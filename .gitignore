@@ -3,3 +3,10 @@
 scripts/__pycache__/
 .env
 dinov3/
+
+# Large data files
+data_synth_complex/
+data_tetris/
+
+data/ganis_kievit_data/.DS_Store
+.DS_Store
