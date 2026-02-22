@@ -8,5 +8,7 @@ dinov3/
 data_synth_complex/
 data_tetris/
 
+logs/
+
 data/ganis_kievit_data/.DS_Store
 .DS_Store
