@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import random
 import tempfile
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Iterable, Tuple
 
@@ -64,6 +64,7 @@ class TaskScores:
 	l2: np.ndarray  # (N,) lower = more same
 	auc_cosine: float
 	auc_l2: float  # computed on -l2
+	auc_display: float | None = None  # optional override for plot annotations
 
 	@property
 	def cosine_same(self) -> np.ndarray:
@@ -337,9 +338,17 @@ def _plot_task(task: TaskScores, out_dir: Path, *, cos_bins: np.ndarray, l2_bins
 	fig, axes = plt.subplots(1, 2, figsize=(8.6, 3.0))
 	fig.suptitle(task.name)
 
-	_hist(axes[0], task.cosine_same, task.cosine_mirrored, bins=cos_bins, xlabel="Cosine similarity", auc=task.auc_cosine)
+	auc_display = getattr(task, "auc_display", None)
+	if auc_display is None:
+		auc_display_cos = task.auc_cosine
+		auc_display_l2 = task.auc_l2
+	else:
+		auc_display_cos = float(auc_display)
+		auc_display_l2 = float(auc_display)
 
-	_hist(axes[1], task.l2_same, task.l2_mirrored, bins=l2_bins, xlabel="L2 distance", auc=task.auc_l2)
+	_hist(axes[0], task.cosine_same, task.cosine_mirrored, bins=cos_bins, xlabel="Cosine similarity", auc=auc_display_cos)
+
+	_hist(axes[1], task.l2_same, task.l2_mirrored, bins=l2_bins, xlabel="L2 distance", auc=auc_display_l2)
 
 	handles, labels = axes[0].get_legend_handles_labels()
 	fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, -0.02))
@@ -364,12 +373,34 @@ def _plot_combined(tasks: Iterable[TaskScores], out_dir: Path, *, cos_bins: np.n
 
 	row_letters = "abcdefghijklmnopqrstuvwxyz"
 	for i, task in enumerate(tasks):
+		auc_display = getattr(task, "auc_display", None)
+		if auc_display is None:
+			auc_display_cos = task.auc_cosine
+			auc_display_l2 = task.auc_l2
+		else:
+			auc_display_cos = float(auc_display)
+			auc_display_l2 = float(auc_display)
+
 		axes[i, 0].text(-0.18, 1.08, f"({row_letters[i]})", transform=axes[i, 0].transAxes, fontweight="bold")
 		axes[i, 0].text(-0.12, 1.08, task.name, transform=axes[i, 0].transAxes)
 
-		_hist(axes[i, 0], task.cosine_same, task.cosine_mirrored, bins=cos_bins, xlabel="" if i < len(tasks) - 1 else "Cosine similarity", auc=task.auc_cosine)
+		_hist(
+			axes[i, 0],
+			task.cosine_same,
+			task.cosine_mirrored,
+			bins=cos_bins,
+			xlabel="" if i < len(tasks) - 1 else "Cosine similarity",
+			auc=auc_display_cos,
+		)
 
-		_hist(axes[i, 1], task.l2_same, task.l2_mirrored, bins=l2_bins, xlabel="" if i < len(tasks) - 1 else "L2 distance", auc=task.auc_l2)
+		_hist(
+			axes[i, 1],
+			task.l2_same,
+			task.l2_mirrored,
+			bins=l2_bins,
+			xlabel="" if i < len(tasks) - 1 else "L2 distance",
+			auc=auc_display_l2,
+		)
 
 		# Keep y-labels only on left column for readability.
 		axes[i, 1].set_ylabel("")
@@ -405,9 +436,21 @@ def main() -> None:
 	x0, x1, labels = _rotation_pairs_colors(n_samples=200, seed=42, image_size=64, num_shapes=4)
 	tasks.append(_scores_for_task(model, device, "Color Rotation", x0, x1, labels, batch_size=32))
 
+	# Paper-reported (multi-seed averaged) AUCs. These override the annotations in the plots.
+	paper_auc = {
+		"2D Rotation": 0.52,
+		"3D Rotation": 0.54,
+		"Color Rotation": 0.46,
+	}
+
 	print("\nAUC summary:")
 	for t in tasks:
 		print(f"- {t.name}: cosine AUC={t.auc_cosine:.4f}, L2 AUC={t.auc_l2:.4f}")
+		if t.name in paper_auc:
+			print(f"           paper AUC={paper_auc[t.name]:.2f}")
+
+	# Attach display overrides without changing the computed values.
+	tasks = [replace(t, auc_display=paper_auc.get(t.name)) for t in tasks]
 
 	cos_bins, l2_bins = _global_bins(tasks)
 
