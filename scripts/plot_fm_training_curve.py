@@ -112,6 +112,18 @@ def main() -> None:
 		help="Plot title (default: Flow Matching Training Loss).",
 	)
 	parser.add_argument(
+		"--fig-width",
+		type=float,
+		default=7.0,
+		help="Figure width in inches (default: 7.0).",
+	)
+	parser.add_argument(
+		"--fig-height",
+		type=float,
+		default=3.6,
+		help="Figure height in inches (default: 3.6).",
+	)
+	parser.add_argument(
 		"--out-dir",
 		type=Path,
 		default=Path("diagrams"),
@@ -151,7 +163,7 @@ def main() -> None:
 	epochs = np.arange(1, losses.size + 1, dtype=np.float64)
 	sm_epochs, sm = _moving_average(losses, args.smooth)
 
-	fig, ax = plt.subplots(1, 1, figsize=(7.0, 2.8))
+	fig, ax = plt.subplots(1, 1, figsize=(args.fig_width, args.fig_height))
 	ax.plot(epochs, losses, label="epoch loss", linewidth=1.5, alpha=0.35)
 	ax.plot(sm_epochs, sm, label=f"{args.smooth}-epoch moving avg", linewidth=2.2)
 
