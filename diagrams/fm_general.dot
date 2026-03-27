@@ -1,0 +1,119 @@
+digraph FMGeneral {
+  graph [
+    rankdir=TB,
+    fontsize=18,
+    fontname="Helvetica",
+    labelloc="t",
+    label="Flow Matching (General Template)",
+    bgcolor="white",
+    compound=true,
+    splines=ortho,
+    nodesep=0.35,
+    ranksep=0.55
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fillcolor="white",
+    color="#2A4A7B",
+    penwidth=1.2,
+    fontname="Helvetica",
+    fontsize=12
+  ];
+
+  edge [
+    color="#2A4A7B",
+    penwidth=1.2,
+    arrowsize=0.9
+  ];
+
+  // --------------------------
+  // Training cluster
+  // --------------------------
+  subgraph cluster_train {
+    label="Training (flow / delta matching)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7AA6D8";
+    style="rounded,filled";
+    fillcolor="#EAF2FF";
+
+    train_sample_endpoints [label="Sample endpoints / params\n(x0, x1) or (x0, cond, u)"];
+    train_sample_t [label="Sample time\n t ~ Uniform(0, 1)"];
+    train_teacher [label="Path / teacher generator\nProduces (x_t, target_update)"];
+    train_xt [label="x_t\n(state at time t)"];
+    train_target [label="target_update\n(v* or Δx*)"];
+    train_loss [label="Regression loss\n||update - target|| (L1 / MSE)\n+ optional correction loss"];
+
+    train_sample_endpoints -> train_teacher;
+    train_sample_t -> train_teacher;
+    train_teacher -> train_xt;
+    train_teacher -> train_target;
+  }
+
+  // --------------------------
+  // Update network cluster
+  // --------------------------
+  subgraph cluster_net {
+    label="Update Network  fθ(x_t, t, cond, u)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7AA6D8";
+    style="rounded,filled";
+    fillcolor="#EAF2FF";
+
+    net_cond [label="cond\n(goal / context)"];
+    net_cond_enc [label="Cond encoder  E\n(frozen or trainable)"];
+    net_cond_proj [label="cond_proj"];
+
+    net_t [label="t"];
+    net_t_emb [label="time_mlp"];
+
+    net_u [label="u (optional control)"];
+    net_u_emb [label="control_mlp (optional)"];
+
+    net_xt_in [label="x_t"];
+    net_unet [label="UNet backbone\n(encoder/decoder + skips)"];
+    net_gc [label="global_cond\n(sum(...) broadcast)\nadded at bottleneck"];
+    net_out [label="update field\n(v or Δx)"];
+
+    net_cond -> net_cond_enc -> net_cond_proj;
+    net_t -> net_t_emb;
+    net_u -> net_u_emb;
+    net_xt_in -> net_unet -> net_out;
+
+    net_t_emb -> net_gc;
+    net_cond_proj -> net_gc;
+    net_u_emb -> net_gc;
+    net_gc -> net_unet;
+  }
+
+  // --------------------------
+  // Inference / rollout cluster
+  // --------------------------
+  subgraph cluster_infer {
+    label="Inference / Rollout (ODE / residual steps)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7AA6D8";
+    style="rounded,filled";
+    fillcolor="#EAF2FF";
+
+    infer_init [label="Initialize state\nx at t=0"];
+    infer_step [label="For i = 0..N-1:\nupdate = fθ(x, t_i, cond, u)\nx ← Project(x + η · update)\n(Project = clamp / corrector / constraints)"];
+    infer_out [label="Final state\nx at t=1"];
+
+    infer_init -> infer_step -> infer_out;
+  }
+
+  // --------------------------
+  // Cross-cluster connections
+  // --------------------------
+  train_xt -> net_xt_in [ltail=cluster_train, lhead=cluster_net];
+  train_target -> train_loss;
+  net_out -> train_loss [ltail=cluster_net, lhead=cluster_train];
+
+  // Show that inference uses the same network
+  net_out -> infer_step [style=dashed];
+}

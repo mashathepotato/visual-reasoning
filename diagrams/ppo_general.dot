@@ -1,0 +1,138 @@
+digraph PPOGeneral {
+  graph [
+    rankdir=TB,
+    fontsize=18,
+    fontname="Helvetica",
+    labelloc="t",
+    label="Proximal Policy Optimization (General Template)",
+    bgcolor="white",
+    compound=true,
+    splines=ortho,
+    nodesep=0.35,
+    ranksep=0.55
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fillcolor="white",
+    color="#2C6B3F",
+    penwidth=1.2,
+    fontname="Helvetica",
+    fontsize=12
+  ];
+
+  edge [
+    color="#2C6B3F",
+    penwidth=1.2,
+    arrowsize=0.9
+  ];
+
+  // --------------------------
+  // Environment cluster
+  // --------------------------
+  subgraph cluster_env {
+    label="Environment";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7BC090";
+    style="rounded,filled";
+    fillcolor="#EAF7EE";
+
+    env_state [label="State s_t (hidden)\n(whatever the env simulates)"];
+    env_obs [label="Observation o_t\n(what the agent sees)"];
+    env_step [label="Step(s_t, a_t)\n→ (o_{t+1}, r_t, done)"];
+
+    env_state -> env_obs;
+    env_obs -> env_step;
+  }
+
+  // --------------------------
+  // Actor-Critic cluster
+  // --------------------------
+  subgraph cluster_ac {
+    label="Actor-Critic (shared trunk optional)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7BC090";
+    style="rounded,filled";
+    fillcolor="#EAF7EE";
+
+    ac_in [label="o_t"];
+    ac_feat [label="Feature extractor\n(CNN/MLP/Transformer)"];
+    pi_head [label="Policy head\nπθ(a|o)"];
+    v_head [label="Value head\nVθ(o)"];
+    act [label="Action a_t\n(sample or argmax)"];
+    logp_old [label="logπθ_old(a_t|o_t)\n(store)"];
+    v_t [label="Vθ(o_t)\n(store)"];
+
+    ac_in -> ac_feat;
+    ac_feat -> pi_head;
+    ac_feat -> v_head;
+
+    pi_head -> act;
+    pi_head -> logp_old [style=dashed];
+    v_head -> v_t [style=dashed];
+  }
+
+  // --------------------------
+  // Rollout / buffer cluster
+  // --------------------------
+  subgraph cluster_rollout {
+    label="Rollout collection (on-policy)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7BC090";
+    style="rounded,filled";
+    fillcolor="#EAF7EE";
+
+    buffer [label="Rollout buffer\n(o_t, a_t, r_t, done,\nlogp_old, V_t)"];
+    horizon [label="Collect T steps\n(or until done)"];
+
+    horizon -> buffer;
+  }
+
+  // --------------------------
+  // PPO update cluster
+  // --------------------------
+  subgraph cluster_update {
+    label="PPO update (optimize θ for K epochs)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7BC090";
+    style="rounded,filled";
+    fillcolor="#EAF7EE";
+
+    gae [label="Compute advantages A_t\n(GAE(λ), discount γ)\n+ returns R_t"];
+    minibatch [label="Shuffle → minibatches"];
+    ratio [label="Compute ratio\nr_t = exp(logp_new - logp_old)"];
+    clipobj [label="Clipped surrogate objective\nL_clip = min(r_t·A_t,\nclip(r_t,1±ε)·A_t)"];
+    vloss [label="Value loss\n||V_new - R_t||²"];
+    ent [label="Entropy bonus\nH[πθ]"];
+    total [label="Total loss\n-(L_clip) + c1·Vloss - c2·Entropy"];
+    stepopt [label="Gradient step\n(Adam/SGD)\n+ optional KL early stop"];
+
+    gae -> minibatch -> ratio -> clipobj -> total -> stepopt;
+    vloss -> total;
+    ent -> total;
+  }
+
+  // --------------------------
+  // Cross-cluster wiring
+  // --------------------------
+  // Acting loop
+  env_obs -> ac_in [ltail=cluster_env, lhead=cluster_ac];
+  act -> env_step [ltail=cluster_ac, lhead=cluster_env];
+
+  // Store transitions
+  act -> horizon [style=dashed];
+  logp_old -> buffer;
+  v_t -> buffer;
+  env_step -> horizon [style=dashed];
+  env_step -> buffer;
+
+  // Update loop
+  buffer -> gae [ltail=cluster_rollout, lhead=cluster_update];
+  stepopt -> ac_feat [style=dashed, ltail=cluster_update, lhead=cluster_ac];
+}
+
