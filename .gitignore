@@ -1,6 +1,7 @@
 .venv/
 .ipynb_checkpoints/
 scripts/__pycache__/
+utils/__pycache__/
 .env
 dinov3/
 
