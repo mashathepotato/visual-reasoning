@@ -10,6 +10,7 @@ sys.path.insert(0, str(REPO_ROOT))
 import torch
 
 from stable_baselines3 import PPO
+from stable_baselines3.common.logger import configure
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv
 
@@ -54,18 +55,20 @@ def main() -> None:
 
     log_dir = Path(args.log_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
+    logger = configure(str(log_dir), ["stdout", "csv"])
 
     model = PPO(
         "CnnPolicy",
         env,
         verbose=1,
-        tensorboard_log=str(log_dir),
+        tensorboard_log=None,
         learning_rate=args.lr,
         n_steps=args.n_steps,
         batch_size=args.batch_size,
         policy_kwargs={"normalize_images": False},
         seed=args.seed,
     )
+    model.set_logger(logger)
     model.learn(total_timesteps=int(args.total_timesteps))
 
     out = Path(args.out)
