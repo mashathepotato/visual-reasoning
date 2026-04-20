@@ -5301,13 +5301,13 @@
   "maze_trace": {
     "name": "maze_trace",
     "n": 300,
-    "accuracy": 0.8266666666666667,
+    "accuracy": 1.0,
     "results": [
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5323,9 +5323,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5365,9 +5365,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5383,9 +5383,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5401,15 +5401,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5443,9 +5443,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5455,9 +5455,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5527,9 +5527,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5569,9 +5569,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5629,9 +5629,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5653,9 +5653,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5677,9 +5677,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5725,15 +5725,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5743,9 +5743,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5773,9 +5773,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5821,9 +5821,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5887,9 +5887,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5899,9 +5899,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -5941,9 +5941,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -5971,9 +5971,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6037,9 +6037,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6067,9 +6067,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6193,9 +6193,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6229,9 +6229,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -6241,9 +6241,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6331,9 +6331,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6433,9 +6433,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6463,9 +6463,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -6487,15 +6487,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6511,9 +6511,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6523,15 +6523,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6571,9 +6571,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6619,15 +6619,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6643,9 +6643,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -6667,15 +6667,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6697,9 +6697,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6709,9 +6709,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6787,15 +6787,15 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6925,9 +6925,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6955,9 +6955,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "YES",
@@ -6967,21 +6967,21 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -7021,9 +7021,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
@@ -7081,9 +7081,9 @@
       },
       {
         "gt": "NO",
-        "pred": "YES",
-        "raw": "YES",
-        "correct": false
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
       },
       {
         "gt": "NO",
