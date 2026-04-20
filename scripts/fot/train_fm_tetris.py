@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import sys
 import argparse
 import random
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Tuple
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT))
 
 import kornia as K
 import torch
@@ -177,4 +181,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
