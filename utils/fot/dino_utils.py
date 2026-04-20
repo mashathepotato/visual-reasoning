@@ -6,10 +6,37 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import timm
+from huggingface_hub import hf_hub_download
+from safetensors.torch import load_file as safetensors_load_file
 
 
 def create_dinov3(*, device: torch.device) -> nn.Module:
-    model = timm.create_model("vit_small_patch16_dinov3", pretrained=True).to(device).eval()
+    # Prefer local HF cache to avoid network calls in sandboxed environments.
+    state_dict = None
+    try:
+        ckpt_path = hf_hub_download(
+            repo_id="timm/vit_small_patch16_dinov3.lvd1689m",
+            filename="model.safetensors",
+            local_files_only=True,
+        )
+        state_dict = safetensors_load_file(ckpt_path)
+    except Exception:
+        state_dict = None
+
+    if state_dict is not None:
+        model = timm.create_model("vit_small_patch16_dinov3", pretrained=False)
+        model.load_state_dict(state_dict)
+    else:
+        try:
+            model = timm.create_model("vit_small_patch16_dinov3", pretrained=True)
+        except Exception as e:
+            raise RuntimeError(
+                "Failed to load DINOv3 weights. Either (a) run once with internet so timm can cache "
+                "the weights, or (b) pre-populate the local HF cache with "
+                "`timm/vit_small_patch16_dinov3.lvd1689m` / `model.safetensors`."
+            ) from e
+
+    model = model.to(device).eval()
     for p in model.parameters():
         p.requires_grad = False
     return model
@@ -44,4 +71,3 @@ def dino_embed_rgb01(img_rgb01: torch.Tensor, dino_model: nn.Module) -> torch.Te
     img = (img - mean) / std
     feats = dino_model.forward_features(img)
     return feats[:, 0, :]
-
