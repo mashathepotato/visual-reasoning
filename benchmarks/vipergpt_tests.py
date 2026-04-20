@@ -1,5 +1,15 @@
 from __future__ import annotations
 
+"""
+ViperGPT-style baseline for FoT synthetic datasets.
+
+This is a lightweight "tools + program" baseline (no training) that plugs into the
+existing `utils/llm_baselines` evaluation loops.
+
+Example:
+  python3 benchmarks/vipergpt_tests.py --seed 0 --n-rotation 400 --tasks tetris,colors,maze-trace,maze-solve
+"""
+
 import argparse
 import json
 import random
