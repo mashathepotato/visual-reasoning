@@ -263,7 +263,8 @@ Pair/shape tools:
 - flip_lr(image) -> mirrored image
 
 Maze/grid tools:
-- downsample_to_grid(image, upscale=UPSCALE) -> np.ndarray uint8 (H,W,3)
+- to_grid(image) -> np.ndarray uint8 (H,W,3) (uses UPSCALE)
+- downsample_to_grid(image, upscale) -> np.ndarray uint8 (H,W,3) (low-level; pass upscale explicitly)
 - rgb_mask(grid_rgb, rgb) -> np.ndarray bool (H,W) exact RGB mask (e.g., rgb_mask(grid, TRACE_RGB))
 - find_color(grid_rgb, [R,G,B]) -> (y,x) tuple
 - wall_mask(grid_rgb, thr=10) -> np.ndarray bool (H,W) where True=wall (black)
@@ -289,7 +290,8 @@ SYSTEM_PROMPT = (
     "- For maze solving return ONLY a string of moves using letters U,D,L,R.\n"
     "Tips:\n"
     "- Hu moments are floats: use a distance (e.g., L2) rather than exact equality.\n"
-    "- Mirroring changes shapes: compare A vs B and flip_lr(A) vs B; return SAME if the unflipped distance is smaller.\n"
+    "- Mirroring changes shapes: compare hu(A) vs hu(B) and hu(flip_lr(A)) vs hu(B).\n"
+    "  Return 'SAME' if d_normal <= d_flipped else 'DIFFERENT'.\n"
     "- For mazes, use the provided START_RGB/GOAL_RGB/TRACE_RGB and UPSCALE.\n"
     "- For maze trace validity, do NOT solve the maze; verify the highlighted TRACE_RGB pixels form a continuous path.\n"
 )
@@ -370,6 +372,9 @@ def _restricted_builtins() -> Dict[str, Any]:
 
 
 def _tool_globals(*, upscale: int) -> Dict[str, Any]:
+    def to_grid(image: Image.Image) -> np.ndarray:
+        return downsample_to_grid(image, upscale=int(upscale))
+
     return {
         "np": np,
         "UPSCALE": int(upscale),
@@ -382,6 +387,7 @@ def _tool_globals(*, upscale: int) -> Dict[str, Any]:
         "hu_moments": hu_moments,
         "l2": l2,
         "flip_lr": flip_lr,
+        "to_grid": to_grid,
         "downsample_to_grid": downsample_to_grid,
         "rgb_mask": rgb_mask,
         "find_color": find_color,
