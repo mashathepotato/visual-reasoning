@@ -38,10 +38,14 @@ import numpy as np
 from PIL import Image
 
 try:
-    from openai import OpenAI
-except Exception as e:  # pragma: no cover
-    raise RuntimeError("Missing dependency: openai. Install with `pip install openai`.") from e
+    from anthropic import Anthropic
+except Exception:  # pragma: no cover
+    Anthropic = None  # type: ignore[assignment]
 
+try:
+    from openai import OpenAI
+except Exception:  # pragma: no cover
+    OpenAI = None  # type: ignore[assignment]
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
@@ -359,6 +363,7 @@ class ViperGPTPipeline:
     def __init__(
         self,
         *,
+        provider: str,
         model: str,
         temperature: float,
         max_output_tokens: int,
@@ -367,6 +372,10 @@ class ViperGPTPipeline:
         no_api: bool,
         force_regen: bool,
     ):
+        self.provider = provider.strip().lower()
+        if self.provider not in {"openai", "anthropic"}:
+            raise ValueError(f"Unsupported provider={provider!r}. Use 'openai' or 'anthropic'.")
+
         self.model = model
         self.temperature = float(temperature)
         self.max_output_tokens = int(max_output_tokens)
@@ -377,13 +386,22 @@ class ViperGPTPipeline:
         self.cache = JsonlCache(program_cache_path)
         self._solve_fns: Dict[str, Callable[[Image.Image, str], str]] = {}
 
-        self.client: Optional[OpenAI]
         if self.no_api:
             self.client = None
-        else:
+            return
+
+        if self.provider == "openai":
+            if OpenAI is None:
+                raise RuntimeError("Missing dependency: openai. Install with `pip install openai`.")
             if not os.getenv("OPENAI_API_KEY"):
                 raise RuntimeError("Set OPENAI_API_KEY (or pass --no-api if you have cached programs).")
             self.client = OpenAI()
+        else:
+            if Anthropic is None:
+                raise RuntimeError("Missing dependency: anthropic. Install with `pip install anthropic`.")
+            if not os.getenv("ANTHROPIC_API_KEY"):
+                raise RuntimeError("Set ANTHROPIC_API_KEY (or pass --no-api if you have cached programs).")
+            self.client = Anthropic()
 
     def _synth_program(self, question: str) -> str:
         if not self.client:
@@ -391,7 +409,7 @@ class ViperGPTPipeline:
 
         prompt = _program_prompt(question)
         key = cache_key(
-            model=self.model,
+            model=f"{self.provider}:{self.model}",
             prompt=prompt,
             image_bytes=b"",
             max_output_tokens=self.max_output_tokens,
@@ -403,20 +421,36 @@ class ViperGPTPipeline:
             if cached is not None:
                 return cached
 
-        resp = self.client.responses.create(
-            model=self.model,
-            input=[{"role": "user", "content": [{"type": "input_text", "text": prompt}]}],
-            temperature=self.temperature,
-            max_output_tokens=self.max_output_tokens,
-        )
-        text = getattr(resp, "output_text", None)
-        if not isinstance(text, str) or not text.strip():
-            text = str(resp)
+        if self.provider == "openai":
+            resp = self.client.responses.create(  # type: ignore[union-attr]
+                model=self.model,
+                input=[{"role": "user", "content": [{"type": "input_text", "text": prompt}]}],
+                temperature=self.temperature,
+                max_output_tokens=self.max_output_tokens,
+            )
+            text = getattr(resp, "output_text", None)
+            if not isinstance(text, str) or not text.strip():
+                text = str(resp)
+        else:
+            msg = self.client.messages.create(  # type: ignore[union-attr]
+                model=self.model,
+                temperature=self.temperature,
+                max_tokens=self.max_output_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            blocks = getattr(msg, "content", None)
+            if isinstance(blocks, list):
+                text_parts = [getattr(b, "text", "") for b in blocks if getattr(b, "type", "") == "text"]
+                text = "\n".join([t for t in text_parts if isinstance(t, str) and t.strip()]).strip()
+            else:
+                text = ""
+            if not text:
+                text = str(msg)
         code = _strip_code_fences(text)
 
         self.cache.put(
             key=key,
-            model=self.model,
+            model=f"{self.provider}:{self.model}",
             prompt=prompt,
             response=code,
             meta={"max_output_tokens": self.max_output_tokens, "temperature": self.temperature},
@@ -429,7 +463,7 @@ class ViperGPTPipeline:
 
         prompt = _program_prompt(question)
         key = cache_key(
-            model=self.model,
+            model=f"{self.provider}:{self.model}",
             prompt=prompt,
             image_bytes=b"",
             max_output_tokens=self.max_output_tokens,
@@ -443,7 +477,8 @@ class ViperGPTPipeline:
         if code is None:
             if self.no_api:
                 raise RuntimeError(
-                    f"Missing cached program for model={self.model}. Re-run without --no-api to generate it."
+                    f"Missing cached program for provider={self.provider} model={self.model}. "
+                    "Re-run without --no-api to generate it."
                 )
             code = self._synth_program(question)
 
@@ -481,7 +516,8 @@ def main() -> int:
         default="tetris,colors,3d,maze-trace,maze-solve",
         help="Comma-separated: tetris, colors, 3d, maze-trace, maze-solve",
     )
-    ap.add_argument("--model", type=str, default="gpt-4o-mini")
+    ap.add_argument("--provider", type=str, default="openai", help="openai|anthropic")
+    ap.add_argument("--model", type=str, default="")
     ap.add_argument("--temperature", type=float, default=0.0)
     ap.add_argument("--max-output-tokens", type=int, default=900, help="Max tokens for program synthesis.")
     ap.add_argument("--timeout-s", type=float, default=0.25, help="Per-sample execution timeout.")
@@ -491,10 +527,18 @@ def main() -> int:
     ap.add_argument("--out", type=str, default="", help="Optional path to write JSON results.")
     args = ap.parse_args()
 
+    provider = args.provider.strip().lower()
+    if not args.model:
+        if provider == "anthropic":
+            args.model = "claude-3-5-sonnet-20241022"
+        else:
+            args.model = "gpt-4o-mini"
+
     rng = random.Random(args.seed)
     tasks = set(_parse_tasks(args.tasks))
 
     vipergpt = ViperGPTPipeline(
+        provider=provider,
         model=args.model,
         temperature=args.temperature,
         max_output_tokens=args.max_output_tokens,
@@ -504,7 +548,7 @@ def main() -> int:
         force_regen=args.force_regen,
     )
 
-    out: Dict[str, Any] = {"seed": args.seed, "tasks": sorted(tasks), "model": args.model}
+    out: Dict[str, Any] = {"seed": args.seed, "tasks": sorted(tasks), "provider": provider, "model": args.model}
 
     if "tetris" in tasks:
         samples = build_tetris_samples(rng, args.n_rotation, upscale=args.upscale)
@@ -548,4 +592,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
