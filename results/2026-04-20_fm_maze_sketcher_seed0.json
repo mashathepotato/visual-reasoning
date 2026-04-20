@@ -1,0 +1,14 @@
+{
+  "run": "2026-04-20_fm_maze_sketcher_seed0",
+  "task": "fm_maze_sketcher",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "5eb1e663c49a3b2f053eb7d552d4e367276b7d05",
+  "command": ".venv/bin/python scripts/fot/train_fm_maze_sketcher.py --out models/runs/2026-04-20_fm_maze_sketcher/sketcher.pth --epochs 1 --train-samples 200 --batch-size 16 --img-size 32 --maze-cells 9 --seed 0",
+  "metrics": {
+    "train_loss": 0.065115
+  },
+  "artifacts": {
+    "sketcher": "models/runs/2026-04-20_fm_maze_sketcher/sketcher.pth"
+  }
+}

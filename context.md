@@ -71,6 +71,7 @@ Notes:
 ## Training log (append-only)
 2026-04-20:
 - `fm_tetris` (seed=0, epochs=1): train_loss=7.6626, test_loss=8.3546 → `results/2026-04-20_fm_tetris_seed0.json`
+- `fm_maze_sketcher` (seed=0, epochs=1): train_loss=0.0651 → `results/2026-04-20_fm_maze_sketcher_seed0.json`
 
 ### PPO training snapshots (from last row of each `logs/*/progress.csv`)
 - `ppo_tetris`: steps=51200, ep_rew_mean=61.55, ep_len_mean=9.20
