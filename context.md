@@ -67,6 +67,7 @@ FoT “heatmap sketcher” MCQ training scripts:
 Notes:
 - Requires the `datasets` Python package and access to HuggingFace dataset files.
 - If you hit network/DNS restrictions, run on a machine with internet (or pre-download HF caches).
+- Both scripts also support `--smoke` to run a tiny synthetic dataset (no HF / `datasets`) to validate the training loop.
 
 ## Training log (append-only)
 2026-04-20:
@@ -75,6 +76,8 @@ Notes:
 - `ppo_tetris_fm_smoke` (seed=0, steps=512): ep_rew_mean=0.476, ep_len_mean=10.81 → `results/2026-04-20_ppo_tetris_fm_seed0_smoke.json`
 - `ppo_colors_fm_smoke` (seed=0, steps=512): ep_rew_mean=11.61, ep_len_mean=12.15 → `results/2026-04-20_ppo_colors_fm_seed0_smoke.json`
 - `ppo_maze_progress_smoke` (seed=0, steps=512): ep_rew_mean=10.85, ep_len_mean=15.39 → `results/2026-04-20_ppo_maze_progress_seed0_smoke.json`
+- `sat_v2_smoke` (seed=0, epochs=1): train_loss=1.4148, val_loss=1.3865, val_acc=0.2812 → `results/2026-04-20_sat_v2_smoke_seed0.json`
+- `vstar_smoke` (seed=0, epochs=1): train_loss=25.7288, val_loss=1.4431, val_acc=0.1000 → `results/2026-04-20_vstar_smoke_seed0.json`
 
 ### PPO training snapshots (from last row of each `logs/*/progress.csv`)
 - `ppo_tetris`: steps=51200, ep_rew_mean=61.55, ep_len_mean=9.20

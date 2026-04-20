@@ -1,0 +1,17 @@
+{
+  "run": "2026-04-20_sat_v2_smoke_seed0",
+  "task": "sat_v2_fot_vqa_smoke",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "8cbbec1011ac43406f26aff38c0978efc9d76b65",
+  "command": "MPLCONFIGDIR=/tmp/mpl .venv/bin/python scripts/fot/train_sat_v2_fot_vqa.py --smoke --smoke-train 64 --smoke-val 32 --image-size 128 --epochs 1 --batch-size 8 --num-workers 0 --sketch-steps 4 --out models/runs/2026-04-20_sat_v2_smoke_seed0/model.pt --seed 0",
+  "metrics": {
+    "train_loss": 1.4148,
+    "val_loss": 1.3865,
+    "val_acc": 0.2812
+  },
+  "artifacts": {
+    "checkpoint": "models/runs/2026-04-20_sat_v2_smoke_seed0/model.pt"
+  },
+  "notes": "Smoke run uses ToyMCQDataset (no HF datasets)."
+}
