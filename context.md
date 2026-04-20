@@ -68,6 +68,7 @@ Notes:
 - Requires the `datasets` Python package and access to HuggingFace dataset files.
 - If you hit network/DNS restrictions, run on a machine with internet (or pre-download HF caches).
 - Both scripts also support `--smoke` to run a tiny synthetic dataset (no HF / `datasets`) to validate the training loop.
+- Sandbox note: this repo’s `.venv/` currently does **not** have `datasets` installed, so only `--smoke` runs can execute here.
 
 ## Training log (append-only)
 2026-04-20:
