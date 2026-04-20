@@ -1,0 +1,29 @@
+{
+  "run": "2026-04-20_ppo_colors_fm_seed0_smoke",
+  "task": "ppo_colors_fm",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "6fc0ffda6cce7d9739fa45c32bd302bc4e365124",
+  "command": "MPLCONFIGDIR=/tmp/mpl .venv/bin/python scripts/fot/train_ppo_colors_fm.py --ckpt models/rotator_colors_500e_checkpoint.pth --fm-steps 5 --total-timesteps 512 --n-steps 128 --batch-size 64 --out models/runs/2026-04-20_ppo_colors_fm_seed0_smoke/controller --log-dir logs/runs/2026-04-20_ppo_colors_fm_seed0_smoke --seed 0",
+  "metrics": {
+    "total_timesteps": 512,
+    "iterations": 4,
+    "time_elapsed_s": 113,
+    "fps": 4,
+    "ep_rew_mean": 11.611274365853657,
+    "ep_len_mean": 12.146341463414634,
+    "approx_kl": 0.03534832,
+    "clip_fraction": 0.303125,
+    "entropy_loss": -2.0324801802635193,
+    "explained_variance": -2.380018472671509,
+    "learning_rate": 0.0002,
+    "loss": 5.113956451416016,
+    "n_updates": 30,
+    "policy_gradient_loss": -0.033864906430244444,
+    "value_loss": 32.86008129119873
+  },
+  "artifacts": {
+    "controller": "models/runs/2026-04-20_ppo_colors_fm_seed0_smoke/controller.zip",
+    "progress_csv": "logs/runs/2026-04-20_ppo_colors_fm_seed0_smoke/progress.csv"
+  }
+}
