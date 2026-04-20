@@ -285,9 +285,16 @@ Common patterns (recommended):
   walls = wall_mask(grid)
   trace = rgb_mask(grid, TRACE_RGB)
   trace[start] = True; trace[goal] = True
+  # No walls, must be a single simple path (no branches/gaps):
   if (trace & walls).any(): return 'NO'
   path = bfs_path_4n(trace, start, goal)
-  return 'YES' if len(path) > 0 else 'NO'
+  if len(path) == 0: return 'NO'
+  # Degree constraints (4-neighborhood) enforce a single continuous path:
+  for (y,x) where trace[y,x] is True:
+      deg = number of 4-neighbors with trace==True
+      if (y,x)==start or (y,x)==goal: deg must equal 1
+      else: deg must equal 2
+  return 'YES'
 
 - Maze solve (moves):
   grid = to_grid(image)
