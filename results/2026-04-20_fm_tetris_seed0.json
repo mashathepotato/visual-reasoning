@@ -1,0 +1,17 @@
+{
+  "run": "2026-04-20_fm_tetris_seed0",
+  "task": "fm_tetris",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "d154c54704dd1a08f9f4801e79c7924bb1acf47b",
+  "command": ".venv/bin/python scripts/fot/train_fm_tetris.py --out-rotator models/runs/2026-04-20_fm_tetris/rotator.pth --out-corrector models/runs/2026-04-20_fm_tetris/corrector.pth --epochs 1 --train-samples 200 --test-samples 50 --batch-size 16 --seed 0",
+  "metrics": {
+    "train_loss": 7.662557,
+    "test_loss": 8.354609
+  },
+  "artifacts": {
+    "rotator": "models/runs/2026-04-20_fm_tetris/rotator.pth",
+    "corrector": "models/runs/2026-04-20_fm_tetris/corrector.pth"
+  }
+}
+
