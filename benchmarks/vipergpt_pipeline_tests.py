@@ -18,6 +18,7 @@ If you already have cached programs, you can run without API access:
 
 import argparse
 import ast
+import builtins
 import json
 import os
 import random
@@ -150,6 +151,16 @@ def flip_lr(img: Image.Image) -> Image.Image:
     return img.transpose(op)
 
 
+def l2(a: np.ndarray, b: np.ndarray) -> float:
+    """L2 distance between two arrays after flattening."""
+    a1 = np.asarray(a, dtype=np.float32).ravel()
+    b1 = np.asarray(b, dtype=np.float32).ravel()
+    if a1.shape != b1.shape:
+        raise ValueError(f"Shape mismatch: {a1.shape} vs {b1.shape}")
+    d = a1 - b1
+    return float(np.sqrt(np.dot(d, d)))
+
+
 def downsample_to_grid(img: Image.Image, *, upscale: int) -> np.ndarray:
     """
     Inverse of nearest-neighbor upscale used in `utils.llm_baselines.render_maze`.
@@ -224,20 +235,32 @@ def path_to_moves(path: Sequence[Tuple[int, int]]) -> str:
     return "".join(moves)
 
 
-TOOL_DOCS = """
+START_RGB: Tuple[int, int, int] = (50, 220, 50)
+GOAL_RGB: Tuple[int, int, int] = (50, 50, 220)
+TRACE_RGB: Tuple[int, int, int] = (255, 50, 50)
+
+
+TOOL_DOCS_TEMPLATE = """
 Available tools (call directly in Python):
+
+Globals/constants:
+- UPSCALE (int) = {upscale}
+- START_RGB = {start_rgb}
+- GOAL_RGB = {goal_rgb}
+- TRACE_RGB = {trace_rgb}
 
 Pair/shape tools:
 - split_pair_image(image) -> (image_a, image_b)
-- mask_nonblack(image, thr=8) -> np.ndarray uint8 mask (H,W) in {0,1}
-- hu_moments(mask) -> np.ndarray float32 shape=(7,) (rotation-invariant moments)
+- mask_nonblack(image, thr=8) -> np.ndarray uint8 mask (H,W) in {{0,1}}
+- hu_moments(mask) -> np.ndarray float32 shape=(7,) (rotation-invariant moments; compare with L2 distance, not equality)
+- l2(a, b) -> float (L2 distance between arrays)
 - flip_lr(image) -> mirrored image
 
 Maze/grid tools:
-- downsample_to_grid(image, upscale) -> np.ndarray uint8 (H,W,3)
+- downsample_to_grid(image, upscale=UPSCALE) -> np.ndarray uint8 (H,W,3)
 - find_color(grid_rgb, [R,G,B]) -> (y,x) tuple
-- wall_mask(grid_rgb, thr=10) -> np.ndarray bool (H,W) where True=wall
-- bfs_path_4n(free_mask, start, goal) -> list[(y,x)] shortest path
+- wall_mask(grid_rgb, thr=10) -> np.ndarray bool (H,W) where True=wall (black)
+- bfs_path_4n(free_mask, start, goal) -> list[(y,x)] shortest path (4-neighborhood)
 - path_to_moves(path) -> UDLR string
 """.strip()
 
@@ -257,6 +280,10 @@ SYSTEM_PROMPT = (
     "- For rotation questions return exactly 'SAME' or 'DIFFERENT'.\n"
     "- For maze trace validity return exactly 'YES' or 'NO'.\n"
     "- For maze solving return ONLY a string of moves using letters U,D,L,R.\n"
+    "Tips:\n"
+    "- Hu moments are floats: use a distance (e.g., L2) rather than exact equality.\n"
+    "- Mirroring changes shapes: compare A vs B and flip_lr(A) vs B.\n"
+    "- For mazes, use the provided START_RGB/GOAL_RGB/TRACE_RGB and UPSCALE.\n"
 )
 
 
@@ -298,40 +325,54 @@ def _time_limit(seconds: float):
 
 
 def _restricted_builtins() -> Dict[str, Any]:
+    def safe_import(name, globals=None, locals=None, fromlist=(), level=0):  # type: ignore[no-untyped-def]
+        root = str(name).split(".", 1)[0]
+        if root not in {"numpy", "cv2", "PIL"}:
+            raise ImportError(f"Import blocked: {name!r}")
+        return builtins.__import__(name, globals, locals, fromlist, level)
+
     allowed = {
+        "__import__": safe_import,
         "abs": abs,
         "all": all,
         "any": any,
         "bool": bool,
         "dict": dict,
+        "Exception": Exception,
         "enumerate": enumerate,
         "float": float,
         "int": int,
+        "isinstance": isinstance,
         "len": len,
         "list": list,
         "max": max,
         "min": min,
         "range": range,
+        "round": round,
         "set": set,
         "sorted": sorted,
         "str": str,
         "sum": sum,
         "tuple": tuple,
+        "type": type,
+        "ValueError": ValueError,
         "zip": zip,
     }
     return allowed
 
 
-def _tool_globals() -> Dict[str, Any]:
+def _tool_globals(*, upscale: int) -> Dict[str, Any]:
     return {
         "np": np,
-        "cv2": cv2,
-        "Image": Image,
-        "deque": deque,
+        "UPSCALE": int(upscale),
+        "START_RGB": START_RGB,
+        "GOAL_RGB": GOAL_RGB,
+        "TRACE_RGB": TRACE_RGB,
         # tools
         "split_pair_image": split_pair_image,
         "mask_nonblack": mask_nonblack,
         "hu_moments": hu_moments,
+        "l2": l2,
         "flip_lr": flip_lr,
         "downsample_to_grid": downsample_to_grid,
         "find_color": find_color,
@@ -341,12 +382,12 @@ def _tool_globals() -> Dict[str, Any]:
     }
 
 
-def _compile_solve_fn(code: str) -> Callable[[Image.Image, str], str]:
+def _compile_solve_fn(code: str, *, tool_globals: Dict[str, Any]) -> Callable[[Image.Image, str], str]:
     code = _strip_code_fences(code)
     _assert_safe_ast(code)
 
     g: Dict[str, Any] = {"__builtins__": _restricted_builtins()}
-    g.update(_tool_globals())
+    g.update(tool_globals)
     l: Dict[str, Any] = {}
     exec(compile(code, "<vipergpt_program>", "exec"), g, l)  # noqa: S102
     solve = l.get("solve") or g.get("solve")
@@ -355,8 +396,17 @@ def _compile_solve_fn(code: str) -> Callable[[Image.Image, str], str]:
     return solve  # type: ignore[return-value]
 
 
-def _program_prompt(question: str) -> str:
-    return f"{SYSTEM_PROMPT}\n\n{TOOL_DOCS}\n\nQuestion:\n{question}\n"
+def _tool_docs(*, upscale: int) -> str:
+    return TOOL_DOCS_TEMPLATE.format(
+        upscale=int(upscale),
+        start_rgb=START_RGB,
+        goal_rgb=GOAL_RGB,
+        trace_rgb=TRACE_RGB,
+    )
+
+
+def _program_prompt(*, question: str, tool_docs: str) -> str:
+    return f"{SYSTEM_PROMPT}\n\n{tool_docs}\n\nQuestion:\n{question}\n"
 
 
 class ViperGPTPipeline:
@@ -364,6 +414,7 @@ class ViperGPTPipeline:
         self,
         *,
         provider: str,
+        upscale: int,
         model: str,
         temperature: float,
         max_output_tokens: int,
@@ -376,6 +427,7 @@ class ViperGPTPipeline:
         if self.provider not in {"openai", "anthropic"}:
             raise ValueError(f"Unsupported provider={provider!r}. Use 'openai' or 'anthropic'.")
 
+        self.upscale = int(upscale)
         self.model = model
         self.temperature = float(temperature)
         self.max_output_tokens = int(max_output_tokens)
@@ -405,9 +457,12 @@ class ViperGPTPipeline:
 
     def _synth_program(self, question: str) -> str:
         if not self.client:
-            raise RuntimeError("No API client available (use OPENAI_API_KEY or run with --no-api + cached programs).")
+            raise RuntimeError(
+                "No API client available (set OPENAI_API_KEY / ANTHROPIC_API_KEY, or run with --no-api + cached programs)."
+            )
 
-        prompt = _program_prompt(question)
+        tool_docs = _tool_docs(upscale=self.upscale)
+        prompt = _program_prompt(question=question, tool_docs=tool_docs)
         key = cache_key(
             model=f"{self.provider}:{self.model}",
             prompt=prompt,
@@ -461,7 +516,8 @@ class ViperGPTPipeline:
         if question in self._solve_fns:
             return self._solve_fns[question]
 
-        prompt = _program_prompt(question)
+        tool_docs = _tool_docs(upscale=self.upscale)
+        prompt = _program_prompt(question=question, tool_docs=tool_docs)
         key = cache_key(
             model=f"{self.provider}:{self.model}",
             prompt=prompt,
@@ -482,7 +538,7 @@ class ViperGPTPipeline:
                 )
             code = self._synth_program(question)
 
-        solve = _compile_solve_fn(code)
+        solve = _compile_solve_fn(code, tool_globals=_tool_globals(upscale=self.upscale))
         self._solve_fns[question] = solve
         return solve
 
@@ -523,7 +579,7 @@ def main() -> int:
     ap.add_argument("--timeout-s", type=float, default=0.25, help="Per-sample execution timeout.")
     ap.add_argument("--program-cache", type=str, default="benchmarks/vipergpt_program_cache.jsonl")
     ap.add_argument("--force-regen", action="store_true", help="Regenerate programs even if cached.")
-    ap.add_argument("--no-api", action="store_true", help="Do not call OpenAI; require cached programs.")
+    ap.add_argument("--no-api", action="store_true", help="Do not call the API; require cached programs.")
     ap.add_argument("--out", type=str, default="", help="Optional path to write JSON results.")
     args = ap.parse_args()
 
@@ -539,6 +595,7 @@ def main() -> int:
 
     vipergpt = ViperGPTPipeline(
         provider=provider,
+        upscale=args.upscale,
         model=args.model,
         temperature=args.temperature,
         max_output_tokens=args.max_output_tokens,
