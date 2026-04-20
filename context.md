@@ -74,6 +74,7 @@ Notes:
 - `fm_maze_sketcher` (seed=0, epochs=1): train_loss=0.0651 → `results/2026-04-20_fm_maze_sketcher_seed0.json`
 - `ppo_tetris_fm_smoke` (seed=0, steps=512): ep_rew_mean=0.476, ep_len_mean=10.81 → `results/2026-04-20_ppo_tetris_fm_seed0_smoke.json`
 - `ppo_colors_fm_smoke` (seed=0, steps=512): ep_rew_mean=11.61, ep_len_mean=12.15 → `results/2026-04-20_ppo_colors_fm_seed0_smoke.json`
+- `ppo_maze_progress_smoke` (seed=0, steps=512): ep_rew_mean=10.85, ep_len_mean=15.39 → `results/2026-04-20_ppo_maze_progress_seed0_smoke.json`
 
 ### PPO training snapshots (from last row of each `logs/*/progress.csv`)
 - `ppo_tetris`: steps=51200, ep_rew_mean=61.55, ep_len_mean=9.20
