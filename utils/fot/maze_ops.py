@@ -167,8 +167,5 @@ class MazeTraceDataset(Dataset):
         # - trace_t: (1, H, W)
         # - t: (1,)
         # - delta: (1, H, W)
-        trace_t = trace_t.unsqueeze(0)
-        delta = delta.unsqueeze(0)
         t_t = torch.tensor([t], dtype=torch.float32)
         return cond, trace_t, t_t, delta
-
