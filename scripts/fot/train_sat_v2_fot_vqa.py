@@ -15,12 +15,17 @@ from torch.utils.data import DataLoader
 
 from utils.fot.external_datasets import SATv2Dataset
 from utils.fot.text_ops import tokenize_choices_to_buckets, tokenize_to_buckets
+from utils.fot.toy_datasets import ToyMCQDataset
 from utils.fot.torch_utils import get_device, set_seed
 from utils.fot.vqa_heatmap_model import FoTHeatmapMCQModel
 
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Train FoT heatmap MCQ model on SAT-v2 (array/SAT-v2).")
+    p.add_argument("--smoke", action="store_true", help="Run a tiny synthetic smoke test (no HF datasets needed).")
+    p.add_argument("--smoke-train", type=int, default=128)
+    p.add_argument("--smoke-val", type=int, default=64)
+
     p.add_argument("--train-split", type=str, default="train")
     p.add_argument("--val-split", type=str, default="val")
     p.add_argument("--cache-dir", type=str, default=None)
@@ -105,20 +110,24 @@ def main() -> None:
     device = get_device()
     print("Device:", device)
 
-    train_ds = SATv2Dataset(
-        split=args.train_split,
-        image_size=args.image_size,
-        max_samples=args.max_train,
-        cache_dir=args.cache_dir,
-        streaming=bool(args.streaming),
-    )
-    val_ds = SATv2Dataset(
-        split=args.val_split,
-        image_size=args.image_size,
-        max_samples=args.max_val,
-        cache_dir=args.cache_dir,
-        streaming=bool(args.streaming),
-    )
+    if args.smoke:
+        train_ds = ToyMCQDataset(n_samples=args.smoke_train, image_size=args.image_size, seed=args.seed)
+        val_ds = ToyMCQDataset(n_samples=args.smoke_val, image_size=args.image_size, seed=args.seed + 1)
+    else:
+        train_ds = SATv2Dataset(
+            split=args.train_split,
+            image_size=args.image_size,
+            max_samples=args.max_train,
+            cache_dir=args.cache_dir,
+            streaming=bool(args.streaming),
+        )
+        val_ds = SATv2Dataset(
+            split=args.val_split,
+            image_size=args.image_size,
+            max_samples=args.max_val,
+            cache_dir=args.cache_dir,
+            streaming=bool(args.streaming),
+        )
 
     train_loader = DataLoader(
         train_ds,

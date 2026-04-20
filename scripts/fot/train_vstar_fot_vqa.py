@@ -14,12 +14,16 @@ from torch.utils.data import DataLoader, Subset, random_split
 
 from utils.fot.external_datasets import VStarBenchWithBboxDataset
 from utils.fot.text_ops import tokenize_choices_to_buckets, tokenize_to_buckets
+from utils.fot.toy_datasets import ToyMCQWithMaskDataset
 from utils.fot.torch_utils import get_device, set_seed
 from utils.fot.vqa_heatmap_model import FoTHeatmapMCQModel
 
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Train FoT heatmap MCQ model on V*Bench (vstar-bench-with-bbox).")
+    p.add_argument("--smoke", action="store_true", help="Run a tiny synthetic smoke test (no HF datasets needed).")
+    p.add_argument("--smoke-samples", type=int, default=128)
+
     p.add_argument("--split", type=str, default="test")
     p.add_argument("--cache-dir", type=str, default=None)
     p.add_argument("--image-size", type=int, default=512)
@@ -108,7 +112,15 @@ def main() -> None:
     device = get_device()
     print("Device:", device)
 
-    full = VStarBenchWithBboxDataset(split=args.split, image_size=args.image_size, max_samples=args.max_samples, cache_dir=args.cache_dir)
+    if args.smoke:
+        full = ToyMCQWithMaskDataset(n_samples=args.smoke_samples, image_size=args.image_size, seed=args.seed)
+    else:
+        full = VStarBenchWithBboxDataset(
+            split=args.split,
+            image_size=args.image_size,
+            max_samples=args.max_samples,
+            cache_dir=args.cache_dir,
+        )
     n_total = len(full)
     n_train = max(1, int(round(float(args.train_ratio) * n_total)))
     n_val = max(1, n_total - n_train)
