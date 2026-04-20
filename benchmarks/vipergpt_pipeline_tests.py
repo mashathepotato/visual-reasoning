@@ -270,6 +270,30 @@ Maze/grid tools:
 - wall_mask(grid_rgb, thr=10) -> np.ndarray bool (H,W) where True=wall (black)
 - bfs_path_4n(free_mask, start, goal) -> list[(y,x)] shortest path (4-neighborhood)
 - path_to_moves(path) -> UDLR string
+
+Common patterns (recommended):
+- Rotation SAME vs DIFFERENT:
+  a,b = split_pair_image(image)
+  ha = hu_moments(mask_nonblack(a))
+  hb = hu_moments(mask_nonblack(b))
+  ha_flip = hu_moments(mask_nonblack(flip_lr(a)))
+  return 'SAME' if l2(ha,hb) <= l2(ha_flip,hb) else 'DIFFERENT'
+
+- Maze trace validity (YES/NO):
+  grid = to_grid(image)
+  start = find_color(grid, START_RGB); goal = find_color(grid, GOAL_RGB)
+  walls = wall_mask(grid)
+  trace = rgb_mask(grid, TRACE_RGB)
+  trace[start] = True; trace[goal] = True
+  if (trace & walls).any(): return 'NO'
+  path = bfs_path_4n(trace, start, goal)
+  return 'YES' if len(path) > 0 else 'NO'
+
+- Maze solve (moves):
+  grid = to_grid(image)
+  start = find_color(grid, START_RGB); goal = find_color(grid, GOAL_RGB)
+  free = ~wall_mask(grid)
+  return path_to_moves(bfs_path_4n(free, start, goal))
 """.strip()
 
 
