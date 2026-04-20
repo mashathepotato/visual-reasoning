@@ -121,7 +121,8 @@ def predict_same_different(pair_img: Image.Image) -> str:
     hu_a = _hu_vec(a_mask)
     hu_b = _hu_vec(b_mask)
 
-    a_flip = a.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+    flip_lr = getattr(Image, "FLIP_LEFT_RIGHT", Image.Transpose.FLIP_LEFT_RIGHT)
+    a_flip = a.transpose(flip_lr)
     hu_a_flip = _hu_vec(_mask_nonblack(a_flip))
 
     d_same = float(np.linalg.norm(hu_a - hu_b))
