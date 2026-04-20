@@ -11,5 +11,8 @@ data_tetris/
 
 logs/
 
+# Local training runs (large artifacts)
+models/runs/
+
 data/ganis_kievit_data/.DS_Store
 .DS_Store
