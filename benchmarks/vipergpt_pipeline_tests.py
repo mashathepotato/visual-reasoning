@@ -175,6 +175,12 @@ def downsample_to_grid(img: Image.Image, *, upscale: int) -> np.ndarray:
     return arr[oy::upscale, ox::upscale, :].copy()
 
 
+def rgb_mask(grid_rgb: np.ndarray, rgb: Sequence[int]) -> np.ndarray:
+    """Boolean mask of pixels exactly equal to an RGB value in a grid image."""
+    target = np.array(list(rgb), dtype=np.uint8).reshape(1, 1, 3)
+    return np.all(grid_rgb == target, axis=-1)
+
+
 def find_color(grid_rgb: np.ndarray, color: Sequence[int]) -> Tuple[int, int]:
     """Find the first (y,x) location of an exact RGB value in a grid image."""
     target = np.array(color, dtype=np.uint8).reshape(1, 1, 3)
@@ -258,6 +264,7 @@ Pair/shape tools:
 
 Maze/grid tools:
 - downsample_to_grid(image, upscale=UPSCALE) -> np.ndarray uint8 (H,W,3)
+- rgb_mask(grid_rgb, rgb) -> np.ndarray bool (H,W) exact RGB mask (e.g., rgb_mask(grid, TRACE_RGB))
 - find_color(grid_rgb, [R,G,B]) -> (y,x) tuple
 - wall_mask(grid_rgb, thr=10) -> np.ndarray bool (H,W) where True=wall (black)
 - bfs_path_4n(free_mask, start, goal) -> list[(y,x)] shortest path (4-neighborhood)
@@ -282,8 +289,9 @@ SYSTEM_PROMPT = (
     "- For maze solving return ONLY a string of moves using letters U,D,L,R.\n"
     "Tips:\n"
     "- Hu moments are floats: use a distance (e.g., L2) rather than exact equality.\n"
-    "- Mirroring changes shapes: compare A vs B and flip_lr(A) vs B.\n"
+    "- Mirroring changes shapes: compare A vs B and flip_lr(A) vs B; return SAME if the unflipped distance is smaller.\n"
     "- For mazes, use the provided START_RGB/GOAL_RGB/TRACE_RGB and UPSCALE.\n"
+    "- For maze trace validity, do NOT solve the maze; verify the highlighted TRACE_RGB pixels form a continuous path.\n"
 )
 
 
@@ -375,6 +383,7 @@ def _tool_globals(*, upscale: int) -> Dict[str, Any]:
         "l2": l2,
         "flip_lr": flip_lr,
         "downsample_to_grid": downsample_to_grid,
+        "rgb_mask": rgb_mask,
         "find_color": find_color,
         "wall_mask": wall_mask,
         "bfs_path_4n": bfs_path_4n,
