@@ -1,0 +1,29 @@
+{
+  "run": "2026-04-20_ppo_tetris_fm_seed0_smoke",
+  "task": "ppo_tetris_fm",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "9b2d53367f3d18cb5f52706cb4f2ecc2b0e96563",
+  "command": "MPLCONFIGDIR=/tmp/mpl .venv/bin/python scripts/fot/train_ppo_tetris_fm.py --rotator models/rotator_fm_tetris_with_corrector.pth --corrector models/rotator_fm_tetris_corrector.pth --fm-steps 5 --total-timesteps 512 --n-steps 128 --batch-size 64 --out models/runs/2026-04-20_ppo_tetris_fm_seed0_smoke/controller --log-dir logs/runs/2026-04-20_ppo_tetris_fm_seed0_smoke --seed 0",
+  "metrics": {
+    "total_timesteps": 512,
+    "iterations": 4,
+    "time_elapsed_s": 47,
+    "fps": 10,
+    "ep_rew_mean": 0.47588536170212736,
+    "ep_len_mean": 10.808510638297872,
+    "approx_kl": 0.0073203086,
+    "clip_fraction": 0.02734375,
+    "entropy_loss": -2.1340898513793944,
+    "explained_variance": 0.008535146713256836,
+    "learning_rate": 0.0002,
+    "loss": 0.04069952294230461,
+    "n_updates": 30,
+    "policy_gradient_loss": -0.011315882531926036,
+    "value_loss": 0.41577155366539953
+  },
+  "artifacts": {
+    "controller": "models/runs/2026-04-20_ppo_tetris_fm_seed0_smoke/controller.zip",
+    "progress_csv": "logs/runs/2026-04-20_ppo_tetris_fm_seed0_smoke/progress.csv"
+  }
+}
