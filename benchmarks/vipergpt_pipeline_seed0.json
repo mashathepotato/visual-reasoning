@@ -1,0 +1,7475 @@
+{
+  "seed": 0,
+  "tasks": [
+    "3d",
+    "colors",
+    "maze-solve",
+    "maze-trace",
+    "tetris"
+  ],
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tetris": {
+    "name": "tetris",
+    "n": 400,
+    "accuracy": 0.82,
+    "results": [
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      }
+    ]
+  },
+  "colored_shapes": {
+    "name": "colored_shapes",
+    "n": 400,
+    "accuracy": 0.8675,
+    "results": [
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      }
+    ]
+  },
+  "3d_blocks": {
+    "name": "3d_blocks",
+    "n": 78,
+    "accuracy": 0.6538461538461539,
+    "results": [
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": false
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "SAME",
+        "pred": "SAME",
+        "raw": "SAME",
+        "correct": true
+      },
+      {
+        "gt": "DIFFERENT",
+        "pred": "DIFFERENT",
+        "raw": "DIFFERENT",
+        "correct": true
+      }
+    ]
+  },
+  "maze_trace": {
+    "name": "maze_trace",
+    "n": 300,
+    "accuracy": 0.8266666666666667,
+    "results": [
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "NO",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": false
+      },
+      {
+        "gt": "NO",
+        "pred": "NO",
+        "raw": "NO",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      },
+      {
+        "gt": "YES",
+        "pred": "YES",
+        "raw": "YES",
+        "correct": true
+      }
+    ]
+  },
+  "maze_solve": {
+    "name": "maze_solve",
+    "n": 60,
+    "success_rate": 1.0,
+    "results": [
+      {
+        "moves": "RRRRRRRRDDRRRRRRDDDDLLLLDDLLUULLDDLLUUUURRUULLLLDDDDLLDDDDRRDDLLDDDDRRRRRRRRRRUUUURRRRDDLLDDRRRR",
+        "raw": "RRRRRRRRDDRRRRRRDDDDLLLLDDLLUULLDDLLUUUURRUULLLLDDDDLLDDDDRRDDLLDDDDRRRRRRRRRRUUUURRRRDDLLDDRRRR",
+        "success": true,
+        "len": 96
+      },
+      {
+        "moves": "RRDDLLDDRRDDLLDDDDDDRRUUUURRDDDDDDLLDDRRRRRRRRRRRRRR",
+        "raw": "RRDDLLDDRRDDLLDDDDDDRRUUUURRDDDDDDLLDDRRRRRRRRRRRRRR",
+        "success": true,
+        "len": 52
+      },
+      {
+        "moves": "RRDDDDLLDDRRRRRRUUUUUURRDDDDRRUURRRRDDDDLLLLLLDDDDDDLLUUUULLLLDDRRDDDDDDRRUURRDDRRUUUUUUUURRDDRRUURRDDDDLLDDRRDD",
+        "raw": "RRDDDDLLDDRRRRRRUUUUUURRDDDDRRUURRRRDDDDLLLLLLDDDDDDLLUUUULLLLDDRRDDDDDDRRUURRDDRRUUUUUUUURRDDRRUURRDDDDLLDDRRDD",
+        "success": true,
+        "len": 112
+      },
+      {
+        "moves": "RRRRRRDDLLDDLLUULLDDDDDDDDDDRRRRUUUULLUURRRRRRDDRRUUUURRRRDDLLDDDDDDLLLLUULLDDDDLLLLLLDDRRRRRRRRRRUURRRRDDRR",
+        "raw": "RRRRRRDDLLDDLLUULLDDDDDDDDDDRRRRUUUULLUURRRRRRDDRRUUUURRRRDDLLDDDDDDLLLLUULLDDDDLLLLLLDDRRRRRRRRRRUURRRRDDRR",
+        "success": true,
+        "len": 108
+      },
+      {
+        "moves": "RRRRRRDDDDLLLLDDDDRRRRRRDDLLDDDDDDRRUUUURRRRUUUULLUURRRRUULLUULLUURRRRRRDDDDDDDDDDDDDDDD",
+        "raw": "RRRRRRDDDDLLLLDDDDRRRRRRDDLLDDDDDDRRUUUURRRRUUUULLUURRRRUULLUULLUURRRRRRDDDDDDDDDDDDDDDD",
+        "success": true,
+        "len": 88
+      },
+      {
+        "moves": "DDDDDDDDDDRRDDDDLLDDRRRRRRRRUUUULLUURRUULLLLLLUUUURRUUUURRRRDDDDDDRRRRUURRUURRDDDDLLDDDDRRDDLLDDLLLLDDRRRRRR",
+        "raw": "DDDDDDDDDDRRDDDDLLDDRRRRRRRRUUUULLUURRUULLLLLLUUUURRUUUURRRRDDDDDDRRRRUURRUURRDDDDLLDDDDRRDDLLDDLLLLDDRRRRRR",
+        "success": true,
+        "len": 108
+      },
+      {
+        "moves": "RRDDDDLLDDRRDDLLDDDDRRDDRRRRDDRRRRRRRRRR",
+        "raw": "RRDDDDLLDDRRDDLLDDDDRRDDRRRRDDRRRRRRRRRR",
+        "success": true,
+        "len": 40
+      },
+      {
+        "moves": "DDRRUURRRRDDLLDDDDLLDDRRRRUURRUUUUUURRRRRRRRDDDDLLLLDDLLDDDDDDLLDDDDRRRRRRUULLUURRRRDDDD",
+        "raw": "DDRRUURRRRDDLLDDDDLLDDRRRRUURRUUUUUURRRRRRRRDDDDLLLLDDLLDDDDDDLLDDDDRRRRRRUULLUURRRRDDDD",
+        "success": true,
+        "len": 88
+      },
+      {
+        "moves": "RRRRDDDDLLUULLDDDDRRDDRRRRRRRRRRDDRRUURRDDDDDDDD",
+        "raw": "RRRRDDDDLLUULLDDDDRRDDRRRRRRRRRRDDRRUURRDDDDDDDD",
+        "success": true,
+        "len": 48
+      },
+      {
+        "moves": "RRDDRRDDLLDDRRDDDDRRRRRRRRDDRRDDLLDDRRRR",
+        "raw": "RRDDRRDDLLDDRRDDDDRRRRRRRRDDRRDDLLDDRRRR",
+        "success": true,
+        "len": 40
+      },
+      {
+        "moves": "DDDDRRDDLLDDDDDDRRDDRRUUUULLUURRRRRRDDLLDDRRRRRRUUUURRDDRRDDDDLLLLDDRRRR",
+        "raw": "DDDDRRDDLLDDDDDDRRDDRRUUUULLUURRRRRRDDLLDDRRRRRRUUUURRDDRRDDDDLLLLDDRRRR",
+        "success": true,
+        "len": 72
+      },
+      {
+        "moves": "DDRRDDLLDDDDDDDDRRDDLLDDRRRRRRRRUURRDDRRRRUULLUULLUUUULLLLLLLLUURRRRUURRDDRRRRUURRUUUURRDDDDDDLLDDDDDDRRDDDD",
+        "raw": "DDRRDDLLDDDDDDDDRRDDLLDDRRRRRRRRUURRDDRRRRUULLUULLUUUULLLLLLLLUURRRRUURRDDRRRRUURRUUUURRDDDDDDLLDDDDDDRRDDDD",
+        "success": true,
+        "len": 108
+      },
+      {
+        "moves": "DDDDDDDDRRRRRRDDRRUUUURRDDRRDDDDLLLLLLDDLLUULLLLDDDDRRRRRRRRUURRDDRRUURRUUUURRDDDDDD",
+        "raw": "DDDDDDDDRRRRRRDDRRUUUURRDDRRDDDDLLLLLLDDLLUULLLLDDDDRRRRRRRRUURRDDRRUURRUUUURRDDDDDD",
+        "success": true,
+        "len": 84
+      },
+      {
+        "moves": "RRDDLLDDRRDDRRRRDDLLLLDDRRRRDDLLDDRRRRRRDDRRUUUULLLLUUUURRRRDDRRUURRDDDDDDDD",
+        "raw": "RRDDLLDDRRDDRRRRDDLLLLDDRRRRDDLLDDRRRRRRDDRRUUUULLLLUUUURRRRDDRRUURRDDDDDDDD",
+        "success": true,
+        "len": 76
+      },
+      {
+        "moves": "DDRRUURRDDRRRRRRUURRRRDDRRDDDDLLDDRRDDDDLLLLDDRRDDRR",
+        "raw": "DDRRUURRDDRRRRRRUURRRRDDRRDDDDLLDDRRDDDDLLLLDDRRDDRR",
+        "success": true,
+        "len": 52
+      },
+      {
+        "moves": "DDDDRRDDDDRRRRRRRRDDLLLLDDRRRRRRRRRRDDDD",
+        "raw": "DDDDRRDDDDRRRRRRRRDDLLLLDDRRRRRRRRRRDDDD",
+        "success": true,
+        "len": 40
+      },
+      {
+        "moves": "RRRRRRRRDDDDRRUUUURRDDRRRRDDLLDDLLDDLLLLLLDDDDRRRRDDLLDDRRRRUUUUUURRUURRDDDDDDDD",
+        "raw": "RRRRRRRRDDDDRRUUUURRDDRRRRDDLLDDLLDDLLLLLLDDDDRRRRDDLLDDRRRRUUUUUURRUURRDDDDDDDD",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "RRRRRRDDRRUURRRRDDLLDDDDRRRRUURRDDDDLLLLDDLLDDRRDDLLDDRRRRRR",
+        "raw": "RRRRRRDDRRUURRRRDDLLDDDDRRRRUURRDDDDLLLLDDLLDDRRDDLLDDRRRRRR",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "DDDDRRUUUURRDDRRRRUURRDDDDLLDDDDLLDDDDDDRRUURRUUUURRUURRDDDDLLDDRRRRDDLLLLDDRRRR",
+        "raw": "DDDDRRUUUURRDDRRRRUURRDDDDLLDDDDLLDDDDDDRRUURRUUUURRUURRDDDDLLDDRRRRDDLLLLDDRRRR",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "DDRRRRDDLLLLDDRRRRDDLLDDLLDDRRDDDDRRRRRRUUUURRDDRRRRDDRR",
+        "raw": "DDRRRRDDLLLLDDRRRRDDLLDDLLDDRRDDDDRRRRRRUUUURRDDRRRRDDRR",
+        "success": true,
+        "len": 56
+      },
+      {
+        "moves": "RRRRRRDDLLDDRRRRRRDDDDRRUUUUUURRUURRDDDDLLDDRRDDLLDDLLDDDDLLUULLLLDDRRDDRRRRRRRR",
+        "raw": "RRRRRRDDLLDDRRRRRRDDDDRRUUUUUURRUURRDDDDLLDDRRDDLLDDLLDDDDLLUULLLLDDRRDDRRRRRRRR",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "RRDDRRDDLLLLDDDDRRRRRRRRUULLUURRRRDDRRUURRRRDDDDLLDDLLLLDDLLUULLLLLLDDRRDDDDRRRRUURRDDRRRRRR",
+        "raw": "RRDDRRDDLLLLDDDDRRRRRRRRUULLUURRRRDDRRUURRRRDDDDLLDDLLLLDDLLUULLLLLLDDRRDDDDRRRRUURRDDRRRRRR",
+        "success": true,
+        "len": 92
+      },
+      {
+        "moves": "DDRRUURRRRRRRRDDLLDDRRRRRRDDDDRRDDLLDDRRDDDD",
+        "raw": "DDRRUURRRRRRRRDDLLDDRRRRRRDDDDRRDDLLDDRRDDDD",
+        "success": true,
+        "len": 44
+      },
+      {
+        "moves": "DDRRUURRRRRRDDDDDDLLDDRRDDLLLLDDLLDDRRDDRRUUUURRRRRRDDLLLLDDRRRRRRUURRDD",
+        "raw": "DDRRUURRRRRRDDDDDDLLDDRRDDLLLLDDLLDDRRDDRRUUUURRRRRRDDLLLLDDRRRRRRUURRDD",
+        "success": true,
+        "len": 72
+      },
+      {
+        "moves": "DDDDRRRRUULLUURRRRDDRRRRDDRRUUUURRRRDDDDDDDDDDLLDDRRDDLLDDRR",
+        "raw": "DDDDRRRRUULLUURRRRDDRRRRDDRRUUUURRRRDDDDDDDDDDLLDDRRDDLLDDRR",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "RRDDDDLLDDRRDDDDRRDDRRRRDDRRUUUUUURRRRUULLLLLLUURRUUUURRRRDDRRDDDDDDDDDDLLLLDDRRRRDD",
+        "raw": "RRDDDDLLDDRRDDDDRRDDRRRRDDRRUUUUUURRRRUULLLLLLUURRUUUURRRRDDRRDDDDDDDDDDLLLLDDRRRRDD",
+        "success": true,
+        "len": 84
+      },
+      {
+        "moves": "DDRRUURRDDRRDDDDLLLLLLDDRRDDRRDDRRUUUURRDDDDDDLLLLDDRRRRRRUURRRRUULLUURRRRDDDDDD",
+        "raw": "DDRRUURRDDRRDDDDLLLLLLDDRRDDRRDDRRUUUURRDDDDDDLLLLDDRRRRRRUURRRRUULLUURRRRDDDDDD",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "RRDDRRUURRRRRRDDLLDDRRRRDDRRRRDDLLDDDDDDLLLLLLUUUULLDDDDDDRRRRRRRRRR",
+        "raw": "RRDDRRUURRRRRRDDLLDDRRRRDDRRRRDDLLDDDDDDLLLLLLUUUULLDDDDDDRRRRRRRRRR",
+        "success": true,
+        "len": 68
+      },
+      {
+        "moves": "RRDDDDDDRRRRDDRRUURRDDRRUUUULLLLUUUURRDDRRRRDDRRDDLLDDDDRRDDLLLLDDRRRRDD",
+        "raw": "RRDDDDDDRRRRDDRRUURRDDRRUUUULLLLUUUURRDDRRRRDDRRDDLLDDDDRRDDLLLLDDRRRRDD",
+        "success": true,
+        "len": 72
+      },
+      {
+        "moves": "DDDDDDDDRRUUUUUURRRRDDDDRRUURRDDRRUURRDDDDRRDDDDDDLLUULLDDLLLLDDRRRRRRRR",
+        "raw": "DDDDDDDDRRUUUUUURRRRDDDDRRUURRDDRRUURRDDDDRRDDDDDDLLUULLDDLLLLDDRRRRRRRR",
+        "success": true,
+        "len": 72
+      },
+      {
+        "moves": "DDRRUURRDDDDRRUURRRRUURRRRDDLLDDLLDDDDRRDDRRUUUURRDDDDDDLLLLLLDDDDRRRRUURRDD",
+        "raw": "DDRRUURRDDDDRRUURRRRUURRRRDDLLDDLLDDDDRRDDRRUUUURRDDDDDDLLLLLLDDDDRRRRUURRDD",
+        "success": true,
+        "len": 76
+      },
+      {
+        "moves": "RRDDDDRRDDRRRRRRRRRRRRDDDDDDDDLLUUUULLLLUULLLLLLLLLLDDDDRRDDLLDDRRRRRRRRRRUULLLLLLUURRUURRDDRRRRDDDDRRRR",
+        "raw": "RRDDDDRRDDRRRRRRRRRRRRDDDDDDDDLLUUUULLLLUULLLLLLLLLLDDDDRRDDLLDDRRRRRRRRRRUULLLLLLUURRUURRDDRRRRDDDDRRRR",
+        "success": true,
+        "len": 104
+      },
+      {
+        "moves": "RRDDDDRRRRUUUURRRRRRDDLLDDDDLLDDLLDDDDDDLLDDRRRRRRRRUURRRRDD",
+        "raw": "RRDDDDRRRRUUUURRRRRRDDLLDDDDLLDDLLDDDDDDLLDDRRRRRRRRUURRRRDD",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "RRDDLLDDDDRRDDLLDDDDDDRRDDRRRRRRRRRRUULLUULLLLDDLLUULLUURRUURRRRUULLUUUUUURRDDRRRRRRUURRDDDDLLLLDDLLDDDDRRDDRRDDRRDD",
+        "raw": "RRDDLLDDDDRRDDLLDDDDDDRRDDRRRRRRRRRRUULLUULLLLDDLLUULLUURRUURRRRUULLUUUUUURRDDRRRRRRUURRDDDDLLLLDDLLDDDDRRDDRRDDRRDD",
+        "success": true,
+        "len": 116
+      },
+      {
+        "moves": "RRDDLLDDDDDDDDRRRRRRRRRRDDRRRRUULLUUUURRUULLUUUURRDDRRDDDDDDDDDDDDDD",
+        "raw": "RRDDLLDDDDDDDDRRRRRRRRRRDDRRRRUULLUUUURRUULLUUUURRDDRRDDDDDDDDDDDDDD",
+        "success": true,
+        "len": 68
+      },
+      {
+        "moves": "DDDDDDDDRRDDDDDDLLDDRRRRUURRRRDDRRRRRRUUUURRDDDD",
+        "raw": "DDDDDDDDRRDDDDDDLLDDRRRRUURRRRDDRRRRRRUUUURRDDDD",
+        "success": true,
+        "len": 48
+      },
+      {
+        "moves": "RRRRRRRRDDDDRRUUUURRRRRRDDDDDDDDDDLLLLUULLLLUULLLLUURRUULLLLDDLLDDRRDDDDLLDDRRDDLLDDRRRRUUUURRRRRRDDDDRRUUUURRDDDDRR",
+        "raw": "RRRRRRRRDDDDRRUUUURRRRRRDDDDDDDDDDLLLLUULLLLUULLLLUURRUULLLLDDLLDDRRDDDDLLDDRRDDLLDDRRRRUUUURRRRRRDDDDRRUUUURRDDDDRR",
+        "success": true,
+        "len": 116
+      },
+      {
+        "moves": "DDRRRRDDDDLLLLDDRRRRRRDDDDDDDDRRUURRDDRRRRUULLUULLLLUURRUURRRRUURRDDDDLLDDRRDDDD",
+        "raw": "DDRRRRDDDDLLLLDDRRRRRRDDDDDDDDRRUURRDDRRRRUULLUULLLLUURRUURRRRUURRDDDDLLDDRRDDDD",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "DDDDDDRRRRRRUULLUURRRRRRUURRRRRRDDLLLLDDLLDDRRRRDDRRDDLLDDRRDDLLDDRR",
+        "raw": "DDDDDDRRRRRRUULLUURRRRRRUURRRRRRDDLLLLDDLLDDRRRRDDRRDDLLDDRRDDLLDDRR",
+        "success": true,
+        "len": 68
+      },
+      {
+        "moves": "DDDDDDDDRRRRRRRRRRDDRRUUUURRDDRRDDDDDDDD",
+        "raw": "DDDDDDDDRRRRRRRRRRDDRRUUUURRDDRRDDDDDDDD",
+        "success": true,
+        "len": 40
+      },
+      {
+        "moves": "RRRRDDDDLLDDLLDDRRDDDDDDLLDDRRRRUUUUUUUUUURRUURRUULLUURRRRDDDDRRRRUULLUURRRRDDDDDDDDDDLLDDRRDDDD",
+        "raw": "RRRRDDDDLLDDLLDDRRDDDDDDLLDDRRRRUUUUUUUUUURRUURRUULLUURRRRDDDDRRRRUULLUURRRRDDDDDDDDDDLLDDRRDDDD",
+        "success": true,
+        "len": 96
+      },
+      {
+        "moves": "DDRRRRDDLLLLDDRRRRRRDDRRRRUURRRRRRDDDDLLUULLDDLLLLDDDDLLLLUULLLLDDRRDDRRRRRRRRUUUURRDDRRUURRDDDD",
+        "raw": "DDRRRRDDLLLLDDRRRRRRDDRRRRUURRRRRRDDDDLLUULLDDLLLLDDDDLLLLUULLLLDDRRDDRRRRRRRRUUUURRDDRRUURRDDDD",
+        "success": true,
+        "len": 96
+      },
+      {
+        "moves": "DDRRUURRRRRRDDLLLLDDLLDDDDDDLLDDDDRRDDRRUURRDDRRUURRRRDDRRRR",
+        "raw": "DDRRUURRRRRRDDLLLLDDLLDDDDDDLLDDDDRRDDRRUURRDDRRUURRRRDDRRRR",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "DDDDRRUURRRRRRRRDDLLDDRRRRDDLLLLDDLLDDRRRRDDLLDDRRRRUURRRRDD",
+        "raw": "DDDDRRUURRRRRRRRDDLLDDRRRRDDLLLLDDLLDDRRRRDDLLDDRRRRUURRRRDD",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "DDRRUURRDDDDLLLLDDDDDDDDRRUURRDDDDLLDDRRRRRRRRRRUUUURRUURRDDDDDD",
+        "raw": "DDRRUURRDDDDLLLLDDDDDDDDRRUURRDDDDLLDDRRRRRRRRRRUUUURRUURRDDDDDD",
+        "success": true,
+        "len": 64
+      },
+      {
+        "moves": "DDDDDDRRUURRUUUURRRRDDLLDDDDLLDDDDRRRRDDDDLLLLLLLLDDRRRRRRRRRRRRRRRR",
+        "raw": "DDDDDDRRUURRUUUURRRRDDLLDDDDLLDDDDRRRRDDDDLLLLLLLLDDRRRRRRRRRRRRRRRR",
+        "success": true,
+        "len": 68
+      },
+      {
+        "moves": "RRDDDDLLDDRRRRUUUURRRRUURRDDRRDDLLDDLLDDDDDDDDDDRRUUUUUUUURRDDDDDDDDRRUUUURRDDDD",
+        "raw": "RRDDDDLLDDRRRRUUUURRRRUURRDDRRDDLLDDLLDDDDDDDDDDRRUUUUUUUURRDDDDDDDDRRUUUURRDDDD",
+        "success": true,
+        "len": 80
+      },
+      {
+        "moves": "RRRRDDLLLLDDDDRRDDDDLLDDRRRRRRUULLUUUUUURRUURRRRDDLLDDLLDDRRRRRRDDLLLLDDDDDDRRUUUURRRRUUUURRDDDDDDDD",
+        "raw": "RRRRDDLLLLDDDDRRDDDDLLDDRRRRRRUULLUUUUUURRUURRRRDDLLDDLLDDRRRRRRDDLLLLDDDDDDRRUUUURRRRUUUURRDDDDDDDD",
+        "success": true,
+        "len": 100
+      },
+      {
+        "moves": "RRDDRRUURRDDRRDDDDDDLLUULLLLLLDDDDRRUURRDDRRRRRRDDLLDDRRRRRRDDRR",
+        "raw": "RRDDRRUURRDDRRDDDDDDLLUULLLLLLDDDDRRUURRDDRRRRRRDDLLDDRRRRRRDDRR",
+        "success": true,
+        "len": 64
+      },
+      {
+        "moves": "RRRRDDRRDDLLLLLLDDDDDDRRDDRRUURRDDRRUURRRRRRRRDDLLLLDDLLLLLLLLLLLLDDRRRRRRRRRRRRRRRR",
+        "raw": "RRRRDDRRDDLLLLLLDDDDDDRRDDRRUURRDDRRUURRRRRRRRDDLLLLDDLLLLLLLLLLLLDDRRRRRRRRRRRRRRRR",
+        "success": true,
+        "len": 84
+      },
+      {
+        "moves": "RRDDLLDDDDRRUURRRRDDDDLLDDRRRRUUUUUURRDDDDDDDDLLLLDDDDRRUURRDDRRUUUUUURRUUUUUURRDDDDDDDDLLDDRRDD",
+        "raw": "RRDDLLDDDDRRUURRRRDDDDLLDDRRRRUUUUUURRDDDDDDDDLLLLDDDDRRUURRDDRRUUUUUURRUUUUUURRDDDDDDDDLLDDRRDD",
+        "success": true,
+        "len": 96
+      },
+      {
+        "moves": "DDDDDDRRDDLLDDRRDDLLDDRRRRDDRRRRUURRUUUURRRRUULLLLLLUURRRRRRUULLUURRUURRDDDDDDDDDDDDDDLLUULLDDDDRRRR",
+        "raw": "DDDDDDRRDDLLDDRRDDLLDDRRRRDDRRRRUURRUUUURRRRUULLLLLLUURRRRRRUULLUURRUURRDDDDDDDDDDDDDDLLUULLDDDDRRRR",
+        "success": true,
+        "len": 100
+      },
+      {
+        "moves": "RRDDDDRRDDDDRRUURRRRRRUUUURRRRDDLLDDDDLLDDDDLLDDDDRRRRUURRDD",
+        "raw": "RRDDDDRRDDDDRRUURRRRRRUUUURRRRDDLLDDDDLLDDDDLLDDDDRRRRUURRDD",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "DDDDDDDDRRUURRUURRUULLUURRRRRRDDRRDDLLDDRRDDLLLLDDDDDDDDRRRRRRUURRDD",
+        "raw": "DDDDDDDDRRUURRUURRUULLUURRRRRRDDRRDDLLDDRRDDLLLLDDDDDDDDRRRRRRUURRDD",
+        "success": true,
+        "len": 68
+      },
+      {
+        "moves": "DDRRRRUURRDDDDLLLLLLDDDDDDDDRRRRDDRRUURRDDDDRRRRRRRR",
+        "raw": "DDRRRRUURRDDDDLLLLLLDDDDDDDDRRRRDDRRUURRDDDDRRRRRRRR",
+        "success": true,
+        "len": 52
+      },
+      {
+        "moves": "RRDDLLDDDDRRDDDDRRRRUUUURRDDRRRRUUUURRUURRDDDDDDDDDDDDLLDDRR",
+        "raw": "RRDDLLDDDDRRDDDDRRRRUUUURRDDRRRRUUUURRUURRDDDDDDDDDDDDLLDDRR",
+        "success": true,
+        "len": 60
+      },
+      {
+        "moves": "RRRRRRRRDDLLLLLLDDDDLLDDRRRRUUUURRRRRRDDLLDDDDDDRRUURRRRDDLLDDLLDDRRRRUURRDD",
+        "raw": "RRRRRRRRDDLLLLLLDDDDLLDDRRRRUUUURRRRRRDDLLDDDDDDRRUURRRRDDLLDDLLDDRRRRUURRDD",
+        "success": true,
+        "len": 76
+      },
+      {
+        "moves": "RRRRRRRRDDDDRRRRRRDDRRDDLLDDLLDDDDLLDDRRRRUURRDD",
+        "raw": "RRRRRRRRDDDDRRRRRRDDRRDDLLDDLLDDDDLLDDRRRRUURRDD",
+        "success": true,
+        "len": 48
+      },
+      {
+        "moves": "DDRRRRDDDDRRDDLLLLDDLLDDRRDDDDRRRRRRUULLUUUURRRRUUUULLUUUUUURRRRRRRRDDLLDDDDDDLLDDRRDDDDLLLLDDRRRRRR",
+        "raw": "DDRRRRDDDDRRDDLLLLDDLLDDRRDDDDRRRRRRUULLUUUURRRRUUUULLUUUUUURRRRRRRRDDLLDDDDDDLLDDRRDDDDLLLLDDRRRRRR",
+        "success": true,
+        "len": 100
+      },
+      {
+        "moves": "DDDDDDDDDDDDRRDDRRUURRUUUUUUUULLDDLLUUUUUURRDDRRRRUURRRRRRRRDDLLDDLLUULLDDDDDDRRDDRRDDRRDDDD",
+        "raw": "DDDDDDDDDDDDRRDDRRUURRUUUUUUUULLDDLLUUUUUURRDDRRRRUURRRRRRRRDDLLDDLLUULLDDDDDDRRDDRRDDRRDDDD",
+        "success": true,
+        "len": 92
+      }
+    ]
+  }
+}
