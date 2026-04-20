@@ -29,12 +29,19 @@ class SATv2Dataset(Dataset):
         image_index: int = 0,
         max_samples: Optional[int] = None,
         cache_dir: Optional[str] = None,
+        streaming: bool = False,
     ):
         load_dataset = _lazy_load_dataset()
-        ds = load_dataset("array/SAT-v2", split=split, cache_dir=cache_dir)
-        if max_samples is not None:
-            ds = ds.select(range(int(max_samples)))
-        self.ds = ds
+        if streaming:
+            if max_samples is None:
+                raise ValueError("streaming=True requires max_samples (finite dataset length).")
+            it = load_dataset("array/SAT-v2", split=split, cache_dir=cache_dir, streaming=True)
+            self.ds = list(it.take(int(max_samples)))
+        else:
+            ds = load_dataset("array/SAT-v2", split=split, cache_dir=cache_dir)
+            if max_samples is not None:
+                ds = ds.select(range(int(max_samples)))
+            self.ds = ds
         self.image_size = int(image_size)
         self.image_index = int(image_index)
 
@@ -165,4 +172,3 @@ class VStarBenchWithBboxDataset(Dataset):
                 "original_image_size": orig_size,
             },
         }
-

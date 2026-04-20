@@ -21,6 +21,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--val-split", type=str, default="val")
     p.add_argument("--cache-dir", type=str, default=None)
     p.add_argument("--image-size", type=int, default=256)
+    p.add_argument("--streaming", action="store_true", help="Use HF streaming (requires --max-train/--max-val).")
     p.add_argument("--max-train", type=int, default=None)
     p.add_argument("--max-val", type=int, default=2000)
 
@@ -100,8 +101,20 @@ def main() -> None:
     device = get_device()
     print("Device:", device)
 
-    train_ds = SATv2Dataset(split=args.train_split, image_size=args.image_size, max_samples=args.max_train, cache_dir=args.cache_dir)
-    val_ds = SATv2Dataset(split=args.val_split, image_size=args.image_size, max_samples=args.max_val, cache_dir=args.cache_dir)
+    train_ds = SATv2Dataset(
+        split=args.train_split,
+        image_size=args.image_size,
+        max_samples=args.max_train,
+        cache_dir=args.cache_dir,
+        streaming=bool(args.streaming),
+    )
+    val_ds = SATv2Dataset(
+        split=args.val_split,
+        image_size=args.image_size,
+        max_samples=args.max_val,
+        cache_dir=args.cache_dir,
+        streaming=bool(args.streaming),
+    )
 
     train_loader = DataLoader(
         train_ds,
@@ -169,4 +182,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
