@@ -1,7 +1,7 @@
 digraph Inference {
   graph [
     rankdir=TB,
-    fontsize=18,
+    fontsize=16,
     fontname="Helvetica",
     labelloc="t",
     label="FoT Inference: Controller–Sketcher Loop",
@@ -68,7 +68,6 @@ digraph Inference {
     controller [
       label=<
         <FONT FACE="Helvetica">Controller</FONT><BR/>
-        <FONT FACE="Helvetica">VLM + CoT</FONT><BR/>
         <FONT FACE="Helvetica">selects action</FONT><BR/>
         <FONT FACE="Times New Roman" POINT-SIZE="18"><I>a</I><SUB><I>k</I></SUB></FONT>
       >
@@ -77,7 +76,6 @@ digraph Inference {
     sketcher [
       label=<
         <FONT FACE="Helvetica">Sketcher</FONT><BR/>
-        <FONT FACE="Helvetica">Generative model</FONT><BR/>
         <FONT FACE="Helvetica">produces visual</FONT><BR/>
         <FONT FACE="Times New Roman" POINT-SIZE="18"><I>v</I><SUB><I>k</I></SUB></FONT>
       >
