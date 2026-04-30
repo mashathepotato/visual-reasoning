@@ -1,6 +1,6 @@
 digraph Inference {
   graph [
-    rankdir=LR,
+    rankdir=TB,
     fontsize=18,
     fontname="Helvetica",
     labelloc="t",
@@ -8,8 +8,9 @@ digraph Inference {
     bgcolor="white",
     compound=true,
     splines=ortho,
-    nodesep=0.35,
-    ranksep=0.65
+    nodesep=0.25,
+    ranksep=0.45,
+    margin=0.04
   ];
 
   node [
@@ -19,7 +20,7 @@ digraph Inference {
     color="#2A4A7B",
     penwidth=1.2,
     fontname="Helvetica",
-    fontsize=12
+    fontsize=11
   ];
 
   edge [
@@ -32,57 +33,32 @@ digraph Inference {
 
   dataset [
     label=<
-      <FONT FACE="Helvetica">Dataset</FONT><BR/>
-      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>𝒟</I></FONT>
-    >,
-    fillcolor="#F5F7FA"
-  ];
-
-  sample [
-    label=<
-      <FONT FACE="Helvetica">Sample</FONT><BR/>
-      <FONT FACE="Times New Roman" POINT-SIZE="20">(<I>I</I>, <I>o</I>)</FONT>
-    >,
-    fillcolor="#F5F7FA"
-  ];
-
-  input [
-    label=<
-      <FONT FACE="Helvetica">Input image</FONT><BR/>
-      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>I</I></FONT>
-    >,
-    fillcolor="#F5F7FA"
-  ];
-
-  truth [
-    label=<
-      <FONT FACE="Helvetica">Ground truth label</FONT><BR/>
-      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I></FONT>
+      <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="0" CELLSPACING="0">
+        <TR>
+          <TD ALIGN="LEFT"><FONT FACE="Helvetica">Dataset</FONT></TD>
+          <TD ALIGN="RIGHT"><FONT FACE="Times New Roman" POINT-SIZE="20"><I>𝒟</I></FONT></TD>
+        </TR>
+        <TR>
+          <TD ALIGN="CENTER" COLSPAN="2">
+            <FONT FACE="Times New Roman" POINT-SIZE="20">(<I>I</I>, <I>o</I>)</FONT>
+          </TD>
+        </TR>
+      </TABLE>
     >,
     fillcolor="#F5F7FA"
   ];
 
   output [
     label=<
-      <FONT FACE="Helvetica">Predicted output</FONT><BR/>
+      <FONT FACE="Helvetica">Prediction</FONT><BR/>
       <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I>′</FONT>
-    >,
-    fillcolor="#F5F7FA"
-  ];
-
-  compare [
-    label=<
-      <FONT FACE="Helvetica">Compare (train / eval)</FONT><BR/>
-      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I>′</FONT>
-      <FONT FACE="Helvetica"> vs </FONT>
-      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I></FONT><BR/>
-      <FONT FACE="Helvetica">(metric / loss)</FONT>
     >,
     fillcolor="#F5F7FA"
   ];
 
   subgraph cluster_loop {
     label="Inference loop";
+    labeljust="r";
     fontname="Helvetica";
     fontsize=14;
     color="#7AA6D8";
@@ -92,35 +68,31 @@ digraph Inference {
     controller [
       label=<
         <FONT FACE="Helvetica">Controller</FONT><BR/>
-        <FONT FACE="Helvetica">(VLM + CoT)</FONT><BR/>
-        <FONT FACE="Helvetica">selects action </FONT>
-        <FONT FACE="Times New Roman" POINT-SIZE="16"><I>a</I><SUB><I>k</I></SUB></FONT>
+        <FONT FACE="Helvetica">VLM + CoT</FONT><BR/>
+        <FONT FACE="Helvetica">selects action</FONT><BR/>
+        <FONT FACE="Times New Roman" POINT-SIZE="18"><I>a</I><SUB><I>k</I></SUB></FONT>
       >
     ];
 
     sketcher [
       label=<
         <FONT FACE="Helvetica">Sketcher</FONT><BR/>
-        <FONT FACE="Helvetica">(Generative model)</FONT><BR/>
-        <FONT FACE="Helvetica">produces visual </FONT>
-        <FONT FACE="Times New Roman" POINT-SIZE="16"><I>v</I><SUB><I>k</I></SUB></FONT>
+        <FONT FACE="Helvetica">Generative model</FONT><BR/>
+        <FONT FACE="Helvetica">produces visual</FONT><BR/>
+        <FONT FACE="Times New Roman" POINT-SIZE="18"><I>v</I><SUB><I>k</I></SUB></FONT>
       >
     ];
 
-    controller:ne -> sketcher:nw;
-    sketcher:sw -> controller:se;
+    { rank=same; controller; sketcher; }
+
+    controller:ne -> sketcher:nw [constraint=false];
+    sketcher:sw -> controller:se [constraint=false];
   }
 
-  dataset -> sample;
-  sample -> input;
-  sample -> truth;
+  { rank=source; dataset; }
+  { rank=sink; output; }
 
-  { rank=same; input; truth; }
-
-  input -> controller;
-  input -> sketcher [style=dashed, constraint=false];
-  controller -> output;
-
-  output -> compare;
-  truth -> compare;
+  dataset:s -> controller:nw;
+  dataset -> sketcher [style=invis, weight=1];
+  controller:s -> output:n [minlen=2];
 }
