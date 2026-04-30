@@ -1,0 +1,54 @@
+digraph Inference {
+  graph [
+    rankdir=TB,
+    fontsize=18,
+    fontname="Helvetica",
+    labelloc="t",
+    label="FoT Inference: Controller–Sketcher Loop",
+    bgcolor="white",
+    compound=true,
+    splines=ortho,
+    nodesep=0.35,
+    ranksep=0.65
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fillcolor="white",
+    color="#2A4A7B",
+    penwidth=1.2,
+    fontname="Helvetica",
+    fontsize=12
+  ];
+
+  edge [
+    color="#2A4A7B",
+    penwidth=1.2,
+    arrowsize=0.9
+  ];
+
+  input [label="Input\nimage I + task prompt", fillcolor="#F5F7FA"];
+  output [label="Predicted output\no'", fillcolor="#F5F7FA"];
+
+  subgraph cluster_loop {
+    label="Inference loop (repeat until stop)";
+    fontname="Helvetica";
+    fontsize=14;
+    color="#7AA6D8";
+    style="rounded,filled";
+    fillcolor="#EAF2FF";
+
+    controller [label="Controller\n(VLM + CoT)\nselects action a_k"];
+    sketcher [label="Sketcher\n(Generative model)\nproduces visual v_k"];
+
+    { rank=same; controller; sketcher; }
+
+    controller -> sketcher;
+    sketcher -> controller;
+  }
+
+  input -> controller;
+  controller -> output [minlen=2];
+  input -> sketcher [style=dashed, constraint=false];
+}
