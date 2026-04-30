@@ -1,6 +1,6 @@
 digraph Inference {
   graph [
-    rankdir=TB,
+    rankdir=LR,
     fontsize=18,
     fontname="Helvetica",
     labelloc="t",
@@ -25,30 +25,102 @@ digraph Inference {
   edge [
     color="#2A4A7B",
     penwidth=1.2,
-    arrowsize=0.9
+    arrowsize=0.9,
+    fontname="Helvetica",
+    fontsize=10
   ];
 
-  input [label="Input\nimage I + task prompt", fillcolor="#F5F7FA"];
-  output [label="Predicted output\no'", fillcolor="#F5F7FA"];
+  dataset [
+    label=<
+      <FONT FACE="Helvetica">Dataset</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>𝒟</I></FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
+
+  sample [
+    label=<
+      <FONT FACE="Helvetica">Sample</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20">(<I>I</I>, <I>o</I>)</FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
+
+  input [
+    label=<
+      <FONT FACE="Helvetica">Input image</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>I</I></FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
+
+  truth [
+    label=<
+      <FONT FACE="Helvetica">Ground truth label</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I></FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
+
+  output [
+    label=<
+      <FONT FACE="Helvetica">Predicted output</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I>′</FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
+
+  compare [
+    label=<
+      <FONT FACE="Helvetica">Compare (train / eval)</FONT><BR/>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I>′</FONT>
+      <FONT FACE="Helvetica"> vs </FONT>
+      <FONT FACE="Times New Roman" POINT-SIZE="20"><I>o</I></FONT><BR/>
+      <FONT FACE="Helvetica">(metric / loss)</FONT>
+    >,
+    fillcolor="#F5F7FA"
+  ];
 
   subgraph cluster_loop {
-    label="Inference loop (repeat until stop)";
+    label="Inference loop";
     fontname="Helvetica";
     fontsize=14;
     color="#7AA6D8";
     style="rounded,filled";
     fillcolor="#EAF2FF";
 
-    controller [label="Controller\n(VLM + CoT)\nselects action a_k"];
-    sketcher [label="Sketcher\n(Generative model)\nproduces visual v_k"];
+    controller [
+      label=<
+        <FONT FACE="Helvetica">Controller</FONT><BR/>
+        <FONT FACE="Helvetica">(VLM + CoT)</FONT><BR/>
+        <FONT FACE="Helvetica">selects action </FONT>
+        <FONT FACE="Times New Roman" POINT-SIZE="16"><I>a</I><SUB><I>k</I></SUB></FONT>
+      >
+    ];
 
-    { rank=same; controller; sketcher; }
+    sketcher [
+      label=<
+        <FONT FACE="Helvetica">Sketcher</FONT><BR/>
+        <FONT FACE="Helvetica">(Generative model)</FONT><BR/>
+        <FONT FACE="Helvetica">produces visual </FONT>
+        <FONT FACE="Times New Roman" POINT-SIZE="16"><I>v</I><SUB><I>k</I></SUB></FONT>
+      >
+    ];
 
-    controller -> sketcher;
-    sketcher -> controller;
+    controller:ne -> sketcher:nw;
+    sketcher:sw -> controller:se;
   }
 
+  dataset -> sample;
+  sample -> input;
+  sample -> truth;
+
+  { rank=same; input; truth; }
+
   input -> controller;
-  controller -> output [minlen=2];
   input -> sketcher [style=dashed, constraint=false];
+  controller -> output;
+
+  output -> compare;
+  truth -> compare;
 }
