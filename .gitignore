@@ -17,4 +17,8 @@ models/runs/
 data/ganis_kievit_data/.DS_Store
 .DS_Store
 
+# Editor / tool caches
+.claude/
+~/
+
 paper/
