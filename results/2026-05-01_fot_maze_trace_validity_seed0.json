@@ -1,0 +1,23 @@
+{
+  "run": "2026-05-01_fot_maze_trace_validity_seed0",
+  "task": "fot_maze_trace_validity",
+  "seed": 0,
+  "device": "cpu",
+  "code_commit": "1c6ad4902cb09e69de753c3d8aa6f9a3d19e20bd",
+  "command": "MPLCONFIGDIR=/tmp/mpl .venv/bin/python scripts/fot/eval_maze_trace_validity.py --method fot --rollout sketcher --device cpu --sketcher models/runs/2026-05-01_fm_maze_sketcher_seed0_v2/sketcher.pth --n 500 --seed 0 --calibrate-n 200 --calibrate-seed 1",
+  "metrics": {
+    "n": 500,
+    "accuracy": 0.618,
+    "auc": 0.622445384073291,
+    "threshold": 0.37118908762931824,
+    "calibrated": true,
+    "calibrate_seed": 1,
+    "calibrate_n": 200,
+    "calibrate_best_acc": 0.64,
+    "rollout": "sketcher"
+  },
+  "artifacts": {
+    "sketcher": "models/runs/2026-05-01_fm_maze_sketcher_seed0_v2/sketcher.pth"
+  }
+}
+
