@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import argparse
+from functools import partial
 from pathlib import Path
 from typing import Dict, Optional, Tuple
 
@@ -132,14 +133,14 @@ def main() -> None:
         batch_size=args.batch_size,
         shuffle=True,
         num_workers=args.num_workers,
-        collate_fn=lambda b: collate_fn(b, text_buckets=args.text_buckets, text_max_len=args.text_max_len),
+        collate_fn=partial(collate_fn, text_buckets=args.text_buckets, text_max_len=args.text_max_len),
     )
     val_loader = DataLoader(
         val_ds,
         batch_size=args.batch_size,
         shuffle=False,
         num_workers=args.num_workers,
-        collate_fn=lambda b: collate_fn(b, text_buckets=args.text_buckets, text_max_len=args.text_max_len),
+        collate_fn=partial(collate_fn, text_buckets=args.text_buckets, text_max_len=args.text_max_len),
     )
 
     model = FoTHeatmapMCQModel(
