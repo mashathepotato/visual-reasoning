@@ -272,6 +272,10 @@ class Metrics:
     method: Method
     threshold: float
     rollout: str
+    calibrated: bool
+    calibrate_seed: int
+    calibrate_n: int
+    calibrate_best_acc: float
     sketcher: str
     controller: str
     device: str
@@ -291,6 +295,8 @@ def parse_args() -> argparse.Namespace:
         default=0.5,
         help="Score threshold for mapping scores -> YES/NO (FoT method only).",
     )
+    p.add_argument("--calibrate-seed", type=int, default=1, help="Seed for threshold calibration dataset (FoT only).")
+    p.add_argument("--calibrate-n", type=int, default=0, help="If >0, calibrate threshold on this many samples.")
     p.add_argument("--sketcher", type=str, default="models/runs/2026-04-20_fm_maze_sketcher/sketcher.pth")
     p.add_argument("--controller", type=str, default="", help="Required if --rollout controller")
     p.add_argument("--device", type=str, default="cpu", help="Torch device for FoT rollout (default: cpu).")
@@ -305,8 +311,9 @@ def main() -> None:
     # `build_maze_trace_samples` expects `random.Random`; seed compatibility:
     import random
 
-    py_rng = random.Random(int(args.seed))
-    samples = build_maze_trace_samples(py_rng, int(args.n), maze_cells=int(args.maze_cells), upscale=int(args.upscale))
+    def build_samples(seed: int, n: int):
+        py_rng = random.Random(int(seed))
+        return build_maze_trace_samples(py_rng, int(n), maze_cells=int(args.maze_cells), upscale=int(args.upscale))
 
     y_true: List[int] = []
     y_score: List[float] = []
@@ -326,6 +333,49 @@ def main() -> None:
             rollout=str(args.rollout),  # type: ignore[arg-type]
             controller_path=controller_path,
         )
+
+    threshold = float(args.threshold)
+    calibrated = False
+    calibrate_best_acc = float("nan")
+    if method == "fot" and int(args.calibrate_n) > 0:
+        assert solver is not None
+        calibrated = True
+
+        val_scores: List[float] = []
+        val_true: List[int] = []
+        for img, gt in build_samples(int(args.calibrate_seed), int(args.calibrate_n)):
+            gt_i = 1 if gt == "YES" else 0
+            grid, start, goal, trace_grid = _extract_maze_from_image(img, upscale=int(args.upscale))
+            trace_pred_64, _ = solver.rollout_trace(grid=grid, start=start, goal=goal)
+
+            import torch
+
+            from utils.fot.maze_ops import resize_nn
+
+            trace_obs = trace_grid.astype(np.float32)
+            trace_obs[start] = 1.0
+            trace_obs[goal] = 1.0
+            trace_obs_64 = resize_nn(torch.tensor(trace_obs).float(), 64).detach().cpu().numpy()  # (H,W)
+            score = _dice_soft(trace_pred_64, trace_obs_64)
+
+            val_scores.append(float(score))
+            val_true.append(gt_i)
+
+        # Pick the threshold that maximizes calibration accuracy (ties -> higher threshold).
+        val_scores_a = np.asarray(val_scores, dtype=np.float32)
+        val_true_a = np.asarray(val_true, dtype=np.int32)
+        best_acc = -1.0
+        best_th = threshold
+        for th in np.unique(val_scores_a):
+            pred = (val_scores_a >= th).astype(np.int32)
+            acc = float(np.mean(pred == val_true_a))
+            if acc > best_acc or (acc == best_acc and float(th) > float(best_th)):
+                best_acc = acc
+                best_th = float(th)
+        threshold = float(best_th)
+        calibrate_best_acc = float(best_acc)
+
+    samples = build_samples(int(args.seed), int(args.n))
 
     t0 = time.time()
     for i, (img, gt) in enumerate(samples):
@@ -348,7 +398,7 @@ def main() -> None:
             trace_obs_64 = resize_nn(torch.tensor(trace_obs).float(), 64).detach().cpu().numpy()  # (H,W)
 
             score = _dice_soft(trace_pred_64, trace_obs_64)
-            pred = "YES" if float(score) >= float(args.threshold) else "NO"
+            pred = "YES" if float(score) >= threshold else "NO"
 
         y_true.append(gt_i)
         y_pred.append(pred)
@@ -367,8 +417,12 @@ def main() -> None:
         maze_cells=int(args.maze_cells),
         upscale=int(args.upscale),
         method=method,
-        threshold=float(args.threshold),
+        threshold=float(threshold),
         rollout=str(args.rollout),
+        calibrated=bool(calibrated),
+        calibrate_seed=int(args.calibrate_seed),
+        calibrate_n=int(args.calibrate_n),
+        calibrate_best_acc=float(calibrate_best_acc),
         sketcher=str(sketcher_path),
         controller=str(controller_path) if controller_path is not None else "",
         device=str(args.device),
