@@ -1,0 +1,119 @@
+# PolyPizza Barista — Ingredient List (100)
+
+## Doughs & Bases
+1. Sourdough base
+2. Neapolitan dough
+3. Whole wheat dough
+4. Cauliflower crust
+5. Gluten-free flatbread
+6. Focaccia base
+7. Stuffed-crust dough
+8. Cornmeal crust
+9. Squid-ink dough
+10. Brioche base
+
+## Sauces
+11. San Marzano tomato sauce
+12. White garlic cream sauce
+13. Pesto genovese
+14. BBQ sauce
+15. Spicy arrabbiata
+16. Truffle cream
+17. Romesco
+18. Harissa paste
+19. Chimichurri
+20. Hot honey drizzle
+
+## Cheeses
+21. Fresh mozzarella (fior di latte)
+22. Buffalo mozzarella
+23. Parmigiano-Reggiano
+24. Pecorino romano
+25. Gorgonzola
+26. Ricotta
+27. Burrata
+28. Smoked scamorza
+29. Feta
+30. Goat cheese
+31. Provolone
+32. Cheddar
+33. Vegan cashew mozzarella
+
+## Cured Meats
+34. Pepperoni
+35. Spicy 'nduja
+36. Prosciutto di Parma
+37. Speck
+38. Soppressata
+39. Salami picante
+40. Bresaola
+41. Capicola
+42. Pancetta
+43. Mortadella
+
+## Other Proteins
+44. Italian sausage crumble
+45. Meatballs
+46. Grilled chicken
+47. Anchovies
+48. Shrimp
+49. Smoked salmon
+50. Tuna (oil-packed)
+51. Clams
+52. Bacon lardons
+53. Plant-based pepperoni
+54. Tofu crumble
+
+## Vegetables
+55. Cremini mushrooms
+56. Wild mushrooms (porcini, chanterelle)
+57. Roasted red peppers
+58. Cherry tomatoes
+59. Sun-dried tomatoes
+60. Red onion
+61. Caramelized onions
+62. Black olives
+63. Castelvetrano olives
+64. Capers
+65. Artichoke hearts
+66. Baby spinach
+67. Arugula
+68. Kale
+69. Roasted garlic
+70. Eggplant
+71. Zucchini ribbons
+72. Corn kernels
+73. Roasted butternut squash
+74. Pickled jalapeños
+75. Fresh basil
+76. Charred broccolini
+77. Brussels sprouts
+78. Fennel shavings
+
+## Fruits
+79. Fresh figs
+80. Pear slices
+81. Pineapple
+82. Apple
+83. Pomegranate seeds
+84. Lemon zest
+
+## Nuts, Seeds & Crunch
+85. Toasted pine nuts
+86. Walnuts
+87. Pistachios
+88. Sesame seeds
+89. Chili flakes
+90. Crispy shallots
+
+## Eggs & Finishing
+91. Cracked egg (sunny-side)
+92. Quail egg
+93. Truffle oil
+94. Extra virgin olive oil
+95. Balsamic glaze
+96. Aged balsamic
+97. Flake sea salt
+98. Cracked black pepper
+99. Microgreens
+100. Edible flowers
