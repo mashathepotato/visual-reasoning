@@ -6,6 +6,8 @@ import statistics
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Tuple
 
+from .metrics import mean_t_ci
+
 
 def _read_json(path: Path) -> Dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
@@ -62,9 +64,13 @@ def aggregate_run_directories(run_directories: Iterable[Path]) -> Dict[str, Any]
             if not all(isinstance(value, (int, float)) for value in values):
                 continue
             numeric = [float(value) for value in values]
+            ci_low, ci_high = mean_t_ci(numeric)
             aggregated[split][metric] = {
                 "mean": statistics.fmean(numeric),
                 "std": statistics.stdev(numeric) if len(numeric) > 1 else 0.0,
+                "ci95_low": ci_low,
+                "ci95_high": ci_high,
+                "ci_method": "student_t_over_independent_seeds" if len(numeric) > 1 else "undefined_single_seed",
                 "n_seeds": len(numeric),
             }
 

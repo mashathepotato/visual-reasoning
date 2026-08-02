@@ -16,6 +16,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from utils.fot.metrics import wilson_accuracy_ci  # noqa: E402
+from utils.fot.reproducibility import write_json  # noqa: E402
 from utils.llm_baselines import (  # noqa: E402
     DEFAULT_MAZE_CELLS,
     DEFAULT_UPSCALE,
@@ -301,6 +303,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--controller", type=str, default="", help="Required if --rollout controller")
     p.add_argument("--device", type=str, default="cpu", help="Torch device for FoT rollout (default: cpu).")
     p.add_argument("--out", type=str, default="")
+    p.add_argument("--summary-out", type=str, default="", help="Optional standard run summary for suite aggregation.")
     p.add_argument("--save-results", action="store_true", help="Include per-sample predictions in the JSON output.")
     return p.parse_args()
 
@@ -439,6 +442,21 @@ def main() -> None:
             payload["results"] = rows
         out_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print("Wrote:", out_path)
+
+    if args.summary_out:
+        correct = int(round(acc * len(y_true)))
+        ci_low, ci_high = wilson_accuracy_ci(correct, len(y_true))
+        write_json(Path(args.summary_out), {
+            "experiment_name": f"maze_trace_{method}_{args.rollout}",
+            "task": "maze_trace",
+            "model": f"{method}_{args.rollout}",
+            "seed": int(args.seed),
+            "metrics": {"test": {"n": len(y_true), "accuracy": acc, "auc": auc,
+                "accuracy_ci95_low": ci_low, "accuracy_ci95_high": ci_high,
+                "accuracy_ci_method": "wilson_test_items", "threshold": threshold}},
+            "elapsed_seconds": dt,
+            "preliminary": False,
+        })
 
 
 if __name__ == "__main__":

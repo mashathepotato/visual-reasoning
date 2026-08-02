@@ -127,7 +127,7 @@ Claims are conditional on results:
 | P1 | Data efficiency may justify complexity | Use identical nested 1/5/10/25/50/100% subsets; screen 10/100% first | Accuracy vs examples and compute | Not started | Not run | — | Data efficiency | BENTO/ICLR |
 | P1 | 3D split is leaky and tiny | Regenerate identity-disjoint splits or grouped cross-validation; remove test-tuned fusion | Macro accuracy/AUC and identity-grouped CI | Not started | Invalid current result | — | Transfer | ICLR |
 | P1 | Maze uses oracle structure | Redesign reward/termination around trace validity and goal reach | Validity, reach, collision, connectivity, path ratio | Not started | Invalid current controller evidence | — | Additional tasks | ICLR |
-| P1 | No external benchmark | Select one compatible benchmark only if core claim survives | Official metric plus trace metrics | Interface prototypes only | Not run | — | External validity | ICLR |
+| P1 | No external benchmark | Evaluate matched direct and visual-trace models on SAT-v2 dynamic spatial reasoning | Accuracy, log loss, Wilson CI, question-type breakdown, synthetic validation and real-image test | Implemented and smoke-tested | Full three-seed run pending | — | External validity | ICLR |
 | P2 | SO(2)/equivariance claim | Implement and measure an actually equivariant alternative if path results justify it | Equivariance defect, OOD-angle error | Not started | Not run | — | Geometry | ICLR/NeurReps |
 | P2 | Neuroscience framing | Test compute/steps versus angular disparity; otherwise reduce to motivation/limitations | Slope and uncertainty versus angular disparity | Not started | Not run | — | Motivation/limitations | ICLR optional |
 | P2 | Multi-agent framing | Only implement explicit proposer/verifier communication after core baselines | Reliability at equal rounds/calls | Not started | Not run | — | Extension | Optional |
@@ -218,3 +218,19 @@ Proposed dates:
 - [x] Run full CNN/ViT seeds 0, 1, and 2 on Apple MPS and commit the aggregate
   results. All six runs completed in 71.9 minutes.
 - [ ] Implement the no-trace/transition/controller factorial and trajectory metrics.
+
+### 2026-08-02 comprehensive MPS suite
+
+- [x] Added a resumable paper suite spanning all native tasks and SAT-v2.
+- [x] Added frozen DINOv3 pair-head baselines and an extended partial-fine-tuning path.
+- [x] Added exact rendered-rotation search as the decisive deterministic-transition baseline.
+- [x] Added independently retrained colored rotation flow and validation-selected flow checkpoints.
+- [x] Added scripted fixed-manifest FoT/PPO evaluation and 2-D-to-3-D transfer evaluation.
+- [x] Added SAT-v2 direct/no-trace and FoT visual-trace models, multi-image tiling,
+  question-type breakdowns, and the complete 150-question real-image test split.
+- [x] Added Wilson test-item intervals, Student-t intervals across independent seeds,
+  per-example predictions, CSV/JSON/Markdown audits, and failed-stage accounting.
+- [x] Completed all 25 smoke stages (one preliminary seed) and the full 20-test unit suite.
+- [ ] Run the non-preliminary overnight profile for seeds 0, 1, and 2.
+- [ ] Decide whether the extended partial-DINO profile is justified after inspecting
+  the frozen-DINO and direct-classifier results.

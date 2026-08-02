@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import math
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
@@ -26,7 +27,8 @@ class SATv2Dataset(Dataset):
         *,
         split: str,
         image_size: int = 256,
-        image_index: int = 0,
+        image_index: Optional[int] = None,
+        max_images: int = 9,
         max_samples: Optional[int] = None,
         cache_dir: Optional[str] = None,
         streaming: bool = False,
@@ -43,7 +45,8 @@ class SATv2Dataset(Dataset):
                 ds = ds.select(range(int(max_samples)))
             self.ds = ds
         self.image_size = int(image_size)
-        self.image_index = int(image_index)
+        self.image_index = None if image_index is None else int(image_index)
+        self.max_images = int(max_images)
 
     def __len__(self) -> int:
         return len(self.ds)
@@ -51,12 +54,33 @@ class SATv2Dataset(Dataset):
     def __getitem__(self, idx: int):
         row = self.ds[int(idx)]
         images = row.get("images")
-        if isinstance(images, list):
+        if isinstance(images, list) and self.image_index is None:
+            if not images:
+                raise ValueError("SAT-v2 row contains no images")
+            selected = images
+            if len(selected) > self.max_images:
+                indices = torch.linspace(0, len(selected) - 1, self.max_images).round().long().tolist()
+                selected = [selected[index] for index in indices]
+            columns = int(math.ceil(math.sqrt(len(selected))))
+            rows = int(math.ceil(len(selected) / columns))
+            cell_h = max(1, self.image_size // rows)
+            cell_w = max(1, self.image_size // columns)
+            canvas = torch.zeros((3, self.image_size, self.image_size), dtype=torch.float32)
+            for image_number, value in enumerate(selected):
+                tensor = resize_image_tensor(to_rgb_tensor01(value), size=max(cell_h, cell_w))
+                tensor = torch.nn.functional.interpolate(
+                    tensor.unsqueeze(0), size=(cell_h, cell_w), mode="bilinear", align_corners=False
+                ).squeeze(0)
+                row_number, column_number = divmod(image_number, columns)
+                y0, x0 = row_number * cell_h, column_number * cell_w
+                canvas[:, y0:y0 + cell_h, x0:x0 + cell_w] = tensor
+            img_t = canvas
+        elif isinstance(images, list):
             img = images[self.image_index]
+            img_t = resize_image_tensor(to_rgb_tensor01(img), size=self.image_size)
         else:
             img = images
-
-        img_t = resize_image_tensor(to_rgb_tensor01(img), size=self.image_size)
+            img_t = resize_image_tensor(to_rgb_tensor01(img), size=self.image_size)
         question = str(row.get("question", ""))
         choices = list(row.get("answers", []))
         correct = str(row.get("correct_answer", ""))
@@ -81,7 +105,8 @@ class SATv2Dataset(Dataset):
             "question": question,
             "choices": [str(c) for c in choices],
             "label": int(label),
-            "meta": {"question_type": row.get("question_type", None)},
+            "meta": {"question_type": row.get("question_type", None), "sample_id": row.get("id", f"satv2-{idx:07d}"),
+                     "num_images": len(images) if isinstance(images, list) else 1},
         }
 
 

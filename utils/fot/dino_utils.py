@@ -10,7 +10,7 @@ from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file as safetensors_load_file
 
 
-def create_dinov3(*, device: torch.device) -> nn.Module:
+def create_dinov3(*, device: torch.device, freeze: bool = True) -> nn.Module:
     # Prefer local HF cache to avoid network calls in sandboxed environments.
     state_dict = None
     try:
@@ -38,7 +38,7 @@ def create_dinov3(*, device: torch.device) -> nn.Module:
 
     model = model.to(device).eval()
     for p in model.parameters():
-        p.requires_grad = False
+        p.requires_grad = not freeze
     return model
 
 
@@ -60,9 +60,8 @@ def dino_embed_fm_gray64(img_fm: torch.Tensor, dino_model: nn.Module) -> torch.T
     return feats[:, 0, :]
 
 
-@torch.no_grad()
-def dino_embed_rgb01(img_rgb01: torch.Tensor, dino_model: nn.Module) -> torch.Tensor:
-    """DINOv3 CLS embedding for RGB inputs in [0, 1]."""
+def dino_features_rgb01(img_rgb01: torch.Tensor, dino_model: nn.Module) -> torch.Tensor:
+    """Differentiable DINOv3 CLS embedding for RGB inputs in [0, 1]."""
     if img_rgb01.dim() == 3:
         img_rgb01 = img_rgb01.unsqueeze(0)
     img = F.interpolate(img_rgb01, size=(224, 224), mode="bilinear", align_corners=False)
@@ -71,3 +70,9 @@ def dino_embed_rgb01(img_rgb01: torch.Tensor, dino_model: nn.Module) -> torch.Te
     img = (img - mean) / std
     feats = dino_model.forward_features(img)
     return feats[:, 0, :]
+
+
+@torch.no_grad()
+def dino_embed_rgb01(img_rgb01: torch.Tensor, dino_model: nn.Module) -> torch.Tensor:
+    """Frozen/inference DINOv3 CLS embedding for RGB inputs in [0, 1]."""
+    return dino_features_rgb01(img_rgb01, dino_model)

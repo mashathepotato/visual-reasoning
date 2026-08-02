@@ -178,3 +178,49 @@ class FoTHeatmapMCQModel(nn.Module):
         logits = self.scorer(joint).squeeze(-1)  # (B,N)
         return logits, heat
 
+
+class DirectMCQModel(nn.Module):
+    """No-trace control with the same image/text encoders and scoring head."""
+
+    def __init__(
+        self,
+        *,
+        num_text_buckets: int = 50_000,
+        text_dim: int = 256,
+        vision_feat_dim: int = 128,
+        mlp_hidden: int = 256,
+    ):
+        super().__init__()
+        self.text = HashedTextEncoder(num_buckets=num_text_buckets, emb_dim=text_dim)
+        self.vision = SmallVisionBackbone(in_ch=3, feat_dim=vision_feat_dim)
+        self.scorer = nn.Sequential(
+            nn.Linear(vision_feat_dim + text_dim + text_dim, mlp_hidden),
+            nn.ReLU(inplace=True),
+            nn.Linear(mlp_hidden, 1),
+        )
+
+    def forward(
+        self,
+        *,
+        images: torch.Tensor,
+        q_input_ids: torch.Tensor,
+        q_attention_mask: torch.Tensor,
+        choice_input_ids: torch.Tensor,
+        choice_attention_mask: torch.Tensor,
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        question = self.text(q_input_ids, q_attention_mask)
+        visual = self.vision(images).mean(dim=(2, 3))
+        batch, choices, length = choice_input_ids.shape
+        choice = self.text(
+            choice_input_ids.reshape(batch * choices, length),
+            choice_attention_mask.reshape(batch * choices, length),
+        ).reshape(batch, choices, -1)
+        joint = torch.cat(
+            (visual[:, None, :].expand(-1, choices, -1),
+             question[:, None, :].expand(-1, choices, -1), choice),
+            dim=-1,
+        )
+        logits = self.scorer(joint).squeeze(-1)
+        empty_trace = torch.zeros((batch, 1, images.shape[-2], images.shape[-1]),
+                                  device=images.device, dtype=images.dtype)
+        return logits, empty_trace

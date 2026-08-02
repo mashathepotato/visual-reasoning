@@ -13,6 +13,7 @@ logs/
 
 # Local training runs (large artifacts)
 models/runs/
+models/cache/
 
 data/ganis_kievit_data/.DS_Store
 .DS_Store

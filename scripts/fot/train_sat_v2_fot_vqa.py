@@ -72,6 +72,9 @@ def collate_fn(batch, *, text_buckets: int, text_max_len: int) -> Dict[str, torc
         "q_attention_mask": q.attention_mask,
         "choice_input_ids": c_ids,
         "choice_attention_mask": c_mask,
+        "sample_ids": [str(b.get("meta", {}).get("sample_id", f"sample-{i}")) for i, b in enumerate(batch)],
+        "question_types": [str(b.get("meta", {}).get("question_type", "unknown")) for b in batch],
+        "num_images": [int(b.get("meta", {}).get("num_images", 1)) for b in batch],
     }
 
 

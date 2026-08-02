@@ -3,6 +3,8 @@ from __future__ import annotations
 import sys
 import argparse
 import random
+import json
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -19,6 +21,8 @@ from utils.fot.dino_utils import create_dinov3, dino_embed_fm_gray64
 from utils.fot.models import CorrectorUNet, FastRotator
 from utils.fot.tetris_ops import get_tetris_tensor, to_fm_tensor
 from utils.fot.torch_utils import get_device, set_seed
+from utils.fot.reproducibility import write_json
+from utils.fot.supervised_models import count_parameters
 from utils.llm_baselines import CHIRAL_TETRIS_SHAPES
 
 
@@ -51,13 +55,13 @@ class FastTetrisDataset(Dataset):
         self.entries = entries
         self.keys: List[str] = list(entries.keys())
         self.n = int(n_samples)
-        self.rng = random.Random(seed)
+        self.seed = int(seed)
 
     def __len__(self) -> int:
         return self.n
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
-        key = self.rng.choice(self.keys)
+        key = random.Random(self.seed + 1_000_003 * int(idx)).choice(self.keys)
         e = self.entries[key]
         return e.img_fm, e.emb
 
@@ -77,6 +81,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--dt", type=float, default=0.1)
     p.add_argument("--corr-weight", type=float, default=1.0)
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--summary-out", type=str, default="")
+    p.add_argument("--history-out", type=str, default="")
+    p.add_argument("--preliminary", action="store_true")
     return p.parse_args()
 
 
@@ -104,6 +111,10 @@ def main() -> None:
     optim = torch.optim.AdamW(list(rotator.parameters()) + list(corrector.parameters()), lr=args.lr)
 
     dt = float(args.dt)
+    history = []
+    best_loss = float("inf")
+    best_epoch = 0
+    started = time.perf_counter()
     for epoch in range(int(args.epochs)):
         rotator.train()
         corrector.train()
@@ -142,39 +153,49 @@ def main() -> None:
             epoch_loss += float(loss.detach().cpu())
 
         avg = epoch_loss / max(1, len(train_loader))
-        if (epoch + 1) % 5 == 0 or epoch == 0:
-            rotator.eval()
-            corrector.eval()
-            with torch.no_grad():
-                test_loss = 0.0
-                for base_img, base_emb in test_loader:
-                    base_img = base_img.to(device)
-                    base_emb = base_emb.to(device)
-                    b = int(base_img.shape[0])
-                    ang_start = torch.rand(b, device=device) * 360.0
-                    ang_delta = torch.rand(b, device=device) * 360.0 - 180.0
-                    t = torch.rand(b, 1, device=device)
-                    ang_t = ang_start + (t.squeeze(1) * ang_delta)
-                    x_t = K.geometry.transform.rotate(base_img, ang_t)
-                    ang_next = ang_t + (dt * ang_delta)
-                    x_next = K.geometry.transform.rotate(base_img, ang_next)
-                    target_v = (x_next - x_t) / dt
-                    pred_v = rotator(x_t, t, base_emb, ang_delta.view(b, 1))
-                    x_pred = x_t + pred_v * dt
-                    corr = corrector(x_pred)
-                    x_corr = (x_pred + corr).clamp(-1.0, 1.0)
-                    loss = F.mse_loss(pred_v, target_v) + float(args.corr_weight) * F.mse_loss(x_corr, x_next)
-                    test_loss += float(loss.detach().cpu())
-                test_loss /= max(1, len(test_loader))
+        rotator.eval()
+        corrector.eval()
+        with torch.no_grad():
+            test_loss = 0.0
+            for base_img, base_emb in test_loader:
+                base_img = base_img.to(device)
+                base_emb = base_emb.to(device)
+                b = int(base_img.shape[0])
+                ang_start = torch.rand(b, device=device) * 360.0
+                ang_delta = torch.rand(b, device=device) * 360.0 - 180.0
+                t = torch.rand(b, 1, device=device)
+                ang_t = ang_start + (t.squeeze(1) * ang_delta)
+                x_t = K.geometry.transform.rotate(base_img, ang_t)
+                ang_next = ang_t + (dt * ang_delta)
+                x_next = K.geometry.transform.rotate(base_img, ang_next)
+                target_v = (x_next - x_t) / dt
+                pred_v = rotator(x_t, t, base_emb, ang_delta.view(b, 1))
+                x_pred = x_t + pred_v * dt
+                corr = corrector(x_pred)
+                x_corr = (x_pred + corr).clamp(-1.0, 1.0)
+                loss = F.mse_loss(pred_v, target_v) + float(args.corr_weight) * F.mse_loss(x_corr, x_next)
+                test_loss += float(loss.detach().cpu())
+            test_loss /= max(1, len(test_loader))
+        row = {"epoch": epoch + 1, "train_loss": avg, "validation_loss": test_loss}
+        history.append(row)
+        print(json.dumps(row, sort_keys=True))
+        if test_loss < best_loss:
+            best_loss = test_loss
+            best_epoch = epoch + 1
+            out_rot = Path(args.out_rotator); out_corr = Path(args.out_corrector)
+            out_rot.parent.mkdir(parents=True, exist_ok=True); out_corr.parent.mkdir(parents=True, exist_ok=True)
+            torch.save(rotator.state_dict(), str(out_rot)); torch.save(corrector.state_dict(), str(out_corr))
 
-            print(f"Epoch {epoch + 1:03d} | train {avg:.6f} | test {test_loss:.6f}")
-
-    out_rot = Path(args.out_rotator)
-    out_corr = Path(args.out_corrector)
-    out_rot.parent.mkdir(parents=True, exist_ok=True)
-    out_corr.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(rotator.state_dict(), str(out_rot))
-    torch.save(corrector.state_dict(), str(out_corr))
+    out_rot = Path(args.out_rotator); out_corr = Path(args.out_corrector)
+    if args.history_out:
+        write_json(Path(args.history_out), {"epochs": history})
+    if args.summary_out:
+        write_json(Path(args.summary_out), {"experiment_name": "tetris_rotation_orbit_flow", "task": "tetris_rotation",
+            "model": "rotation_orbit_flow_corrector", "seed": args.seed,
+            "parameter_count": count_parameters(rotator) + count_parameters(corrector),
+            "train_samples": args.train_samples, "best_epoch": best_epoch,
+            "metrics": {"validation": {"velocity_plus_reconstruction_mse": best_loss}},
+            "elapsed_seconds": time.perf_counter() - started, "preliminary": bool(args.preliminary)})
     print("Saved rotator:", out_rot)
     print("Saved corrector:", out_corr)
 

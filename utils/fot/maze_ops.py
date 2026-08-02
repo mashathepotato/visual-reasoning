@@ -138,21 +138,24 @@ class MazeTraceDataset(Dataset):
         self.n = int(n_samples)
         self.maze_cells = int(maze_cells)
         self.img_size = int(img_size)
-        self.rng = random.Random(seed)
+        self.seed = int(seed)
 
     def __len__(self) -> int:
         return self.n
 
     def __getitem__(self, idx: int):
-        grid = generate_maze(self.maze_cells, self.maze_cells, self.rng)
+        # Stateless generation makes each sample invariant to access order,
+        # worker count, and validation frequency.
+        rng = random.Random(self.seed + 1_000_003 * int(idx))
+        grid = generate_maze(self.maze_cells, self.maze_cells, rng)
         start = (1, 1)
         goal = (grid.shape[0] - 2, grid.shape[1] - 2)
         path = bfs_shortest_path(grid, start, goal)
         frames = segment_frames_from_path(path)
         if len(frames) < 2:
-            return self.__getitem__(idx + 1)
+            return self.__getitem__(idx + self.n)
 
-        k = self.rng.randint(0, len(frames) - 2)
+        k = rng.randint(0, len(frames) - 2)
         trace_t_np = nodes_to_trace(grid.shape, frames[k])
         trace_next_np = nodes_to_trace(grid.shape, frames[k + 1])
         delta_np = trace_next_np - trace_t_np

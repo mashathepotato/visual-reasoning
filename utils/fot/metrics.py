@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 import random
+import statistics
 from typing import Dict, Iterable, List, Sequence, Tuple
 
 import numpy as np
@@ -64,9 +65,13 @@ def binary_classification_metrics(
     eps = np.finfo(np.float64).eps
     clipped = np.clip(probabilities, eps, 1 - eps)
     log_loss = -float(np.mean(y * np.log(clipped) + (1 - y) * np.log(1 - clipped)))
+    accuracy_ci_low, accuracy_ci_high = wilson_accuracy_ci(int(np.sum(predictions == y)), int(y.size))
     return {
         "n": int(y.size),
         "accuracy": float(np.mean(predictions == y)),
+        "accuracy_ci95_low": accuracy_ci_low,
+        "accuracy_ci95_high": accuracy_ci_high,
+        "accuracy_ci_method": "wilson_test_items",
         "balanced_accuracy": float(0.5 * (positive_recall + negative_recall)),
         "auc": float(binary_auc(y.tolist(), probabilities.tolist())),
         "brier": float(np.mean((probabilities - y) ** 2)),
@@ -102,3 +107,54 @@ def bootstrap_mean_ci(
     lower = means[max(0, int((alpha / 2) * samples))]
     upper = means[min(samples - 1, int((1 - alpha / 2) * samples) - 1)]
     return float(lower), float(upper)
+
+
+def wilson_accuracy_ci(
+    correct: int,
+    total: int,
+    *,
+    confidence: float = 0.95,
+) -> Tuple[float, float]:
+    """Wilson score interval for a binomial accuracy or success rate."""
+    if total <= 0 or not 0 <= correct <= total:
+        raise ValueError("Expected 0 <= correct <= total and total > 0")
+    if confidence != 0.95:
+        raise ValueError("Only the predeclared 95% Wilson interval is supported")
+    z = 1.959963984540054
+    n = float(total)
+    p = float(correct) / n
+    denominator = 1.0 + (z * z / n)
+    center = (p + z * z / (2.0 * n)) / denominator
+    half = z * math.sqrt((p * (1.0 - p) / n) + (z * z / (4.0 * n * n))) / denominator
+    return max(0.0, center - half), min(1.0, center + half)
+
+
+def mean_t_ci(
+    values: Sequence[float],
+    *,
+    confidence: float = 0.95,
+) -> Tuple[float, float]:
+    """Two-sided Student-t interval over independent runs.
+
+    The small fixed table avoids adding a scipy dependency to result aggregation.
+    For one run the interval is deliberately undefined rather than pretending the
+    within-test-set uncertainty is between-seed uncertainty.
+    """
+    data = [float(value) for value in values]
+    if len(data) < 2:
+        return float("nan"), float("nan")
+    if confidence != 0.95:
+        raise ValueError("Only the predeclared 95% t interval is supported")
+    if any(not math.isfinite(value) for value in data):
+        raise ValueError("values must be finite")
+    # Two-sided 0.975 quantiles for df 1..30; normal approximation thereafter.
+    critical = (
+        12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.306, 2.262, 2.228,
+        2.201, 2.179, 2.160, 2.145, 2.131, 2.120, 2.110, 2.101, 2.093, 2.086,
+        2.080, 2.074, 2.069, 2.064, 2.060, 2.056, 2.052, 2.048, 2.045, 2.042,
+    )
+    df = len(data) - 1
+    t_value = critical[df - 1] if df <= len(critical) else 1.96
+    mean = statistics.fmean(data)
+    half = t_value * statistics.stdev(data) / math.sqrt(len(data))
+    return mean - half, mean + half
