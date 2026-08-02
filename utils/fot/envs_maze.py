@@ -98,7 +98,9 @@ class MazeEnvFMProgress(gym.Env):
         return self._obs(), {}
 
     def step(self, action: int):
-        n = self.action_steps.get(int(action), 1)
+        if not self.action_space.contains(action):
+            raise ValueError(f"Invalid action: {action}")
+        n = self.action_steps[int(action)]
         prev_progress = self.progress
 
         # advance FM sketch n steps
@@ -125,7 +127,6 @@ class MazeEnvFMProgress(gym.Env):
             terminated = True
 
         self.step_count += 1
-        truncated = self.step_count >= self.max_steps
+        truncated = self.step_count >= self.max_steps and not terminated
 
         return self._obs(), float(reward), terminated, truncated, {}
-
