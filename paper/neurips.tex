@@ -1,0 +1,355 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2026
+
+% "preprint" option is used for arXiv or other preprint submissions
+\usepackage[preprint]{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+
+\title{Flow-of-Thought: A Framework for Visual Reasoning}
+
+\author{
+  Mariia Baidachna \\
+  University of Glasgow \\
+  Glasgow, Scotland, United Kingdom \\
+  \And
+  Nicolas Pugeault \\
+  University of Glasgow \\
+  Glasgow, Scotland, United Kingdom \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We study whether learned, explicit visual transition traces improve spatial reasoning over equally trained direct classifiers, simpler transition mechanisms, and simpler controllers. Flow-of-Thought (FoT) couples a learned image-space transition model with a sequential controller, exposing intermediate visual states that can be evaluated directly. The present draft defines the framework and the falsification tests required to isolate the value of visual traces, learned flow transitions, rotation-orbit path supervision, and reinforcement learning. Comparative and generalization claims are withheld until matched train/validation/test protocols, multiple seeds, and quantitative trajectory-fidelity evaluations are complete.
+
+% The code is publicly available at \url{https://github.com/mashathepotato/visual-reasoning}.
+\end{abstract}
+
+\section{Introduction}
+% Visual tasks are different --> examples done
+% SoTA fails --> cite specific methods, elaborate on why they fail done
+% Recent advances in FM/GenAI/RL have increased capabilities in other similar problems like CoT but still unclear on visual tasks done
+% Recent advances attempts in visual reasoning have a gap done
+% Our contribbution fills the gap by... done
+% Our eval methods and brief results/conclusions
+% Include ablation studies
+
+% Show that we are aware of ViperGPT, Group relative policy optimization (if relevant), all visual reasoning benchmarks: SAT-2, BLINK, RoboSpatial, ScreenSpot, VisualWebArena, V*Bench
+% Show we are aware of prompting strats for iterative reasoning in images: CoT, mm-CoT, IoT Prompting, Mind's Eye
+
+% Massive progress in llms but
+% Visual tasks are different --> examples of failure
+Although modern foundation models have achieved impressive semantic capabilities, they still fail to generalize to spatial planning or visual logic tasks that are often trivial for humans \citep{vsp2025, topobench2026}. One example is an IQ-style question that presents a source block and a target block, which has been rotated or also mirrored, and asks to determine if the blocks are the same. It is difficult to solve for this kind of invariance in one-shot, but human reasoning reduces cognitive load by mentally simulating the incremental rotation steps that lead to the solution \citep{shepard1971mental}. Similarly, it is difficult to determine the path from the start to the end of the maze, but intermediate sketches of the path make the task trivial \citep{lotfi2024cos}. Text-based models lack a "mental scratchpad" and instead attempt to hold entire spatial states in fixed attention mechanisms, which fails for complex geometries \cite{zhang2024mindseye, latentsketchpad2025}.
+
+% There have been improvements in parallel domains but it is still unclear how to apply them to visual tasks
+Recent advances in reasoning capabilities, propelled by reinforcement learning (RL), have significantly contributed to performance gains in text-based tasks \citep{ouyang2022training, openai2024o1, deepseek2025deepseekr1, lightman2023lets}. Despite the success of large language models (LLMs) with built-in reasoning, these frameworks fail to generalize outside of semantic and symbolic domains \citep{dziri2023faith, fu2024blink, vsp2025}. This limitation stems from a fundamental modality mismatch: text is inherently one-dimensional and discrete, whereas visual reasoning requires understanding multi-dimensional topology, continuous geometric transformations, and spatial relationships. Recent evaluations of state-of-the-art (SoTA) Multimodal Large Language Models (MLLMs) reveal that even when equipped with powerful vision encoders, these systems suffer from a perception-reasoning gap. Tasks that are deeply ingrained in human cognitive core knowledge \citep{spelke2007core}, such as mental rotation or shortest connected path through a maze, often result in severe spatial hallucinations or logical collapse in MLLMs \citep{fu2024blink, vsp2025}. Without the ability to explicitly track geometric changes step-by-step, MLLMs are forced to rely on semantic memorization rather than true spatial thinking \citep{chollet2019arc}, highlighting the need for frameworks that can reason through continuous visual states.
+
+We introduce Flow-of-Thought (FoT), in which a model generates a visual transition trace and a controller selects transformations and a stopping decision. A learned velocity field can expose intermediate sketches during numerical integration, making transition quality directly measurable. Our central hypothesis is not that this machinery is necessary by construction, but that explicit learned visual transitions may improve accuracy, data efficiency, or specified forms of out-of-distribution generalization under a matched protocol.
+
+% Brief eval summary
+The revised evaluation compares FoT with task-trained CNN and ViT classifiers, no-trace controllers, deterministic rotations, direct learned predictors, linear-path flow models, and non-RL controllers on identical examples. Closed multimodal models remain contextual zero-shot references rather than primary baselines. All thresholds and checkpoint choices are selected on validation data, and test results are reported across independent seeds with uncertainty.
+
+
+
+\section{Related Work}
+
+\textbf{Chain-of-Thought (CoT) and Reinforcement Learning.} The integration of RL into language modeling has evolved from stylistic alignment (RLHF) \citep{ouyang2022training} to reasoning discovery \citep{deepseek2025deepseekr1, openai2024o1}. These models treat CoT trace generation as an MDP, using PPO to spontaneously discover logical deduction paths without supervised human labels. AlphaGeometry \citep{trinh2024solving} extended this to geometric proofs. More recently, Diffusion of Thought (DoT) \citep{ye2024diffusion} challenged the sequential token paradigm by integrating reasoning into diffusion models, highlighting the benefit of refining intermediate steps globally over time.
+
+\textbf{Visual Reasoning and Chain-of-Sketch.} To address spatial limitations, "Visual Sketchpad" \citep{hu2024visual} allowed models to generate code to plot geometric auxiliary lines. Extending this, Lotfi et al. \cite{lotfi2024cos} formalized "Inductive CoS," generating visual traces frame-by-frame to solve high "globality degree" tasks (e.g., mazes). This physical grounding is critical; recent evaluations in the "Illusion of Thinking" \cite{shojaee2025illusion} highlight that models often memorize puzzle heuristics rather than adapting dynamically. Without an externalized visual buffer, foundation models suffer from acute epistemic boundaries in spatial tasks.
+
+\textbf{Mental-rotation behavior.} Classic mental-rotation studies report reaction times that increase approximately with angular disparity \citep{shepard1971mental}. This motivates a measurable analogy---whether model computation or trace length scales with angular disparity---but does not establish that the brain renders frame-by-frame images or that FoT is biologically plausible. We treat this connection as optional motivation rather than evidence for the architecture.
+
+
+\section{The Flow-of-Thought Framework}
+% symbols definition to reuse later
+% add formality now to help with discussion later on
+
+\section{Overview and Architecture}
+
+Our design treats \textbf{visual reasoning as controlled dynamics in image space}. A \emph{flow model} (trained with flow matching) defines a deterministic visual transition operator that can transform a current canvas into a new canvas (e.g., a rotated shape or a partially drawn maze path). A RL policy then learns to select high-level actions that repeatedly invoke this visual operator, producing an explicit intermediate \emph{CoS} trace that is inspectable frame-by-frame.
+
+In this section, we bring together all the pieces of the implementation to create the final FoT pipeline. The general framework consists of two main parts: a generative model and RL. Our design treats visual reasoning as the "sketcher" in image space. The overall view in Figure \ref{fig:method_pipeline} shows how these two parts interact. The generative model, which learns the transport map from the original image to a transformed image after taking some action, is frozen and passed into the RL algorithm as an action sketcher. The right-hand side shows the RL workflow with predefined image observations and set of actions (e.g., rotate 15 degrees). The model is trained in a loop of action updates to learn the policy and the value function of the environment while maximizing the reward. The link between the two sides is contained in the action updates strictly using the pretrained and frozen flow matching model. The specific inputs and action configurations are task-dependent.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/pipeline.png}
+  \caption{Overview of the FoT pipeline. A flow model predicts continuous visual state transitions governed by a learned ODE, enabling sketch sampling at any time $t$. A PPO-trained controller \citep{schulman2017proximal} selects actions to navigate this continuous space toward the target state.}
+  \label{fig:method_pipeline}
+\end{figure}
+
+Across all tasks, the same abstraction is reused:
+\begin{itemize}
+    \item A \textbf{frozen flow model} provides state transitions in a sketch space governed by a learned ODE, enabling sketch sampling at any time $t$.
+    \item \textbf{PPO} is trained on a Gymnasium environment that wraps these transitions with a task-specific action set, reward, and termination condition to navigate this continuous space toward the target state.
+\end{itemize}
+
+
+
+\section{Problem Formulation and Datasets}
+
+We define four primary tasks to test the FoT framework.
+
+
+\subsection{2D Tetris Dataset}
+Due to data scarcity, we generated a synthetic dataset of 20,000 chiral "Tetris-like" block pairs to isolate spatial reasoning capabilities from semantic knowledge. We specifically selected shapes with distinct chirality ('L', 'J', 'S', 'Z') to ensure that a mirrored version is unambiguously distinct from a rotated version. An example of the 'L' shape is shown in Figure \ref{fig:data_sample_tetris}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{figures/data_sample_tetris.png}
+  \caption{Samples from our evaluation Tetris set with a rotated and mirrored example.}
+  \label{fig:data_sample_tetris}
+\end{figure}
+
+Each sample consists of a source image ($A$) and a target image ($B$). The target ($B$) is generated by either rotating $A$ by a random angle $\theta \in [0, 360^{\circ}]$ (labeled "Same") or by mirroring $A$ and then rotating it (labeled "Different"). For these 2D rotation tasks, we generate intermediate training steps by applying a built-in rotation operator to a base image, sampling $\theta_0$, $\Delta\theta$, and $t$, supervising the velocity with $v^*(x_t,t) = (x_{t+\delta t}-x_t)/\delta t$.
+
+\subsection{Colored Shapes Dataset}
+This task uses the same problem formulation as the Tetris dataset but focuses on multi-object compositional rotation and additional RGB channels, increasing the complexity of the spatial state. Figure \ref{fig:data_sample_colors} shows a randomly chosen rotated and mirrored sample.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{figures/data_sample_colors.png}
+  \caption{Samples from our colored shapes evaluation set with a rotated and mirrored example.}
+  \label{fig:data_sample_colors}
+\end{figure}
+
+\subsection{3D Blocks Dataset}
+We employ a dataset consisting of 3D blocks \citep{ganis2015new}. This dataset consists of sample pairs that are rotated by a number of degrees or rotated and mirrored, as shown in Figure \ref{fig:data_sample_3d}. Note, it contains no intermediate steps between the source state and the rotated state.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{figures/data_sample_3d.png}
+  \caption{Samples from the 3D blocks set \citep{ganis2015new} with a rotated and mirrored example.}
+  \label{fig:data_sample_3d}
+\end{figure}
+
+
+\subsection{Maze Navigation Dataset}
+A 2D navigation task relying on continuous trace-growth flow to find shortest paths. For mazes, we compute a shortest path with BFS and convert segments into trace masks to supervise the flow model. Figure \ref{fig:data_sample_maze} shows a sample from the maze problem.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{figures/data_sample_maze.png}
+  \caption{Samples from our evaluation Maze set.}
+  \label{fig:data_sample_maze}
+\end{figure}
+
+
+
+\section{The Visual Transition Model (Flow Matching)}
+% Motivation for what we're doing
+% notation, input, parameters, set the scene
+% explain how you do it
+
+A key design choice in FoT is the use of flow matching \citep{lipman2022flow} to define a continuous visual transition operator.
+
+\subsection{Notation.}
+Let $x \in \mathbb{R}^{C \times H \times W}$ denote an image-like state (a ``sketch''). Let $t \in [0,1]$ be a continuous time variable. By modeling the transition from a base state to a target state as an ODE, we learn a neural \textbf{velocity field} $v_\phi$:
+\begin{equation}
+    \frac{d x(t)}{d t} = v_\phi\!\left(x(t), t, c\right),
+\end{equation}
+where $c$ is a task-dependent conditioning signal (e.g., an embedding of the object identity, or a maze layout).
+
+This formulation allows us to sample an intermediate sketch at any arbitrary point $t \in [0, 1]$ during the integration process. At inference, a final sketch is obtained by numerically integrating the ODE from $t=0$ to $t=1$. The intermediate states $\{x(t_k)\}_{k=0}^{K}$ form the \textbf{visual reasoning trace}.
+
+
+\subsection{General Flow Matching Template}
+The general flow matching architecture used throughout FoT is summarized in Figure~\ref{fig:fm_general}. The diagram decomposes the method into three reusable components: (i) a \emph{path/teacher generator} that provides supervision at intermediate times, (ii) a conditioned neural field $v_\phi$ that predicts local dynamics, and (iii) a numerical integration procedure that converts local updates into a global transition. During training, we sample a time $t \sim \mathcal{U}(0,1)$ and use the path generator to construct an intermediate sketch $x(t)$ together with a target local update (e.g., a finite-difference approximation of $\tfrac{dx(t)}{dt}$). The network is then trained by direct regression so that $v_\phi(x(t), t, c)$ matches this target update. Architecturally, $v_\phi$ is parameterized as a conditioned U-Net: the current sketch $x(t)$ is processed through an encoder--decoder with skip connections, while $t$ and the task-dependent conditioning signal $c$ are embedded into a global conditioning vector that is injected at the bottleneck to modulate the deepest representation. At inference time, the model is rolled out by integrating the ODE from $t=0$ to $t=1$ with a standard solver, producing both the final sketch and the intermediate states $\{x(t_k)\}_{k=0}^{K}$ that constitute the visual reasoning trace. An optional projection (or corrective) step can be applied after each integration update to keep states within valid ranges, but the overall template remains task-agnostic until we specify how $c$ and the training paths are constructed in the following sections.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/fm_general.png}
+  \caption{General flow matching diagram.}
+  \label{fig:fm_general}
+\end{figure}
+
+
+
+\subsection{Development Process of the Mental Rotator}
+The rotator model was tested via a "hard-coded" exhaustive search to see if it was sufficient to distinguish rotated from mirrored shapes before implementing it into the pipeline. This involved rotating the original shape by some angle delta and computing the Mean Squared Error (MSE), calculated as $\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$, which measures the average squared difference between the generated and target pixel intensities—for each rotation in the context of this problem.
+
+The naive approach of inputting the original image and angle and outputting a new image each time resulted in blurred images for larger angles, as shown in Figure \ref{fig:initial_exhaustive_search}. This approach achieved 57.20\% accuracy on 1,000 samples of randomly generated rotated and mirrored Tetris images, meaning it was near random guessing. Moreover, naive exhaustive search requires inferencing at each angle (e.g., every 5 degrees for each sample) and takes 15 minutes to run on Metal Performance Shaders (MPS), making this infeasible at scale. Despite the limitations, exhaustive search and intermediate visualizations provided helpful metrics used to tailor the generative model before freezing it, serving as a sanity check of this segment of the pipeline.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{figures/initial_exhaustive_search.png}
+    \caption{Initial flow matching results for exhaustive search with iterative rotations on an example Tetris shape.}
+    \label{fig:initial_exhaustive_search}
+\end{figure}
+
+This initial experiment highlighted the need for geometric shape integrity that would preserve the original shape without blur and allow accurate validation against the target image. Additionally, errors in the first steps would propagate down the workflow, especially if recursive rotations of the same shape are applied, and undermine the controller's ability to differentiate between shapes.
+
+Early exploratory variants changed losses, schedules, and teacher paths simultaneously, so their qualitative differences do not identify which intervention helped. The live implementation uses squared-error velocity and corrector objectives with fixed-rate AdamW. The revised experiments compare loss and path choices under a matched architecture, data stream, and update budget.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{figures/improved_fm_samples.png}
+    \caption{Improved flow matching results on three samples. Employing the MAE loss visibly reduces the blur of the pixels. The model struggles with bigger rotation angles, particularly 180 degrees, collapsing the shapes into deformed states.}
+    \label{fig:improved_fm_samples}
+\end{figure}
+
+This prompted replacing linear image interpolation with supervision sampled along a rendered rotation orbit. The current implementation does not enforce $SO(2)$ equivariance or optimize on a Riemannian representation; we therefore reserve the term geodesic flow matching for a future implementation and controlled geometry ablation.
+
+The training objective and optimizer are now described from the live configuration rather than from legacy experiments. Alternative losses and schedules remain ablations; they are not part of the current claimed method.
+
+Figure \ref{fig:final_fm_samples} is retained as a qualitative legacy example only. The current model does not strictly enforce rigid-body rotation, and the figure cannot establish geometric fidelity or classification performance. The revised evaluation measures every generated frame against the rendered teacher path and reports representative failures selected by a declared rule.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/final_fm_samples.png}
+    \caption{The final samples of the flow matching model that was ultimately frozen. The figure shows two randomly chosen sample Tetris shapes with a "SAME" and "MIRRORED" target for each.}
+    \label{fig:final_fm_samples}
+\end{figure}
+
+These exploratory traces helped identify failure modes, but they do not demonstrate the necessity of sequential state generation. Necessity is tested against the no-trace and simpler-transition baselines in the revised protocol.
+
+
+For task specific formulations, please refer to Appendix A.
+
+
+\section{The Sequential Controller: PPO}
+
+\paragraph{Why RL on top of flow matching?}
+While the flow model dictates the continuous physics of how pixels move along the ODE trajectory, it does not decide \emph{which} transformation to apply or \emph{when} to stop. In other words, the flow model is the sketcher and RL defines which strokes would lead to the solution. We therefore wrap the frozen flow model in a MDP and learn a controller with PPO \citep{schulman2017proximal}.
+
+\subsection{General RL Template}
+The PPO controller used in FoT follows the generic actor-critic template shown in Figure~\ref{fig:ppo_general}. The diagram separates the learning system into four interacting modules: an environment that defines the Markov decision process (MDP), an actor-critic network that maps observations to actions and value estimates, an on-policy rollout buffer that stores trajectories, and an optimization loop that updates the policy with conservative (proximal) steps. Concretely, at each timestep the agent receives an observation $o_t$ and samples an action $a_t \sim \pi_\theta(\cdot \mid o_t)$; the environment transitions to the next timestep and returns reward $r_t$ and a termination signal. PPO collects rollouts under the current policy (the \emph{behavior} policy), storing both actions and their log-probabilities under the behavior distribution. After a batch of experience is gathered, the algorithm computes advantage estimates (typically via GAE) and performs several epochs of minibatch updates that maximize a clipped surrogate objective. This clipping constrains the ratio between the updated policy and the behavior policy, preventing destabilizing updates while still improving expected return. In parallel, the value head is trained to predict returns, and an entropy bonus is commonly included to encourage exploration. Importantly for FoT, the environment dynamics can include calls to a frozen flow-matching model; PPO remains agnostic to these internal mechanics and learns only from observations and rewards, making it a reusable control layer that can be placed on top of different visual transition operators before introducing task-specific state, action, and reward definitions.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/ppo_general.png}
+  \caption{General PPO diagram.}
+  \label{fig:ppo_general}
+\end{figure}
+
+
+
+
+\section{Experiments}
+
+\subsection{Datasets and Baselines}
+To isolate continuous spatial logic from semantic priors, we evaluate across four spatial tasks with high globality degrees:
+\begin{enumerate}
+    \item \textbf{Tetris (2D Synthetic):} Chiral block pairs requiring verification if the target is a pure rotation or a mirrored mismatch. Fixed manifests specify the exact train, validation, ID-test, and OOD-angle examples.
+    \item \textbf{Colored Shapes:} Multi-object compositional RGB block rotations.
+    \item \textbf{3D Blocks:} 384 complex 3D chiral block pairs \citep{ganis2015new}. The current 78-example derived test split is not used as OOD evidence because object identities overlap the training array; an identity-disjoint protocol is future work.
+    \item \textbf{Maze Navigation:} Procedural perfect mazes requiring trace-growth generation.
+\end{enumerate}
+
+Primary comparisons use task-trained CNN and ViT pair classifiers on the same manifests, plus matched transition and controller ablations. DINOv3 and closed multimodal models are retained only as contextual zero-shot references.
+
+\subsection{Quantitative Results}
+
+Legacy exploratory measurements were removed from this draft because they were produced with unmatched protocols, test-selected thresholds, or incomplete provenance. This section will be populated only from machine-readable multi-seed outputs generated by the matched evaluation harness.
+
+
+\subsection{Discussion}
+
+The discussion will distinguish four questions: whether visual traces help, whether learned transitions help, whether rotation-orbit supervision improves geometric fidelity over a linear path, and whether PPO improves over simpler controllers. Qualitative traces will be paired with exact intermediate-state metrics and a declared failure-sampling rule.
+
+\section{Conclusion and Future Work}
+This work defines an explicit and falsifiable study of learned visual transition traces. The final conclusion will report which components survive matched direct-classifier, transition, and controller ablations; no claim of broad generalization, biological plausibility, or component necessity is made in the present draft.
+
+\begin{ack}
+We also extend our thanks to Google DeepMind for organizing the Eastern European School of Machine Learning (EEML) and generously funding attendance. The insights gained during the program, particularly regarding intermediate reasoning paradigms, were the direct inspiration for this research.
+\end{ack}
+
+\bibliographystyle{plainnat}
+\bibliography{main}
+
+\appendix
+
+\section{Technical appendices and supplementary material}
+\subsection{Task-Specific Formulations}
+
+Building directly on these developmental insights, we formalize the exact flow matching mechanisms for our spatial tasks.
+
+\subsubsection{Rotation-Orbit Path Supervision}
+Rather than linearly interpolating pixels, the current implementation samples teacher states along rotations rendered by a deterministic image operator. It conditions the learned velocity field on visual features and the requested angle. This is an image-space construction and is not, by itself, an equivariant or Riemannian flow model.
+
+Let $R_\theta(\cdot)$ be a ground-truth rotation operator (used only for data generation). For a base image $x_0$ and a target rotation $\Delta\theta$, we define the rotation-orbit teacher trajectory:
+\begin{equation}
+    x(t) = R_{t \Delta\theta}(x_0), \quad t \in [0,1].
+\end{equation}
+Training samples are generated by drawing $t \sim \mathcal{U}(0,1)$ and a small step $\delta t$, then computing:
+\begin{equation}
+    x_t = x(t), \quad x_{t+\delta t} = x(t+\delta t),
+\end{equation}
+and the target velocity via a finite-difference approximation:
+\begin{equation}
+    v^\star_t \approx \frac{x_{t+\delta t} - x_t}{\delta t}.
+\end{equation}
+The live rotator training script matches this velocity with squared error:
+\begin{equation}
+    \mathcal{L}_{\mathrm{FM}}(\phi) = \mathbb{E}\left[\left\lVert v_\phi(x_t, t, c, \Delta\theta) - v^\star_t \right\rVert_2^2\right].
+\end{equation}
+
+\paragraph{Conditioning.}
+For rotation, $c$ includes:
+\begin{itemize}
+    \item A \textbf{frozen visual embedding} (e.g., DINOv3 CLS features) extracted from the base image, to preserve object identity during transformation.
+    \item The target rotation parameter $\Delta\theta$ (normalized), and a time embedding of $t$.
+\end{itemize}
+
+\paragraph{Architecture of the Velocity Network.}
+The velocity network $v_\phi$ is implemented as a conditioned U-Net that processes spatial and semantic information through two distinct pathways before fusing them.
+
+The spatial input $x_t \in \mathbb{R}^{1 \times 64 \times 64}$ is processed through an encoder pathway consisting of sequential blocks of $3 \times 3$ convolutions, Batch Normalization, and ReLU activations, followed by max-pooling. This progressively downsamples the spatial resolution while extracting hierarchical geometric features, culminating in a lower-resolution bottleneck.
+
+Concurrently, the conditioning variables are processed through parallel Multilayer Perceptrons (MLPs). The continuous time variable $t$, the normalized target rotation $\Delta\theta / 360^{\circ}$, and the frozen DINOv3 feature vector $c_{dino} \in \mathbb{R}^{384}$ are each mapped to a shared latent dimension via separate linear projections and GELU activations. These three dense representations are summed to form a single, unified global conditioning vector:
+\begin{equation}
+    c_{\mathrm{global}} = \mathrm{MLP}_{\mathrm{time}}(t) + \mathrm{MLP}_{\mathrm{angle}}(\Delta\theta) + \mathrm{Proj}_{\mathrm{dino}}(c_{\mathrm{dino}}).
+\end{equation}
+
+To effectively guide the physical transformation, $c_{\mathrm{global}}$ is spatially broadcasted (expanded across the height and width dimensions) and added element-wise to the feature maps strictly at the U-Net's bottleneck. This design choice ensures that the global identity and target constraints modulate the deepest, most compressed representation of the shape.
+
+Finally, a decoder pathway reconstructs the spatial resolution using bilinear upsampling. To preserve high-frequency structural details (such as the sharp edges of the Tetris blocks), skip connections from the encoder are concatenated with the upsampled features at each resolution block. A terminal $1 \times 1$ convolution collapses the channels to predict the final velocity field $v_t$, which matches the dimensionality of the input image.
+
+\subsubsection{Numerical Integration}
+To apply a rotation at test time, we integrate the ODE with $K$ steps. In practice we use a second-order update (Heun / RK2) for stability:
+\begin{align}
+    v_1 &= v_\phi(x_k, t_k, c), \\
+    \tilde{x} &= x_k + \Delta t \, v_1, \\
+    v_2 &= v_\phi(\tilde{x}, t_{k+1}, c), \\
+    x_{k+1} &= x_k + \tfrac{1}{2}\Delta t \left(v_1 + v_2\right),
+\end{align}
+with $\Delta t = 1/K$. The resulting sequence $\{x_k\}$ is directly visualizable as the model ``mentally rotating'' the object.
+
+\subsubsection{Maze Sketcher (Same Principle, Different State)}
+For mazes, the sketch state is not a rotated image but a \textbf{trace mask} (the red path). We represent:
+\begin{equation}
+    \tau(t) \in [0,1]^{1 \times H \times W}
+\end{equation}
+as the current drawn trace, conditioned on a maze context image $m \in [0,1]^{3 \times H \times W}$ encoding walls, start, and goal. The sketcher predicts an additive update:
+\begin{equation}
+    \Delta\tau \approx v_\psi(\tau_t, m, t),
+\end{equation}
+trained from shortest-path supervision: we generate a maze, compute a BFS shortest path, convert partial prefixes of the path into frame-like trace masks, and regress the one-step delta between consecutive frames.
+
+At inference, the model rolls out:
+\begin{equation}
+    \tau_{k+1} = \mathrm{clip}\!\left(\tau_k + v_\psi(\tau_k, m, t_k),\, 0,\, 1\right),
+\end{equation}
+producing an explicit CoS trajectory. This ODE-driven approach forces the model to learn local, continuous transition rules rather than attempting to solve the global problem in a single, discrete pass.
+
+\newpage
+\input{checklist.tex}
+
+\end{document}
