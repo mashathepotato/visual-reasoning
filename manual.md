@@ -32,6 +32,34 @@ used by every matched method. Regeneration should produce the same hashes.
 
 ## Run the matched supervised baselines
 
+### One-command Apple MPS overnight run
+
+This runs the full colored-rotation CNN and ViT for seeds 0, 1, and 2
+sequentially, prevents macOS sleep with `caffeinate`, and resumes by skipping
+completed runs:
+
+```bash
+./scripts/run_mps_overnight.sh
+```
+
+Large checkpoints, predictions, resolved configs, and console logs are saved to
+`models/runs/mps_baselines/{cnn,vit}/seedN/`. Lightweight aggregate results and
+the live/final status file are saved to `results/mps_baselines/`. A failed run is
+recorded and the remaining runs continue. Re-run the same command to retry only
+incomplete runs, or use `./scripts/run_mps_overnight.sh --force` to rerun all six.
+
+Before committing to the overnight run, verify the wrapper on tiny subsets:
+
+```bash
+./scripts/run_mps_overnight.sh --smoke --seeds 0 --force
+```
+
+Keep the Mac connected to power. You can follow progress in another terminal:
+
+```bash
+tail -f models/runs/mps_baselines/vit/seed0/console.log
+```
+
 Tiny end-to-end ViT smoke test (10 train examples and 8 examples per evaluation
 split; pipeline validation only):
 

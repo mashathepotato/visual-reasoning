@@ -28,6 +28,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=None, help="Override experiment.seed for a multi-seed run.")
+    parser.add_argument("--device", choices=("auto", "cpu", "cuda", "mps"), default=None)
+    parser.add_argument("--num-workers", type=int, default=None)
+    parser.add_argument("--epochs", type=int, default=None)
+    parser.add_argument("--train-fraction", type=float, default=None)
+    parser.add_argument("--max-eval-samples", type=int, default=None)
+    parser.add_argument("--preliminary", action="store_true", help="Mark output as a pipeline check, not a scientific run.")
     return parser.parse_args()
 
 
@@ -152,7 +158,19 @@ def main() -> None:
     config = copy.deepcopy(load_experiment_config(config_path))
     if args.seed is not None:
         config["experiment"]["seed"] = int(args.seed)
-        validate_experiment_config(config)
+    if args.device is not None:
+        config["experiment"]["device"] = str(args.device)
+    if args.num_workers is not None:
+        config["training"]["num_workers"] = int(args.num_workers)
+    if args.epochs is not None:
+        config["training"]["epochs"] = int(args.epochs)
+    if args.train_fraction is not None:
+        config["dataset"]["train_fraction"] = float(args.train_fraction)
+    if args.max_eval_samples is not None:
+        config["dataset"]["max_eval_samples"] = int(args.max_eval_samples)
+    if args.preliminary:
+        config["experiment"]["preliminary"] = True
+    validate_experiment_config(config)
 
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -278,7 +296,8 @@ def main() -> None:
         "checkpoint_selection": "validation_accuracy",
         "metrics": final_metrics,
         "elapsed_seconds": time.perf_counter() - started,
-        "preliminary": "smoke" in str(config["experiment"]["name"]).lower(),
+        "preliminary": bool(config["experiment"].get("preliminary", False))
+        or "smoke" in str(config["experiment"]["name"]).lower(),
     }
     write_json(output_dir / "summary.json", summary)
     print(json.dumps(summary, indent=2, sort_keys=True))
