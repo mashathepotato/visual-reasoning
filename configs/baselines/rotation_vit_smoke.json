@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "experiment": {
+    "name": "colored_rotation_vit_smoke",
+    "seed": 0,
+    "device": "cpu"
+  },
+  "dataset": {
+    "task": "colored_rotation",
+    "manifest": "data/splits/colored_rotation_v1.json",
+    "image_size": 64,
+    "train_fraction": 0.002,
+    "max_eval_samples": 8,
+    "augmentations": []
+  },
+  "model": {
+    "type": "vit",
+    "input_channels": 6,
+    "num_classes": 2,
+    "patch_size": 16,
+    "embed_dim": 32,
+    "depth": 1,
+    "num_heads": 4,
+    "mlp_ratio": 2.0,
+    "dropout": 0.0,
+    "pretrained": false
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 4,
+    "epochs": 1,
+    "num_workers": 0,
+    "scheduler": "none",
+    "update_budget": null
+  },
+  "evaluation": {
+    "splits": ["validation", "test_id", "test_ood_angle"],
+    "metrics": ["accuracy", "balanced_accuracy", "auc", "brier", "log_loss"],
+    "checkpoint_selection": "validation_accuracy",
+    "threshold_selection": "fixed_0.5"
+  },
+  "transition": {
+    "type": "none",
+    "flow_integration_steps": 0,
+    "conditioning": "none",
+    "frozen": null
+  },
+  "controller": {
+    "type": "direct_supervised_classifier",
+    "action_space": null,
+    "reward": null,
+    "step_penalty": null,
+    "max_episode_steps": 1,
+    "terminal_rule": "binary_argmax"
+  }
+}
