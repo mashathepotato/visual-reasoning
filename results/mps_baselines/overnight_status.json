@@ -1,0 +1,115 @@
+{
+  "aggregates": {
+    "cnn": "/Users/masha/Documents/visual-reasoning/results/mps_baselines/cnn_seeds0-1-2.json",
+    "vit": "/Users/masha/Documents/visual-reasoning/results/mps_baselines/vit_seeds0-1-2.json"
+  },
+  "device": "mps",
+  "elapsed_seconds": 4312.556757249986,
+  "finished_at_utc": "2026-08-02T19:13:43.143853+00:00",
+  "metadata": {
+    "command": [
+      "/Users/masha/Documents/visual-reasoning/scripts/run_mps_overnight.py"
+    ],
+    "created_at_utc": "2026-08-02T18:01:50.457779+00:00",
+    "dependencies": {
+      "datasets": "4.8.5",
+      "gymnasium": "1.2.3",
+      "kornia": "0.8.2",
+      "numpy": "2.2.6",
+      "pillow": "12.1.1",
+      "scikit-learn": "1.8.0",
+      "stable-baselines3": "2.7.1",
+      "timm": "1.0.22",
+      "torch": "2.9.1",
+      "torchvision": "0.24.1"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "549fa3e8d0094fcea8eba81ae1717f4bd58c64da",
+      "dirty": false,
+      "status": []
+    },
+    "hardware": {
+      "cuda_available": false,
+      "cuda_device": null,
+      "cuda_device_count": 0,
+      "mps_available": true
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": {
+      "executable": "/Users/masha/Documents/visual-reasoning/.venv/bin/python",
+      "implementation": "CPython",
+      "version": "3.12.12"
+    }
+  },
+  "models": [
+    "cnn",
+    "vit"
+  ],
+  "output_root": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines",
+  "results_dir": "/Users/masha/Documents/visual-reasoning/results/mps_baselines",
+  "runs": [
+    {
+      "elapsed_seconds": 202.34317237499636,
+      "model": "cnn",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed0",
+      "seed": 0,
+      "started_at_utc": "2026-08-02T18:01:50.497642+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 236.99326449999353,
+      "model": "cnn",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed1",
+      "seed": 1,
+      "started_at_utc": "2026-08-02T18:05:12.905260+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 260.4309671249939,
+      "model": "cnn",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed2",
+      "seed": 2,
+      "started_at_utc": "2026-08-02T18:09:09.898292+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 1119.7676369170076,
+      "model": "vit",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/vit/seed0",
+      "seed": 0,
+      "started_at_utc": "2026-08-02T18:13:30.328851+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 1290.113527708978,
+      "model": "vit",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/vit/seed1",
+      "seed": 1,
+      "started_at_utc": "2026-08-02T18:32:10.093936+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 1202.834589999984,
+      "model": "vit",
+      "returncode": 0,
+      "run_directory": "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/vit/seed2",
+      "seed": 2,
+      "started_at_utc": "2026-08-02T18:53:40.261044+00:00",
+      "status": "complete"
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "smoke": false,
+  "started_at_utc": "2026-08-02T18:01:50.437781+00:00",
+  "status": "complete"
+}

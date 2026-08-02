@@ -117,7 +117,7 @@ Claims are conditional on results:
 
 | Priority | Reviewer concern | Planned response | Metrics | Implementation status | Experiment status | Result | Paper section | Venue |
 |---|---|---|---|---|---|---|---|---|
-| P0 | Unfair zero-shot baselines | Train small CNN and ViT on identical manifests, pixels, updates, and validation protocol | Accuracy, AUC, calibration, parameters, runtime | Implemented for colored rotation | Smoke only | Pipeline validated; no scientific result | Experiments | BENTO |
+| P0 | Unfair zero-shot baselines | Train small CNN and ViT on identical manifests, pixels, updates, and validation protocol | Accuracy, AUC, calibration, parameters, runtime | Implemented for colored rotation | Seeds 0/1/2 complete | ID accuracy: CNN 65.93 ± 0.78%, ViT 56.40 ± 2.01%; held-out-angle comparison has an unpaired-split caveat | Experiments | BENTO |
 | P0 | Explicit traces may not help | Compare direct pair classifier, scalar/no-image controller, exact rendered trace, and learned trace | Accuracy/AUC, latency, transition calls | Not started | Not run | — | Main hypothesis | BENTO |
 | P0 | Flow may be unnecessary | Hold controller fixed across deterministic rotation, direct learned predictor, linear/rectified flow, and rotation-orbit flow | Task metrics and trace fidelity | Not started | Not run | — | Method ablations | BENTO |
 | P0 | Intermediate states may be blurry fades | Match predicted frames to exact rotations | Angular error, mask/edge IoU, SSIM, area drift, connected components, rollout drift | Not started | Not run | — | Trajectory evaluation | BENTO |
@@ -215,5 +215,6 @@ Proposed dates:
   0.5 on ID and OOD-angle smoke splits; this is explicitly non-scientific.
 - [x] Track the legacy paper sources, remove reviewer template boilerplate, and
   remove unsupported legacy result claims from the NeurIPS draft.
-- [ ] Run full CNN/ViT seeds 0, 1, and 2 on a CUDA host.
+- [x] Run full CNN/ViT seeds 0, 1, and 2 on Apple MPS and commit the aggregate
+  results. All six runs completed in 71.9 minutes.
 - [ ] Implement the no-trace/transition/controller factorial and trajectory metrics.

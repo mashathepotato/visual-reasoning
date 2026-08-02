@@ -1,0 +1,189 @@
+{
+  "completed_runs": [
+    "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed0",
+    "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed1",
+    "/Users/masha/Documents/visual-reasoning/models/runs/mps_baselines/cnn/seed2"
+  ],
+  "experiment_name": "colored_rotation_cnn",
+  "metrics": {
+    "test_id": {
+      "accuracy": {
+        "mean": 0.6593333333333334,
+        "n_seeds": 3,
+        "std": 0.007767453465154036
+      },
+      "auc": {
+        "mean": 0.7230773333333333,
+        "n_seeds": 3,
+        "std": 0.006963150244920276
+      },
+      "balanced_accuracy": {
+        "mean": 0.6593333333333333,
+        "n_seeds": 3,
+        "std": 0.007767453465153974
+      },
+      "brier": {
+        "mean": 0.22705897923362003,
+        "n_seeds": 3,
+        "std": 0.003305537670221023
+      },
+      "fn": {
+        "mean": 147.66666666666666,
+        "n_seeds": 3,
+        "std": 37.753587026047384
+      },
+      "fp": {
+        "mean": 193.0,
+        "n_seeds": 3,
+        "std": 45.50824101193101
+      },
+      "log_loss": {
+        "mean": 0.6614009533171746,
+        "n_seeds": 3,
+        "std": 0.009770052813384857
+      },
+      "n": {
+        "mean": 1000.0,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "threshold": {
+        "mean": 0.5,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "tn": {
+        "mean": 307.0,
+        "n_seeds": 3,
+        "std": 45.50824101193101
+      },
+      "tp": {
+        "mean": 352.3333333333333,
+        "n_seeds": 3,
+        "std": 37.753587026047384
+      }
+    },
+    "test_ood_angle": {
+      "accuracy": {
+        "mean": 0.6766666666666667,
+        "n_seeds": 3,
+        "std": 0.0015275252316519481
+      },
+      "auc": {
+        "mean": 0.7475946666666666,
+        "n_seeds": 3,
+        "std": 0.004111737994246891
+      },
+      "balanced_accuracy": {
+        "mean": 0.6766666666666667,
+        "n_seeds": 3,
+        "std": 0.0015275252316519481
+      },
+      "brier": {
+        "mean": 0.21502588908527034,
+        "n_seeds": 3,
+        "std": 0.006699994069778474
+      },
+      "fn": {
+        "mean": 138.33333333333334,
+        "n_seeds": 3,
+        "std": 40.5010287935175
+      },
+      "fp": {
+        "mean": 185.0,
+        "n_seeds": 3,
+        "std": 38.97435053981015
+      },
+      "log_loss": {
+        "mean": 0.6264422526927178,
+        "n_seeds": 3,
+        "std": 0.02011064546247392
+      },
+      "n": {
+        "mean": 1000.0,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "threshold": {
+        "mean": 0.5,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "tn": {
+        "mean": 315.0,
+        "n_seeds": 3,
+        "std": 38.97435053981015
+      },
+      "tp": {
+        "mean": 361.6666666666667,
+        "n_seeds": 3,
+        "std": 40.5010287935175
+      }
+    },
+    "validation": {
+      "accuracy": {
+        "mean": 0.6733333333333333,
+        "n_seeds": 3,
+        "std": 0.0037859388972001857
+      },
+      "auc": {
+        "mean": 0.73728,
+        "n_seeds": 3,
+        "std": 0.002890060206985312
+      },
+      "balanced_accuracy": {
+        "mean": 0.6733333333333333,
+        "n_seeds": 3,
+        "std": 0.0037859388972001466
+      },
+      "brier": {
+        "mean": 0.21817593868965288,
+        "n_seeds": 3,
+        "std": 0.0048519964772457
+      },
+      "fn": {
+        "mean": 148.66666666666666,
+        "n_seeds": 3,
+        "std": 35.23256069793017
+      },
+      "fp": {
+        "mean": 178.0,
+        "n_seeds": 3,
+        "std": 38.301436004411116
+      },
+      "log_loss": {
+        "mean": 0.6367992256754442,
+        "n_seeds": 3,
+        "std": 0.014825693484616702
+      },
+      "n": {
+        "mean": 1000.0,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "threshold": {
+        "mean": 0.5,
+        "n_seeds": 3,
+        "std": 0.0
+      },
+      "tn": {
+        "mean": 322.0,
+        "n_seeds": 3,
+        "std": 38.301436004411116
+      },
+      "tp": {
+        "mean": 351.3333333333333,
+        "n_seeds": 3,
+        "std": 35.23256069793017
+      }
+    }
+  },
+  "missing_or_failed_runs": [],
+  "model": "cnn",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "task": "colored_rotation"
+}
