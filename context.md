@@ -97,12 +97,14 @@ Notes:
 - DINOv3 rotation separation plots already exported: `diagrams/*baseline_separation.(png|pdf)`
 
 ## Gotchas / assumptions (fast)
-- `requirements.txt` is **not exhaustive** for all scripts/notebooks (common missing deps: `gymnasium`, `stable-baselines3`, `kornia`, `Pillow`, `imageio`, `jupyter`, `tensorboard`).
+- `requirements.txt` pins the verified direct runtime dependencies. Jupyter and
+  LaTeX tooling remain optional and are not required for canonical CLI runs.
 - Image conventions matter:
   - tetris FM expects grayscale `[-1,1]` FM tensors; colors uses RGB `[0,1]`.
 - 3D “blocks” data used by eval is **already** in `data/test_balanced.npy`; regenerating from raw jpgs requires `data/ganis_kievit_data/stimuli_jpgs/` + `scripts/prep_ganis_kievit.py`.
 
 ## Next useful steps (suggested)
-- Add a single “eval harness” that reports *comparable metrics* for learned PPO/FoT agents (not just reward curves).
-- Consolidate deps into a reproducible env file (or split `requirements.txt` into core vs RL vs notebooks).
+- Extend the matched supervised harness to a common transition/controller
+  evaluator that reports task and trajectory metrics (not just reward curves).
+- Run the committed CNN/ViT configs on CUDA for seeds 0, 1, and 2.
 - Tighten the 3D story: standardize whether 3D uses raw jpgs vs only preprocessed `.npy`, and keep scripts consistent.

@@ -117,13 +117,13 @@ Claims are conditional on results:
 
 | Priority | Reviewer concern | Planned response | Metrics | Implementation status | Experiment status | Result | Paper section | Venue |
 |---|---|---|---|---|---|---|---|---|
-| P0 | Unfair zero-shot baselines | Train small CNN and ViT on identical manifests, pixels, updates, and validation protocol | Accuracy, AUC, calibration, parameters, runtime | Not started | Not run | — | Experiments | BENTO |
+| P0 | Unfair zero-shot baselines | Train small CNN and ViT on identical manifests, pixels, updates, and validation protocol | Accuracy, AUC, calibration, parameters, runtime | Implemented for colored rotation | Smoke only | Pipeline validated; no scientific result | Experiments | BENTO |
 | P0 | Explicit traces may not help | Compare direct pair classifier, scalar/no-image controller, exact rendered trace, and learned trace | Accuracy/AUC, latency, transition calls | Not started | Not run | — | Main hypothesis | BENTO |
 | P0 | Flow may be unnecessary | Hold controller fixed across deterministic rotation, direct learned predictor, linear/rectified flow, and rotation-orbit flow | Task metrics and trace fidelity | Not started | Not run | — | Method ablations | BENTO |
 | P0 | Intermediate states may be blurry fades | Match predicted frames to exact rotations | Angular error, mask/edge IoU, SSIM, area drift, connected components, rollout drift | Not started | Not run | — | Trajectory evaluation | BENTO |
 | P0 | PPO may be unnecessary | Compare greedy, supervised/BC, PPO, and random with common observations and budgets | Accuracy, success, actions, reward, calls, latency | Not started | Not run | — | Controller ablations | BENTO |
-| P0 | Test leakage and unstable estimates | Lock validation-selected rules; run seeds 0/1/2; paired bootstrap over fixed test items | Mean, SD, 95% CI, n | Not started | Not run | — | Protocol/statistics | BENTO |
-| P0 | “Generalization” is vague | Predeclare ID and OOD-angle splits | Accuracy and trace error by angle | Not started | Not run | — | Generalization | BENTO |
+| P0 | Test leakage and unstable estimates | Lock validation-selected rules; run seeds 0/1/2; paired bootstrap over fixed test items | Mean, SD, 95% CI, n | Manifests, validation selection, and seed aggregation implemented | Full runs not launched | — | Protocol/statistics | BENTO |
+| P0 | “Generalization” is vague | Predeclare ID and OOD-angle splits | Accuracy and trace error by angle | ID/OOD-angle manifests implemented | Baseline smoke only | — | Generalization | BENTO |
 | P1 | Data efficiency may justify complexity | Use identical nested 1/5/10/25/50/100% subsets; screen 10/100% first | Accuracy vs examples and compute | Not started | Not run | — | Data efficiency | BENTO/ICLR |
 | P1 | 3D split is leaky and tiny | Regenerate identity-disjoint splits or grouped cross-validation; remove test-tuned fusion | Macro accuracy/AUC and identity-grouped CI | Not started | Invalid current result | — | Transfer | ICLR |
 | P1 | Maze uses oracle structure | Redesign reward/termination around trace validity and goal reach | Validity, reach, collision, connectivity, path ratio | Not started | Invalid current controller evidence | — | Additional tasks | ICLR |
@@ -205,5 +205,15 @@ Proposed dates:
   one epoch, 8 train / 4 validation examples, seed 0, MPS, approximately 7 seconds.
   It produced `val_loss=1.3901`, `val_acc=0.0`; this is a pipeline check only.
 - [x] Confirmed 3D object-identity overlap in the checked-in arrays.
-- [ ] Implement the reproducibility foundation.
-- [ ] Implement and smoke-test the matched supervised ViT baseline.
+- [x] Implement the reproducibility foundation: pinned direct dependencies,
+  immutable manifests, stateless datasets, strict configs, run metadata, and
+  aggregation that marks missing runs.
+- [x] Implement matched small CNN/ViT baselines with validation-only checkpoint
+  selection and machine-readable predictions.
+- [x] Smoke-test the ViT pipeline on CPU: 10 train examples, 8 per evaluation
+  split, 58,434 parameters, approximately 1.4 seconds end to end. Accuracy was
+  0.5 on ID and OOD-angle smoke splits; this is explicitly non-scientific.
+- [x] Track the legacy paper sources, remove reviewer template boilerplate, and
+  remove unsupported legacy result claims from the NeurIPS draft.
+- [ ] Run full CNN/ViT seeds 0, 1, and 2 on a CUDA host.
+- [ ] Implement the no-trace/transition/controller factorial and trajectory metrics.
