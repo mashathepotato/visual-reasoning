@@ -1,0 +1,82 @@
+[
+  {
+    "sample_id": "tetris_rotation:test_ood_angle:000263",
+    "label": "SAME",
+    "render_angle_deg": 325.0,
+    "exact_best_angle": 34,
+    "exact_best_mse": 0.0014467494329437613,
+    "flow_best_angle": 30,
+    "flow_best_mse": 0.024440273642539978,
+    "ppo_actions": [
+      "rotate +15",
+      "rotate +15",
+      "rotate +15",
+      "rotate +15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15",
+      "rotate +15",
+      "rotate -15"
+    ],
+    "ppo_terminated": false,
+    "ppo_truncated": true,
+    "ppo_final_info": {
+      "angle": 60.0,
+      "error": 0.034309323877096176,
+      "best_error": 0.024440273642539978,
+      "best_angle": 30.0,
+      "is_mirrored": false,
+      "no_improve_steps": 0,
+      "total_rotation": 360.0
+    }
+  },
+  {
+    "sample_id": "tetris_rotation:test_ood_angle:000262",
+    "label": "DIFFERENT",
+    "render_angle_deg": 225.0,
+    "exact_best_angle": 188,
+    "exact_best_mse": 0.030675804242491722,
+    "flow_best_angle": 210,
+    "flow_best_mse": 0.07721614837646484,
+    "ppo_actions": [
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30",
+      "rotate -30"
+    ],
+    "ppo_terminated": false,
+    "ppo_truncated": true,
+    "ppo_final_info": {
+      "angle": 0.0,
+      "error": 0.09947242587804794,
+      "best_error": 0.07721614837646484,
+      "best_angle": 120.0,
+      "is_mirrored": true,
+      "no_improve_steps": 2,
+      "total_rotation": 360.0
+    }
+  }
+]

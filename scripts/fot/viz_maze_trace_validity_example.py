@@ -88,6 +88,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--maze-cells", type=int, default=DEFAULT_MAZE_CELLS)
     p.add_argument("--upscale", type=int, default=DEFAULT_UPSCALE)
     p.add_argument("--sketcher", type=str, required=True)
+    p.add_argument("--rollout", choices=("sketcher", "controller"), default="sketcher")
+    p.add_argument("--controller", type=str, default="")
     p.add_argument("--device", type=str, default="cpu")
     p.add_argument("--threshold", type=float, default=0.37118908762931824)
     p.add_argument("--out", type=str, required=True)
@@ -116,7 +118,8 @@ def main() -> None:
         sketcher_path=Path(str(args.sketcher)),
         device=str(args.device),
         img_size=64,
-        rollout="sketcher",
+        rollout=str(args.rollout),
+        controller_path=Path(args.controller) if args.controller else None,
     )
     trace_pred_64, _ = solver.rollout_trace(grid=grid, start=start, goal=goal)
 
@@ -140,7 +143,7 @@ def main() -> None:
     pred_rgb = _overlay_trace(base_64, trace_64=trace_pred_64, color=(255, 230, 0), alpha_scale=0.9)
     pred_img = Image.fromarray(pred_rgb, mode="RGB")
     pred_img = _nearest_resize(pred_img, scale=4)
-    pred_img = _title(pred_img, "FoT solve trace (yellow)")
+    pred_img = _title(pred_img, f"FoT {args.rollout} trace (yellow)")
 
     both_rgb = _overlay_trace(base_64, trace_64=trace_obs_64, color=(255, 50, 50), alpha_scale=0.9)
     both_rgb = _overlay_trace(both_rgb, trace_64=trace_pred_64, color=(255, 230, 0), alpha_scale=0.6)

@@ -1,0 +1,25 @@
+{
+  "archive": {
+    "copy_method": "apfs_clone",
+    "raw_file_count": 416,
+    "raw_manifest_sha256": "0dd123a2592d70856ac8936b1da14547302e53cb5b6d93fd6f9b7796b942d685",
+    "raw_path": "/Users/masha/Documents/visual-reasoning/models/archives/mps_paper_suite_2026-08-03",
+    "read_only": true,
+    "results_file_count": 17,
+    "results_manifest": "/Users/masha/Documents/visual-reasoning/results/baseline_archives/mps_paper_suite_2026-08-03/MANIFEST.sha256",
+    "results_path": "/Users/masha/Documents/visual-reasoning/results/baseline_archives/mps_paper_suite_2026-08-03"
+  },
+  "created_at_utc": "2026-08-05T06:10:45.199898+00:00",
+  "git_commit_at_archive": "eb9a85f6f2a958bc4a3758a3bd6b28ad1e9d1cad",
+  "name": "mps_paper_suite_2026-08-03",
+  "notes": [
+    "This preserves the completed 65-stage MPS paper suite before flow-v1 development.",
+    "Raw checkpoints are stored outside Git under models/archives; compact reports are tracked under results.",
+    "The archive utility refuses to overwrite a snapshot with the same name."
+  ],
+  "schema_version": 1,
+  "source": {
+    "results_dir": "/Users/masha/Documents/visual-reasoning/results/mps_paper_suite",
+    "run_root": "/Users/masha/Documents/visual-reasoning/models/runs/mps_paper_suite"
+  }
+}

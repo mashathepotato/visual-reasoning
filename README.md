@@ -14,3 +14,14 @@ matrix with:
 ```bash
 scripts/run_paper_mps_suite.sh --profile overnight --seeds 0 1 2 --keep-going
 ```
+
+## PPO-free trajectory flow rebuild
+
+The NeurReps-oriented flow-only method, generated-image QC, frozen baseline
+archive, and MPS commands are documented in
+[`docs/neurreps_flow_v1.md`](docs/neurreps_flow_v1.md). Run its resumable
+three-task, three-seed overnight suite with:
+
+```bash
+.venv/bin/python scripts/run_neurreps_flow_suite.py --profile overnight --device mps
+```

@@ -20,6 +20,7 @@ from scripts.run_paper_mps_suite import stage_plan
 from utils.fot.external_datasets import SATv2Dataset
 from utils.fot.maze_ops import MazeTraceDataset
 from utils.fot.metrics import mean_t_ci, wilson_accuracy_ci
+from utils.fot.trajectory_datasets import MazeTrajectoryDataset, RotationTrajectoryDataset, render_rotation_frames
 
 
 class PaperSuiteTests(unittest.TestCase):
@@ -59,6 +60,19 @@ class PaperSuiteTests(unittest.TestCase):
         _ = dataset[0]
         second = dataset[2]
         self.assertTrue(all(torch.equal(a, b) for a, b in zip(first, second)))
+
+    def test_new_flow_trajectories_are_fixed_and_auditable(self) -> None:
+        rotation = RotationTrajectoryDataset(task="tetris", n_samples=3, image_size=32, seed=9)
+        base, start, delta = rotation[1]
+        times = torch.tensor([0.0, 0.5, 1.0])
+        rendered = render_rotation_frames(base[None], start[None], delta[None], times)
+        self.assertEqual(tuple(rendered.shape), (1, 3, 1, 32, 32))
+        self.assertTrue(torch.equal(rotation[1][0], base))
+        maze = MazeTrajectoryDataset(n_samples=2, maze_cells=5, image_size=32, trajectory_steps=4, seed=9)
+        condition, frames = maze[0]
+        self.assertEqual(tuple(condition.shape), (3, 32, 32))
+        self.assertEqual(tuple(frames.shape), (5, 1, 32, 32))
+        self.assertTrue(torch.all(frames[1:] >= frames[:-1]))
 
     def test_confidence_intervals(self) -> None:
         low, high = wilson_accuracy_ci(80, 100)

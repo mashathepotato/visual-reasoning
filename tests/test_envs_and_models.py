@@ -8,6 +8,7 @@ import torch.nn as nn
 from utils.fot.envs_maze import MazeEnvFMProgress
 from utils.fot.envs_rotation import RotationEnv
 from utils.fot.models import FastRotator
+from utils.fot.trajectory_flow import TrajectoryFlowField, integrate_trajectory, rotation_action
 
 
 class ZeroSketcher(nn.Module):
@@ -62,6 +63,23 @@ class EnvironmentAndModelTests(unittest.TestCase):
             torch.zeros((2, 1)),
         )
         self.assertEqual(tuple(output.shape), (2, 1, 16, 16))
+
+    def test_trajectory_flow_rollout_is_differentiable(self) -> None:
+        flow = TrajectoryFlowField(
+            state_channels=1, condition_channels=3, width=8, context_dim=32
+        )
+        initial = torch.zeros((2, 1, 16, 16))
+        condition = torch.zeros((2, 3, 16, 16))
+        endpoint = integrate_trajectory(
+            flow,
+            initial,
+            condition,
+            rotation_action(torch.tensor([30.0, -45.0])),
+            steps=2,
+        )
+        endpoint.square().mean().backward()
+        self.assertEqual(tuple(endpoint.shape), (2, 1, 16, 16))
+        self.assertTrue(all(parameter.grad is not None for parameter in flow.parameters()))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,277 @@
+{
+  "aggregates": [
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.004457390711953242,
+      "metric": "cycle_mse",
+      "n_seeds": 1,
+      "task": "colored",
+      "values": [
+        0.004457390711953242
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.11288291712601979,
+      "metric": "endpoint_mse",
+      "n_seeds": 1,
+      "task": "colored",
+      "values": [
+        0.11288291712601979
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 10.196982701619467,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 1,
+      "task": "colored",
+      "values": [
+        10.196982701619467
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.2601163635651271,
+      "metric": "silhouette_iou",
+      "n_seeds": 1,
+      "task": "colored",
+      "values": [
+        0.2601163635651271
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.07876981794834137,
+      "metric": "trajectory_mse",
+      "n_seeds": 1,
+      "task": "colored",
+      "values": [
+        0.07876981794834137
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.011353358005483946,
+      "metric": "endpoint_iou",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.011353358005483946
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.2026759386062622,
+      "metric": "endpoint_mse",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.2026759386062622
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.0,
+      "metric": "goal_reached",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.0,
+      "metric": "obstacle_violation_rate",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 1.0,
+      "metric": "path_precision",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.011353358005483946,
+      "metric": "path_recall",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.011353358005483946
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.10221796482801437,
+      "metric": "trajectory_mse",
+      "n_seeds": 1,
+      "task": "maze",
+      "values": [
+        0.10221796482801437
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.00434722937643528,
+      "metric": "cycle_mse",
+      "n_seeds": 1,
+      "task": "tetris",
+      "values": [
+        0.00434722937643528
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.05899554739395777,
+      "metric": "endpoint_mse",
+      "n_seeds": 1,
+      "task": "tetris",
+      "values": [
+        0.05899554739395777
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 12.599339803059896,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 1,
+      "task": "tetris",
+      "values": [
+        12.599339803059896
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.48270981510480243,
+      "metric": "silhouette_iou",
+      "n_seeds": 1,
+      "task": "tetris",
+      "values": [
+        0.48270981510480243
+      ]
+    },
+    {
+      "ci95_high": null,
+      "ci95_low": null,
+      "mean": 0.04006166383624077,
+      "metric": "trajectory_mse",
+      "n_seeds": 1,
+      "task": "tetris",
+      "values": [
+        0.04006166383624077
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-08-05T06:32:05.738648+00:00",
+  "method": "trajectory_supervised_spatial_flow_no_ppo",
+  "profile": "smoke",
+  "schema_version": 1,
+  "summaries": [
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/tetris/seed0/audit_best.png",
+      "best_epoch": 1,
+      "best_selection_value": 0.48270981510480243,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/tetris/seed0/best_checkpoint.pt",
+      "elapsed_seconds": 3.5139794999849983,
+      "experiment_name": "neurreps_trajectory_flow_tetris",
+      "metrics": {
+        "validation": {
+          "cycle_mse": 0.00434722937643528,
+          "endpoint_mse": 0.05899554739395777,
+          "endpoint_psnr_db": 12.599339803059896,
+          "silhouette_iou": 0.48270981510480243,
+          "trajectory_mse": 0.04006166383624077
+        }
+      },
+      "model": "trajectory_supervised_spatial_flow_no_ppo",
+      "parameter_count": 56594,
+      "preliminary": true,
+      "seed": 0,
+      "selection_metric": "silhouette_iou",
+      "task": "tetris",
+      "train_samples": 24,
+      "validation_protocol": "heldout_shapes_FP",
+      "validation_samples": 12
+    },
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/colored/seed0/audit_best.png",
+      "best_epoch": 1,
+      "best_selection_value": 0.2601163635651271,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/colored/seed0/best_checkpoint.pt",
+      "elapsed_seconds": 3.874283292039763,
+      "experiment_name": "neurreps_trajectory_flow_colored",
+      "metrics": {
+        "validation": {
+          "cycle_mse": 0.004457390711953242,
+          "endpoint_mse": 0.11288291712601979,
+          "endpoint_psnr_db": 10.196982701619467,
+          "silhouette_iou": 0.2601163635651271,
+          "trajectory_mse": 0.07876981794834137
+        }
+      },
+      "model": "trajectory_supervised_spatial_flow_no_ppo",
+      "parameter_count": 56882,
+      "preliminary": true,
+      "seed": 0,
+      "selection_metric": "silhouette_iou",
+      "task": "colored",
+      "train_samples": 24,
+      "validation_protocol": "independent_procedural_validation",
+      "validation_samples": 12
+    },
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/maze/seed0/audit_best.png",
+      "best_epoch": 1,
+      "best_selection_value": 0.011353358005483946,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/smoke/maze/seed0/best_checkpoint.pt",
+      "elapsed_seconds": 3.700376041990239,
+      "experiment_name": "neurreps_trajectory_flow_maze",
+      "metrics": {
+        "validation": {
+          "endpoint_iou": 0.011353358005483946,
+          "endpoint_mse": 0.2026759386062622,
+          "goal_reached": 0.0,
+          "obstacle_violation_rate": 0.0,
+          "path_precision": 1.0,
+          "path_recall": 0.011353358005483946,
+          "trajectory_mse": 0.10221796482801437
+        }
+      },
+      "model": "trajectory_supervised_spatial_flow_no_ppo",
+      "parameter_count": 56665,
+      "preliminary": true,
+      "seed": 0,
+      "selection_metric": "endpoint_iou",
+      "task": "maze",
+      "train_samples": 24,
+      "validation_protocol": "fixed_validation",
+      "validation_samples": 12
+    }
+  ]
+}
