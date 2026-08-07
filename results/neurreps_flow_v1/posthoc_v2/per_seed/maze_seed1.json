@@ -1,0 +1,26 @@
+{
+  "best_epoch": 30,
+  "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/maze/seed1/best_checkpoint.pt",
+  "renderers": {
+    "additive_flow": {
+      "activation_time_mae_normalized": 0.06502931932918728,
+      "endpoint_iou": 0.9762840531766415,
+      "endpoint_mse": 0.006175307008234086,
+      "future_path_activation_rate_at_0_1": 0.3675715599302202,
+      "future_path_activation_rate_at_0_5": 0.13580119222810028,
+      "future_path_mean_intensity": 0.16413378356024622,
+      "goal_reached": 1.0,
+      "intermediate_prefix_iou": 0.8449052973091602,
+      "missed_path_activation_rate": 0.011843543922586831,
+      "monotonicity_violation_rate": 0.0004794411945658794,
+      "obstacle_violation_rate": 0.0,
+      "off_path_activation_rate_at_0_1": 0.017363535362819676,
+      "path_precision": 0.9879425996541977,
+      "path_recall": 0.988072797358036,
+      "premature_activation_rate": 0.29495658034051303,
+      "trajectory_mse": 0.009721582208876499
+    }
+  },
+  "seed": 1,
+  "task": "maze"
+}

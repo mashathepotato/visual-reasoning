@@ -86,3 +86,77 @@ old suite.
 Hypothesis-conditioned competing flows and the replacement for PPO are
 deliberately out of scope for v1. They should be designed only after these flow
 quality gates pass across seeds.
+
+## Frozen-checkpoint post-hoc audit
+
+The original rotation rollout repeatedly sampled the previous generated image.
+That numerical renderer accumulated interpolation blur even when the learned
+transport field was accurate. `integrate_deformation_times` now integrates a
+backward characteristic map while retaining the checkpoint's native recurrent
+state, then samples the original source exactly once at every requested time.
+It supports arbitrary sorted times in `[0, 1]`, not only the training grid.
+
+All nine completed checkpoints were re-evaluated without retraining or model
+selection:
+
+| Task | Metric | Original rollout | Single-source rollout |
+|---|---|---:|---:|
+| Tetris | silhouette IoU | 0.792 | 0.874 |
+| Tetris | PSNR | 19.88 dB | 23.58 dB |
+| Tetris | sharpness ratio | 0.816 | 1.003 |
+| Colored shapes | silhouette IoU | 0.671 | 0.825 |
+| Colored shapes | PSNR | 18.35 dB | 21.54 dB |
+| Colored shapes | sharpness ratio | 0.841 | 1.137 |
+
+The arbitrary-time `t=0.37` MSE was 0.00185 for Tetris and 0.00455 for colored
+shapes. This establishes that the learned field can be decoded continuously and
+that much of the earlier apparent rotation failure was a rendering artifact.
+Full per-seed values, confidence intervals, and image grids are in
+`results/neurreps_flow_v1/posthoc_v2`.
+
+The same audit adds temporal-causality metrics for the maze flow. Its final path
+remains excellent (IoU 0.975, goal reached 1.0, obstacle violations 0), and mean
+intermediate prefix IoU is 0.842. However, 31.7% of future-path pixels cross the
+activation threshold before their ground-truth step; mean future-path intensity
+is 0.164. The current model therefore learns a mostly monotone final route but
+does not yet support a strong claim of strictly causal, step-by-step search.
+
+Reproduce the frozen audit on MPS with:
+
+```bash
+.venv/bin/python scripts/evaluate_neurreps_flow_posthoc.py --device mps
+```
+
+## Zero-shot Ganis-Kievit diagnostic
+
+After the renderer gate passed, the six frozen 2-D rotation checkpoints were
+applied to all 78 balanced Ganis-Kievit 3-D block pairs. No 3-D image or label
+was used for training, validation, threshold fitting, or checkpoint selection.
+For each pair, the evaluator compares reconstruction error under an original-
+source rotation hypothesis and a horizontally reflected-source hypothesis. It
+reports both the supplied angular disparity (including both signs) and a
+label-free full-angle marginalization.
+
+| 2-D training domain | Supplied-angle accuracy | AUC | Marginalized accuracy | AUC |
+|---|---:|---:|---:|---:|
+| Tetris | 0.585 [0.537, 0.634] | 0.639 | 0.564 [0.509, 0.619] | 0.645 |
+| Colored shapes | 0.615 [0.505, 0.726] | 0.647 | 0.581 [0.469, 0.693] | 0.662 |
+
+These are weak, angle-dependent zero-shot signals rather than a solved 3-D
+reasoning result. Performance is strong at 0 degrees, generally informative at
+50/100 degrees, and reverses or degrades at 150 degrees. The generated states
+are coherent planar rotations, but planar reflection is not a physical mirrored
+3-D transformation. In addition, the legacy dataset preparation has object-
+identity overlap and supplies no ground-truth intermediate views. Treat this as
+a transparent transfer diagnostic and motivation for a future 3-D-aware
+hypothesis-conditioned flow, not as unseen-object OOD evidence.
+
+Reproduce it with:
+
+```bash
+.venv/bin/python scripts/evaluate_neurreps_flow_3d_zero_shot.py --device mps
+```
+
+The complete predictions, per-angle breakdowns, checkpoint/data hashes,
+confidence intervals, and visual trajectories are in
+`results/neurreps_flow_v1/ganis3d_zero_shot`.

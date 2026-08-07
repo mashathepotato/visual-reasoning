@@ -1,0 +1,25 @@
+{
+  "best_epoch": 15,
+  "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed2/best_checkpoint.pt",
+  "renderers": {
+    "repeated_resampling": {
+      "endpoint_mse": 0.023846144751441898,
+      "endpoint_psnr_db": 18.151616702079775,
+      "foreground_area_ratio": 0.9282913006842136,
+      "sharpness_ratio": 0.8250907399505377,
+      "silhouette_iou": 0.6593763392977416,
+      "trajectory_mse": 0.012822597250014951
+    },
+    "single_source": {
+      "arbitrary_t_0.37_mse": 0.0037827695387022686,
+      "endpoint_mse": 0.008857157861129963,
+      "endpoint_psnr_db": 22.180894973278047,
+      "foreground_area_ratio": 0.9804894830286502,
+      "sharpness_ratio": 1.1259211352467537,
+      "silhouette_iou": 0.8380941458791494,
+      "trajectory_mse": 0.004931754485078273
+    }
+  },
+  "seed": 2,
+  "task": "colored"
+}

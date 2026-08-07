@@ -16,11 +16,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.fot.train_dinov3_pair_baseline import PairHead
+from scripts.evaluate_neurreps_flow_3d_zero_shot import classification_metrics
 from scripts.run_paper_mps_suite import stage_plan
 from utils.fot.external_datasets import SATv2Dataset
 from utils.fot.maze_ops import MazeTraceDataset
 from utils.fot.metrics import mean_t_ci, wilson_accuracy_ci
 from utils.fot.trajectory_datasets import MazeTrajectoryDataset, RotationTrajectoryDataset, render_rotation_frames
+from utils.fot.trajectory_metrics import maze_temporal_metrics
 
 
 class PaperSuiteTests(unittest.TestCase):
@@ -74,11 +76,32 @@ class PaperSuiteTests(unittest.TestCase):
         self.assertEqual(tuple(frames.shape), (5, 1, 32, 32))
         self.assertTrue(torch.all(frames[1:] >= frames[:-1]))
 
+    def test_maze_temporal_metrics_reward_true_prefixes(self) -> None:
+        truth = torch.zeros((1, 4, 1, 4, 4))
+        truth[:, 0, :, 0, 0] = 1
+        truth[:, 1, :, 0, :2] = 1
+        truth[:, 2, :, 0, :3] = 1
+        truth[:, 3, :, 0, :] = 1
+        metrics = maze_temporal_metrics(list(truth.unbind(dim=1)), truth)
+        self.assertAlmostEqual(float(metrics["intermediate_prefix_iou"]), 1.0)
+        self.assertAlmostEqual(float(metrics["future_path_mean_intensity"]), 0.0)
+        self.assertAlmostEqual(float(metrics["activation_time_mae_normalized"]), 0.0)
+        self.assertAlmostEqual(float(metrics["monotonicity_violation_rate"]), 0.0)
+
     def test_confidence_intervals(self) -> None:
         low, high = wilson_accuracy_ci(80, 100)
         self.assertLess(low, 0.8); self.assertGreater(high, 0.8)
         low, high = mean_t_ci([0.7, 0.8, 0.9])
         self.assertLess(low, 0.8); self.assertGreater(high, 0.8)
+
+    def test_zero_shot_hypothesis_metrics_use_fixed_zero_margin(self) -> None:
+        metrics = classification_metrics([1, 1, 0, 0], [2.0, 0.1, -0.1, -2.0])
+        self.assertEqual(metrics["accuracy"], 1.0)
+        self.assertEqual(metrics["balanced_accuracy"], 1.0)
+        self.assertEqual(metrics["auc"], 1.0)
+        single_class = classification_metrics([1], [0.2])
+        self.assertIsNone(single_class["auc"])
+        self.assertIsNone(single_class["balanced_accuracy"])
 
     def test_aggregator_writes_all_formats(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

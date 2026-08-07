@@ -130,16 +130,19 @@ class TrajectoryFlowField(nn.Module):
         }
 
     @staticmethod
-    def _sampling_grid(state: torch.Tensor) -> torch.Tensor:
+    def sampling_grid(state: torch.Tensor) -> torch.Tensor:
         y_coordinates = torch.linspace(-1.0, 1.0, state.shape[-2], device=state.device, dtype=state.dtype)
         x_coordinates = torch.linspace(-1.0, 1.0, state.shape[-1], device=state.device, dtype=state.dtype)
         yy, xx = torch.meshgrid(y_coordinates, x_coordinates, indexing="ij")
         return torch.stack([xx, yy], dim=-1).unsqueeze(0).expand(state.shape[0], -1, -1, -1)
 
+    # Compatibility for the v1 training code and frozen checkpoints.
+    _sampling_grid = sampling_grid
+
     def apply_field(self, state: torch.Tensor, field: torch.Tensor, dt: float) -> torch.Tensor:
         if self.dynamics_mode == "additive":
             return state + float(dt) * field
-        grid = self._sampling_grid(state) + float(dt) * field.permute(0, 2, 3, 1)
+        grid = self.sampling_grid(state) + float(dt) * field.permute(0, 2, 3, 1)
         return F.grid_sample(
             state, grid, mode="bilinear", padding_mode="zeros", align_corners=True
         )
@@ -200,6 +203,93 @@ def integrate_trajectory(
         if return_frames:
             frames.append(state)
     return (state, frames) if return_frames else state
+
+
+def render_from_sampling_map(source: torch.Tensor, sampling_map: torch.Tensor) -> torch.Tensor:
+    """Render from the original source exactly once for the requested state."""
+    return F.grid_sample(
+        source, sampling_map, mode="bilinear", padding_mode="zeros", align_corners=True
+    )
+
+
+def sample_vector_field(field: torch.Tensor, sampling_map: torch.Tensor) -> torch.Tensor:
+    """Evaluate an Eulerian vector field along the current characteristics."""
+    return F.grid_sample(
+        field, sampling_map, mode="bilinear", padding_mode="zeros", align_corners=True
+    ).permute(0, 2, 3, 1)
+
+
+def integrate_deformation_times(
+    model: TrajectoryFlowField,
+    source: torch.Tensor,
+    condition: torch.Tensor,
+    action: Optional[torch.Tensor],
+    times: Sequence[float] | torch.Tensor,
+    *,
+    max_step: float = 1.0 / 12.0,
+    method: str = "heun",
+    clamp: Optional[Tuple[float, float]] = None,
+    return_maps: bool = False,
+) -> List[torch.Tensor] | Tuple[List[torch.Tensor], List[torch.Tensor]]:
+    """Generate transport-flow states at arbitrary continuous times.
+
+    A deformation map is integrated continuously, while every returned image is
+    sampled directly from ``source``. This avoids the progressive blur caused by
+    repeatedly resampling the previous image. Additive dynamics should continue
+    to use :func:`integrate_trajectory`.
+    """
+    if model.dynamics_mode != "transport":
+        raise ValueError("Single-resampling deformation integration requires transport dynamics")
+    if max_step <= 0.0:
+        raise ValueError("max_step must be positive")
+    if method not in {"euler", "heun"}:
+        raise ValueError(f"Unknown integration method: {method}")
+    requested = [float(value) for value in (times.detach().cpu().tolist() if torch.is_tensor(times) else times)]
+    if any(value < 0.0 or value > 1.0 for value in requested):
+        raise ValueError("Requested times must lie in [0, 1]")
+    if any(right < left for left, right in zip(requested, requested[1:])):
+        raise ValueError("Requested times must be sorted")
+
+    sampling_map = model.sampling_grid(source).clone()
+    # Preserve the frozen model's native recurrent state as the field input.
+    # The parallel map is a decoder state: it records the same transport while
+    # allowing requested images to be sampled once from the original source.
+    shadow_state = source
+    current_time = 0.0
+    frames: List[torch.Tensor] = []
+    maps: List[torch.Tensor] = []
+    for target_time in requested:
+        while current_time + 1e-10 < target_time:
+            dt = min(float(max_step), target_time - current_time)
+            t0 = torch.full(
+                (source.shape[0], 1), current_time, device=source.device, dtype=source.dtype
+            )
+            field = model(shadow_state, condition, t0, action)
+            if method == "heun":
+                proposal_state = model.apply_field(shadow_state, field, dt)
+                map_velocity = sample_vector_field(field, sampling_map)
+                proposal_map = sampling_map + dt * map_velocity
+                t1 = torch.full(
+                    (source.shape[0], 1), current_time + dt, device=source.device, dtype=source.dtype
+                )
+                next_field = model(proposal_state, condition, t1, action)
+                average_field = 0.5 * (field + next_field)
+                shadow_state = model.apply_field(shadow_state, average_field, dt)
+                next_map_velocity = sample_vector_field(next_field, proposal_map)
+                sampling_map = sampling_map + 0.5 * dt * (map_velocity + next_map_velocity)
+            else:
+                shadow_state = model.apply_field(shadow_state, field, dt)
+                sampling_map = sampling_map + dt * sample_vector_field(field, sampling_map)
+            if clamp is not None:
+                shadow_state = shadow_state.clamp(*clamp)
+            current_time += dt
+        frame = render_from_sampling_map(source, sampling_map)
+        if clamp is not None:
+            frame = frame.clamp(*clamp)
+        frames.append(frame)
+        if return_maps:
+            maps.append(sampling_map.clone())
+    return (frames, maps) if return_maps else frames
 
 
 def weighted_image_loss(prediction: torch.Tensor, target: torch.Tensor, *, foreground_weight: float = 4.0) -> torch.Tensor:

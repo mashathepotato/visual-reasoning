@@ -1,0 +1,32 @@
+{
+  "arguments": {
+    "angle_step": 10,
+    "audit_examples": 6,
+    "data_path": "/Users/masha/Documents/visual-reasoning/data/test_balanced.npy",
+    "device": "mps",
+    "hypothesis_batch_size": 48,
+    "item_batch_size": 6,
+    "max_eval": 0,
+    "output_dir": "/Users/masha/Documents/visual-reasoning/results/neurreps_flow_v1/ganis3d_zero_shot",
+    "run_root": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "source_models": [
+      "tetris",
+      "colored"
+    ]
+  },
+  "data": {
+    "labels": {
+      "different": 39,
+      "same": 39
+    },
+    "n_items": 78,
+    "path": "/Users/masha/Documents/visual-reasoning/data/test_balanced.npy",
+    "sha256": "4410001edc7a93ee3a905c3097ec77275da52d671ffedb9cf46502254d831538"
+  },
+  "schema_version": 1
+}

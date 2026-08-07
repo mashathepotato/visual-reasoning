@@ -59,7 +59,11 @@ def aggregate(summaries: List[dict], results_dir: Path, profile: str) -> None:
             metric_rows.append({"task": summary["task"], "seed": summary["seed"], "metric": metric,
                                 "value": value, "preliminary": summary["preliminary"]})
     with (results_dir / "per_seed_metrics.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=("task", "seed", "metric", "value", "preliminary"))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=("task", "seed", "metric", "value", "preliminary"),
+            lineterminator="\n",
+        )
         writer.writeheader(); writer.writerows(metric_rows)
     grouped: Dict[tuple, List[float]] = {}
     for row in metric_rows:

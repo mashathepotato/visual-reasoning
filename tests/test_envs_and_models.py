@@ -8,7 +8,12 @@ import torch.nn as nn
 from utils.fot.envs_maze import MazeEnvFMProgress
 from utils.fot.envs_rotation import RotationEnv
 from utils.fot.models import FastRotator
-from utils.fot.trajectory_flow import TrajectoryFlowField, integrate_trajectory, rotation_action
+from utils.fot.trajectory_flow import (
+    TrajectoryFlowField,
+    integrate_deformation_times,
+    integrate_trajectory,
+    rotation_action,
+)
 
 
 class ZeroSketcher(nn.Module):
@@ -80,6 +85,18 @@ class EnvironmentAndModelTests(unittest.TestCase):
         endpoint.square().mean().backward()
         self.assertEqual(tuple(endpoint.shape), (2, 1, 16, 16))
         self.assertTrue(all(parameter.grad is not None for parameter in flow.parameters()))
+
+    def test_transport_flow_renders_arbitrary_times_from_source(self) -> None:
+        flow = TrajectoryFlowField(
+            state_channels=1, condition_channels=1, width=8, context_dim=32,
+            dynamics_mode="transport",
+        )
+        source = torch.rand((2, 1, 16, 16))
+        frames = integrate_deformation_times(
+            flow, source, source, torch.zeros(2, 3), [0.0, 0.37, 1.0], max_step=0.1
+        )
+        self.assertEqual(len(frames), 3)
+        self.assertTrue(all(torch.allclose(frame, source, atol=2e-5) for frame in frames))
 
 
 if __name__ == "__main__":

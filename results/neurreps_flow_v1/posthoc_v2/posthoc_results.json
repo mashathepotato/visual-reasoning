@@ -1,0 +1,950 @@
+{
+  "aggregates": [
+    {
+      "ci95_high_display": 0.025391361418674638,
+      "ci95_high_raw": 0.025391361418674638,
+      "ci95_low_display": 0.020667765834014966,
+      "ci95_low_raw": 0.020667765834014966,
+      "mean": 0.023029563626344802,
+      "metric": "endpoint_mse",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.000950674825358885,
+      "task": "colored",
+      "values": [
+        0.0219859156264647,
+        0.023256630501127803,
+        0.023846144751441898
+      ]
+    },
+    {
+      "ci95_high_display": 19.72100237058055,
+      "ci95_high_raw": 19.72100237058055,
+      "ci95_low_display": 16.970818235015358,
+      "ci95_low_raw": 16.970818235015358,
+      "mean": 18.345910302797954,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.5535043751997213,
+      "task": "colored",
+      "values": [
+        18.97036592245102,
+        17.915748283863067,
+        18.151616702079775
+      ]
+    },
+    {
+      "ci95_high_display": 1.0074515560006145,
+      "ci95_high_raw": 1.0074515560006145,
+      "ci95_low_display": 0.8977668189768946,
+      "ci95_low_raw": 0.8977668189768946,
+      "mean": 0.9526091874887546,
+      "metric": "foreground_area_ratio",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.022075242544726252,
+      "task": "colored",
+      "values": [
+        0.9581502294540405,
+        0.9713860323280096,
+        0.9282913006842136
+      ]
+    },
+    {
+      "ci95_high_display": 0.8756125242719006,
+      "ci95_high_raw": 0.8756125242719006,
+      "ci95_low_display": 0.8065460290800579,
+      "ci95_low_raw": 0.8065460290800579,
+      "mean": 0.8410792766759793,
+      "metric": "sharpness_ratio",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.013900380986867652,
+      "task": "colored",
+      "values": [
+        0.8478505930304527,
+        0.8502964970469474,
+        0.8250907399505377
+      ]
+    },
+    {
+      "ci95_high_display": 0.6988739191130269,
+      "ci95_high_raw": 0.6988739191130269,
+      "ci95_low_display": 0.6427829749250942,
+      "ci95_low_raw": 0.6427829749250942,
+      "mean": 0.6708284470190604,
+      "metric": "silhouette_iou",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.011288910664421272,
+      "task": "colored",
+      "values": [
+        0.6819467569515109,
+        0.6711622448079289,
+        0.6593763392977416
+      ]
+    },
+    {
+      "ci95_high_display": 0.01372624796334103,
+      "ci95_high_raw": 0.01372624796334103,
+      "ci95_low_display": 0.01128590842638299,
+      "ci95_low_raw": 0.01128590842638299,
+      "mean": 0.012506078194862009,
+      "metric": "trajectory_mse",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.0004911447903474824,
+      "task": "colored",
+      "values": [
+        0.011940283428466501,
+        0.012755353906104574,
+        0.012822597250014951
+      ]
+    },
+    {
+      "ci95_high_display": 0.007879127786689411,
+      "ci95_high_raw": 0.007879127786689411,
+      "ci95_low_display": 0.001228215054951469,
+      "ci95_low_raw": 0.001228215054951469,
+      "mean": 0.004553671420820441,
+      "metric": "arbitrary_t_0.37_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0013385682974758112,
+      "task": "colored",
+      "values": [
+        0.0037789293593505136,
+        0.00609931536440854,
+        0.0037827695387022686
+      ]
+    },
+    {
+      "ci95_high_display": 0.018337970673637065,
+      "ci95_high_raw": 0.018337970673637065,
+      "ci95_low_display": 0.002469258248627213,
+      "ci95_low_raw": 0.002469258248627213,
+      "mean": 0.010403614461132141,
+      "metric": "endpoint_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.003193750426541552,
+      "task": "colored",
+      "values": [
+        0.008277464245784358,
+        0.014076221276482101,
+        0.008857157861129963
+      ]
+    },
+    {
+      "ci95_high_display": 26.07763615619081,
+      "ci95_high_raw": 26.07763615619081,
+      "ci95_low_display": 17.006491635531805,
+      "ci95_low_raw": 17.006491635531805,
+      "mean": 21.542063895861308,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 1.8256661855195706,
+      "task": "colored",
+      "values": [
+        22.962469658851624,
+        19.482827055454255,
+        22.180894973278047
+      ]
+    },
+    {
+      "ci95_high_display": 1.0226525049691495,
+      "ci95_high_raw": 1.0226525049691495,
+      "ci95_low_display": 0.9588445970132852,
+      "ci95_low_raw": 0.9588445970132852,
+      "mean": 0.9907485509912173,
+      "metric": "foreground_area_ratio",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.012842033291219558,
+      "task": "colored",
+      "values": [
+        0.9866054660081863,
+        1.0051507039368153,
+        0.9804894830286502
+      ]
+    },
+    {
+      "ci95_high_display": 1.2156858043830887,
+      "ci95_high_raw": 1.2156858043830887,
+      "ci95_low_display": 1.0577747983772263,
+      "ci95_low_raw": 1.0577747983772263,
+      "mean": 1.1367303013801575,
+      "metric": "sharpness_ratio",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.03178130205397025,
+      "task": "colored",
+      "values": [
+        1.1117634734511375,
+        1.1725062954425811,
+        1.1259211352467537
+      ]
+    },
+    {
+      "ci95_high_display": 0.9046356171643747,
+      "ci95_high_raw": 0.9046356171643747,
+      "ci95_low_display": 0.7457838214659677,
+      "ci95_low_raw": 0.7457838214659677,
+      "mean": 0.8252097193151713,
+      "metric": "silhouette_iou",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.03197064617978064,
+      "task": "colored",
+      "values": [
+        0.848727744370699,
+        0.7888072676956653,
+        0.8380941458791494
+      ]
+    },
+    {
+      "ci95_high_display": 0.009833187919497858,
+      "ci95_high_raw": 0.009833187919497858,
+      "ci95_low_display": 0.0017077507628397246,
+      "ci95_low_raw": 0.0017077507628397246,
+      "mean": 0.005770469341168791,
+      "metric": "trajectory_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.001635332325010444,
+      "task": "colored",
+      "values": [
+        0.0047246544735935455,
+        0.007654999064834555,
+        0.004931754485078273
+      ]
+    },
+    {
+      "ci95_high_display": 0.07942721087078602,
+      "ci95_high_raw": 0.07942721087078602,
+      "ci95_low_display": 0.05376228092024374,
+      "ci95_low_raw": 0.05376228092024374,
+      "mean": 0.0665947458955149,
+      "metric": "activation_time_mae_normalized",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.005165345415644367,
+      "task": "maze",
+      "values": [
+        0.06239319664426148,
+        0.06502931932918728,
+        0.0723617217130959
+      ]
+    },
+    {
+      "ci95_high_display": 1.0,
+      "ci95_high_raw": 1.003491966203359,
+      "ci95_low_display": 0.9461731359605917,
+      "ci95_low_raw": 0.9461731359605917,
+      "mean": 0.9748325510819753,
+      "metric": "endpoint_iou",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.011536036045885247,
+      "task": "maze",
+      "values": [
+        0.9855741442739964,
+        0.9762840531766415,
+        0.9626394557952881
+      ]
+    },
+    {
+      "ci95_high_display": 0.012316893446343527,
+      "ci95_high_raw": 0.012316893446343527,
+      "ci95_low_display": 0.00046854746606848647,
+      "ci95_low_raw": 0.00046854746606848647,
+      "mean": 0.006392720456206007,
+      "metric": "endpoint_mse",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.002384608090110486,
+      "task": "maze",
+      "values": [
+        0.004124264104611939,
+        0.006175307008234086,
+        0.008878590255771996
+      ]
+    },
+    {
+      "ci95_high_display": 0.43209838217648444,
+      "ci95_high_raw": 0.43209838217648444,
+      "ci95_low_display": 0.2783086486232521,
+      "ci95_low_raw": 0.2783086486232521,
+      "mean": 0.3552035153998683,
+      "metric": "future_path_activation_rate_at_0_1",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.03095185128941186,
+      "task": "maze",
+      "values": [
+        0.3780589611758478,
+        0.3675715599302202,
+        0.31998002509353685
+      ]
+    },
+    {
+      "ci95_high_display": 0.14490368437170345,
+      "ci95_high_raw": 0.14490368437170345,
+      "ci95_low_display": 0.1322680197266848,
+      "ci95_low_raw": 0.1322680197266848,
+      "mean": 0.13858585204919413,
+      "metric": "future_path_activation_rate_at_0_5",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.002543064507619572,
+      "task": "maze",
+      "values": [
+        0.1407852936933341,
+        0.13580119222810028,
+        0.139171070226148
+      ]
+    },
+    {
+      "ci95_high_display": 0.18256975078329885,
+      "ci95_high_raw": 0.18256975078329885,
+      "ci95_low_display": 0.14622695754053872,
+      "ci95_low_raw": 0.14622695754053872,
+      "mean": 0.16439835416191878,
+      "metric": "future_path_mean_intensity",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.00731438117423093,
+      "task": "maze",
+      "values": [
+        0.17184143105871044,
+        0.16413378356024622,
+        0.15721984786679968
+      ]
+    },
+    {
+      "ci95_high_display": 1.0,
+      "ci95_high_raw": 1.0,
+      "ci95_low_display": 1.0,
+      "ci95_low_raw": 1.0,
+      "mean": 1.0,
+      "metric": "goal_reached",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.0,
+      "task": "maze",
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "ci95_high_display": 0.8625839857671435,
+      "ci95_high_raw": 0.8625839857671435,
+      "ci95_low_display": 0.82202594882113,
+      "ci95_low_raw": 0.82202594882113,
+      "mean": 0.8423049672941366,
+      "metric": "intermediate_prefix_iou",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.008162744671827912,
+      "task": "maze",
+      "values": [
+        0.848850763887167,
+        0.8449052973091602,
+        0.8331588406860828
+      ]
+    },
+    {
+      "ci95_high_display": 0.026612500152556937,
+      "ci95_high_raw": 0.026612500152556937,
+      "ci95_low_display": 0.0,
+      "ci95_low_raw": -0.0021086317215488325,
+      "mean": 0.012251934215504055,
+      "metric": "missed_path_activation_rate",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.00578043918857043,
+      "task": "maze",
+      "values": [
+        0.006686520169023424,
+        0.011843543922586831,
+        0.018225738554901907
+      ]
+    },
+    {
+      "ci95_high_display": 0.004640471230604262,
+      "ci95_high_raw": 0.004640471230604262,
+      "ci95_low_display": 0.0,
+      "ci95_low_raw": -0.002184764695190148,
+      "mean": 0.0012278532677070567,
+      "metric": "monotonicity_violation_rate",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.0013736527303184198,
+      "task": "maze",
+      "values": [
+        0.00039093117311495007,
+        0.0004794411945658794,
+        0.002813187435440341
+      ]
+    },
+    {
+      "ci95_high_display": 0.0,
+      "ci95_high_raw": 0.0,
+      "ci95_low_display": 0.0,
+      "ci95_low_raw": 0.0,
+      "mean": 0.0,
+      "metric": "obstacle_violation_rate",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.0,
+      "task": "maze",
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high_display": 0.026946593382308336,
+      "ci95_high_raw": 0.026946593382308336,
+      "ci95_low_display": 0.008245618412280997,
+      "ci95_low_raw": 0.008245618412280997,
+      "mean": 0.01759610589729467,
+      "metric": "off_path_activation_rate_at_0_1",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.003763773971550222,
+      "task": "maze",
+      "values": [
+        0.013954010167508387,
+        0.017363535362819676,
+        0.02147077216155594
+      ]
+    },
+    {
+      "ci95_high_display": 1.0,
+      "ci95_high_raw": 1.0015798716777742,
+      "ci95_low_display": 0.9719549335008678,
+      "ci95_low_raw": 0.9719549335008678,
+      "mean": 0.9867674025893212,
+      "metric": "path_precision",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.005962340006215285,
+      "task": "maze",
+      "values": [
+        0.9920546387135982,
+        0.9879425996541977,
+        0.9803049694001674
+      ]
+    },
+    {
+      "ci95_high_display": 1.0,
+      "ci95_high_raw": 1.002161282673693,
+      "ci95_low_display": 0.9731610636162595,
+      "ci95_low_raw": 0.9731610636162595,
+      "mean": 0.9876611731449763,
+      "metric": "path_recall",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.00583660851012108,
+      "task": "maze",
+      "values": [
+        0.9932810732722283,
+        0.988072797358036,
+        0.9816296488046646
+      ]
+    },
+    {
+      "ci95_high_display": 0.3819657606512424,
+      "ci95_high_raw": 0.3819657606512424,
+      "ci95_low_display": 0.25105445419911226,
+      "ci95_low_raw": 0.25105445419911226,
+      "mean": 0.3165101074251773,
+      "metric": "premature_activation_rate",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.02634731978390759,
+      "task": "maze",
+      "values": [
+        0.3086921038957371,
+        0.29495658034051303,
+        0.34588163803928185
+      ]
+    },
+    {
+      "ci95_high_display": 0.011068231029564661,
+      "ci95_high_raw": 0.011068231029564661,
+      "ci95_low_display": 0.007779481859205763,
+      "ci95_low_raw": 0.007779481859205763,
+      "mean": 0.009423856444385214,
+      "metric": "trajectory_mse",
+      "n_seeds": 3,
+      "renderer": "additive_flow",
+      "std": 0.0006618964276564724,
+      "task": "maze",
+      "values": [
+        0.008665381876053289,
+        0.009721582208876499,
+        0.009884605248225853
+      ]
+    },
+    {
+      "ci95_high_display": 0.015358561166732244,
+      "ci95_high_raw": 0.015358561166732244,
+      "ci95_low_display": 0.012716807426054981,
+      "ci95_low_raw": 0.012716807426054981,
+      "mean": 0.014037684296393611,
+      "metric": "endpoint_mse",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.0005316815826095927,
+      "task": "tetris",
+      "values": [
+        0.013788059492508182,
+        0.014648244470590726,
+        0.013676748926081927
+      ]
+    },
+    {
+      "ci95_high_display": 20.54416695214288,
+      "ci95_high_raw": 20.54416695214288,
+      "ci95_low_display": 19.217727916072043,
+      "ci95_low_raw": 19.217727916072043,
+      "mean": 19.880947434107462,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.2669602374642546,
+      "task": "tetris",
+      "values": [
+        20.060777683258056,
+        19.574206159114837,
+        20.007858459949492
+      ]
+    },
+    {
+      "ci95_high_display": 1.0743848476278217,
+      "ci95_high_raw": 1.0743848476278217,
+      "ci95_low_display": 1.0212662282121745,
+      "ci95_low_raw": 1.0212662282121745,
+      "mean": 1.047825537919998,
+      "metric": "foreground_area_ratio",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.010690698077598834,
+      "task": "tetris",
+      "values": [
+        1.0542075107991695,
+        1.0354833853244783,
+        1.0537857176363468
+      ]
+    },
+    {
+      "ci95_high_display": 0.8327833061339434,
+      "ci95_high_raw": 0.8327833061339434,
+      "ci95_low_display": 0.7998435346363013,
+      "ci95_low_raw": 0.7998435346363013,
+      "mean": 0.8163134203851223,
+      "metric": "sharpness_ratio",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.006629486151943427,
+      "task": "tetris",
+      "values": [
+        0.8221279807388783,
+        0.8090941508114338,
+        0.8177181296050549
+      ]
+    },
+    {
+      "ci95_high_display": 0.7923170636173535,
+      "ci95_high_raw": 0.7923170636173535,
+      "ci95_low_display": 0.7910930233124447,
+      "ci95_low_raw": 0.7910930233124447,
+      "mean": 0.7917050434648991,
+      "metric": "silhouette_iou",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.000246351382595175,
+      "task": "tetris",
+      "values": [
+        0.7918601538240909,
+        0.7914209826290608,
+        0.7918339939415455
+      ]
+    },
+    {
+      "ci95_high_display": 0.007602081803156914,
+      "ci95_high_raw": 0.007602081803156914,
+      "ci95_low_display": 0.006305565151625432,
+      "ci95_low_raw": 0.006305565151625432,
+      "mean": 0.006953823477391173,
+      "metric": "trajectory_mse",
+      "n_seeds": 3,
+      "renderer": "repeated_resampling",
+      "std": 0.00026093803315263786,
+      "task": "tetris",
+      "values": [
+        0.006858083058577904,
+        0.007249108290852746,
+        0.006754279082742869
+      ]
+    },
+    {
+      "ci95_high_display": 0.0025179233392302984,
+      "ci95_high_raw": 0.0025179233392302984,
+      "ci95_low_display": 0.0011758968054901258,
+      "ci95_low_raw": 0.0011758968054901258,
+      "mean": 0.001846910072360212,
+      "metric": "arbitrary_t_0.37_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0002700973903722434,
+      "task": "tetris",
+      "values": [
+        0.0017874354260857218,
+        0.0021417882545210886,
+        0.0016115065364738256
+      ]
+    },
+    {
+      "ci95_high_display": 0.008031516948934468,
+      "ci95_high_raw": 0.008031516948934468,
+      "ci95_low_display": 0.003958978356937705,
+      "ci95_low_raw": 0.003958978356937705,
+      "mean": 0.005995247652936087,
+      "metric": "endpoint_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0008196425467259365,
+      "task": "tetris",
+      "values": [
+        0.0057308133610058576,
+        0.006914465296576963,
+        0.005340464301225438
+      ]
+    },
+    {
+      "ci95_high_display": 25.711862399168353,
+      "ci95_high_raw": 25.711862399168353,
+      "ci95_low_display": 21.452355638754824,
+      "ci95_low_raw": 21.452355638754824,
+      "mean": 23.58210901896159,
+      "metric": "endpoint_psnr_db",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.857271917757302,
+      "task": "tetris",
+      "values": [
+        23.814113550186157,
+        22.632712750434877,
+        24.299500756263733
+      ]
+    },
+    {
+      "ci95_high_display": 1.0692085983609048,
+      "ci95_high_raw": 1.0692085983609048,
+      "ci95_low_display": 1.0484269505486001,
+      "ci95_low_raw": 1.0484269505486001,
+      "mean": 1.0588177744547527,
+      "metric": "foreground_area_ratio",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0041825319400318264,
+      "task": "tetris",
+      "values": [
+        1.0543946389853955,
+        1.0627087700366973,
+        1.059349914342165
+      ]
+    },
+    {
+      "ci95_high_display": 1.0049307100423244,
+      "ci95_high_raw": 1.0049307100423244,
+      "ci95_low_display": 1.0005935195636684,
+      "ci95_low_raw": 1.0005935195636684,
+      "mean": 1.0027621148029964,
+      "metric": "sharpness_ratio",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0008729066083123942,
+      "task": "tetris",
+      "values": [
+        1.0019586819410324,
+        1.003690934330225,
+        1.0026367281377315
+      ]
+    },
+    {
+      "ci95_high_display": 0.896013232860888,
+      "ci95_high_raw": 0.896013232860888,
+      "ci95_low_display": 0.8526643639863282,
+      "ci95_low_raw": 0.8526643639863282,
+      "mean": 0.8743387984236082,
+      "metric": "silhouette_iou",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.008724429856074684,
+      "task": "tetris",
+      "values": [
+        0.8775797837972641,
+        0.8644576951861381,
+        0.8809789162874222
+      ]
+    },
+    {
+      "ci95_high_display": 0.0038853605730653044,
+      "ci95_high_raw": 0.0038853605730653044,
+      "ci95_low_display": 0.001863496574550428,
+      "ci95_low_raw": 0.001863496574550428,
+      "mean": 0.0028744285738078667,
+      "metric": "trajectory_mse",
+      "n_seeds": 3,
+      "renderer": "single_source",
+      "std": 0.0004069220510599734,
+      "task": "tetris",
+      "values": [
+        0.002769970615481725,
+        0.003323396707637585,
+        0.0025299183983042896
+      ]
+    }
+  ],
+  "per_seed": [
+    {
+      "best_epoch": 15,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed0/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.013788059492508182,
+          "endpoint_psnr_db": 20.060777683258056,
+          "foreground_area_ratio": 1.0542075107991695,
+          "sharpness_ratio": 0.8221279807388783,
+          "silhouette_iou": 0.7918601538240909,
+          "trajectory_mse": 0.006858083058577904
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.0017874354260857218,
+          "endpoint_mse": 0.0057308133610058576,
+          "endpoint_psnr_db": 23.814113550186157,
+          "foreground_area_ratio": 1.0543946389853955,
+          "sharpness_ratio": 1.0019586819410324,
+          "silhouette_iou": 0.8775797837972641,
+          "trajectory_mse": 0.002769970615481725
+        }
+      },
+      "seed": 0,
+      "task": "tetris"
+    },
+    {
+      "best_epoch": 5,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed1/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.014648244470590726,
+          "endpoint_psnr_db": 19.574206159114837,
+          "foreground_area_ratio": 1.0354833853244783,
+          "sharpness_ratio": 0.8090941508114338,
+          "silhouette_iou": 0.7914209826290608,
+          "trajectory_mse": 0.007249108290852746
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.0021417882545210886,
+          "endpoint_mse": 0.006914465296576963,
+          "endpoint_psnr_db": 22.632712750434877,
+          "foreground_area_ratio": 1.0627087700366973,
+          "sharpness_ratio": 1.003690934330225,
+          "silhouette_iou": 0.8644576951861381,
+          "trajectory_mse": 0.003323396707637585
+        }
+      },
+      "seed": 1,
+      "task": "tetris"
+    },
+    {
+      "best_epoch": 5,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed2/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.013676748926081927,
+          "endpoint_psnr_db": 20.007858459949492,
+          "foreground_area_ratio": 1.0537857176363468,
+          "sharpness_ratio": 0.8177181296050549,
+          "silhouette_iou": 0.7918339939415455,
+          "trajectory_mse": 0.006754279082742869
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.0016115065364738256,
+          "endpoint_mse": 0.005340464301225438,
+          "endpoint_psnr_db": 24.299500756263733,
+          "foreground_area_ratio": 1.059349914342165,
+          "sharpness_ratio": 1.0026367281377315,
+          "silhouette_iou": 0.8809789162874222,
+          "trajectory_mse": 0.0025299183983042896
+        }
+      },
+      "seed": 2,
+      "task": "tetris"
+    },
+    {
+      "best_epoch": 20,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed0/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.0219859156264647,
+          "endpoint_psnr_db": 18.97036592245102,
+          "foreground_area_ratio": 0.9581502294540405,
+          "sharpness_ratio": 0.8478505930304527,
+          "silhouette_iou": 0.6819467569515109,
+          "trajectory_mse": 0.011940283428466501
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.0037789293593505136,
+          "endpoint_mse": 0.008277464245784358,
+          "endpoint_psnr_db": 22.962469658851624,
+          "foreground_area_ratio": 0.9866054660081863,
+          "sharpness_ratio": 1.1117634734511375,
+          "silhouette_iou": 0.848727744370699,
+          "trajectory_mse": 0.0047246544735935455
+        }
+      },
+      "seed": 0,
+      "task": "colored"
+    },
+    {
+      "best_epoch": 1,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed1/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.023256630501127803,
+          "endpoint_psnr_db": 17.915748283863067,
+          "foreground_area_ratio": 0.9713860323280096,
+          "sharpness_ratio": 0.8502964970469474,
+          "silhouette_iou": 0.6711622448079289,
+          "trajectory_mse": 0.012755353906104574
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.00609931536440854,
+          "endpoint_mse": 0.014076221276482101,
+          "endpoint_psnr_db": 19.482827055454255,
+          "foreground_area_ratio": 1.0051507039368153,
+          "sharpness_ratio": 1.1725062954425811,
+          "silhouette_iou": 0.7888072676956653,
+          "trajectory_mse": 0.007654999064834555
+        }
+      },
+      "seed": 1,
+      "task": "colored"
+    },
+    {
+      "best_epoch": 15,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed2/best_checkpoint.pt",
+      "renderers": {
+        "repeated_resampling": {
+          "endpoint_mse": 0.023846144751441898,
+          "endpoint_psnr_db": 18.151616702079775,
+          "foreground_area_ratio": 0.9282913006842136,
+          "sharpness_ratio": 0.8250907399505377,
+          "silhouette_iou": 0.6593763392977416,
+          "trajectory_mse": 0.012822597250014951
+        },
+        "single_source": {
+          "arbitrary_t_0.37_mse": 0.0037827695387022686,
+          "endpoint_mse": 0.008857157861129963,
+          "endpoint_psnr_db": 22.180894973278047,
+          "foreground_area_ratio": 0.9804894830286502,
+          "sharpness_ratio": 1.1259211352467537,
+          "silhouette_iou": 0.8380941458791494,
+          "trajectory_mse": 0.004931754485078273
+        }
+      },
+      "seed": 2,
+      "task": "colored"
+    },
+    {
+      "best_epoch": 30,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/maze/seed0/best_checkpoint.pt",
+      "renderers": {
+        "additive_flow": {
+          "activation_time_mae_normalized": 0.06239319664426148,
+          "endpoint_iou": 0.9855741442739964,
+          "endpoint_mse": 0.004124264104611939,
+          "future_path_activation_rate_at_0_1": 0.3780589611758478,
+          "future_path_activation_rate_at_0_5": 0.1407852936933341,
+          "future_path_mean_intensity": 0.17184143105871044,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.848850763887167,
+          "missed_path_activation_rate": 0.006686520169023424,
+          "monotonicity_violation_rate": 0.00039093117311495007,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.013954010167508387,
+          "path_precision": 0.9920546387135982,
+          "path_recall": 0.9932810732722283,
+          "premature_activation_rate": 0.3086921038957371,
+          "trajectory_mse": 0.008665381876053289
+        }
+      },
+      "seed": 0,
+      "task": "maze"
+    },
+    {
+      "best_epoch": 30,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/maze/seed1/best_checkpoint.pt",
+      "renderers": {
+        "additive_flow": {
+          "activation_time_mae_normalized": 0.06502931932918728,
+          "endpoint_iou": 0.9762840531766415,
+          "endpoint_mse": 0.006175307008234086,
+          "future_path_activation_rate_at_0_1": 0.3675715599302202,
+          "future_path_activation_rate_at_0_5": 0.13580119222810028,
+          "future_path_mean_intensity": 0.16413378356024622,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.8449052973091602,
+          "missed_path_activation_rate": 0.011843543922586831,
+          "monotonicity_violation_rate": 0.0004794411945658794,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.017363535362819676,
+          "path_precision": 0.9879425996541977,
+          "path_recall": 0.988072797358036,
+          "premature_activation_rate": 0.29495658034051303,
+          "trajectory_mse": 0.009721582208876499
+        }
+      },
+      "seed": 1,
+      "task": "maze"
+    },
+    {
+      "best_epoch": 28,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/maze/seed2/best_checkpoint.pt",
+      "renderers": {
+        "additive_flow": {
+          "activation_time_mae_normalized": 0.0723617217130959,
+          "endpoint_iou": 0.9626394557952881,
+          "endpoint_mse": 0.008878590255771996,
+          "future_path_activation_rate_at_0_1": 0.31998002509353685,
+          "future_path_activation_rate_at_0_5": 0.139171070226148,
+          "future_path_mean_intensity": 0.15721984786679968,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.8331588406860828,
+          "missed_path_activation_rate": 0.018225738554901907,
+          "monotonicity_violation_rate": 0.002813187435440341,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.02147077216155594,
+          "path_precision": 0.9803049694001674,
+          "path_recall": 0.9816296488046646,
+          "premature_activation_rate": 0.34588163803928185,
+          "trajectory_mse": 0.009884605248225853
+        }
+      },
+      "seed": 2,
+      "task": "maze"
+    }
+  ],
+  "protocol": "frozen checkpoints; no retraining or model selection",
+  "schema_version": 1
+}

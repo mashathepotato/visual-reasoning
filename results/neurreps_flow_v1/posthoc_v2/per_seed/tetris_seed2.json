@@ -1,0 +1,25 @@
+{
+  "best_epoch": 5,
+  "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed2/best_checkpoint.pt",
+  "renderers": {
+    "repeated_resampling": {
+      "endpoint_mse": 0.013676748926081927,
+      "endpoint_psnr_db": 20.007858459949492,
+      "foreground_area_ratio": 1.0537857176363468,
+      "sharpness_ratio": 0.8177181296050549,
+      "silhouette_iou": 0.7918339939415455,
+      "trajectory_mse": 0.006754279082742869
+    },
+    "single_source": {
+      "arbitrary_t_0.37_mse": 0.0016115065364738256,
+      "endpoint_mse": 0.005340464301225438,
+      "endpoint_psnr_db": 24.299500756263733,
+      "foreground_area_ratio": 1.059349914342165,
+      "sharpness_ratio": 1.0026367281377315,
+      "silhouette_iou": 0.8809789162874222,
+      "trajectory_mse": 0.0025299183983042896
+    }
+  },
+  "seed": 2,
+  "task": "tetris"
+}
