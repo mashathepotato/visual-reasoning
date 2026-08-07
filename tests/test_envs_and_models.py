@@ -8,6 +8,7 @@ import torch.nn as nn
 from utils.fot.envs_maze import MazeEnvFMProgress
 from utils.fot.envs_rotation import RotationEnv
 from utils.fot.models import FastRotator
+from utils.fot.maze_moe import MazeExpertMixtureFlow, integrate_maze_moe
 from utils.fot.trajectory_flow import (
     TrajectoryFlowField,
     integrate_deformation_times,
@@ -97,6 +98,37 @@ class EnvironmentAndModelTests(unittest.TestCase):
         )
         self.assertEqual(len(frames), 3)
         self.assertTrue(all(torch.allclose(frame, source, atol=2e-5) for frame in frames))
+
+    def test_maze_moe_routes_frozen_rotation_features(self) -> None:
+        tetris = TrajectoryFlowField(
+            state_channels=1, condition_channels=1, width=8, context_dim=32,
+            dynamics_mode="transport",
+        )
+        colored = TrajectoryFlowField(
+            state_channels=3, condition_channels=3, width=8, context_dim=32,
+            dynamics_mode="transport",
+        )
+        model = MazeExpertMixtureFlow(
+            tetris, colored, width=8, context_dim=32, expert_dim=8, router_width=8
+        )
+        condition = torch.zeros((2, 3, 16, 16))
+        condition[:, 0, 4:12, 7:9] = 1
+        initial = torch.zeros((2, 1, 16, 16))
+        prepared = model.prepare_experts(condition)
+        velocity, weights = model(
+            initial, condition, torch.zeros(2, 1),
+            prepared_experts=prepared, return_router=True,
+        )
+        self.assertEqual(tuple(velocity.shape), (2, 1, 16, 16))
+        self.assertTrue(torch.allclose(weights.sum(dim=1), torch.ones_like(weights[:, 0])))
+        self.assertTrue(all(not parameter.requires_grad for parameter in tetris.parameters()))
+        endpoint = integrate_maze_moe(model, initial, condition, None, steps=2)
+        endpoint.square().mean().backward()
+        self.assertTrue(any(
+            parameter.grad is not None
+            for name, parameter in model.named_parameters()
+            if not name.startswith(("tetris_expert.", "colored_expert."))
+        ))
 
 
 if __name__ == "__main__":

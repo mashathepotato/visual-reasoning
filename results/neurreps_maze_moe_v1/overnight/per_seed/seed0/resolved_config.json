@@ -1,0 +1,47 @@
+{
+  "arguments": {
+    "audit_every": 5,
+    "audit_examples": 4,
+    "batch_size": 20,
+    "colored_checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed0/best_checkpoint.pt",
+    "context_dim": 128,
+    "device": "mps",
+    "epochs": 30,
+    "expert_dim": 16,
+    "image_size": 64,
+    "integration_steps": 8,
+    "learning_rate": 0.0002,
+    "maze_cells": 9,
+    "num_workers": 0,
+    "output_dir": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed0",
+    "preliminary": false,
+    "rollout_batch": 4,
+    "rollout_every": 2,
+    "rollout_weight": 2.0,
+    "router_balance_weight": 0.01,
+    "router_entropy_weight": 0.001,
+    "router_mode": "learned",
+    "router_temperature": 0.5,
+    "router_width": 16,
+    "seed": 0,
+    "tetris_checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed0/best_checkpoint.pt",
+    "train_samples": 3000,
+    "validation_every": 2,
+    "validation_samples": 400,
+    "weight_decay": 0.0001,
+    "width": 32
+  },
+  "frozen_experts": {
+    "colored": {
+      "best_epoch": 20,
+      "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed0/best_checkpoint.pt",
+      "sha256": "471b29cc1c421dbf661bfe7ccab12c80620e12d910799ec30588f90836cdad2f"
+    },
+    "tetris": {
+      "best_epoch": 15,
+      "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed0/best_checkpoint.pt",
+      "sha256": "e4d16ed51bc935a5472745075b7fa7a7110a1a1c92841a772f5f645bb3645a29"
+    }
+  },
+  "schema_version": 1
+}

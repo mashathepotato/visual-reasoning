@@ -1,0 +1,2292 @@
+{
+  "aggregates": [
+    {
+      "ci95_high": 0.4871434999821612,
+      "ci95_high_display": 0.4871434999821612,
+      "ci95_low": -0.07636384679059474,
+      "ci95_low_display": 0.0,
+      "mean": 0.20538982659578323,
+      "metric": "activation_time_mae_normalized",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.11341196317089788,
+      "values": [
+        0.20660138130187988,
+        0.09137693971395493,
+        0.3181911587715149
+      ]
+    },
+    {
+      "ci95_high": 0.8978901183095322,
+      "ci95_high_display": 0.8978901183095322,
+      "ci95_low": 0.2236549771341934,
+      "ci95_low_display": 0.2236549771341934,
+      "mean": 0.5607725477218628,
+      "metric": "endpoint_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.135697132322108,
+      "values": [
+        0.5345849919319153,
+        0.7076548552513122,
+        0.44007779598236085
+      ]
+    },
+    {
+      "ci95_high": 0.21557362273275,
+      "ci95_high_display": 0.21557362273275,
+      "ci95_low": -0.006497481613746706,
+      "ci95_low_display": 0.0,
+      "mean": 0.10453807055950165,
+      "metric": "endpoint_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.04469421747862678,
+      "values": [
+        0.09925411015748978,
+        0.06272071093320847,
+        0.1516393905878067
+      ]
+    },
+    {
+      "ci95_high": 0.44404398350274443,
+      "ci95_high_display": 0.44404398350274443,
+      "ci95_low": 0.13729586533351854,
+      "ci95_low_display": 0.13729586533351854,
+      "mean": 0.2906699244181315,
+      "metric": "future_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.061736384591592045,
+      "values": [
+        0.2810943758487701,
+        0.3566345965862274,
+        0.23428080081939698
+      ]
+    },
+    {
+      "ci95_high": 0.2758918348631479,
+      "ci95_high_display": 0.2758918348631479,
+      "ci95_low": -0.07570148026508267,
+      "ci95_low_display": 0.0,
+      "mean": 0.1000951772990326,
+      "metric": "future_path_activation_rate_at_0_5",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.0707619666980793,
+      "values": [
+        0.02102071972563863,
+        0.15745594531297682,
+        0.12180886685848236
+      ]
+    },
+    {
+      "ci95_high": 0.24827216676451047,
+      "ci95_high_display": 0.24827216676451047,
+      "ci95_low": 0.013806460384753569,
+      "ci95_low_display": 0.013806460384753569,
+      "mean": 0.131039313574632,
+      "metric": "future_path_mean_intensity",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.04718876552199224,
+      "values": [
+        0.08887787967920303,
+        0.18201300144195556,
+        0.12222705960273743
+      ]
+    },
+    {
+      "ci95_high": 1.0680555124528843,
+      "ci95_high_display": 1.0,
+      "ci95_low": -0.001388845786217674,
+      "ci95_low_display": 0.0,
+      "mean": 0.5333333333333333,
+      "metric": "goal_reached",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.21523727217499608,
+      "values": [
+        0.5625,
+        0.305,
+        0.7325
+      ]
+    },
+    {
+      "ci95_high": 1.1557156042916985,
+      "ci95_high_display": 1.0,
+      "ci95_low": -0.03747981912527587,
+      "ci95_low_display": 0.0,
+      "mean": 0.5591178925832113,
+      "metric": "intermediate_prefix_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.24014351577002777,
+      "values": [
+        0.5797921299934388,
+        0.7882559084892273,
+        0.30930563926696775
+      ]
+    },
+    {
+      "ci95_high": 0.7080910094666847,
+      "ci95_high_display": 0.7080910094666847,
+      "ci95_low": -0.1485619958329567,
+      "ci95_low_display": 0.0,
+      "mean": 0.27976450681686404,
+      "metric": "missed_path_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.17241070527952004,
+      "values": [
+        0.3871715795993805,
+        0.08089471459388733,
+        0.37122722625732424
+      ]
+    },
+    {
+      "ci95_high": 0.020495336885858743,
+      "ci95_high_display": 0.020495336885858743,
+      "ci95_low": -0.010025130634228881,
+      "ci95_low_display": 0.0,
+      "mean": 0.00523510312581493,
+      "metric": "monotonicity_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.006142574995996683,
+      "values": [
+        0.011999652478843928,
+        5.700511319446378e-06,
+        0.0036999563872814178
+      ]
+    },
+    {
+      "ci95_high": 0.10776139180821025,
+      "ci95_high_display": 0.10776139180821025,
+      "ci95_low": -0.06669959997491413,
+      "ci95_low_display": 0.0,
+      "mean": 0.020530895916648056,
+      "metric": "obstacle_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.035112166129122456,
+      "values": [
+        0.06107480376958847,
+        0.00017027244466589765,
+        0.0003476115356897935
+      ]
+    },
+    {
+      "ci95_high": 0.2717920395022505,
+      "ci95_high_display": 0.2717920395022505,
+      "ci95_low": 0.10594913837453986,
+      "ci95_low_display": 0.10594913837453986,
+      "mean": 0.18887058893839517,
+      "metric": "off_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.033377681946062825,
+      "values": [
+        0.20158060193061828,
+        0.1510050868988037,
+        0.21402607798576356
+      ]
+    },
+    {
+      "ci95_high": 1.0385199275839863,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.3922345813881816,
+      "ci95_low_display": 0.3922345813881816,
+      "mean": 0.715377254486084,
+      "metric": "path_precision",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.13007193304652273,
+      "values": [
+        0.8170962047576904,
+        0.7602186107635498,
+        0.5688169479370118
+      ]
+    },
+    {
+      "ci95_high": 1.1485635380179893,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.29184068955667725,
+      "ci95_low_display": 0.29184068955667725,
+      "mean": 0.7202021137873332,
+      "metric": "path_recall",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.1724247619730565,
+      "values": [
+        0.612804811000824,
+        0.9190891361236573,
+        0.6287123942375183
+      ]
+    },
+    {
+      "ci95_high": 0.4123838458325626,
+      "ci95_high_display": 0.4123838458325626,
+      "ci95_low": -0.1345209715630771,
+      "ci95_low_display": 0.0,
+      "mean": 0.13893143713474274,
+      "metric": "premature_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.11007052412658923,
+      "values": [
+        0.05059002190828323,
+        0.26223725736141207,
+        0.10396703213453293
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "router_entropy",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "router_tetris_weight",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "router_tetris_weight_on_path",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "router_tetris_weight_on_walls",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.11671964322420354,
+      "ci95_high_display": 0.11671964322420354,
+      "ci95_low": -0.02119205529384212,
+      "ci95_low_display": 0.0,
+      "mean": 0.04776379396518071,
+      "metric": "trajectory_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "colored_only",
+      "std": 0.027756224586495064,
+      "values": [
+        0.04435437321662903,
+        0.02186977446079254,
+        0.07706723421812058
+      ]
+    },
+    {
+      "ci95_high": 0.07401189017029641,
+      "ci95_high_display": 0.07401189017029641,
+      "ci95_low": 0.06338823271063923,
+      "ci95_low_display": 0.06338823271063923,
+      "mean": 0.06870006144046784,
+      "metric": "activation_time_mae_normalized",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0021381262470758005,
+      "values": [
+        0.06811391830444335,
+        0.06691613733768463,
+        0.07107012867927551
+      ]
+    },
+    {
+      "ci95_high": 0.991850871509775,
+      "ci95_high_display": 0.991850871509775,
+      "ci95_low": 0.9653433137471829,
+      "ci95_low_display": 0.9653433137471829,
+      "mean": 0.978597092628479,
+      "metric": "endpoint_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.005334933398719102,
+      "values": [
+        0.9724467182159424,
+        0.9813703107833862,
+        0.9819742488861084
+      ]
+    },
+    {
+      "ci95_high": 0.008737217340349044,
+      "ci95_high_display": 0.008737217340349044,
+      "ci95_low": 0.002227375323843076,
+      "ci95_low_display": 0.002227375323843076,
+      "mean": 0.00548229633209606,
+      "metric": "endpoint_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0013101762865250955,
+      "values": [
+        0.0069860091712325816,
+        0.004586573047563433,
+        0.004874306777492165
+      ]
+    },
+    {
+      "ci95_high": 0.5052270034889369,
+      "ci95_high_display": 0.5052270034889369,
+      "ci95_low": 0.29215800802509095,
+      "ci95_low_display": 0.29215800802509095,
+      "mean": 0.398692505757014,
+      "metric": "future_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.04288244546375132,
+      "values": [
+        0.3574543857574463,
+        0.3955741012096405,
+        0.4430490303039551
+      ]
+    },
+    {
+      "ci95_high": 0.2098620264072858,
+      "ci95_high_display": 0.2098620264072858,
+      "ci95_low": 0.10774174547795028,
+      "ci95_low_display": 0.10774174547795028,
+      "mean": 0.15880188594261804,
+      "metric": "future_path_activation_rate_at_0_5",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.020552813740740902,
+      "values": [
+        0.13961625427007676,
+        0.15629710674285888,
+        0.18049229681491852
+      ]
+    },
+    {
+      "ci95_high": 0.2413549308577939,
+      "ci95_high_display": 0.2413549308577939,
+      "ci95_low": 0.1374603139758345,
+      "ci95_low_display": 0.1374603139758345,
+      "mean": 0.18940762241681416,
+      "metric": "future_path_mean_intensity",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.02090991808882836,
+      "values": [
+        0.1698718786239624,
+        0.18688766658306122,
+        0.2114633220434189
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_high_display": 1.0,
+      "ci95_low": 1.0,
+      "ci95_low_display": 1.0,
+      "mean": 1.0,
+      "metric": "goal_reached",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "ci95_high": 0.8451383530722743,
+      "ci95_high_display": 0.8451383530722743,
+      "ci95_low": 0.8302531969918125,
+      "ci95_low_display": 0.8302531969918125,
+      "mean": 0.8376957750320434,
+      "metric": "intermediate_prefix_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0029957990483328602,
+      "values": [
+        0.8351661682128906,
+        0.8410040140151978,
+        0.836917142868042
+      ]
+    },
+    {
+      "ci95_high": 0.015635042192335667,
+      "ci95_high_display": 0.015635042192335667,
+      "ci95_low": -0.0012341422062200702,
+      "ci95_low_display": 0.0,
+      "mean": 0.007200449993057798,
+      "metric": "missed_path_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.003395106258487888,
+      "values": [
+        0.010509876373689622,
+        0.0037257040338590742,
+        0.007365769571624697
+      ]
+    },
+    {
+      "ci95_high": 0.0029525076536072396,
+      "ci95_high_display": 0.0029525076536072396,
+      "ci95_low": -0.0007868276274761788,
+      "ci95_low_display": 0.0,
+      "mean": 0.0010828400130655307,
+      "metric": "monotonicity_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0007525817677633429,
+      "values": [
+        0.0007589983782963827,
+        0.0005463882480398752,
+        0.001943133412860334
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "obstacle_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.02586800326529087,
+      "ci95_high_display": 0.02586800326529087,
+      "ci95_low": 0.007480442353855154,
+      "ci95_low_display": 0.007480442353855154,
+      "mean": 0.016674222809573015,
+      "metric": "off_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0037006959941754767,
+      "values": [
+        0.0206455460190773,
+        0.016054795011878013,
+        0.013322327397763728
+      ]
+    },
+    {
+      "ci95_high": 0.9935944879141749,
+      "ci95_high_display": 0.9935944879141749,
+      "ci95_low": 0.9774629970304867,
+      "ci95_low_display": 0.9774629970304867,
+      "mean": 0.9855287424723308,
+      "metric": "path_precision",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.003246637440434848,
+      "values": [
+        0.9826211071014405,
+        0.9849331951141358,
+        0.989031925201416
+      ]
+    },
+    {
+      "ci95_high": 1.0011336870602765,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.9842112919080259,
+      "ci95_low_display": 0.9842112919080259,
+      "mean": 0.9926724894841512,
+      "metric": "path_recall",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.0034058154995881174,
+      "values": [
+        0.989344654083252,
+        0.9961512660980225,
+        0.9925215482711792
+      ]
+    },
+    {
+      "ci95_high": 0.438364724101805,
+      "ci95_high_display": 0.438364724101805,
+      "ci95_low": 0.2473951246518063,
+      "ci95_low_display": 0.2473951246518063,
+      "mean": 0.34287992437680564,
+      "metric": "premature_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.038434702410931366,
+      "values": [
+        0.3023996698856354,
+        0.3473644781112671,
+        0.3788756251335144
+      ]
+    },
+    {
+      "ci95_high": 0.7125230531863412,
+      "ci95_high_display": 0.6931471805599453,
+      "ci95_low": 0.6530919570751944,
+      "ci95_low_display": 0.6530919570751944,
+      "mean": 0.6828075051307678,
+      "metric": "router_entropy",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.011961152453406404,
+      "values": [
+        0.6869000887870789,
+        0.6921851897239685,
+        0.6693372368812561
+      ]
+    },
+    {
+      "ci95_high": 0.6875974188272939,
+      "ci95_high_display": 0.6875974188272939,
+      "ci95_low": 0.3693333758885874,
+      "ci95_low_display": 0.3693333758885874,
+      "mean": 0.5284653973579407,
+      "metric": "router_tetris_weight",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.06405408930886851,
+      "values": [
+        0.5016254377365112,
+        0.4821975326538086,
+        0.6015732216835022
+      ]
+    },
+    {
+      "ci95_high": 0.684974393187592,
+      "ci95_high_display": 0.684974393187592,
+      "ci95_low": 0.38509056157009836,
+      "ci95_low_display": 0.38509056157009836,
+      "mean": 0.5350324773788452,
+      "metric": "router_tetris_weight_on_path",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.06035487249941078,
+      "values": [
+        0.5162111091613769,
+        0.4863309621810913,
+        0.6025553607940674
+      ]
+    },
+    {
+      "ci95_high": 0.690051404359197,
+      "ci95_high_display": 0.690051404359197,
+      "ci95_low": 0.3617196324246572,
+      "ci95_low_display": 0.3617196324246572,
+      "mean": 0.5258855183919271,
+      "metric": "router_tetris_weight_on_walls",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.06608032892513827,
+      "values": [
+        0.4943151879310608,
+        0.4815117645263672,
+        0.6018296027183533
+      ]
+    },
+    {
+      "ci95_high": 0.011311707288975062,
+      "ci95_high_display": 0.011311707288975062,
+      "ci95_low": 0.00756144708300179,
+      "ci95_low_display": 0.00756144708300179,
+      "mean": 0.009436577185988426,
+      "metric": "trajectory_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "learned",
+      "std": 0.000754780527347133,
+      "values": [
+        0.010222821310162545,
+        0.008717788457870483,
+        0.009369121789932251
+      ]
+    },
+    {
+      "ci95_high": 0.707018498314343,
+      "ci95_high_display": 0.707018498314343,
+      "ci95_low": -0.14602242582333302,
+      "ci95_low_display": 0.0,
+      "mean": 0.280498036245505,
+      "metric": "activation_time_mae_normalized",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.17168373478293786,
+      "values": [
+        0.329296213388443,
+        0.42250014424324034,
+        0.08969775110483169
+      ]
+    },
+    {
+      "ci95_high": 1.2560613929583941,
+      "ci95_high_display": 1.0,
+      "ci95_low": -0.10782786243700127,
+      "ci95_low_display": 0.0,
+      "mean": 0.5741167652606964,
+      "metric": "endpoint_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.2744975001443306,
+      "values": [
+        0.45704668402671816,
+        0.37756392955780027,
+        0.8877396821975708
+      ]
+    },
+    {
+      "ci95_high": 0.23557884664054193,
+      "ci95_high_display": 0.23557884664054193,
+      "ci95_low": -0.05593896702642717,
+      "ci95_low_display": 0.0,
+      "mean": 0.08981993980705738,
+      "metric": "endpoint_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.058671120681220934,
+      "values": [
+        0.10048991978168488,
+        0.14242383182048798,
+        0.02654606781899929
+      ]
+    },
+    {
+      "ci95_high": 0.40885636879521403,
+      "ci95_high_display": 0.40885636879521403,
+      "ci95_low": 0.2426845757810494,
+      "ci95_low_display": 0.2426845757810494,
+      "mean": 0.3257704722881317,
+      "metric": "future_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.03344387500410785,
+      "values": [
+        0.34146222591400144,
+        0.34848305463790896,
+        0.28736613631248475
+      ]
+    },
+    {
+      "ci95_high": 0.17697041413843784,
+      "ci95_high_display": 0.17697041413843784,
+      "ci95_low": 0.040880582514801075,
+      "ci95_low_display": 0.040880582514801075,
+      "mean": 0.10892549832661946,
+      "metric": "future_path_activation_rate_at_0_5",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.027389554121035626,
+      "values": [
+        0.10959825515747071,
+        0.13597247660160064,
+        0.08120576322078704
+      ]
+    },
+    {
+      "ci95_high": 0.20264804464296735,
+      "ci95_high_display": 0.20264804464296735,
+      "ci95_low": 0.09304810502413671,
+      "ci95_low_display": 0.09304810502413671,
+      "mean": 0.14784807483355206,
+      "metric": "future_path_mean_intensity",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.022058176147605833,
+      "values": [
+        0.15130598306655885,
+        0.16797307431697844,
+        0.12426516711711884
+      ]
+    },
+    {
+      "ci95_high": 1.6495900000000001,
+      "ci95_high_display": 1.0,
+      "ci95_low": -0.042923333333333424,
+      "ci95_low_display": 0.0,
+      "mean": 0.8033333333333333,
+      "metric": "goal_reached",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.3406366588218792,
+      "values": [
+        1.0,
+        0.41,
+        1.0
+      ]
+    },
+    {
+      "ci95_high": 1.2615695607880095,
+      "ci95_high_display": 1.0,
+      "ci95_low": -0.38873148880594377,
+      "ci95_low_display": 0.0,
+      "mean": 0.43641903599103293,
+      "metric": "intermediate_prefix_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.3321409790472894,
+      "values": [
+        0.3289908337593079,
+        0.1712883222103119,
+        0.808977952003479
+      ]
+    },
+    {
+      "ci95_high": 0.8921252782013831,
+      "ci95_high_display": 0.8921252782013831,
+      "ci95_low": -0.21514505861866667,
+      "ci95_low_display": 0.0,
+      "mean": 0.3384901097913583,
+      "metric": "missed_path_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.22285016047945969,
+      "values": [
+        0.42000905513763426,
+        0.5091027975082397,
+        0.0863584767282009
+      ]
+    },
+    {
+      "ci95_high": 0.010211457346137915,
+      "ci95_high_display": 0.010211457346137915,
+      "ci95_low": -0.0010923003978471502,
+      "ci95_low_display": 0.0,
+      "mean": 0.004559578474145383,
+      "metric": "monotonicity_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0022750038030481387,
+      "values": [
+        0.004339639395475388,
+        0.006936564203351736,
+        0.002402531823609024
+      ]
+    },
+    {
+      "ci95_high": 3.51185637847552e-05,
+      "ci95_high_display": 3.51185637847552e-05,
+      "ci95_low": -1.2833835697891243e-05,
+      "ci95_low_display": 0.0,
+      "mean": 1.1142364043431977e-05,
+      "metric": "obstacle_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 9.650940303135391e-06,
+      "values": [
+        1.6550938016735018e-05,
+        0.0,
+        1.6876154113560915e-05
+      ]
+    },
+    {
+      "ci95_high": 0.2598806821733266,
+      "ci95_high_display": 0.2598806821733266,
+      "ci95_low": -0.038618601404582495,
+      "ci95_low_display": 0.0,
+      "mean": 0.11063104038437208,
+      "metric": "off_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.060076217194962665,
+      "values": [
+        0.1654847413301468,
+        0.11997993588447571,
+        0.04642844393849373
+      ]
+    },
+    {
+      "ci95_high": 1.2224508043376212,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.28503915347182707,
+      "ci95_low_display": 0.28503915347182707,
+      "mean": 0.7537449789047241,
+      "metric": "path_precision",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.18866425829730107,
+      "values": [
+        0.6948158144950867,
+        0.6015788435935974,
+        0.9648402786254883
+      ]
+    },
+    {
+      "ci95_high": 1.2165405983722195,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.10358065336982569,
+      "ci95_low_display": 0.10358065336982569,
+      "mean": 0.6600606258710225,
+      "metric": "path_recall",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.2239952558137589,
+      "values": [
+        0.577591450214386,
+        0.4889911842346191,
+        0.9135992431640625
+      ]
+    },
+    {
+      "ci95_high": 0.2747412831506022,
+      "ci95_high_display": 0.2747412831506022,
+      "ci95_low": 0.07502324631602683,
+      "ci95_low_display": 0.07502324631602683,
+      "mean": 0.17488226473331453,
+      "metric": "premature_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0401954202864742,
+      "values": [
+        0.12938260018825531,
+        0.18969438910484315,
+        0.2055698049068451
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "router_entropy",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_high_display": 1.0,
+      "ci95_low": 1.0,
+      "ci95_low_display": 1.0,
+      "mean": 1.0,
+      "metric": "router_tetris_weight",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_high_display": 1.0,
+      "ci95_low": 1.0,
+      "ci95_low_display": 1.0,
+      "mean": 1.0,
+      "metric": "router_tetris_weight_on_path",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_high_display": 1.0,
+      "ci95_low": 1.0,
+      "ci95_low_display": 1.0,
+      "mean": 1.0,
+      "metric": "router_tetris_weight_on_walls",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "ci95_high": 0.1455691285323758,
+      "ci95_high_display": 0.1455691285323758,
+      "ci95_low": -0.03558305572883874,
+      "ci95_low_display": 0.0,
+      "mean": 0.05499303640176853,
+      "metric": "trajectory_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "tetris_only",
+      "std": 0.03645884116227083,
+      "values": [
+        0.0592242044210434,
+        0.08915168583393097,
+        0.016603218950331212
+      ]
+    },
+    {
+      "ci95_high": 0.07729086549875852,
+      "ci95_high_display": 0.07729086549875852,
+      "ci95_low": 0.06102734494410242,
+      "ci95_low_display": 0.06102734494410242,
+      "mean": 0.06915910522143046,
+      "metric": "activation_time_mae_normalized",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0032732098432030126,
+      "values": [
+        0.07097400993108749,
+        0.06538050442934036,
+        0.07112280130386353
+      ]
+    },
+    {
+      "ci95_high": 0.998915152660996,
+      "ci95_high_display": 0.998915152660996,
+      "ci95_low": 0.9553231540203192,
+      "ci95_low_display": 0.9553231540203192,
+      "mean": 0.9771191533406576,
+      "metric": "endpoint_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.00877336235755586,
+      "values": [
+        0.9670051145553589,
+        0.9816746234893798,
+        0.9826777219772339
+      ]
+    },
+    {
+      "ci95_high": 0.011278920698279153,
+      "ci95_high_display": 0.011278920698279153,
+      "ci95_low": 0.00039484372053145284,
+      "ci95_low_display": 0.00039484372053145284,
+      "mean": 0.005836882209405303,
+      "metric": "endpoint_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0021905384985997827,
+      "values": [
+        0.00836561357602477,
+        0.0046234789676964285,
+        0.00452155408449471
+      ]
+    },
+    {
+      "ci95_high": 0.503769265573568,
+      "ci95_high_display": 0.503769265573568,
+      "ci95_low": 0.2805066619700721,
+      "ci95_low_display": 0.2805066619700721,
+      "mean": 0.3921379637718201,
+      "metric": "future_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.04493401962251513,
+      "values": [
+        0.35278358936309817,
+        0.38253220319747927,
+        0.4410980987548828
+      ]
+    },
+    {
+      "ci95_high": 0.211384747063726,
+      "ci95_high_display": 0.211384747063726,
+      "ci95_low": 0.09681961850761395,
+      "ci95_low_display": 0.09681961850761395,
+      "mean": 0.15410218278566998,
+      "metric": "future_path_activation_rate_at_0_5",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.023057474254571945,
+      "values": [
+        0.14051734268665314,
+        0.14106441855430604,
+        0.18072478711605072
+      ]
+    },
+    {
+      "ci95_high": 0.24351476775939324,
+      "ci95_high_display": 0.24351476775939324,
+      "ci95_low": 0.12655452025597236,
+      "ci95_low_display": 0.12655452025597236,
+      "mean": 0.1850346440076828,
+      "metric": "future_path_mean_intensity",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.02353951791096397,
+      "values": [
+        0.16757337152957916,
+        0.17572541117668153,
+        0.21180514931678773
+      ]
+    },
+    {
+      "ci95_high": 1.0027525,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.9955808333333334,
+      "ci95_low_display": 0.9955808333333334,
+      "mean": 0.9991666666666666,
+      "metric": "goal_reached",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0014433756729740337,
+      "values": [
+        1.0,
+        1.0,
+        0.9975
+      ]
+    },
+    {
+      "ci95_high": 0.8530592502086214,
+      "ci95_high_display": 0.8530592502086214,
+      "ci95_low": 0.8187736959329395,
+      "ci95_low_display": 0.8187736959329395,
+      "mean": 0.8359164730707804,
+      "metric": "intermediate_prefix_iou",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.006900339527206775,
+      "values": [
+        0.8290582942962647,
+        0.842858214378357,
+        0.8358329105377197
+      ]
+    },
+    {
+      "ci95_high": 0.023345400677610498,
+      "ci95_high_display": 0.023345400677610498,
+      "ci95_low": -0.005560420750567379,
+      "ci95_low_display": 0.0,
+      "mean": 0.00889248996352156,
+      "metric": "missed_path_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.005817609963759848,
+      "values": [
+        0.015559603637084364,
+        0.00484704680275172,
+        0.0062708194507285955
+      ]
+    },
+    {
+      "ci95_high": 0.0023886278117016156,
+      "ci95_high_display": 0.0023886278117016156,
+      "ci95_low": -0.000132841898359161,
+      "ci95_low_display": 0.0,
+      "mean": 0.0011278929566712274,
+      "metric": "monotonicity_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0005074731173101593,
+      "values": [
+        0.0008652010664809496,
+        0.0008056160486012232,
+        0.0017128617549315094
+      ]
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_high_display": 0.0,
+      "ci95_low": 0.0,
+      "ci95_low_display": 0.0,
+      "mean": 0.0,
+      "metric": "obstacle_violation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ci95_high": 0.024380541196487315,
+      "ci95_high_display": 0.024380541196487315,
+      "ci95_low": 0.007996061170079342,
+      "ci95_low_display": 0.007996061170079342,
+      "mean": 0.016188301183283328,
+      "metric": "off_path_activation_rate_at_0_1",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.003297554248354179,
+      "values": [
+        0.019921777844429014,
+        0.014969427064061165,
+        0.013673698641359805
+      ]
+    },
+    {
+      "ci95_high": 0.9946205593656489,
+      "ci95_high_display": 0.9946205593656489,
+      "ci95_low": 0.9769540173301111,
+      "ci95_low_display": 0.9769540173301111,
+      "mean": 0.9857872883478801,
+      "metric": "path_precision",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.003555583128004017,
+      "values": [
+        0.9819815158843994,
+        0.9863562917709351,
+        0.9890240573883057
+      ]
+    },
+    {
+      "ci95_high": 1.005408791108646,
+      "ci95_high_display": 1.0,
+      "ci95_low": 0.9764788959386764,
+      "ci95_low_display": 0.9764788959386764,
+      "mean": 0.9909438435236613,
+      "metric": "path_recall",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.005822455065306633,
+      "values": [
+        0.9842715978622436,
+        0.9949953937530518,
+        0.9935645389556885
+      ]
+    },
+    {
+      "ci95_high": 0.437466528641546,
+      "ci95_high_display": 0.437466528641546,
+      "ci95_low": 0.23235351778331967,
+      "ci95_low_display": 0.23235351778331967,
+      "mean": 0.33491002321243285,
+      "metric": "premature_activation_rate",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.041281217301867866,
+      "values": [
+        0.2963873410224915,
+        0.3298579704761505,
+        0.3784847581386566
+      ]
+    },
+    {
+      "ci95_high": 0.6931473731994627,
+      "ci95_high_display": 0.6931471805599453,
+      "ci95_low": 0.6931473731994627,
+      "ci95_low_display": 0.6931473731994627,
+      "mean": 0.6931473731994628,
+      "metric": "router_entropy",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0,
+      "values": [
+        0.6931473731994628,
+        0.6931473731994628,
+        0.6931473731994628
+      ]
+    },
+    {
+      "ci95_high": 0.5,
+      "ci95_high_display": 0.5,
+      "ci95_low": 0.5,
+      "ci95_low_display": 0.5,
+      "mean": 0.5,
+      "metric": "router_tetris_weight",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0,
+      "values": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "ci95_high": 0.5,
+      "ci95_high_display": 0.5,
+      "ci95_low": 0.5,
+      "ci95_low_display": 0.5,
+      "mean": 0.5,
+      "metric": "router_tetris_weight_on_path",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0,
+      "values": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "ci95_high": 0.5,
+      "ci95_high_display": 0.5,
+      "ci95_low": 0.5,
+      "ci95_low_display": 0.5,
+      "mean": 0.5,
+      "metric": "router_tetris_weight_on_walls",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0,
+      "values": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "ci95_high": 0.012693402139018107,
+      "ci95_high_display": 0.012693402139018107,
+      "ci95_low": 0.006606816482871645,
+      "ci95_low_display": 0.006606816482871645,
+      "mean": 0.009650109310944876,
+      "metric": "trajectory_mse",
+      "model": "maze_moe",
+      "n_seeds": 3,
+      "router_mode": "uniform",
+      "std": 0.0012249913549925195,
+      "values": [
+        0.01099816918373108,
+        0.0086050608381629,
+        0.009347097910940648
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-08-07T22:09:03.031605+00:00",
+  "method": "maze_moe_frozen_tetris_colored_spatial_experts",
+  "paired_comparisons": [
+    {
+      "ci95_high": 0.010020165143324346,
+      "ci95_low": -0.007064286567681401,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.005441603660583549,
+        -0.0003043127059936257,
+        -0.000703473091125506
+      ],
+      "mean_difference": 0.0014779392878214725,
+      "metric": "endpoint_iou",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0034384311390795947
+    },
+    {
+      "ci95_high": 0.0010004541568522092,
+      "ci95_low": -0.0014275184067651077,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        -0.0007753478735685344,
+        0.00011272761970758383,
+        2.202387899160295e-05
+      ],
+      "mean_difference": -0.0002135321249564492,
+      "metric": "trajectory_mse",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0004886558028780445
+    },
+    {
+      "ci95_high": 0.011781964001115154,
+      "ci95_low": -0.008223360078589143,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.006107873916625928,
+        -0.0018542003631591975,
+        0.0010842323303222878
+      ],
+      "mean_difference": 0.001779301961263006,
+      "metric": "intermediate_prefix_iou",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.004026288371825347
+    },
+    {
+      "ci95_high": 0.02964357803699206,
+      "ci95_low": -0.013703775708246544,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.006012328863143901,
+        0.017506507635116575,
+        0.00039086699485779697
+      ],
+      "mean_difference": 0.007969901164372758,
+      "metric": "premature_activation_rate",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.008724124919871522
+    },
+    {
+      "ci95_high": 0.019343781232226135,
+      "ci95_low": -0.0105978244139634,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.0022985070943832564,
+        0.01116225540637969,
+        -0.00034182727336884433
+      ],
+      "mean_difference": 0.004372978409131367,
+      "metric": "future_path_mean_intensity",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0060260727677656795
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "comparison": "learned_minus_uniform",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "metric": "obstacle_violation_rate",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0
+    },
+    {
+      "ci95_high": 0.04418825265918722,
+      "ci95_low": -0.03665916956617981,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        -0.013127426058053948,
+        0.0050862576067447485,
+        0.019334793090820312
+      ],
+      "mean_difference": 0.0037645415465037044,
+      "metric": "endpoint_iou",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.016271420282978035
+    },
+    {
+      "ci95_high": 0.0033910814795741298,
+      "ci95_low": -0.0033656399963677033,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.0015574394341092562,
+        -0.0010037937510060154,
+        -0.0005154834582936016
+      ],
+      "mean_difference": 1.2720741603213076e-05,
+      "metric": "trajectory_mse",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0013598634544414396
+    },
+    {
+      "ci95_high": 0.01711130192376316,
+      "ci95_low": -0.0263296864479496,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        -0.013684595674276379,
+        -0.003901283293962443,
+        0.003758302181959161
+      ],
+      "mean_difference": -0.00460919226209322,
+      "metric": "intermediate_prefix_iou",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.008742969903650394
+    },
+    {
+      "ci95_high": 0.10066531910037914,
+      "ci95_low": -0.04792568519712252,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        -0.006292434010101711,
+        0.05240789777075405,
+        0.03299398709423257
+      ],
+      "mean_difference": 0.026369816951628305,
+      "metric": "premature_activation_rate",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.029905550661277976
+    },
+    {
+      "ci95_high": 0.09500375742735917,
+      "ci95_low": -0.044985220917568375,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        -0.0019695524347480287,
+        0.022753883022815002,
+        0.054243474176619205
+      ],
+      "mean_difference": 0.025009268254895394,
+      "metric": "future_path_mean_intensity",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.028174299673840785
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "comparison": "learned_minus_scratch",
+      "definition": "learned minus comparator",
+      "differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "metric": "obstacle_violation_rate",
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "std_difference": 0.0
+    }
+  ],
+  "parameter_counts": {
+    "moe_frozen": [
+      447364
+    ],
+    "moe_trainable": [
+      898643
+    ],
+    "scratch_maze_trainable": 887905
+  },
+  "posthoc_process_quality_diagnostic": {
+    "aggregates": {
+      "endpoint_iou": {
+        "mean": 0.9707934268315633,
+        "values": [
+          0.9644987964630127,
+          0.9745299243927001,
+          0.973351559638977
+        ]
+      },
+      "intermediate_prefix_iou": {
+        "mean": 0.8329622904459636,
+        "values": [
+          0.8311193084716797,
+          0.8301811790466309,
+          0.8375863838195801
+        ]
+      },
+      "premature_activation_rate": {
+        "mean": 0.27659897168477376,
+        "values": [
+          0.25996442675590514,
+          0.2846178412437439,
+          0.28521464705467225
+        ]
+      },
+      "trajectory_mse": {
+        "mean": 0.010457492731511593,
+        "values": [
+          0.011341865845024586,
+          0.009828239269554616,
+          0.010202373079955578
+        ]
+      }
+    },
+    "per_seed": [
+      {
+        "endpoint_iou": 0.9644987964630127,
+        "epoch": 24,
+        "intermediate_prefix_iou": 0.8311193084716797,
+        "premature_activation_rate": 0.25996442675590514,
+        "seed": 0,
+        "trajectory_mse": 0.011341865845024586
+      },
+      {
+        "endpoint_iou": 0.9745299243927001,
+        "epoch": 24,
+        "intermediate_prefix_iou": 0.8301811790466309,
+        "premature_activation_rate": 0.2846178412437439,
+        "seed": 1,
+        "trajectory_mse": 0.009828239269554616
+      },
+      {
+        "endpoint_iou": 0.973351559638977,
+        "epoch": 24,
+        "intermediate_prefix_iou": 0.8375863838195801,
+        "premature_activation_rate": 0.28521464705467225,
+        "seed": 2,
+        "trajectory_mse": 0.010202373079955578
+      }
+    ],
+    "rule": "among validated epochs within 0.01 endpoint IoU of that seed's best, minimize premature activation",
+    "status": "post_hoc_descriptive_not_checkpoint_selected",
+    "warning": "These epoch states were not retained as final checkpoints and are not used in the primary comparison."
+  },
+  "profile": "overnight",
+  "protocol_notes": [
+    "Tetris and colored checkpoints are frozen and seed-matched.",
+    "Only the learned router is used during training.",
+    "Uniform and single-expert rows are post-training gate interventions, not separately trained controls.",
+    "The scratch-maze reference is the previously frozen three-seed post-hoc audit.",
+    "Paired scratch deltas align both evaluators' documented seed order [0, 1, 2]."
+  ],
+  "schema_version": 1,
+  "scratch_maze_reference": {
+    "activation_time_mae_normalized": {
+      "ci95_high": 0.07942721087078602,
+      "ci95_low": 0.05376228092024374,
+      "mean": 0.0665947458955149,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.06239319664426148,
+        0.06502931932918728,
+        0.0723617217130959
+      ]
+    },
+    "endpoint_iou": {
+      "ci95_high": 1.0,
+      "ci95_low": 0.9461731359605917,
+      "mean": 0.9748325510819753,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.9855741442739964,
+        0.9762840531766415,
+        0.9626394557952881
+      ]
+    },
+    "endpoint_mse": {
+      "ci95_high": 0.012316893446343527,
+      "ci95_low": 0.00046854746606848647,
+      "mean": 0.006392720456206007,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.004124264104611939,
+        0.006175307008234086,
+        0.008878590255771996
+      ]
+    },
+    "future_path_activation_rate_at_0_1": {
+      "ci95_high": 0.43209838217648444,
+      "ci95_low": 0.2783086486232521,
+      "mean": 0.3552035153998683,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3780589611758478,
+        0.3675715599302202,
+        0.31998002509353685
+      ]
+    },
+    "future_path_activation_rate_at_0_5": {
+      "ci95_high": 0.14490368437170345,
+      "ci95_low": 0.1322680197266848,
+      "mean": 0.13858585204919413,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.1407852936933341,
+        0.13580119222810028,
+        0.139171070226148
+      ]
+    },
+    "future_path_mean_intensity": {
+      "ci95_high": 0.18256975078329885,
+      "ci95_low": 0.14622695754053872,
+      "mean": 0.16439835416191878,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.17184143105871044,
+        0.16413378356024622,
+        0.15721984786679968
+      ]
+    },
+    "goal_reached": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "intermediate_prefix_iou": {
+      "ci95_high": 0.8625839857671435,
+      "ci95_low": 0.82202594882113,
+      "mean": 0.8423049672941366,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.848850763887167,
+        0.8449052973091602,
+        0.8331588406860828
+      ]
+    },
+    "missed_path_activation_rate": {
+      "ci95_high": 0.026612500152556937,
+      "ci95_low": 0.0,
+      "mean": 0.012251934215504055,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.006686520169023424,
+        0.011843543922586831,
+        0.018225738554901907
+      ]
+    },
+    "monotonicity_violation_rate": {
+      "ci95_high": 0.004640471230604262,
+      "ci95_low": 0.0,
+      "mean": 0.0012278532677070567,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.00039093117311495007,
+        0.0004794411945658794,
+        0.002813187435440341
+      ]
+    },
+    "obstacle_violation_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "mean": 0.0,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "off_path_activation_rate_at_0_1": {
+      "ci95_high": 0.026946593382308336,
+      "ci95_low": 0.008245618412280997,
+      "mean": 0.01759610589729467,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.013954010167508387,
+        0.017363535362819676,
+        0.02147077216155594
+      ]
+    },
+    "path_precision": {
+      "ci95_high": 1.0,
+      "ci95_low": 0.9719549335008678,
+      "mean": 0.9867674025893212,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.9920546387135982,
+        0.9879425996541977,
+        0.9803049694001674
+      ]
+    },
+    "path_recall": {
+      "ci95_high": 1.0,
+      "ci95_low": 0.9731610636162595,
+      "mean": 0.9876611731449763,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.9932810732722283,
+        0.988072797358036,
+        0.9816296488046646
+      ]
+    },
+    "premature_activation_rate": {
+      "ci95_high": 0.3819657606512424,
+      "ci95_low": 0.25105445419911226,
+      "mean": 0.3165101074251773,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3086921038957371,
+        0.29495658034051303,
+        0.34588163803928185
+      ]
+    },
+    "trajectory_mse": {
+      "ci95_high": 0.011068231029564661,
+      "ci95_low": 0.007779481859205763,
+      "mean": 0.009423856444385214,
+      "seed_order": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.008665381876053289,
+        0.009721582208876499,
+        0.009884605248225853
+      ]
+    }
+  },
+  "summaries": [
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed0/audit_best.png",
+      "best_epoch": 28,
+      "best_selection_value": 0.9724467182159424,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed0/best_checkpoint.pt",
+      "checkpoint_sha256": "c55033167cb738b148720a0a6abc2a3f70131c2dba774a2443b7799ce7a12500",
+      "elapsed_seconds": 3456.1370816249982,
+      "experiment_name": "neurreps_maze_frozen_rotation_expert_mixture",
+      "frozen_experts": {
+        "colored": {
+          "best_epoch": 20,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed0/best_checkpoint.pt",
+          "sha256": "471b29cc1c421dbf661bfe7ccab12c80620e12d910799ec30588f90836cdad2f"
+        },
+        "tetris": {
+          "best_epoch": 15,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed0/best_checkpoint.pt",
+          "sha256": "e4d16ed51bc935a5472745075b7fa7a7110a1a1c92841a772f5f645bb3645a29"
+        }
+      },
+      "frozen_parameter_count": 447364,
+      "metrics": {
+        "colored_only": {
+          "activation_time_mae_normalized": 0.20660138130187988,
+          "endpoint_iou": 0.5345849919319153,
+          "endpoint_mse": 0.09925411015748978,
+          "future_path_activation_rate_at_0_1": 0.2810943758487701,
+          "future_path_activation_rate_at_0_5": 0.02102071972563863,
+          "future_path_mean_intensity": 0.08887787967920303,
+          "goal_reached": 0.5625,
+          "intermediate_prefix_iou": 0.5797921299934388,
+          "missed_path_activation_rate": 0.3871715795993805,
+          "monotonicity_violation_rate": 0.011999652478843928,
+          "obstacle_violation_rate": 0.06107480376958847,
+          "off_path_activation_rate_at_0_1": 0.20158060193061828,
+          "path_precision": 0.8170962047576904,
+          "path_recall": 0.612804811000824,
+          "premature_activation_rate": 0.05059002190828323,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 0.0,
+          "router_tetris_weight_on_path": 0.0,
+          "router_tetris_weight_on_walls": 0.0,
+          "trajectory_mse": 0.04435437321662903
+        },
+        "learned": {
+          "activation_time_mae_normalized": 0.06811391830444335,
+          "endpoint_iou": 0.9724467182159424,
+          "endpoint_mse": 0.0069860091712325816,
+          "future_path_activation_rate_at_0_1": 0.3574543857574463,
+          "future_path_activation_rate_at_0_5": 0.13961625427007676,
+          "future_path_mean_intensity": 0.1698718786239624,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.8351661682128906,
+          "missed_path_activation_rate": 0.010509876373689622,
+          "monotonicity_violation_rate": 0.0007589983782963827,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.0206455460190773,
+          "path_precision": 0.9826211071014405,
+          "path_recall": 0.989344654083252,
+          "premature_activation_rate": 0.3023996698856354,
+          "router_entropy": 0.6869000887870789,
+          "router_tetris_weight": 0.5016254377365112,
+          "router_tetris_weight_on_path": 0.5162111091613769,
+          "router_tetris_weight_on_walls": 0.4943151879310608,
+          "trajectory_mse": 0.010222821310162545
+        },
+        "tetris_only": {
+          "activation_time_mae_normalized": 0.329296213388443,
+          "endpoint_iou": 0.45704668402671816,
+          "endpoint_mse": 0.10048991978168488,
+          "future_path_activation_rate_at_0_1": 0.34146222591400144,
+          "future_path_activation_rate_at_0_5": 0.10959825515747071,
+          "future_path_mean_intensity": 0.15130598306655885,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.3289908337593079,
+          "missed_path_activation_rate": 0.42000905513763426,
+          "monotonicity_violation_rate": 0.004339639395475388,
+          "obstacle_violation_rate": 1.6550938016735018e-05,
+          "off_path_activation_rate_at_0_1": 0.1654847413301468,
+          "path_precision": 0.6948158144950867,
+          "path_recall": 0.577591450214386,
+          "premature_activation_rate": 0.12938260018825531,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 1.0,
+          "router_tetris_weight_on_path": 1.0,
+          "router_tetris_weight_on_walls": 1.0,
+          "trajectory_mse": 0.0592242044210434
+        },
+        "uniform": {
+          "activation_time_mae_normalized": 0.07097400993108749,
+          "endpoint_iou": 0.9670051145553589,
+          "endpoint_mse": 0.00836561357602477,
+          "future_path_activation_rate_at_0_1": 0.35278358936309817,
+          "future_path_activation_rate_at_0_5": 0.14051734268665314,
+          "future_path_mean_intensity": 0.16757337152957916,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.8290582942962647,
+          "missed_path_activation_rate": 0.015559603637084364,
+          "monotonicity_violation_rate": 0.0008652010664809496,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.019921777844429014,
+          "path_precision": 0.9819815158843994,
+          "path_recall": 0.9842715978622436,
+          "premature_activation_rate": 0.2963873410224915,
+          "router_entropy": 0.6931473731994628,
+          "router_tetris_weight": 0.5,
+          "router_tetris_weight_on_path": 0.5,
+          "router_tetris_weight_on_walls": 0.5,
+          "trajectory_mse": 0.01099816918373108
+        }
+      },
+      "model": "maze_moe_frozen_tetris_colored_spatial_experts",
+      "parameter_count": 1346007,
+      "preliminary": false,
+      "router_intervention_note": "uniform/tetris_only/colored_only are post-training gate interventions on the learned-router model",
+      "seed": 0,
+      "selection_metric": "endpoint_iou",
+      "task": "maze",
+      "train_samples": 3000,
+      "trainable_parameter_count": 898643,
+      "validation_protocol": "fixed_seed_disjoint_generated_mazes",
+      "validation_samples": 400
+    },
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed1/audit_best.png",
+      "best_epoch": 28,
+      "best_selection_value": 0.9813703107833862,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed1/best_checkpoint.pt",
+      "checkpoint_sha256": "1e3376ca686201dc131fad70a4e1a760d6df788140475e51feba124dc39b200a",
+      "elapsed_seconds": 3534.9300105000148,
+      "experiment_name": "neurreps_maze_frozen_rotation_expert_mixture",
+      "frozen_experts": {
+        "colored": {
+          "best_epoch": 1,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed1/best_checkpoint.pt",
+          "sha256": "337be3259d86710139355d3bc74bb47c787114124e75acc744d9fcbac48cddd5"
+        },
+        "tetris": {
+          "best_epoch": 5,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed1/best_checkpoint.pt",
+          "sha256": "8cfcf986d4d04b798b140fc41b2e4d647fc5a218cf1ced5295fd78498a0380f7"
+        }
+      },
+      "frozen_parameter_count": 447364,
+      "metrics": {
+        "colored_only": {
+          "activation_time_mae_normalized": 0.09137693971395493,
+          "endpoint_iou": 0.7076548552513122,
+          "endpoint_mse": 0.06272071093320847,
+          "future_path_activation_rate_at_0_1": 0.3566345965862274,
+          "future_path_activation_rate_at_0_5": 0.15745594531297682,
+          "future_path_mean_intensity": 0.18201300144195556,
+          "goal_reached": 0.305,
+          "intermediate_prefix_iou": 0.7882559084892273,
+          "missed_path_activation_rate": 0.08089471459388733,
+          "monotonicity_violation_rate": 5.700511319446378e-06,
+          "obstacle_violation_rate": 0.00017027244466589765,
+          "off_path_activation_rate_at_0_1": 0.1510050868988037,
+          "path_precision": 0.7602186107635498,
+          "path_recall": 0.9190891361236573,
+          "premature_activation_rate": 0.26223725736141207,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 0.0,
+          "router_tetris_weight_on_path": 0.0,
+          "router_tetris_weight_on_walls": 0.0,
+          "trajectory_mse": 0.02186977446079254
+        },
+        "learned": {
+          "activation_time_mae_normalized": 0.06691613733768463,
+          "endpoint_iou": 0.9813703107833862,
+          "endpoint_mse": 0.004586573047563433,
+          "future_path_activation_rate_at_0_1": 0.3955741012096405,
+          "future_path_activation_rate_at_0_5": 0.15629710674285888,
+          "future_path_mean_intensity": 0.18688766658306122,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.8410040140151978,
+          "missed_path_activation_rate": 0.0037257040338590742,
+          "monotonicity_violation_rate": 0.0005463882480398752,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.016054795011878013,
+          "path_precision": 0.9849331951141358,
+          "path_recall": 0.9961512660980225,
+          "premature_activation_rate": 0.3473644781112671,
+          "router_entropy": 0.6921851897239685,
+          "router_tetris_weight": 0.4821975326538086,
+          "router_tetris_weight_on_path": 0.4863309621810913,
+          "router_tetris_weight_on_walls": 0.4815117645263672,
+          "trajectory_mse": 0.008717788457870483
+        },
+        "tetris_only": {
+          "activation_time_mae_normalized": 0.42250014424324034,
+          "endpoint_iou": 0.37756392955780027,
+          "endpoint_mse": 0.14242383182048798,
+          "future_path_activation_rate_at_0_1": 0.34848305463790896,
+          "future_path_activation_rate_at_0_5": 0.13597247660160064,
+          "future_path_mean_intensity": 0.16797307431697844,
+          "goal_reached": 0.41,
+          "intermediate_prefix_iou": 0.1712883222103119,
+          "missed_path_activation_rate": 0.5091027975082397,
+          "monotonicity_violation_rate": 0.006936564203351736,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.11997993588447571,
+          "path_precision": 0.6015788435935974,
+          "path_recall": 0.4889911842346191,
+          "premature_activation_rate": 0.18969438910484315,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 1.0,
+          "router_tetris_weight_on_path": 1.0,
+          "router_tetris_weight_on_walls": 1.0,
+          "trajectory_mse": 0.08915168583393097
+        },
+        "uniform": {
+          "activation_time_mae_normalized": 0.06538050442934036,
+          "endpoint_iou": 0.9816746234893798,
+          "endpoint_mse": 0.0046234789676964285,
+          "future_path_activation_rate_at_0_1": 0.38253220319747927,
+          "future_path_activation_rate_at_0_5": 0.14106441855430604,
+          "future_path_mean_intensity": 0.17572541117668153,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.842858214378357,
+          "missed_path_activation_rate": 0.00484704680275172,
+          "monotonicity_violation_rate": 0.0008056160486012232,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.014969427064061165,
+          "path_precision": 0.9863562917709351,
+          "path_recall": 0.9949953937530518,
+          "premature_activation_rate": 0.3298579704761505,
+          "router_entropy": 0.6931473731994628,
+          "router_tetris_weight": 0.5,
+          "router_tetris_weight_on_path": 0.5,
+          "router_tetris_weight_on_walls": 0.5,
+          "trajectory_mse": 0.0086050608381629
+        }
+      },
+      "model": "maze_moe_frozen_tetris_colored_spatial_experts",
+      "parameter_count": 1346007,
+      "preliminary": false,
+      "router_intervention_note": "uniform/tetris_only/colored_only are post-training gate interventions on the learned-router model",
+      "seed": 1,
+      "selection_metric": "endpoint_iou",
+      "task": "maze",
+      "train_samples": 3000,
+      "trainable_parameter_count": 898643,
+      "validation_protocol": "fixed_seed_disjoint_generated_mazes",
+      "validation_samples": 400
+    },
+    {
+      "audit_image": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed2/audit_best.png",
+      "best_epoch": 30,
+      "best_selection_value": 0.9819742488861084,
+      "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_maze_moe_v1/overnight/learned/seed2/best_checkpoint.pt",
+      "checkpoint_sha256": "8640e347c350f36442d0b60c1a77211ef7f463e952bedb6e084dea90b424d566",
+      "elapsed_seconds": 4129.875535416999,
+      "experiment_name": "neurreps_maze_frozen_rotation_expert_mixture",
+      "frozen_experts": {
+        "colored": {
+          "best_epoch": 15,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/colored/seed2/best_checkpoint.pt",
+          "sha256": "8adecfe4832759f1610bb9a1eb2ff15affdd4d45c6f3260ff74313202c8ef9ca"
+        },
+        "tetris": {
+          "best_epoch": 5,
+          "path": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed2/best_checkpoint.pt",
+          "sha256": "a1ff580bc4c88a74f398822bbef7792b5a01fed4c0a26f0a667d93ad76b6d5b7"
+        }
+      },
+      "frozen_parameter_count": 447364,
+      "metrics": {
+        "colored_only": {
+          "activation_time_mae_normalized": 0.3181911587715149,
+          "endpoint_iou": 0.44007779598236085,
+          "endpoint_mse": 0.1516393905878067,
+          "future_path_activation_rate_at_0_1": 0.23428080081939698,
+          "future_path_activation_rate_at_0_5": 0.12180886685848236,
+          "future_path_mean_intensity": 0.12222705960273743,
+          "goal_reached": 0.7325,
+          "intermediate_prefix_iou": 0.30930563926696775,
+          "missed_path_activation_rate": 0.37122722625732424,
+          "monotonicity_violation_rate": 0.0036999563872814178,
+          "obstacle_violation_rate": 0.0003476115356897935,
+          "off_path_activation_rate_at_0_1": 0.21402607798576356,
+          "path_precision": 0.5688169479370118,
+          "path_recall": 0.6287123942375183,
+          "premature_activation_rate": 0.10396703213453293,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 0.0,
+          "router_tetris_weight_on_path": 0.0,
+          "router_tetris_weight_on_walls": 0.0,
+          "trajectory_mse": 0.07706723421812058
+        },
+        "learned": {
+          "activation_time_mae_normalized": 0.07107012867927551,
+          "endpoint_iou": 0.9819742488861084,
+          "endpoint_mse": 0.004874306777492165,
+          "future_path_activation_rate_at_0_1": 0.4430490303039551,
+          "future_path_activation_rate_at_0_5": 0.18049229681491852,
+          "future_path_mean_intensity": 0.2114633220434189,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.836917142868042,
+          "missed_path_activation_rate": 0.007365769571624697,
+          "monotonicity_violation_rate": 0.001943133412860334,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.013322327397763728,
+          "path_precision": 0.989031925201416,
+          "path_recall": 0.9925215482711792,
+          "premature_activation_rate": 0.3788756251335144,
+          "router_entropy": 0.6693372368812561,
+          "router_tetris_weight": 0.6015732216835022,
+          "router_tetris_weight_on_path": 0.6025553607940674,
+          "router_tetris_weight_on_walls": 0.6018296027183533,
+          "trajectory_mse": 0.009369121789932251
+        },
+        "tetris_only": {
+          "activation_time_mae_normalized": 0.08969775110483169,
+          "endpoint_iou": 0.8877396821975708,
+          "endpoint_mse": 0.02654606781899929,
+          "future_path_activation_rate_at_0_1": 0.28736613631248475,
+          "future_path_activation_rate_at_0_5": 0.08120576322078704,
+          "future_path_mean_intensity": 0.12426516711711884,
+          "goal_reached": 1.0,
+          "intermediate_prefix_iou": 0.808977952003479,
+          "missed_path_activation_rate": 0.0863584767282009,
+          "monotonicity_violation_rate": 0.002402531823609024,
+          "obstacle_violation_rate": 1.6876154113560915e-05,
+          "off_path_activation_rate_at_0_1": 0.04642844393849373,
+          "path_precision": 0.9648402786254883,
+          "path_recall": 0.9135992431640625,
+          "premature_activation_rate": 0.2055698049068451,
+          "router_entropy": 0.0,
+          "router_tetris_weight": 1.0,
+          "router_tetris_weight_on_path": 1.0,
+          "router_tetris_weight_on_walls": 1.0,
+          "trajectory_mse": 0.016603218950331212
+        },
+        "uniform": {
+          "activation_time_mae_normalized": 0.07112280130386353,
+          "endpoint_iou": 0.9826777219772339,
+          "endpoint_mse": 0.00452155408449471,
+          "future_path_activation_rate_at_0_1": 0.4410980987548828,
+          "future_path_activation_rate_at_0_5": 0.18072478711605072,
+          "future_path_mean_intensity": 0.21180514931678773,
+          "goal_reached": 0.9975,
+          "intermediate_prefix_iou": 0.8358329105377197,
+          "missed_path_activation_rate": 0.0062708194507285955,
+          "monotonicity_violation_rate": 0.0017128617549315094,
+          "obstacle_violation_rate": 0.0,
+          "off_path_activation_rate_at_0_1": 0.013673698641359805,
+          "path_precision": 0.9890240573883057,
+          "path_recall": 0.9935645389556885,
+          "premature_activation_rate": 0.3784847581386566,
+          "router_entropy": 0.6931473731994628,
+          "router_tetris_weight": 0.5,
+          "router_tetris_weight_on_path": 0.5,
+          "router_tetris_weight_on_walls": 0.5,
+          "trajectory_mse": 0.009347097910940648
+        }
+      },
+      "model": "maze_moe_frozen_tetris_colored_spatial_experts",
+      "parameter_count": 1346007,
+      "preliminary": false,
+      "router_intervention_note": "uniform/tetris_only/colored_only are post-training gate interventions on the learned-router model",
+      "seed": 2,
+      "selection_metric": "endpoint_iou",
+      "task": "maze",
+      "train_samples": 3000,
+      "trainable_parameter_count": 898643,
+      "validation_protocol": "fixed_seed_disjoint_generated_mazes",
+      "validation_samples": 400
+    }
+  ]
+}

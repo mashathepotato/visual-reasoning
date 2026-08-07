@@ -100,6 +100,21 @@ class TrajectoryFlowField(nn.Module):
         t: torch.Tensor,
         action: Optional[torch.Tensor] = None,
     ) -> torch.Tensor:
+        features = self.spatial_features(state, condition, t, action)
+        return self.out(F.silu(self.out_norm(features)))
+
+    def spatial_features(
+        self,
+        state: torch.Tensor,
+        condition: torch.Tensor,
+        t: torch.Tensor,
+        action: Optional[torch.Tensor] = None,
+    ) -> torch.Tensor:
+        """Return the final full-resolution spatial representation.
+
+        This exposes a frozen flow as a transferable spatial expert without
+        changing the field produced by :meth:`forward`.
+        """
         batch = state.shape[0]
         if t.ndim == 1:
             t = t[:, None]
@@ -117,7 +132,7 @@ class TrajectoryFlowField(nn.Module):
         up2 = self.dec2(torch.cat([up2, x2], dim=1), context)
         up1 = F.interpolate(up2, size=x1.shape[-2:], mode="bilinear", align_corners=False)
         up1 = self.dec1(torch.cat([up1, x1], dim=1), context)
-        return self.out(F.silu(self.out_norm(up1)))
+        return up1
 
     def config(self) -> dict:
         return {
