@@ -1,0 +1,115 @@
+{
+  "models": [
+    {
+      "cache_path": "benchmarks/llm_baselines_cache.jsonl",
+      "cache_sha256": "8b4b6b077568bb8739b19c67de3870145f439767a909008109e9e0d271250093",
+      "model": "gpt-4o-mini",
+      "protocol": "procedural generator sequence from the original direct-VLM notebooks",
+      "provider": "openai",
+      "seed": 0,
+      "summaries": [
+        {
+          "ci95_high": 0.5674258105667859,
+          "ci95_low": 0.48020822109105976,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "tetris",
+          "value": 0.524
+        },
+        {
+          "ci95_high": 0.5436587346975157,
+          "ci95_low": 0.4563412653024843,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "colored",
+          "value": 0.5
+        },
+        {
+          "ci95_high": 0.608325677602536,
+          "ci95_low": 0.39167432239746397,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 78,
+          "task": "ganis3d",
+          "value": 0.5
+        },
+        {
+          "ci95_high": 0.5496098690809679,
+          "ci95_low": 0.4622986388334935,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "maze_trace",
+          "value": 0.506
+        },
+        {
+          "ci95_high": 0.007624340461552241,
+          "ci95_low": 4.336808689942018e-19,
+          "ci_method": "wilson_over_items",
+          "metric": "success_rate",
+          "n": 500,
+          "task": "maze_solve",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "cache_path": "benchmarks/claude_baselines_cache.jsonl",
+      "cache_sha256": "d63e4c49ee5637554d2a8fff1fe8fce930b97b0f4a2b9130878be2e0240dc775",
+      "model": "claude-opus-4-6",
+      "protocol": "procedural generator sequence from the original direct-VLM notebooks",
+      "provider": "anthropic",
+      "seed": 0,
+      "summaries": [
+        {
+          "ci95_high": 0.505823154716285,
+          "ci95_low": 0.41875629515879303,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "tetris",
+          "value": 0.462
+        },
+        {
+          "ci95_high": 0.5595145567685472,
+          "ci95_low": 0.4722414643366831,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "colored",
+          "value": 0.516
+        },
+        {
+          "ci95_high": 0.6446760367720094,
+          "ci95_low": 0.4286364394039756,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 78,
+          "task": "ganis3d",
+          "value": 0.5384615384615384
+        },
+        {
+          "ci95_high": 0.5436587346975157,
+          "ci95_low": 0.4563412653024843,
+          "ci_method": "wilson_over_items",
+          "metric": "accuracy",
+          "n": 500,
+          "task": "maze_trace",
+          "value": 0.5
+        },
+        {
+          "ci95_high": 0.007624340461552241,
+          "ci95_low": 4.336808689942018e-19,
+          "ci_method": "wilson_over_items",
+          "metric": "success_rate",
+          "n": 500,
+          "task": "maze_solve",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "schema_version": 1
+}

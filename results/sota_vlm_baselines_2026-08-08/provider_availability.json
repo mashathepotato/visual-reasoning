@@ -1,0 +1,17 @@
+{
+  "anthropic": {
+    "fallback": "committed cached claude-opus-4-6 evaluation",
+    "model": "claude-fable-5",
+    "reason": "provider_insufficient_credit",
+    "status": "not_evaluated"
+  },
+  "as_of_date": "2026-08-08",
+  "openai": {
+    "cached_responses": 279,
+    "expected_responses": 711,
+    "model": "gpt-5.6-sol",
+    "reason_if_partial": "provider_credit_balance_exhausted",
+    "reasoning_effort": "high",
+    "status": "partially_evaluated"
+  }
+}

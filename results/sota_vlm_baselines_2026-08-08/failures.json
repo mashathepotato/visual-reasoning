@@ -1,0 +1,17 @@
+[
+  {
+    "error": "OpenAI request failed after retries: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+    "item_id": "ganis3d:069:14_0_R",
+    "task": "ganis3d"
+  },
+  {
+    "error": "OpenAI request failed after retries: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+    "item_id": "ganis3d:043:12_100",
+    "task": "ganis3d"
+  },
+  {
+    "error": "OpenAI request failed after retries: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+    "item_id": "ganis3d:071:14_100",
+    "task": "ganis3d"
+  }
+]

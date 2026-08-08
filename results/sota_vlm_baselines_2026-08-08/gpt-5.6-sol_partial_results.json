@@ -1,0 +1,5282 @@
+{
+  "cached_responses": 279,
+  "complete": false,
+  "coverage": {
+    "blink_multiview": {
+      "cached": 0,
+      "expected": 133
+    },
+    "colored_ood": {
+      "cached": 100,
+      "expected": 100
+    },
+    "ganis3d": {
+      "cached": 75,
+      "expected": 78
+    },
+    "maze_solve": {
+      "cached": 0,
+      "expected": 50
+    },
+    "maze_trace": {
+      "cached": 4,
+      "expected": 100
+    },
+    "sat_v2": {
+      "cached": 0,
+      "expected": 150
+    },
+    "tetris_ood": {
+      "cached": 100,
+      "expected": 100
+    }
+  },
+  "estimated_cost_usd_at_2026_08_08_list_price": 14.14513,
+  "expected_responses": 711,
+  "model": "gpt-5.6-sol",
+  "predictions": {
+    "colored_ood": [
+      {
+        "angle_deg": 225.0,
+        "base_id": "scene-2746721279",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000262",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_053f6392d5d36fa8016a7740f9c8808191a3634e7abfcec75b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 747,
+          "reasoning_tokens": 738
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "scene-1625314367",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000263",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_01b80baca69a7438016a77410033f4819dac7583449f16a253",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 272,
+          "reasoning_tokens": 264
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "scene-1018115510",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000212",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0c3ace1e97d885e0016a774133764c819d9cf811d0018e5dd3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1910,
+          "reasoning_tokens": 1901
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-2596341009",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000213",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0ab9c6a18a228636016a7741084a2c819c85c3a9f19adb4569",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1135,
+          "reasoning_tokens": 1127
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "scene-0603441864",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000064",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05fd82e323f90203016a77412fe03481a2887b394c076d7c09",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 849,
+          "reasoning_tokens": 840
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "scene-1216086045",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000065",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0810f618e907c63f016a774109ead0819cb87610847f0cd4b1",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1121,
+          "reasoning_tokens": 1113
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "scene-1506073670",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000514",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a165a7b293727de016a774145c47881918453d589f667f609",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1871,
+          "reasoning_tokens": 1862
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "scene-0153776156",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000515",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09de82c5c5c670a4016a77410f172481a0a6e3164f0ff739de",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 424,
+          "reasoning_tokens": 416
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "scene-4256999903",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000316",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05ccd0dd9be4f9c7016a774117e954819f81741d824be96183",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1127,
+          "reasoning_tokens": 1118
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "scene-1160722532",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000317",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03665ca6172a1e10016a77415295c481a2b4770691e44d4cc3",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 498,
+          "reasoning_tokens": 490
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "scene-4244765076",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000796",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_06e2a28230e3c74c016a774144f01c81a09cb1b4dfcf0fc402",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1689,
+          "reasoning_tokens": 1680
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-1957375619",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000797",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09cf0f3c4d6df92e016a77411daaa0819195e2dc2b2a6b14f2",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 445,
+          "reasoning_tokens": 437
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "scene-0554083578",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000746",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_03889b79a8073060016a77414fbd7c819d990e42d8410d4292",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2356,
+          "reasoning_tokens": 2347
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "scene-0853326021",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000747",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09d58287392f7e07016a774124b34c8191b40d3076dae62863",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 674,
+          "reasoning_tokens": 666
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "scene-1326460562",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000882",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f9ca8fc86a30b45016a774128ea6c81a190af5315c8e243ff",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 963,
+          "reasoning_tokens": 954
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "scene-0690470456",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000883",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_06344538118be75f016a77412ff66881a38bb34384c7c1765f",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 611,
+          "reasoning_tokens": 603
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "scene-2587364041",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000166",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e33dcf50697bff6016a774130bcec819faff381dba0ac8e42",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1527,
+          "reasoning_tokens": 1518
+        }
+      },
+      {
+        "angle_deg": 155.0,
+        "base_id": "scene-3347888393",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000167",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09979529ce0baa04016a77413db124819f8710ccceaf1ae7cf",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 839,
+          "reasoning_tokens": 831
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "scene-2074778905",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000964",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e20ca0e80986584016a774140c08c81a0a9d1a32cbff3171f",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1717,
+          "reasoning_tokens": 1708
+        }
+      },
+      {
+        "angle_deg": 345.0,
+        "base_id": "scene-3026167889",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000965",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0714eb537e2e0161016a774142896881a193f0a46f0195c4c4",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 669,
+          "reasoning_tokens": 661
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "scene-2341350936",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000924",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a77259797fbfa39016a77414507b8819fbb45aa369c89469d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 473,
+          "reasoning_tokens": 464
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "scene-2016112596",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000925",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0d5d1fb79692330c016a77414bb4308192a3f52923ff557837",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 608,
+          "reasoning_tokens": 600
+        }
+      },
+      {
+        "angle_deg": 145.0,
+        "base_id": "scene-2240443791",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000988",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0bd45ddd8adc6d8d016a77414ff44c819daf16f94709be0703",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1835,
+          "reasoning_tokens": 1826
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "scene-1524752719",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000989",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_08026bab02631b01016a7741545cd481a387a228d4ecd0490c",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 821,
+          "reasoning_tokens": 813
+        }
+      },
+      {
+        "angle_deg": 235.0,
+        "base_id": "scene-0485593090",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000164",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f3dd29dfc7bfafe016a77415494808191a8100c14e4bb4280",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 2002,
+          "reasoning_tokens": 1993
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-1765432769",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000165",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09ae1c8ca9682563016a7741574f8881a1b245c6d6c108c396",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 792,
+          "reasoning_tokens": 784
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "scene-3359154279",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000840",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_010ef2b00c5d2a0f016a77415edeec81a09496bd6389ddd17a",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 333,
+          "reasoning_tokens": 324
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-0577081742",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000841",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03e55875715b3514016a77415f768081919a29a70ffb570bc4",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 213,
+          "reasoning_tokens": 205
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "scene-2198635954",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000028",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_06798d88c08941b4016a774162332881a39c8114f6e042e1ff",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 575,
+          "reasoning_tokens": 566
+        }
+      },
+      {
+        "angle_deg": 235.0,
+        "base_id": "scene-3239783322",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000029",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_026a01e9f3239675016a7741633c04819f8f2a957b3e6c9402",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1297,
+          "reasoning_tokens": 1289
+        }
+      },
+      {
+        "angle_deg": 35.0,
+        "base_id": "scene-1611245267",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000546",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d6076fcc13fe799016a7741633eec81a3955ce6c9508e39a3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1220,
+          "reasoning_tokens": 1211
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "scene-0924043900",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000547",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_047356c0e7738b7d016a7741664c5081a1a024b7c1b93c7527",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 507,
+          "reasoning_tokens": 499
+        }
+      },
+      {
+        "angle_deg": 285.0,
+        "base_id": "scene-1118127232",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000536",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_04b57bce9126d7c5016a774198276c81a39671af08d2606a88",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 872,
+          "reasoning_tokens": 863
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-0389187364",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000537",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0c3c6365a473f639016a7741699968819f944fb0606b4e3d98",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 187,
+          "reasoning_tokens": 179
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "scene-3209147591",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000328",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0aaa68035b6e04f9016a77416b767c81a28e56433f4c508a5c",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 757,
+          "reasoning_tokens": 748
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "scene-0500872224",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000329",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_00a31976522a83dd016a77416d57348192adc6f63349e5fc33",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1091,
+          "reasoning_tokens": 1083
+        }
+      },
+      {
+        "angle_deg": 275.0,
+        "base_id": "scene-3739304757",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000660",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0311a6cd580843d4016a77416de78881a397d44ec1231255f3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 975,
+          "reasoning_tokens": 966
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "scene-2940396524",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000661",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_01dabd0a0e7c2fc4016a77416ea0d081a0a24fe1223432a83f",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1560,
+          "reasoning_tokens": 1552
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "scene-0104459220",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000980",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_09814eebb8335fc9016a774171fde081a2a93aabf169686c4b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 2028,
+          "reasoning_tokens": 2019
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "scene-0031543547",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000981",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_024f647ce43e4af9016a7741a614e081a0b1fa0d5f0b95b266",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1042,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "scene-1005387807",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000544",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_032ea484a82d4ced016a774174466081a38aef504094136dd7",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1678,
+          "reasoning_tokens": 1669
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-3509138808",
+        "correct": false,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000545",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_028b706f09c1f47d016a7741a02240819d97f2546e85934b54",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1588,
+          "reasoning_tokens": 1579
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "scene-1305683515",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000308",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_08368058eeeb914c016a77417a4b848191a9e3698ec8728199",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1987,
+          "reasoning_tokens": 1978
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "scene-2526661601",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000309",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_038a11132c60fe66016a77417bbc1c81a2bf1f82020f589788",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 591,
+          "reasoning_tokens": 583
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "scene-1235527235",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000320",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f2471077529803a016a77417c9ee881a1a478d97eea9a3ad8",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 602,
+          "reasoning_tokens": 593
+        }
+      },
+      {
+        "angle_deg": 305.0,
+        "base_id": "scene-1574993891",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000321",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_095ca49c67a37bd9016a77418128c081a1b232cf548ee543f3",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1591,
+          "reasoning_tokens": 1583
+        }
+      },
+      {
+        "angle_deg": 145.0,
+        "base_id": "scene-2108890934",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000310",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0c1ef66f9ce55f20016a774186354881a2bf1589d13aabba82",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1698,
+          "reasoning_tokens": 1689
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "scene-3115511016",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000311",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_07c9116a1198ab67016a774186ce548192b1cdf9ed4acf0001",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 402,
+          "reasoning_tokens": 394
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "scene-3530945836",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000886",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b581d443b25fc21016a7741880a4c819c8095a7975391be9d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1639,
+          "reasoning_tokens": 1630
+        }
+      },
+      {
+        "angle_deg": 305.0,
+        "base_id": "scene-1602422019",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000887",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_021eec36208e09f1016a7741894ebc819e95a135c1c9c77044",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 939,
+          "reasoning_tokens": 931
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "scene-0061818968",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000220",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0c63df3215e785b5016a77418a91a08191ace80dbf74d14106",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1382,
+          "reasoning_tokens": 1373
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "scene-1453953512",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000221",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0a26d4088d431af4016a77418ed094819fb45ab9e068ca45cd",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 416,
+          "reasoning_tokens": 408
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "scene-2003398141",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000558",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d0d5b8148262fdc016a7741943450819c95773c22da580028",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 403,
+          "reasoning_tokens": 394
+        }
+      },
+      {
+        "angle_deg": 55.0,
+        "base_id": "scene-1370063713",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000559",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_09e1ec6a92090ee2016a7741973d5481928a9fecd1b08c208e",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 511,
+          "reasoning_tokens": 503
+        }
+      },
+      {
+        "angle_deg": 85.0,
+        "base_id": "scene-1322173620",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000930",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_080efe3ac57c1bb6016a774198409881a1ba06dfaa9a1aab4a",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 420,
+          "reasoning_tokens": 411
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "scene-1189658106",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000931",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_013912d68479262c016a77419d11f8819fad3c0dec89b2c581",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 483,
+          "reasoning_tokens": 475
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "scene-3867866731",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000120",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05b4a3f31fd36c7b016a77419d4a7081a3a06d515904e90611",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1535,
+          "reasoning_tokens": 1526
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "scene-0292222993",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000121",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03749f7aab51f06d016a77419ed7a4819ea68f8050521285ee",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 425,
+          "reasoning_tokens": 417
+        }
+      },
+      {
+        "angle_deg": 35.0,
+        "base_id": "scene-1308389887",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000564",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_04a95f0470ffeda4016a77419fbe0081a0a409cb11312df148",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1043,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "scene-3378179832",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000565",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0c3089f0a65588e7016a7741a0e300819181d85745cd17661e",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 398,
+          "reasoning_tokens": 390
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-1287147818",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000342",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0350e13a99498a06016a7741a0fadc81928d5f8fe8a5575651",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 781,
+          "reasoning_tokens": 772
+        }
+      },
+      {
+        "angle_deg": 355.0,
+        "base_id": "scene-1821212436",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000343",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_00bf30ff2f880eb2016a7741a394e4819eb97ad9252b1c68f4",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 667,
+          "reasoning_tokens": 659
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "scene-0080233863",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000954",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0bdd6aace9284652016a7741a657c481a188216932682e9cf0",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 824,
+          "reasoning_tokens": 815
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "scene-3150367994",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000955",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0f0c58a00c112bba016a7741a87618819c9c0c78efcbfe0aaf",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 823,
+          "reasoning_tokens": 815
+        }
+      },
+      {
+        "angle_deg": 315.0,
+        "base_id": "scene-3471416312",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000856",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0831dfaf9dd8315d016a7741a954c4819ca2e5ae0497c13fb1",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 514,
+          "reasoning_tokens": 505
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "scene-3365179828",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000857",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0fbe2e59be25f26e016a7741aa428481a08c5943ec8e9b03f4",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 629,
+          "reasoning_tokens": 621
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "scene-0377564427",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000044",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_088daa0e9739e4e5016a7741abbc88819eb80ad721322abdb1",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 565,
+          "reasoning_tokens": 556
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "scene-4290778677",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000045",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0e00a3bcf76195a6016a7741e7723081928d67fbdc349f8013",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2866,
+          "reasoning_tokens": 2858
+        }
+      },
+      {
+        "angle_deg": 55.0,
+        "base_id": "scene-2595444975",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000868",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0920ce8c12f24af9016a7741b23b4c8192a76c78ef0a8839db",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 955,
+          "reasoning_tokens": 946
+        }
+      },
+      {
+        "angle_deg": 275.0,
+        "base_id": "scene-1320061391",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000869",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_014f54d01efc8161016a7741b2cd20819fad151ddb1d205b17",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 524,
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "scene-2244350974",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000022",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a939ee2322a6ca5016a7741f2306081a2ac40c88a664e0bfc",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 379,
+          "reasoning_tokens": 370
+        }
+      },
+      {
+        "angle_deg": 315.0,
+        "base_id": "scene-1456548947",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000023",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0b130a63f7f12788016a7741e705a8819fb5f0b5129dc17b2d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1998,
+          "reasoning_tokens": 1990
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "scene-2424062678",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000478",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_070cbc1c5b62e75e016a7741b6f2bc8192a9403cd0c4c33227",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 177,
+          "reasoning_tokens": 168
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-0485431630",
+        "correct": false,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000479",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0fd21711e97ba2f4016a77424b5bf0819c984f89a07f7694f5",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6219,
+          "reasoning_tokens": 6210
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "scene-3483844491",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000560",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0bd1f2c30c7fdf70016a7741ba78f0819db35d11d5d6d27cad",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 681,
+          "reasoning_tokens": 672
+        }
+      },
+      {
+        "angle_deg": 315.0,
+        "base_id": "scene-2446762278",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000561",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_080777153a0507cd016a7741bae6b481a388612577a97cadf3",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 521,
+          "reasoning_tokens": 513
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-0933864224",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000106",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_046e227b8b452c42016a7741bb004881a0a3c73a539bd27398",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 388,
+          "reasoning_tokens": 379
+        }
+      },
+      {
+        "angle_deg": 35.0,
+        "base_id": "scene-2708462757",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000107",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_00952f79b0a65876016a7741ea34d4819fb43b1d4eb0b329bf",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2059,
+          "reasoning_tokens": 2051
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-2611304411",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000408",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_03df19ecf370a11b016a7741e5c4208192a04e3d76ad63245f",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3300,
+          "reasoning_tokens": 3291
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "scene-3214627088",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000409",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_001fb8a42e5913a9016a7741bd109c819290d3f6ca5fc4f9d3",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 747,
+          "reasoning_tokens": 739
+        }
+      },
+      {
+        "angle_deg": 35.0,
+        "base_id": "scene-3408089342",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000714",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_03c57a7fc30e4b84016a7741c0dd5081a38d8df3a5cdaf43e8",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1072,
+          "reasoning_tokens": 1063
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "scene-1897371900",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000715",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0d7eb981e2525e52016a7741c21b2481a2971ba05df1537a56",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 416,
+          "reasoning_tokens": 408
+        }
+      },
+      {
+        "angle_deg": 295.0,
+        "base_id": "scene-4061809315",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000548",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0652a1cf61c7cca3016a7741c3cbb481929c22b0053976d0c9",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1304,
+          "reasoning_tokens": 1295
+        }
+      },
+      {
+        "angle_deg": 35.0,
+        "base_id": "scene-0905238063",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000549",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03146cec553c3073016a7741c44d20819dac53dcd0e92c8864",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 462,
+          "reasoning_tokens": 454
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-1489550036",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000422",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ca1c4cef40380f9016a7741c91fec819ea31c3917c8244e65",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 391,
+          "reasoning_tokens": 382
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "scene-3234215155",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000423",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03f150fb85c8b479016a7741c98f0c819dafcc1ef8bec2dc22",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 961,
+          "reasoning_tokens": 953
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "scene-1220413627",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000738",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_06f7dd132652238f016a7741c9f174819eb148dc7bb0bf74bc",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1196,
+          "reasoning_tokens": 1187
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "scene-0229571842",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000739",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0eaceba5c4e42852016a7741cb931081928aec29e21798ca50",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1678,
+          "reasoning_tokens": 1670
+        }
+      },
+      {
+        "angle_deg": 165.0,
+        "base_id": "scene-2307699614",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000020",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0080179fa7ee787e016a7741cdb16481a392986cfad423aa45",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 562,
+          "reasoning_tokens": 553
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "scene-0374889327",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000021",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0c4a999523cac1b2016a7741fe9d78819f838974f2426408c9",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1220,
+          "reasoning_tokens": 1212
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "scene-1167930615",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000410",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05db90c1d55e5f09016a7741f83ef88191ab668d463f4bd868",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1561,
+          "reasoning_tokens": 1552
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "scene-0400378621",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000411",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_02667ad38be11c03016a7741da425481a08b0134268fbcacae",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 808,
+          "reasoning_tokens": 800
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "scene-1248916709",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000252",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0bd25b7432a82fe9016a7741da7e10819fa0f5e5b94d7b7200",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1778,
+          "reasoning_tokens": 1769
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "scene-1347060501",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000253",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_03038877bd5a5a9f016a7741db3cf481a1be5243361bc8d17d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1107,
+          "reasoning_tokens": 1099
+        }
+      },
+      {
+        "angle_deg": 345.0,
+        "base_id": "scene-1323621465",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000488",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_009163eb38927867016a7741dac8d4819db5fb9fa2f4ec5c80",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 727,
+          "reasoning_tokens": 718
+        }
+      },
+      {
+        "angle_deg": 355.0,
+        "base_id": "scene-3235494335",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000489",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_020106a14859a0ff016a7742104e58819cb049014ee14c2066",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2481,
+          "reasoning_tokens": 2473
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "scene-3729551815",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000332",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_03f02b94aeab58b6016a7741e7508c819ea008ab97f88c8360",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 354,
+          "reasoning_tokens": 345
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "scene-3653012329",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000333",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0dec87ac1485dd7e016a7741eb4f2481a18f21760c2ed6134e",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 713,
+          "reasoning_tokens": 705
+        }
+      },
+      {
+        "angle_deg": 165.0,
+        "base_id": "scene-1039667392",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000462",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0533e926017f6466016a7741ec1e8881a29516a4832900c2a6",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1416,
+          "reasoning_tokens": 1407
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "scene-2821260902",
+        "correct": true,
+        "invalid": false,
+        "item_id": "colored_rotation:test_ood_angle:000463",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_096b3ad69c3f150b016a7741ef6de4819fb8460812dda5e18b",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 446,
+          "reasoning_tokens": 438
+        }
+      }
+    ],
+    "ganis3d": [
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:000:39_50",
+        "label": "SAME",
+        "name": "39_50",
+        "prediction": "SAME",
+        "request_id": "resp_0a5dd2a457cf284b016a77428bab28819f8d43c73694e12798",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6312,
+          "reasoning_tokens": 6304
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:001:18_0",
+        "label": "SAME",
+        "name": "18_0",
+        "prediction": "SAME",
+        "request_id": "resp_0632edc6b8d51af3016a7741f755ec819eb2e894e23503645e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 611,
+          "reasoning_tokens": 603
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:002:46_100_R",
+        "label": "DIFFERENT",
+        "name": "46_100_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_03fd71f6d6bfa8c1016a7741fa5c3c81a3a32a0d7fba260845",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 815,
+          "reasoning_tokens": 806
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:003:33_100_R",
+        "label": "DIFFERENT",
+        "name": "33_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_0ba64bae4b47dee2016a77422977e881a1967242121d16eb37",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1820,
+          "reasoning_tokens": 1812
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:004:21_150_R",
+        "label": "DIFFERENT",
+        "name": "21_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_00e491a58dd639b3016a774230b094819c9eeffac647d7e42a",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3312,
+          "reasoning_tokens": 3304
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:005:36_150_R",
+        "label": "DIFFERENT",
+        "name": "36_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_0cf0967477f7d2da016a774203f4b8819e848a460701bc216e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1258,
+          "reasoning_tokens": 1250
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:006:24_150",
+        "label": "SAME",
+        "name": "24_150",
+        "prediction": "SAME",
+        "request_id": "resp_0b5be7284e309cd8016a774230c90881a090cd6029d09fd237",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3240,
+          "reasoning_tokens": 3232
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:007:2_0",
+        "label": "SAME",
+        "name": "2_0",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_045c11080716f2b8016a77423f64cc81a1a54f764b4e602469",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2008,
+          "reasoning_tokens": 1999
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:008:25_150_R",
+        "label": "DIFFERENT",
+        "name": "25_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_0ac7cdc951d4d1e9016a7742122e68819d9210628c9c561183",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1560,
+          "reasoning_tokens": 1552
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:009:48_150_R",
+        "label": "DIFFERENT",
+        "name": "48_150_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b4b444da721f72f016a7742455f3c819dbba3e2dcdfbce7c7",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2996,
+          "reasoning_tokens": 2987
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:010:14_150",
+        "label": "SAME",
+        "name": "14_150",
+        "prediction": "SAME",
+        "request_id": "resp_084c63bed05f748a016a7742b5dc38819fa859ec061bf99aa9",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 2732,
+          "reasoning_tokens": 2724
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:011:21_100_R",
+        "label": "DIFFERENT",
+        "name": "21_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_043823d2cb94be6d016a77424d3f388192819a63a02665615c",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1907,
+          "reasoning_tokens": 1899
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:012:48_50",
+        "label": "SAME",
+        "name": "48_50",
+        "prediction": "SAME",
+        "request_id": "resp_089da83c0fa876cc016a7742933f40819c8d91a53301fa424f",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6944,
+          "reasoning_tokens": 6936
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:013:36_0",
+        "label": "SAME",
+        "name": "36_0",
+        "prediction": "SAME",
+        "request_id": "resp_04c97f7aaae3c51d016a7742294924819fb5ba989c67abf1ec",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 363,
+          "reasoning_tokens": 355
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:014:45_150_R",
+        "label": "DIFFERENT",
+        "name": "45_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_02033e1ab9b08264016a7742c278cc81a382abb9671c0eb4bb",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 1116,
+          "reasoning_tokens": 1108
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:015:48_100_R",
+        "label": "DIFFERENT",
+        "name": "48_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_0c92fa38d310d1c4016a7743898d3081a3a487c39369fb54ca",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 2559,
+          "reasoning_tokens": 2551
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:016:44_100",
+        "label": "SAME",
+        "name": "44_100",
+        "prediction": "SAME",
+        "request_id": "resp_0bac0246032f8490016a7742c24c64819ebff3ea2ef284f194",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 3482,
+          "reasoning_tokens": 3474
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:017:33_150_R",
+        "label": "DIFFERENT",
+        "name": "33_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_094cef0b85cca51e016a77423a17d48192ab2d08e9bb0dafdd",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1632,
+          "reasoning_tokens": 1624
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:018:10_150_R",
+        "label": "DIFFERENT",
+        "name": "10_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_09504933ce73658f016a7742e96cc481a39c4ced42e80d27d6",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 4867,
+          "reasoning_tokens": 4859
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:019:30_150",
+        "label": "SAME",
+        "name": "30_150",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e0a6d3763106fc4016a7742e7d0c881a0afde998e6d951dee",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 7696,
+          "reasoning_tokens": 7687
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:020:12_0",
+        "label": "SAME",
+        "name": "12_0",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_01d26ce44e51c797016a774282fe98819196cdcf6b3b268889",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2818,
+          "reasoning_tokens": 2809
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:021:37_150",
+        "label": "SAME",
+        "name": "37_150",
+        "prediction": "SAME",
+        "request_id": "resp_0f525787400bd907016a7742648e78819e96541d062ed2f6d7",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 524,
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:022:10_100",
+        "label": "SAME",
+        "name": "10_100",
+        "prediction": "SAME",
+        "request_id": "resp_04c6f0b8e12b3eba016a77426d2d1081a2ab9d7a1cb8faa975",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1691,
+          "reasoning_tokens": 1683
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:023:32_0_R",
+        "label": "DIFFERENT",
+        "name": "32_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b6473e52ad5fda3016a77429a439081a19d890bc92e642344",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2121,
+          "reasoning_tokens": 2112
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:024:16_50_R",
+        "label": "DIFFERENT",
+        "name": "16_50_R",
+        "prediction": "SAME",
+        "request_id": "resp_0f44bfcd66de4884016a7742f4ed60819c834e2a888c53e4ef",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 3388,
+          "reasoning_tokens": 3380
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:025:35_100",
+        "label": "SAME",
+        "name": "35_100",
+        "prediction": "SAME",
+        "request_id": "resp_095ade124f5b7fcb016a7744cb9a74819dac118fec4a0ffe9f",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 2781,
+          "reasoning_tokens": 2773
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:026:32_50",
+        "label": "SAME",
+        "name": "32_50",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_04c8e5b8a9551ae3016a77430a5dec81a29fa33f64fc007aab",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 5236,
+          "reasoning_tokens": 5227
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:027:38_0_R",
+        "label": "DIFFERENT",
+        "name": "38_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a1253edae29f2c5016a7742bc6374819e99f46eab21949f5e",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2079,
+          "reasoning_tokens": 2070
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:028:11_50",
+        "label": "SAME",
+        "name": "11_50",
+        "prediction": "SAME",
+        "request_id": "resp_0076b195a977c49e016a77429a48a08191bd7c548eaac0ced3",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1042,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:029:31_0",
+        "label": "SAME",
+        "name": "31_0",
+        "prediction": "SAME",
+        "request_id": "resp_0f910907ecef0b0a016a7742b69e60819fb08de8ae5867c167",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1530,
+          "reasoning_tokens": 1522
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:030:23_150_R",
+        "label": "DIFFERENT",
+        "name": "23_150_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d3dad356fd04fd4016a77444600e4819db59845bc60e97b32",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 4786,
+          "reasoning_tokens": 4777
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:031:42_100_R",
+        "label": "DIFFERENT",
+        "name": "42_100_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e0f55a621abbebe016a77434ffc94819295b462578762a8fc",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 5985,
+          "reasoning_tokens": 5976
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:032:40_100_R",
+        "label": "DIFFERENT",
+        "name": "40_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_0427436117e425ee016a77436ab73881a2944138e8bed97044",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 2596,
+          "reasoning_tokens": 2588
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:033:14_50_R",
+        "label": "DIFFERENT",
+        "name": "14_50_R",
+        "prediction": "SAME",
+        "request_id": "resp_0a4d18e3f7360327016a774314fcc4819188d9abfad153d489",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 762,
+          "reasoning_tokens": 754
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:034:6_100_R",
+        "label": "DIFFERENT",
+        "name": "6_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_05df3994b7e5f830016a7742e3ff70819c95da26493d167367",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 830,
+          "reasoning_tokens": 822
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:035:5_50",
+        "label": "SAME",
+        "name": "5_50",
+        "prediction": "SAME",
+        "request_id": "resp_0d30f5800dba9a8e016a774372824c81928e0028032641d92d",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 4664,
+          "reasoning_tokens": 4656
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:036:20_150_R",
+        "label": "DIFFERENT",
+        "name": "20_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_04ab4233c4468f89016a77439636fc8192920b18f380292a6f",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 4974,
+          "reasoning_tokens": 4966
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:037:42_0",
+        "label": "SAME",
+        "name": "42_0",
+        "prediction": "SAME",
+        "request_id": "resp_033ec4a435eae231016a7742fe343081a39d5027df1d725da0",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 806,
+          "reasoning_tokens": 798
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:038:29_150",
+        "label": "SAME",
+        "name": "29_150",
+        "prediction": "SAME",
+        "request_id": "resp_06163cfc662fd8d4016a7743a6728c8191bec9c8b7a79688bc",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 7258,
+          "reasoning_tokens": 7250
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:039:35_50_R",
+        "label": "DIFFERENT",
+        "name": "35_50_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_04c49ee01a6fbd00016a77434c2f9081a1bd59e34b84c27c88",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3531,
+          "reasoning_tokens": 3522
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:040:21_50_R",
+        "label": "DIFFERENT",
+        "name": "21_50_R",
+        "prediction": "SAME",
+        "request_id": "resp_0e74de49bfe36258016a7743245dc481a3b757e6fab103025b",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1076,
+          "reasoning_tokens": 1068
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:041:12_100_R",
+        "label": "DIFFERENT",
+        "name": "12_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_03d0f7da463ed1a0016a77432861e081a28007f7f79d0a9ca1",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1818,
+          "reasoning_tokens": 1810
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:042:41_50",
+        "label": "SAME",
+        "name": "41_50",
+        "prediction": "SAME",
+        "request_id": "resp_03cde8d22407404f016a77432dd86c8192b31f95316e814d6e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 484,
+          "reasoning_tokens": 476
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:044:20_50",
+        "label": "SAME",
+        "name": "20_50",
+        "prediction": "SAME",
+        "request_id": "resp_04ddccbf7b2cde02016a77437fb58081a3a23ea0062edc67ad",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2643,
+          "reasoning_tokens": 2635
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:045:32_50_R",
+        "label": "DIFFERENT",
+        "name": "32_50_R",
+        "prediction": "SAME",
+        "request_id": "resp_0d6c7b166939827b016a77434539888191972c602eb8c822ce",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1628,
+          "reasoning_tokens": 1620
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:046:36_50",
+        "label": "SAME",
+        "name": "36_50",
+        "prediction": "SAME",
+        "request_id": "resp_0d5aa7f351dd84bc016a77434e1d94819eab5d6dd2372ec5a0",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 524,
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:047:19_100",
+        "label": "SAME",
+        "name": "19_100",
+        "prediction": "SAME",
+        "request_id": "resp_034bd89a391d91a4016a7744ea32a8819f95afec8a9c29ba22",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 524,
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:048:45_0",
+        "label": "SAME",
+        "name": "45_0",
+        "prediction": "SAME",
+        "request_id": "resp_0f5b13bc75931bb6016a774358d41881a3b13d916dd0021bbb",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 859,
+          "reasoning_tokens": 851
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:049:39_0_R",
+        "label": "DIFFERENT",
+        "name": "39_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_084382aacda3e3cd016a77436e0e688191816f7e2d64676cf7",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1143,
+          "reasoning_tokens": 1134
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:050:17_0",
+        "label": "SAME",
+        "name": "17_0",
+        "prediction": "SAME",
+        "request_id": "resp_0725fe17b7b839a2016a774376bcf4819f9c1d0dce767a79e6",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 672,
+          "reasoning_tokens": 664
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:051:21_150",
+        "label": "SAME",
+        "name": "21_150",
+        "prediction": "SAME",
+        "request_id": "resp_0cf60f566cfdfe61016a77437c40a08192a231e9388deaf6ee",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 524,
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:052:32_100_R",
+        "label": "DIFFERENT",
+        "name": "32_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_01a7b252f115553b016a774387287c81a0afe93ef0390dda0e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1322,
+          "reasoning_tokens": 1314
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:053:7_50_R",
+        "label": "DIFFERENT",
+        "name": "7_50_R",
+        "prediction": "SAME",
+        "request_id": "resp_032e02eed889ab0d016a7743c1170c819e84c93e531dda0bf0",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1775,
+          "reasoning_tokens": 1767
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:054:21_0_R",
+        "label": "DIFFERENT",
+        "name": "21_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b77d23371f45ea8016a7743c2c33481a18a161bef70ae8708",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1839,
+          "reasoning_tokens": 1830
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:055:31_150_R",
+        "label": "DIFFERENT",
+        "name": "31_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_053c2f788704116b016a7743d66eec819e9ed93bbd7c061f92",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3440,
+          "reasoning_tokens": 3432
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:056:5_0_R",
+        "label": "DIFFERENT",
+        "name": "5_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0eb5ea46678e0228016a7743d356c881a197e093a242c1101e",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 499,
+          "reasoning_tokens": 490
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:057:3_100",
+        "label": "SAME",
+        "name": "3_100",
+        "prediction": "SAME",
+        "request_id": "resp_0749345de39365c4016a77443f113881a09d3a46a77208965c",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 7775,
+          "reasoning_tokens": 7767
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:058:13_150",
+        "label": "SAME",
+        "name": "13_150",
+        "prediction": "SAME",
+        "request_id": "resp_0b8773e11e9f73c7016a7743ae0ebc81a18680abea8a4c1dcc",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1246,
+          "reasoning_tokens": 1238
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:059:22_0",
+        "label": "SAME",
+        "name": "22_0",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ab07848b6a9a7a4016a7743f70710819eb40e2a878c49d6f3",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2641,
+          "reasoning_tokens": 2632
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:060:40_100",
+        "label": "SAME",
+        "name": "40_100",
+        "prediction": "SAME",
+        "request_id": "resp_0d1027e3a210b7b1016a774455a7ac819da3196ab1597f651e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 3574,
+          "reasoning_tokens": 3566
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:061:33_0",
+        "label": "SAME",
+        "name": "33_0",
+        "prediction": "SAME",
+        "request_id": "resp_0163a9ab33e989b7016a7743c551c081a3b04474a11d22dc51",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1042,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:062:21_100",
+        "label": "SAME",
+        "name": "21_100",
+        "prediction": "SAME",
+        "request_id": "resp_08341f41b33ac852016a77446ad648819e82f154e8ea559ebf",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 5036,
+          "reasoning_tokens": 5028
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:063:22_150_R",
+        "label": "DIFFERENT",
+        "name": "22_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_05351d387fa5a5bf016a774408994c819d89cb6e6a444ee594",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1511,
+          "reasoning_tokens": 1503
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:064:33_100",
+        "label": "SAME",
+        "name": "33_100",
+        "prediction": "SAME",
+        "request_id": "resp_054ee170ad7e1aa9016a774483f068819c9737a4aea3b7890e",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 1826,
+          "reasoning_tokens": 1818
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:065:7_0_R",
+        "label": "DIFFERENT",
+        "name": "7_0_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a720e85bf068488016a77440dd36081a1ad33676c87a3a6f8",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2597,
+          "reasoning_tokens": 2588
+        }
+      },
+      {
+        "angle_deg": 150.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:066:13_150_R",
+        "label": "DIFFERENT",
+        "name": "13_150_R",
+        "prediction": "SAME",
+        "request_id": "resp_0e6c488a2043a127016a7744841524819eb767e968e443dda2",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 8152,
+          "reasoning_tokens": 8144
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:067:34_100",
+        "label": "SAME",
+        "name": "34_100",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ce6aa930e66da35016a7743f214f88192b245f9ac72ca770c",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1840,
+          "reasoning_tokens": 1831
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:068:29_100_R",
+        "label": "DIFFERENT",
+        "name": "29_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_0cad6e1c2e7da30e016a774447684481a2bae1062ee411dd23",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3778,
+          "reasoning_tokens": 3770
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:070:9_0",
+        "label": "SAME",
+        "name": "9_0",
+        "prediction": "SAME",
+        "request_id": "resp_0a5923075f5f68de016a77442c25bc81a286c1fe3980d0f169",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 623,
+          "reasoning_tokens": 615
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:072:17_100_R",
+        "label": "DIFFERENT",
+        "name": "17_100_R",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0376e37ffc70f6ae016a7744b594fc819e946afb68ece50eec",
+        "response": "DIFFERENT",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6408,
+          "reasoning_tokens": 6399
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:073:34_100_R",
+        "label": "DIFFERENT",
+        "name": "34_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_01dd4c2a209cb33e016a774476b53081a08abad69cd5a46958",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1173,
+          "reasoning_tokens": 1165
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:074:20_0",
+        "label": "SAME",
+        "name": "20_0",
+        "prediction": "SAME",
+        "request_id": "resp_09dff305f3b52735016a7744989a9c8191b2e127611c1cf5a4",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 870,
+          "reasoning_tokens": 862
+        }
+      },
+      {
+        "angle_deg": 0.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:075:15_0_R",
+        "label": "DIFFERENT",
+        "name": "15_0_R",
+        "prediction": "SAME",
+        "request_id": "resp_08192fe12c5b46a5016a77448b733c819185536d558eb07c4b",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1314,
+          "reasoning_tokens": 1306
+        }
+      },
+      {
+        "angle_deg": 100.0,
+        "correct": false,
+        "invalid": false,
+        "item_id": "ganis3d:076:36_100_R",
+        "label": "DIFFERENT",
+        "name": "36_100_R",
+        "prediction": "SAME",
+        "request_id": "resp_0d4a7011c18110fb016a774496f6b48191bbf64d5ab08abe1a",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1173,
+          "reasoning_tokens": 1165
+        }
+      },
+      {
+        "angle_deg": 50.0,
+        "correct": true,
+        "invalid": false,
+        "item_id": "ganis3d:077:26_50",
+        "label": "SAME",
+        "name": "26_50",
+        "prediction": "SAME",
+        "request_id": "resp_00d19ae305edb37e016a774535a048819ebdfee6beff260cce",
+        "response": "SAME",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6879,
+          "reasoning_tokens": 6871
+        }
+      }
+    ],
+    "maze_trace": [
+      {
+        "correct": true,
+        "invalid": false,
+        "item_id": "maze_trace:20260909:0000",
+        "label": "NO",
+        "prediction": "NO",
+        "request_id": "resp_017b97d77a46b612016a7744d89148819fa1cb22aa2b47cf57",
+        "response": "NO",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 59,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3874,
+          "reasoning_tokens": 3867
+        }
+      },
+      {
+        "correct": false,
+        "invalid": false,
+        "item_id": "maze_trace:20260909:0001",
+        "label": "NO",
+        "prediction": "YES",
+        "request_id": "resp_09be2c4d69639c7e016a7744e40cfc81a399711e37579554e3",
+        "response": "YES",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 59,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2883,
+          "reasoning_tokens": 2876
+        }
+      },
+      {
+        "correct": true,
+        "invalid": false,
+        "item_id": "maze_trace:20260909:0006",
+        "label": "YES",
+        "prediction": "YES",
+        "request_id": "resp_013f8d1cd0033a56016a7744f8699081a3ac502cf04be1b436",
+        "response": "YES",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 59,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3195,
+          "reasoning_tokens": 3188
+        }
+      },
+      {
+        "correct": true,
+        "invalid": false,
+        "item_id": "maze_trace:20260909:0012",
+        "label": "NO",
+        "prediction": "NO",
+        "request_id": "resp_03ba8dab65bf9552016a77452dab8c819e99b32fbd84d2dcd5",
+        "response": "NO",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 59,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 523,
+          "reasoning_tokens": 516
+        }
+      }
+    ],
+    "tetris_ood": [
+      {
+        "angle_deg": 225.0,
+        "base_id": "S",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000262",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_090875e6cf3ad3e8016a773dcac06881a1b38b2c6abaa51da8",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1126,
+          "reasoning_tokens": 1118
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000263",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0bb18f070543d80b016a773dcad4f481a0ae1159240d920722",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 368,
+          "reasoning_tokens": 360
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "S",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000212",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_000e9c9f855e2ec3016a77407ea044819282cab27988642c2d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 1207,
+          "reasoning_tokens": 1199
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000213",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_072b630953358c1b016a773dcacb6c81919dda12d3e06cf191",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 201,
+          "reasoning_tokens": 193
+        }
+      },
+      {
+        "angle_deg": 55.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000064",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f772ee965c8dac9016a773dca4d6481a090e101391692b4c1",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 317,
+          "reasoning_tokens": 308
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000065",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_030519bc87b56350016a773dca53d8819fba63be54798def5f",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 281,
+          "reasoning_tokens": 273
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "J",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000514",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_0dc7b452ba3dd48b016a773dca4e0481a08d23418383f14fcd",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1284,
+          "reasoning_tokens": 1276
+        }
+      },
+      {
+        "angle_deg": 165.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000515",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0f8b736360d44445016a773dcac5c8819eb8137daa4cbef5c6",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 848,
+          "reasoning_tokens": 840
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000316",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f5c525124b0c08b016a773dd1b1a481a2b7b714bc988decea",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 171,
+          "reasoning_tokens": 162
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000317",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0d5473117bdfd90c016a773dd2067481a3bb64086aa2f3f026",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1131,
+          "reasoning_tokens": 1123
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000796",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_04b9a2b045c8ecc7016a773dd25eec819ea3d3ad0e6eb0aa2b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 896,
+          "reasoning_tokens": 887
+        }
+      },
+      {
+        "angle_deg": 85.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000797",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ccc8163d18d45ed016a773dd4da1c819199081c3a11ae3bf7",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1120,
+          "reasoning_tokens": 1111
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000746",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_01990492d47921a9016a774104c91c819ea5ba14078fbb0e6b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 3196,
+          "reasoning_tokens": 3187
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000747",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0c67e54bd149fd84016a773ddc41b4819d8c8e92e72b16f367",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 378,
+          "reasoning_tokens": 370
+        }
+      },
+      {
+        "angle_deg": 145.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000882",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05edd4ef6a8c9273016a77402fc1b4819f90cbefb35b1a3cde",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1373,
+          "reasoning_tokens": 1364
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "Z",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000883",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_071597a6ec4cac9e016a773eb9d3dc81a39527113335c47eed",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1043,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "J",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000166",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_0d173a7bd6c11094016a773de7acd0819ea70e36b259206c48",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 902,
+          "reasoning_tokens": 894
+        }
+      },
+      {
+        "angle_deg": 155.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000167",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0d5b7b713c1f4988016a773de89f7c81a09df7d564d4fe1a76",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 637,
+          "reasoning_tokens": 629
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000964",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e500fba0372c74d016a773e1b96c8819fbfb3b4d305c71f46",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1243,
+          "reasoning_tokens": 1234
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000965",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_02f21d7be182f0bc016a773deeefac819d82f1f72c15d0177b",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 945,
+          "reasoning_tokens": 937
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000924",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_008b4499bbf85541016a773dfbc81c81a2adc79aa59f84a549",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 740,
+          "reasoning_tokens": 731
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000925",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0d36cacad0c13016016a773e9b6374819286c341521790b084",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1375,
+          "reasoning_tokens": 1367
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "J",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000988",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_08b08ec6a2318c69016a773e043c7c81a2b9fd06ba15a16b97",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 387,
+          "reasoning_tokens": 379
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000989",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_089c7810c12cb3e5016a77402ac700819f9a76969e20f37200",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3786,
+          "reasoning_tokens": 3778
+        }
+      },
+      {
+        "angle_deg": 235.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000164",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_06229800c393f0d0016a774038486881a0b5f6ca9bd19d1c21",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3115,
+          "reasoning_tokens": 3106
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000165",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e2a18bf68270322016a774086052081a3a94c6028fdf22d25",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6276,
+          "reasoning_tokens": 6267
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "J",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000840",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_011fd9c70c3d6c7e016a773ebaee60819ca695e121725f8600",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1141,
+          "reasoning_tokens": 1133
+        }
+      },
+      {
+        "angle_deg": 5.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000841",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_097aea7c718e55c6016a773ed57600819ebddc2e83746237ce",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 344,
+          "reasoning_tokens": 336
+        }
+      },
+      {
+        "angle_deg": 275.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000028",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_005579421a288085016a773ed95e8481a0a74df986f2da30f3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1232,
+          "reasoning_tokens": 1223
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000029",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0fe8add465fb8863016a773edfa060819c9dfeaff22e59cf0d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1389,
+          "reasoning_tokens": 1381
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000546",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05a6198d039aa63d016a773fbe0d3081a28fa89faa300e0f21",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 494,
+          "reasoning_tokens": 485
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000547",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0920c0960d9b7e52016a773f555480819296a69785b483f275",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1102,
+          "reasoning_tokens": 1094
+        }
+      },
+      {
+        "angle_deg": 215.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000536",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0375a75f35465343016a773ef9a58c81919c9f8c7542eb7d17",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 244,
+          "reasoning_tokens": 235
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000537",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0031c87a6906f1ea016a774030975081a0bfd4a55e243595ea",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3959,
+          "reasoning_tokens": 3950
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000328",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ca3b87ffa128dbf016a773f0139c881a3a65386bc95619fa4",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1730,
+          "reasoning_tokens": 1721
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000329",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_089a08b7c5f05ba8016a773f29011081a2821ead03d965fbe8",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1607,
+          "reasoning_tokens": 1599
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000660",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b06a7198a2b4073016a773f651948819fa57df6f05be7da63",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 286,
+          "reasoning_tokens": 277
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000661",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_075e590887d07517016a773f45ea2c819289de4b809d35dfce",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 354,
+          "reasoning_tokens": 346
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000980",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0430b77807d55a1e016a773f4cb264819cbd8556725150cad0",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 635,
+          "reasoning_tokens": 626
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "J",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000981",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0139c7a654686585016a773fb4cd0c819e83ca012c7e90bbbc",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 726,
+          "reasoning_tokens": 717
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000544",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0baf2c67a55bcfc2016a773f51ef4081a2b2b98e4d83629e4a",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1196,
+          "reasoning_tokens": 1187
+        }
+      },
+      {
+        "angle_deg": 115.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000545",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0370b613ed6ecd83016a774027f03081a3b5c49f6f0aea946c",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3633,
+          "reasoning_tokens": 3624
+        }
+      },
+      {
+        "angle_deg": 235.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000308",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_05556bba97292d79016a774091139c81a19387abc0fbef50a2",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6353,
+          "reasoning_tokens": 6344
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "S",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000309",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a9ed5a7f1818c07016a774001574c819fae139863fc54a572",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1687,
+          "reasoning_tokens": 1678
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "L",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000320",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_0ca2f0c6bdd44be6016a773f719fc4819e98df1124201993b1",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 377,
+          "reasoning_tokens": 369
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "P",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000321",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a46ef7b9ecd0a43016a773f7ad230819ebc03b002b6592bd8",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 260,
+          "reasoning_tokens": 251
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000310",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0748e22a2a01eea7016a773f80dc5c819fba13440d2bc4ca2d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1221,
+          "reasoning_tokens": 1212
+        }
+      },
+      {
+        "angle_deg": 155.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000311",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_07140ff9d5c38090016a77402d6b2c81a3959a4a26c1c3f1aa",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1075,
+          "reasoning_tokens": 1067
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000886",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_014e4d39a476327a016a773f9d70e881a3be57767f50c8cfe3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 1142,
+          "reasoning_tokens": 1133
+        }
+      },
+      {
+        "angle_deg": 355.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000887",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_013789048b6d1855016a773fb5b89c819e947ad6dc2979ccad",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "output_tokens": 635,
+          "reasoning_tokens": 627
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000220",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_09148f2a208fd3d1016a77402eb6a881a084655c3d4a269124",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2597,
+          "reasoning_tokens": 2588
+        }
+      },
+      {
+        "angle_deg": 125.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000221",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_000a516742a7a1e4016a7740014dfc819e87bf811f5c838a5b",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 261,
+          "reasoning_tokens": 253
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000558",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0473750490d80b44016a774025c084819d93276a347a0369e3",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2438,
+          "reasoning_tokens": 2429
+        }
+      },
+      {
+        "angle_deg": 55.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000559",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0e52697b68fc63c9016a77400148ec81a089cd7e17688627c0",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 518,
+          "reasoning_tokens": 510
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000930",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_075e889f5ea0584e016a7740018e78819c98be6bc939f556b0",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1532,
+          "reasoning_tokens": 1523
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000931",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_08eaa0ffb8f1d04a016a77400cfbc4819fa60e10a0e1e9c70d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 926,
+          "reasoning_tokens": 918
+        }
+      },
+      {
+        "angle_deg": 305.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000120",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_06bf3da652afb7ba016a77400ddbd4819dabf908d569ffaa24",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 89,
+          "reasoning_tokens": 80
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000121",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_0a1e25718ebfa07f016a774010fa74819c8c1b25347c5677ce",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1432,
+          "reasoning_tokens": 1424
+        }
+      },
+      {
+        "angle_deg": 355.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000564",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0e4790d0c4367989016a7740223444819e8870b91fddd35772",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1272,
+          "reasoning_tokens": 1263
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000565",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_05236534020057be016a7740223aa4819182277b8212518df9",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 990,
+          "reasoning_tokens": 982
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000342",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_00c6e01a6c56fd0e016a774023e70081a190e163fd1f713a97",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1575,
+          "reasoning_tokens": 1566
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000343",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_045f3837e1c62fea016a77403438d0819c966c52bb44daa65c",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 962,
+          "reasoning_tokens": 954
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000954",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b9bd8de80633e4c016a774034d18081a1a4a4620d7d378301",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1776,
+          "reasoning_tokens": 1767
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "P",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000955",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d959bddfd07f54a016a7740411944819faefb1b17835d44c2",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 403,
+          "reasoning_tokens": 394
+        }
+      },
+      {
+        "angle_deg": 315.0,
+        "base_id": "Z",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000856",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_019500f579b4b650016a77407481a8819d80c00f08c443e084",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1665,
+          "reasoning_tokens": 1657
+        }
+      },
+      {
+        "angle_deg": 135.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000857",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_07b84ea993bb9de2016a77407735dc81929fbc3550b83d5d0a",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2214,
+          "reasoning_tokens": 2206
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000044",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_079e452f8922eb02016a77418e6c0c819c90978ddd0f87aa09",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 3600,
+          "reasoning_tokens": 3591
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000045",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_045b29bd2bc2a8e9016a774077ad4481a2bdc16f2d8d17e2ee",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2742,
+          "reasoning_tokens": 2733
+        }
+      },
+      {
+        "angle_deg": 55.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000868",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0a4883ab633b8a4c016a77404c9dac819cadfd9df1a4967a5d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1498,
+          "reasoning_tokens": 1489
+        }
+      },
+      {
+        "angle_deg": 275.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000869",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_04800e3a2f8d6ecf016a774056f2b4819ea265c05eda3ab42b",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 504,
+          "reasoning_tokens": 496
+        }
+      },
+      {
+        "angle_deg": 185.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000022",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b4f105a7d477fa9016a77406030d881a1a5eab6849810246d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 463,
+          "reasoning_tokens": 454
+        }
+      },
+      {
+        "angle_deg": 295.0,
+        "base_id": "P",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000023",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b48bf2f9fa744f2016a7740640718819eae6025d12c733b2d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 473,
+          "reasoning_tokens": 464
+        }
+      },
+      {
+        "angle_deg": 205.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000478",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_01f07ef3c3c68516016a774092fecc81a19a2c10c698167d3b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2926,
+          "reasoning_tokens": 2917
+        }
+      },
+      {
+        "angle_deg": 195.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000479",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_09935da47732560e016a774066e3b881a2b9f84951c6110414",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1759,
+          "reasoning_tokens": 1750
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000560",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d146cdf6b580e20016a774094562481a092d32c90c01c8b2f",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2236,
+          "reasoning_tokens": 2227
+        }
+      },
+      {
+        "angle_deg": 335.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000561",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_07bdf2e178577a05016a77406efc48819eb1e82b18546e1f8f",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 577,
+          "reasoning_tokens": 569
+        }
+      },
+      {
+        "angle_deg": 15.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000106",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_00943e64151d7fea016a77409be5088192a79e9795c8aeec73",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2815,
+          "reasoning_tokens": 2806
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000107",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0f463b7f4907f3d9016a7740ad18988192a73d330068209930",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3273,
+          "reasoning_tokens": 3264
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000408",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_02bf70bef4bf84fa016a7740b23fec819192e3120e7380590d",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3949,
+          "reasoning_tokens": 3941
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000409",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_001cf70532b958fd016a7740abcabc81a1908b64679a023697",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1650,
+          "reasoning_tokens": 1642
+        }
+      },
+      {
+        "angle_deg": 255.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000714",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0533cf93141e69cd016a7740b4f540819eba3d0c63c08622d8",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 3496,
+          "reasoning_tokens": 3487
+        }
+      },
+      {
+        "angle_deg": 85.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000715",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_00195d56d93349a2016a774093358881a188100d44185e2a37",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1560,
+          "reasoning_tokens": 1552
+        }
+      },
+      {
+        "angle_deg": 145.0,
+        "base_id": "P",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000548",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0bb5c852a8f5ae49016a7740945cd481a2937e19977376506d",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 42,
+          "reasoning_tokens": 33
+        }
+      },
+      {
+        "angle_deg": 45.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000549",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0276ad2ae244fe98016a7740c6ea0481a3b93024d60e4b19bc",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2215,
+          "reasoning_tokens": 2206
+        }
+      },
+      {
+        "angle_deg": 75.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000422",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0d73810725329e8b016a774124c9c481a1b58e511b60c7af40",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 6201,
+          "reasoning_tokens": 6192
+        }
+      },
+      {
+        "angle_deg": 265.0,
+        "base_id": "Z",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000423",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0313fe1db6c557c1016a7740e015108192b1d861abaaf46bbc",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 701,
+          "reasoning_tokens": 692
+        }
+      },
+      {
+        "angle_deg": 65.0,
+        "base_id": "F",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000738",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_0127f8dfcca4f5d8016a7740b42c6c81a08c920c652e945897",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1356,
+          "reasoning_tokens": 1348
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "Z",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000739",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_08f14113fd539505016a7740b56f688191be15d149d5d4104e",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1356,
+          "reasoning_tokens": 1348
+        }
+      },
+      {
+        "angle_deg": 25.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000020",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_045c566ba1f918bc016a7740c695d0819fba69c95a06cb0ae9",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1043,
+          "reasoning_tokens": 1034
+        }
+      },
+      {
+        "angle_deg": 325.0,
+        "base_id": "S",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000021",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_07bcedd6a101e4dd016a7740f5cd40819cac26cdb4e6b93f13",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 911,
+          "reasoning_tokens": 903
+        }
+      },
+      {
+        "angle_deg": 345.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000410",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_09277340e09ec3e2016a7740d00d38819faae3f247e81a0a61",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1345,
+          "reasoning_tokens": 1336
+        }
+      },
+      {
+        "angle_deg": 95.0,
+        "base_id": "P",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000411",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0b6f3479c0e8f6e9016a7740d04290819da33f11d5c1a18767",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 66,
+          "reasoning_tokens": 57
+        }
+      },
+      {
+        "angle_deg": 315.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000252",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_0ec84942542e6ec7016a7740d1b2f081a383200911471a732e",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 871,
+          "reasoning_tokens": 862
+        }
+      },
+      {
+        "angle_deg": 245.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000253",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_04f13f8721f8790e016a7740fc6e0481a0b9388d489fdcc4f2",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1363,
+          "reasoning_tokens": 1355
+        }
+      },
+      {
+        "angle_deg": 225.0,
+        "base_id": "S",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000488",
+        "label": "DIFFERENT",
+        "prediction": "SAME",
+        "request_id": "resp_054eca2c5ed3e821016a774166dd80819c96ebb64c92923ff0",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 628,
+          "reasoning_tokens": 620
+        }
+      },
+      {
+        "angle_deg": 355.0,
+        "base_id": "Z",
+        "correct": false,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000489",
+        "label": "SAME",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_02c0012b34efa16d016a774114f78481a1abbb924c8cfa846f",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 2065,
+          "reasoning_tokens": 2056
+        }
+      },
+      {
+        "angle_deg": 175.0,
+        "base_id": "F",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000332",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_07a3c19920cc4570016a77410d7920819eadc5381182e28b5b",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 872,
+          "reasoning_tokens": 863
+        }
+      },
+      {
+        "angle_deg": 145.0,
+        "base_id": "J",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000333",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_032ee6d8535d2e88016a774243656481a0b9ad3cb71afc3d5a",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 8192,
+          "output_tokens": 654,
+          "reasoning_tokens": 646
+        }
+      },
+      {
+        "angle_deg": 155.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000462",
+        "label": "DIFFERENT",
+        "prediction": "DIFFERENT",
+        "request_id": "resp_01a1a0c55b2d3c77016a7740f2772c819d84fc7c27f6c6cbab",
+        "response": "DIFFERENT",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 2048,
+          "output_tokens": 1312,
+          "reasoning_tokens": 1303
+        }
+      },
+      {
+        "angle_deg": 105.0,
+        "base_id": "L",
+        "correct": true,
+        "invalid": false,
+        "item_id": "tetris_rotation:test_ood_angle:000463",
+        "label": "SAME",
+        "prediction": "SAME",
+        "request_id": "resp_05c82c75bd67692c016a7741336efc819d83e15139d3872f14",
+        "response": "SAME",
+        "split": "test_ood_angle",
+        "usage": {
+          "cached_input_tokens": 0,
+          "input_tokens": 246,
+          "max_output_tokens_used": 4096,
+          "output_tokens": 1882,
+          "reasoning_tokens": 1874
+        }
+      }
+    ]
+  },
+  "protocol_fingerprint_sha256": "96ce3c1e2bb90b6466750517838daa8893e7cd0ce3626c9b6ebcf9880924bca8",
+  "provider": "openai",
+  "reasoning_effort": "high",
+  "schema_version": 1,
+  "summaries": [
+    {
+      "ci95_high": 0.7986031478881379,
+      "ci95_low": 0.6251197129007884,
+      "ci_method": "wilson_over_items",
+      "complete": true,
+      "expected_n": 100,
+      "invalid_responses": 0,
+      "metric": "accuracy",
+      "n": 100,
+      "task": "tetris_ood",
+      "value": 0.72
+    },
+    {
+      "ci95_high": 0.9944980324498376,
+      "ci95_low": 0.929988209271456,
+      "ci_method": "wilson_over_items",
+      "complete": true,
+      "expected_n": 100,
+      "invalid_responses": 0,
+      "metric": "accuracy",
+      "n": 100,
+      "task": "colored_ood",
+      "value": 0.98
+    },
+    {
+      "ci95_high": 0.6789925798097526,
+      "ci95_low": 0.46052792329276937,
+      "ci_method": "wilson_over_items",
+      "complete": false,
+      "expected_n": 78,
+      "invalid_responses": 0,
+      "metric": "accuracy",
+      "n": 75,
+      "task": "ganis3d",
+      "value": 0.5733333333333334
+    },
+    {
+      "ci95_high": 0.9544127391902995,
+      "ci95_low": 0.30064184258240184,
+      "ci_method": "wilson_over_items",
+      "complete": false,
+      "expected_n": 100,
+      "invalid_responses": 0,
+      "metric": "accuracy",
+      "n": 4,
+      "task": "maze_trace",
+      "value": 0.75
+    }
+  ],
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 67886,
+    "output_tokens": 460190,
+    "reasoning_tokens": 457836
+  }
+}

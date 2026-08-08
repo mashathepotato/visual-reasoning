@@ -1,0 +1,32 @@
+{
+  "external_splits": {
+    "blink_multiview": "validation revision a3666eb249237ba3d5eca8db21176cc47967e040",
+    "ganis3d": "complete local n=78",
+    "sat_v2": "complete test n=150"
+  },
+  "max_output_tokens": 2048,
+  "model": "gpt-5.6-sol",
+  "protocol_fingerprint_sha256": "96ce3c1e2bb90b6466750517838daa8893e7cd0ce3626c9b6ebcf9880924bca8",
+  "reasoning_effort": "high",
+  "sample_counts": {
+    "blink_multiview": 133,
+    "colored_ood": 100,
+    "ganis3d": 78,
+    "maze_solve": 50,
+    "maze_trace": 100,
+    "sat_v2": 150,
+    "tetris_ood": 100
+  },
+  "sat_circular": false,
+  "schema_version": 1,
+  "seed": 20260808,
+  "tasks": [
+    "tetris_ood",
+    "colored_ood",
+    "ganis3d",
+    "maze_trace",
+    "maze_solve",
+    "sat_v2",
+    "blink_multiview"
+  ]
+}

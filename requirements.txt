@@ -26,3 +26,4 @@ safetensors==0.7.0
 
 # Closed-model contextual baselines
 anthropic==0.75.0
+openai==2.29.0

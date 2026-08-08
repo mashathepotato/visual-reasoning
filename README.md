@@ -25,3 +25,19 @@ three-task, three-seed overnight suite with:
 ```bash
 .venv/bin/python scripts/run_neurreps_flow_suite.py --profile overnight --device mps
 ```
+
+## Frontier VLM and published-SOTA audit
+
+The resumable direct-VLM evaluation covers both rotation tasks, Ganis-Kievit
+3-D, maze trace/path generation, the complete SAT-Real test set, and the
+complete BLINK Multi-view validation set. It also performs SAT's official
+original/reversed answer-order evaluation and compiles all archived learned
+baselines and published references into one protocol-labelled table. With
+`OPENAI_API_KEY` in the environment or repository `.env`, run:
+
+```bash
+scripts/run_sota_vlm_audit.sh
+```
+
+The auditable report and prediction-level JSON are written under
+[`results/sota_vlm_baselines_2026-08-08`](results/sota_vlm_baselines_2026-08-08).
