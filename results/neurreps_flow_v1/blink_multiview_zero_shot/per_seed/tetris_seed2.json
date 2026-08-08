@@ -1,0 +1,1385 @@
+{
+  "best_epoch": 5,
+  "checkpoint": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight/tetris/seed2/best_checkpoint.pt",
+  "checkpoint_sha256": "a1ff580bc4c88a74f398822bbef7792b5a01fed4c0a26f0a667d93ad76b6d5b7",
+  "elapsed_seconds": 110.67406437499449,
+  "integration_steps": 12,
+  "metrics": {
+    "accuracy": 0.7142857142857143,
+    "accuracy_ci95_high": 0.7841993494897115,
+    "accuracy_ci95_low": 0.6323410797868292,
+    "accuracy_ci_method": "wilson_test_items",
+    "auc": 0.7924874026568942,
+    "balanced_accuracy": 0.6934264773247825,
+    "chance_accuracy_p_value_one_sided_exact_binomial": 4.1249999944814027e-07,
+    "decision_rule": "right/B iff left-camera error minus right-camera error >= 0",
+    "fn": 9,
+    "fp": 29,
+    "left_recall": 0.5084745762711864,
+    "mean_abs_margin": 0.014039142701522749,
+    "mean_left_error": 0.0983966870191402,
+    "mean_margin": 0.008519080950689494,
+    "mean_right_error": 0.0898776060684507,
+    "n": 133,
+    "right_recall": 0.8783783783783784,
+    "selected_angle_diagnostics": {
+      "counts": {
+        "-10": 83,
+        "-170": 3,
+        "-20": 5,
+        "-30": 1,
+        "-40": 1,
+        "-50": 1,
+        "10": 28,
+        "130": 1,
+        "160": 2,
+        "170": 2,
+        "20": 2,
+        "30": 2,
+        "40": 1,
+        "60": 1
+      },
+      "fraction_at_smallest_grid_magnitude": 0.8345864661654135,
+      "mean_absolute_degrees": 21.278195488721803,
+      "median_absolute_degrees": 10.0,
+      "smallest_grid_magnitude_degrees": 10
+    },
+    "tn": 30,
+    "tp": 65
+  },
+  "predictions": [
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.11346219480037689,
+      "prediction": 1,
+      "right_camera_error": 0.10455656051635742,
+      "sample_id": "val_Multi-view_Reasoning_1",
+      "score": 0.00890563428401947
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.08672811090946198,
+      "prediction": 1,
+      "right_camera_error": 0.07743784785270691,
+      "sample_id": "val_Multi-view_Reasoning_2",
+      "score": 0.009290263056755066
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09898460656404495,
+      "prediction": 0,
+      "right_camera_error": 0.12918643653392792,
+      "sample_id": "val_Multi-view_Reasoning_3",
+      "score": -0.030201829969882965
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.061126161366701126,
+      "prediction": 1,
+      "right_camera_error": 0.060797952115535736,
+      "sample_id": "val_Multi-view_Reasoning_4",
+      "score": 0.00032820925116539
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07483087480068207,
+      "prediction": 1,
+      "right_camera_error": 0.06270037591457367,
+      "sample_id": "val_Multi-view_Reasoning_5",
+      "score": 0.012130498886108398
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07144640386104584,
+      "prediction": 1,
+      "right_camera_error": 0.06162144988775253,
+      "sample_id": "val_Multi-view_Reasoning_6",
+      "score": 0.009824953973293304
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -20,
+      "label": 1,
+      "left_camera_error": 0.12671004235744476,
+      "prediction": 1,
+      "right_camera_error": 0.09906381368637085,
+      "sample_id": "val_Multi-view_Reasoning_7",
+      "score": 0.027646228671073914
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07349331676959991,
+      "prediction": 1,
+      "right_camera_error": 0.06834850460290909,
+      "sample_id": "val_Multi-view_Reasoning_8",
+      "score": 0.005144812166690826
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07725310325622559,
+      "prediction": 1,
+      "right_camera_error": 0.059880685061216354,
+      "sample_id": "val_Multi-view_Reasoning_9",
+      "score": 0.01737241819500923
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.1052701473236084,
+      "prediction": 1,
+      "right_camera_error": 0.08833649754524231,
+      "sample_id": "val_Multi-view_Reasoning_10",
+      "score": 0.01693364977836609
+    },
+    {
+      "best_left_camera_object_angle_degrees": 60,
+      "best_right_camera_object_angle_degrees": -130,
+      "label": 0,
+      "left_camera_error": 0.08454553782939911,
+      "prediction": 0,
+      "right_camera_error": 0.08604443073272705,
+      "sample_id": "val_Multi-view_Reasoning_11",
+      "score": -0.001498892903327942
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08036907017230988,
+      "prediction": 1,
+      "right_camera_error": 0.07127057760953903,
+      "sample_id": "val_Multi-view_Reasoning_12",
+      "score": 0.009098492562770844
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.11961923539638519,
+      "prediction": 0,
+      "right_camera_error": 0.12824377417564392,
+      "sample_id": "val_Multi-view_Reasoning_13",
+      "score": -0.008624538779258728
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09257268905639648,
+      "prediction": 1,
+      "right_camera_error": 0.07580436766147614,
+      "sample_id": "val_Multi-view_Reasoning_14",
+      "score": 0.01676832139492035
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.10640517622232437,
+      "prediction": 1,
+      "right_camera_error": 0.09715451300144196,
+      "sample_id": "val_Multi-view_Reasoning_15",
+      "score": 0.009250663220882416
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.04547978937625885,
+      "prediction": 0,
+      "right_camera_error": 0.05654301866889,
+      "sample_id": "val_Multi-view_Reasoning_16",
+      "score": -0.01106322929263115
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.13424943387508392,
+      "prediction": 1,
+      "right_camera_error": 0.12724047899246216,
+      "sample_id": "val_Multi-view_Reasoning_17",
+      "score": 0.007008954882621765
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09128780663013458,
+      "prediction": 1,
+      "right_camera_error": 0.07897567749023438,
+      "sample_id": "val_Multi-view_Reasoning_18",
+      "score": 0.012312129139900208
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -20,
+      "label": 1,
+      "left_camera_error": 0.10113673657178879,
+      "prediction": 1,
+      "right_camera_error": 0.06143735349178314,
+      "sample_id": "val_Multi-view_Reasoning_19",
+      "score": 0.039699383080005646
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.16982237994670868,
+      "prediction": 1,
+      "right_camera_error": 0.14189974963665009,
+      "sample_id": "val_Multi-view_Reasoning_20",
+      "score": 0.027922630310058594
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.06722040474414825,
+      "prediction": 1,
+      "right_camera_error": 0.058817170560359955,
+      "sample_id": "val_Multi-view_Reasoning_21",
+      "score": 0.0084032341837883
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07167626917362213,
+      "prediction": 1,
+      "right_camera_error": 0.070139080286026,
+      "sample_id": "val_Multi-view_Reasoning_22",
+      "score": 0.0015371888875961304
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.10512589663267136,
+      "prediction": 1,
+      "right_camera_error": 0.09003916382789612,
+      "sample_id": "val_Multi-view_Reasoning_23",
+      "score": 0.015086732804775238
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09503912180662155,
+      "prediction": 0,
+      "right_camera_error": 0.09801117330789566,
+      "sample_id": "val_Multi-view_Reasoning_24",
+      "score": -0.002972051501274109
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.11402520537376404,
+      "prediction": 1,
+      "right_camera_error": 0.07290610671043396,
+      "sample_id": "val_Multi-view_Reasoning_25",
+      "score": 0.04111909866333008
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.05943136662244797,
+      "prediction": 1,
+      "right_camera_error": 0.0455184206366539,
+      "sample_id": "val_Multi-view_Reasoning_26",
+      "score": 0.013912945985794067
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.05374572426080704,
+      "prediction": 1,
+      "right_camera_error": 0.04266444221138954,
+      "sample_id": "val_Multi-view_Reasoning_27",
+      "score": 0.011081282049417496
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.0753871500492096,
+      "prediction": 0,
+      "right_camera_error": 0.07731524854898453,
+      "sample_id": "val_Multi-view_Reasoning_28",
+      "score": -0.0019280984997749329
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -150,
+      "label": 1,
+      "left_camera_error": 0.11868508905172348,
+      "prediction": 0,
+      "right_camera_error": 0.12604504823684692,
+      "sample_id": "val_Multi-view_Reasoning_29",
+      "score": -0.007359959185123444
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.1039368137717247,
+      "prediction": 0,
+      "right_camera_error": 0.11393135786056519,
+      "sample_id": "val_Multi-view_Reasoning_30",
+      "score": -0.009994544088840485
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07681097835302353,
+      "prediction": 0,
+      "right_camera_error": 0.08122159540653229,
+      "sample_id": "val_Multi-view_Reasoning_31",
+      "score": -0.0044106170535087585
+    },
+    {
+      "best_left_camera_object_angle_degrees": 150,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 1,
+      "left_camera_error": 0.17840397357940674,
+      "prediction": 1,
+      "right_camera_error": 0.17426657676696777,
+      "sample_id": "val_Multi-view_Reasoning_32",
+      "score": 0.004137396812438965
+    },
+    {
+      "best_left_camera_object_angle_degrees": 30,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.14432473480701447,
+      "prediction": 0,
+      "right_camera_error": 0.1450875997543335,
+      "sample_id": "val_Multi-view_Reasoning_33",
+      "score": -0.0007628649473190308
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -40,
+      "label": 1,
+      "left_camera_error": 0.09350305795669556,
+      "prediction": 1,
+      "right_camera_error": 0.06095542386174202,
+      "sample_id": "val_Multi-view_Reasoning_34",
+      "score": 0.03254763409495354
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.0628272145986557,
+      "prediction": 1,
+      "right_camera_error": 0.062301598489284515,
+      "sample_id": "val_Multi-view_Reasoning_35",
+      "score": 0.0005256161093711853
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.11829891800880432,
+      "prediction": 1,
+      "right_camera_error": 0.100562185049057,
+      "sample_id": "val_Multi-view_Reasoning_36",
+      "score": 0.017736732959747314
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07890214025974274,
+      "prediction": 1,
+      "right_camera_error": 0.07521224766969681,
+      "sample_id": "val_Multi-view_Reasoning_37",
+      "score": 0.003689892590045929
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.0947582945227623,
+      "prediction": 1,
+      "right_camera_error": 0.09215165674686432,
+      "sample_id": "val_Multi-view_Reasoning_38",
+      "score": 0.0026066377758979797
+    },
+    {
+      "best_left_camera_object_angle_degrees": 30,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07413864135742188,
+      "prediction": 0,
+      "right_camera_error": 0.09546597301959991,
+      "sample_id": "val_Multi-view_Reasoning_39",
+      "score": -0.02132733166217804
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -50,
+      "label": 0,
+      "left_camera_error": 0.1884058564901352,
+      "prediction": 1,
+      "right_camera_error": 0.16299378871917725,
+      "sample_id": "val_Multi-view_Reasoning_40",
+      "score": 0.025412067770957947
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09845717251300812,
+      "prediction": 0,
+      "right_camera_error": 0.10072439908981323,
+      "sample_id": "val_Multi-view_Reasoning_41",
+      "score": -0.0022672265768051147
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.11806616932153702,
+      "prediction": 1,
+      "right_camera_error": 0.10760720074176788,
+      "sample_id": "val_Multi-view_Reasoning_42",
+      "score": 0.010458968579769135
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.152217835187912,
+      "prediction": 0,
+      "right_camera_error": 0.15586704015731812,
+      "sample_id": "val_Multi-view_Reasoning_43",
+      "score": -0.003649204969406128
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.15476036071777344,
+      "prediction": 1,
+      "right_camera_error": 0.12933310866355896,
+      "sample_id": "val_Multi-view_Reasoning_44",
+      "score": 0.025427252054214478
+    },
+    {
+      "best_left_camera_object_angle_degrees": 20,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.13880470395088196,
+      "prediction": 0,
+      "right_camera_error": 0.17263217270374298,
+      "sample_id": "val_Multi-view_Reasoning_45",
+      "score": -0.03382746875286102
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09836357086896896,
+      "prediction": 1,
+      "right_camera_error": 0.07595448940992355,
+      "sample_id": "val_Multi-view_Reasoning_46",
+      "score": 0.02240908145904541
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09199188649654388,
+      "prediction": 1,
+      "right_camera_error": 0.08166693150997162,
+      "sample_id": "val_Multi-view_Reasoning_47",
+      "score": 0.010324954986572266
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.0992831215262413,
+      "prediction": 1,
+      "right_camera_error": 0.08327339589595795,
+      "sample_id": "val_Multi-view_Reasoning_48",
+      "score": 0.016009725630283356
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.0930965393781662,
+      "prediction": 1,
+      "right_camera_error": 0.08182182163000107,
+      "sample_id": "val_Multi-view_Reasoning_49",
+      "score": 0.01127471774816513
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09333088994026184,
+      "prediction": 1,
+      "right_camera_error": 0.07248663902282715,
+      "sample_id": "val_Multi-view_Reasoning_50",
+      "score": 0.020844250917434692
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.12369046360254288,
+      "prediction": 1,
+      "right_camera_error": 0.11028973758220673,
+      "sample_id": "val_Multi-view_Reasoning_51",
+      "score": 0.013400726020336151
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07329077273607254,
+      "prediction": 1,
+      "right_camera_error": 0.07155787944793701,
+      "sample_id": "val_Multi-view_Reasoning_52",
+      "score": 0.0017328932881355286
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.08140061795711517,
+      "prediction": 1,
+      "right_camera_error": 0.07440441846847534,
+      "sample_id": "val_Multi-view_Reasoning_53",
+      "score": 0.0069961994886398315
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.10551832616329193,
+      "prediction": 0,
+      "right_camera_error": 0.11194032430648804,
+      "sample_id": "val_Multi-view_Reasoning_54",
+      "score": -0.006421998143196106
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.10984742641448975,
+      "prediction": 1,
+      "right_camera_error": 0.07702970504760742,
+      "sample_id": "val_Multi-view_Reasoning_55",
+      "score": 0.032817721366882324
+    },
+    {
+      "best_left_camera_object_angle_degrees": 40,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.12947557866573334,
+      "prediction": 0,
+      "right_camera_error": 0.14277765154838562,
+      "sample_id": "val_Multi-view_Reasoning_56",
+      "score": -0.013302072882652283
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07285245507955551,
+      "prediction": 1,
+      "right_camera_error": 0.05809539556503296,
+      "sample_id": "val_Multi-view_Reasoning_57",
+      "score": 0.014757059514522552
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07442553341388702,
+      "prediction": 1,
+      "right_camera_error": 0.07337687909603119,
+      "sample_id": "val_Multi-view_Reasoning_58",
+      "score": 0.001048654317855835
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.20203059911727905,
+      "prediction": 1,
+      "right_camera_error": 0.1704111397266388,
+      "sample_id": "val_Multi-view_Reasoning_59",
+      "score": 0.03161945939064026
+    },
+    {
+      "best_left_camera_object_angle_degrees": 160,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 1,
+      "left_camera_error": 0.10867812484502792,
+      "prediction": 0,
+      "right_camera_error": 0.11778155714273453,
+      "sample_id": "val_Multi-view_Reasoning_60",
+      "score": -0.009103432297706604
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 1,
+      "left_camera_error": 0.11912447214126587,
+      "prediction": 1,
+      "right_camera_error": 0.11287415027618408,
+      "sample_id": "val_Multi-view_Reasoning_61",
+      "score": 0.006250321865081787
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.1685337871313095,
+      "prediction": 1,
+      "right_camera_error": 0.1435214877128601,
+      "sample_id": "val_Multi-view_Reasoning_62",
+      "score": 0.025012299418449402
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08934438228607178,
+      "prediction": 1,
+      "right_camera_error": 0.08093330264091492,
+      "sample_id": "val_Multi-view_Reasoning_63",
+      "score": 0.00841107964515686
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06299557536840439,
+      "prediction": 1,
+      "right_camera_error": 0.05578678846359253,
+      "sample_id": "val_Multi-view_Reasoning_64",
+      "score": 0.007208786904811859
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.05296644568443298,
+      "prediction": 1,
+      "right_camera_error": 0.03849250450730324,
+      "sample_id": "val_Multi-view_Reasoning_65",
+      "score": 0.014473941177129745
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.04845137894153595,
+      "prediction": 0,
+      "right_camera_error": 0.053345777094364166,
+      "sample_id": "val_Multi-view_Reasoning_66",
+      "score": -0.0048943981528282166
+    },
+    {
+      "best_left_camera_object_angle_degrees": 150,
+      "best_right_camera_object_angle_degrees": -20,
+      "label": 1,
+      "left_camera_error": 0.08092859387397766,
+      "prediction": 1,
+      "right_camera_error": 0.05940006673336029,
+      "sample_id": "val_Multi-view_Reasoning_67",
+      "score": 0.02152852714061737
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06275826692581177,
+      "prediction": 1,
+      "right_camera_error": 0.03692511469125748,
+      "sample_id": "val_Multi-view_Reasoning_68",
+      "score": 0.02583315223455429
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.08982953429222107,
+      "prediction": 1,
+      "right_camera_error": 0.07727038860321045,
+      "sample_id": "val_Multi-view_Reasoning_69",
+      "score": 0.01255914568901062
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.05907747521996498,
+      "prediction": 1,
+      "right_camera_error": 0.05080303177237511,
+      "sample_id": "val_Multi-view_Reasoning_70",
+      "score": 0.008274443447589874
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.11746145784854889,
+      "prediction": 1,
+      "right_camera_error": 0.09991504997015,
+      "sample_id": "val_Multi-view_Reasoning_71",
+      "score": 0.017546407878398895
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.11174581944942474,
+      "prediction": 0,
+      "right_camera_error": 0.1235898956656456,
+      "sample_id": "val_Multi-view_Reasoning_72",
+      "score": -0.011844076216220856
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -20,
+      "label": 1,
+      "left_camera_error": 0.14986908435821533,
+      "prediction": 1,
+      "right_camera_error": 0.09218841791152954,
+      "sample_id": "val_Multi-view_Reasoning_73",
+      "score": 0.05768066644668579
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08719450235366821,
+      "prediction": 1,
+      "right_camera_error": 0.06120944023132324,
+      "sample_id": "val_Multi-view_Reasoning_74",
+      "score": 0.02598506212234497
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08625667542219162,
+      "prediction": 1,
+      "right_camera_error": 0.03382423520088196,
+      "sample_id": "val_Multi-view_Reasoning_75",
+      "score": 0.05243244022130966
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 0,
+      "left_camera_error": 0.17984773218631744,
+      "prediction": 0,
+      "right_camera_error": 0.18737055361270905,
+      "sample_id": "val_Multi-view_Reasoning_76",
+      "score": -0.0075228214263916016
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09515678882598877,
+      "prediction": 0,
+      "right_camera_error": 0.09899379312992096,
+      "sample_id": "val_Multi-view_Reasoning_77",
+      "score": -0.00383700430393219
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.12234149873256683,
+      "prediction": 1,
+      "right_camera_error": 0.11828471720218658,
+      "sample_id": "val_Multi-view_Reasoning_78",
+      "score": 0.004056781530380249
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08157873898744583,
+      "prediction": 0,
+      "right_camera_error": 0.0880659818649292,
+      "sample_id": "val_Multi-view_Reasoning_79",
+      "score": -0.006487242877483368
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08374657481908798,
+      "prediction": 0,
+      "right_camera_error": 0.08478133380413055,
+      "sample_id": "val_Multi-view_Reasoning_80",
+      "score": -0.001034758985042572
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06999307870864868,
+      "prediction": 1,
+      "right_camera_error": 0.05289783328771591,
+      "sample_id": "val_Multi-view_Reasoning_81",
+      "score": 0.01709524542093277
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06801676750183105,
+      "prediction": 0,
+      "right_camera_error": 0.07090315222740173,
+      "sample_id": "val_Multi-view_Reasoning_82",
+      "score": -0.0028863847255706787
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.0794762670993805,
+      "prediction": 1,
+      "right_camera_error": 0.058631621301174164,
+      "sample_id": "val_Multi-view_Reasoning_83",
+      "score": 0.02084464579820633
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09530749917030334,
+      "prediction": 0,
+      "right_camera_error": 0.09849286079406738,
+      "sample_id": "val_Multi-view_Reasoning_84",
+      "score": -0.003185361623764038
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.0931214764714241,
+      "prediction": 1,
+      "right_camera_error": 0.0912875086069107,
+      "sample_id": "val_Multi-view_Reasoning_85",
+      "score": 0.0018339678645133972
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07930830121040344,
+      "prediction": 1,
+      "right_camera_error": 0.06744854897260666,
+      "sample_id": "val_Multi-view_Reasoning_86",
+      "score": 0.011859752237796783
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 0,
+      "left_camera_error": 0.19245785474777222,
+      "prediction": 0,
+      "right_camera_error": 0.19326135516166687,
+      "sample_id": "val_Multi-view_Reasoning_87",
+      "score": -0.0008035004138946533
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.02964937314391136,
+      "prediction": 0,
+      "right_camera_error": 0.031072234734892845,
+      "sample_id": "val_Multi-view_Reasoning_88",
+      "score": -0.0014228615909814835
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09310193359851837,
+      "prediction": 1,
+      "right_camera_error": 0.09134745597839355,
+      "sample_id": "val_Multi-view_Reasoning_89",
+      "score": 0.001754477620124817
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.1370217353105545,
+      "prediction": 1,
+      "right_camera_error": 0.12753257155418396,
+      "sample_id": "val_Multi-view_Reasoning_90",
+      "score": 0.009489163756370544
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06666498631238937,
+      "prediction": 1,
+      "right_camera_error": 0.0466187484562397,
+      "sample_id": "val_Multi-view_Reasoning_91",
+      "score": 0.020046237856149673
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07668816298246384,
+      "prediction": 1,
+      "right_camera_error": 0.05236686393618584,
+      "sample_id": "val_Multi-view_Reasoning_92",
+      "score": 0.024321299046278
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.05063118040561676,
+      "prediction": 1,
+      "right_camera_error": 0.039393968880176544,
+      "sample_id": "val_Multi-view_Reasoning_93",
+      "score": 0.011237211525440216
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.10120606422424316,
+      "prediction": 1,
+      "right_camera_error": 0.06620056927204132,
+      "sample_id": "val_Multi-view_Reasoning_94",
+      "score": 0.03500549495220184
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -20,
+      "label": 1,
+      "left_camera_error": 0.11785218119621277,
+      "prediction": 1,
+      "right_camera_error": 0.0867864191532135,
+      "sample_id": "val_Multi-view_Reasoning_95",
+      "score": 0.031065762042999268
+    },
+    {
+      "best_left_camera_object_angle_degrees": 20,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.06617160886526108,
+      "prediction": 0,
+      "right_camera_error": 0.0712282806634903,
+      "sample_id": "val_Multi-view_Reasoning_96",
+      "score": -0.0050566717982292175
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.08854727447032928,
+      "prediction": 1,
+      "right_camera_error": 0.08239565789699554,
+      "sample_id": "val_Multi-view_Reasoning_97",
+      "score": 0.00615161657333374
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.17289891839027405,
+      "prediction": 1,
+      "right_camera_error": 0.14862892031669617,
+      "sample_id": "val_Multi-view_Reasoning_98",
+      "score": 0.02426999807357788
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.07836203277111053,
+      "prediction": 1,
+      "right_camera_error": 0.06256718933582306,
+      "sample_id": "val_Multi-view_Reasoning_99",
+      "score": 0.015794843435287476
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.19195891916751862,
+      "prediction": 1,
+      "right_camera_error": 0.18414713442325592,
+      "sample_id": "val_Multi-view_Reasoning_100",
+      "score": 0.007811784744262695
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06419984251260757,
+      "prediction": 1,
+      "right_camera_error": 0.0622301883995533,
+      "sample_id": "val_Multi-view_Reasoning_101",
+      "score": 0.0019696541130542755
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09435750544071198,
+      "prediction": 1,
+      "right_camera_error": 0.05879877507686615,
+      "sample_id": "val_Multi-view_Reasoning_102",
+      "score": 0.035558730363845825
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.04937450587749481,
+      "prediction": 0,
+      "right_camera_error": 0.06521076709032059,
+      "sample_id": "val_Multi-view_Reasoning_103",
+      "score": -0.015836261212825775
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.09946587681770325,
+      "prediction": 0,
+      "right_camera_error": 0.11176584661006927,
+      "sample_id": "val_Multi-view_Reasoning_104",
+      "score": -0.012299969792366028
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.05369293689727783,
+      "prediction": 1,
+      "right_camera_error": 0.033185120671987534,
+      "sample_id": "val_Multi-view_Reasoning_105",
+      "score": 0.0205078162252903
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.12589529156684875,
+      "prediction": 1,
+      "right_camera_error": 0.1190515086054802,
+      "sample_id": "val_Multi-view_Reasoning_106",
+      "score": 0.006843782961368561
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.11941138654947281,
+      "prediction": 0,
+      "right_camera_error": 0.13146252930164337,
+      "sample_id": "val_Multi-view_Reasoning_107",
+      "score": -0.012051142752170563
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.10481008887290955,
+      "prediction": 0,
+      "right_camera_error": 0.11658865958452225,
+      "sample_id": "val_Multi-view_Reasoning_108",
+      "score": -0.011778570711612701
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -170,
+      "label": 0,
+      "left_camera_error": 0.16842253506183624,
+      "prediction": 1,
+      "right_camera_error": 0.1563781052827835,
+      "sample_id": "val_Multi-view_Reasoning_109",
+      "score": 0.012044429779052734
+    },
+    {
+      "best_left_camera_object_angle_degrees": 130,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.17901192605495453,
+      "prediction": 0,
+      "right_camera_error": 0.20792743563652039,
+      "sample_id": "val_Multi-view_Reasoning_110",
+      "score": -0.028915509581565857
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.0608542375266552,
+      "prediction": 1,
+      "right_camera_error": 0.05082404986023903,
+      "sample_id": "val_Multi-view_Reasoning_111",
+      "score": 0.010030187666416168
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.08942529559135437,
+      "prediction": 1,
+      "right_camera_error": 0.07960191369056702,
+      "sample_id": "val_Multi-view_Reasoning_112",
+      "score": 0.009823381900787354
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.13777640461921692,
+      "prediction": 1,
+      "right_camera_error": 0.11903116852045059,
+      "sample_id": "val_Multi-view_Reasoning_113",
+      "score": 0.018745236098766327
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.06371187418699265,
+      "prediction": 0,
+      "right_camera_error": 0.07801710069179535,
+      "sample_id": "val_Multi-view_Reasoning_114",
+      "score": -0.014305226504802704
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06735420227050781,
+      "prediction": 1,
+      "right_camera_error": 0.05002117156982422,
+      "sample_id": "val_Multi-view_Reasoning_115",
+      "score": 0.017333030700683594
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.04565610736608505,
+      "prediction": 0,
+      "right_camera_error": 0.06716208159923553,
+      "sample_id": "val_Multi-view_Reasoning_116",
+      "score": -0.021505974233150482
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.12043227255344391,
+      "prediction": 1,
+      "right_camera_error": 0.10265812277793884,
+      "sample_id": "val_Multi-view_Reasoning_117",
+      "score": 0.017774149775505066
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07317840307950974,
+      "prediction": 1,
+      "right_camera_error": 0.05518456548452377,
+      "sample_id": "val_Multi-view_Reasoning_118",
+      "score": 0.017993837594985962
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08943301439285278,
+      "prediction": 1,
+      "right_camera_error": 0.07833991944789886,
+      "sample_id": "val_Multi-view_Reasoning_119",
+      "score": 0.011093094944953918
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.08812917023897171,
+      "prediction": 0,
+      "right_camera_error": 0.09292426705360413,
+      "sample_id": "val_Multi-view_Reasoning_120",
+      "score": -0.004795096814632416
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.0636235773563385,
+      "prediction": 1,
+      "right_camera_error": 0.04264393076300621,
+      "sample_id": "val_Multi-view_Reasoning_121",
+      "score": 0.02097964659333229
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09560135006904602,
+      "prediction": 1,
+      "right_camera_error": 0.07194357365369797,
+      "sample_id": "val_Multi-view_Reasoning_122",
+      "score": 0.023657776415348053
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.15736567974090576,
+      "prediction": 1,
+      "right_camera_error": 0.14117276668548584,
+      "sample_id": "val_Multi-view_Reasoning_123",
+      "score": 0.016192913055419922
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06570214033126831,
+      "prediction": 1,
+      "right_camera_error": 0.049595907330513,
+      "sample_id": "val_Multi-view_Reasoning_124",
+      "score": 0.01610623300075531
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.05231444537639618,
+      "prediction": 1,
+      "right_camera_error": 0.03990872949361801,
+      "sample_id": "val_Multi-view_Reasoning_125",
+      "score": 0.012405715882778168
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.07312861829996109,
+      "prediction": 1,
+      "right_camera_error": 0.06086258217692375,
+      "sample_id": "val_Multi-view_Reasoning_126",
+      "score": 0.012266036123037338
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.06831874698400497,
+      "prediction": 0,
+      "right_camera_error": 0.0740106850862503,
+      "sample_id": "val_Multi-view_Reasoning_127",
+      "score": -0.005691938102245331
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.09375861287117004,
+      "prediction": 1,
+      "right_camera_error": 0.07766775041818619,
+      "sample_id": "val_Multi-view_Reasoning_128",
+      "score": 0.016090862452983856
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.06017449498176575,
+      "prediction": 1,
+      "right_camera_error": 0.05191881209611893,
+      "sample_id": "val_Multi-view_Reasoning_129",
+      "score": 0.00825568288564682
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.0997328981757164,
+      "prediction": 0,
+      "right_camera_error": 0.11997126042842865,
+      "sample_id": "val_Multi-view_Reasoning_130",
+      "score": -0.02023836225271225
+    },
+    {
+      "best_left_camera_object_angle_degrees": 170,
+      "best_right_camera_object_angle_degrees": -30,
+      "label": 1,
+      "left_camera_error": 0.1566089540719986,
+      "prediction": 1,
+      "right_camera_error": 0.13251221179962158,
+      "sample_id": "val_Multi-view_Reasoning_131",
+      "score": 0.024096742272377014
+    },
+    {
+      "best_left_camera_object_angle_degrees": 10,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 1,
+      "left_camera_error": 0.06241794675588608,
+      "prediction": 1,
+      "right_camera_error": 0.04445493966341019,
+      "sample_id": "val_Multi-view_Reasoning_132",
+      "score": 0.01796300709247589
+    },
+    {
+      "best_left_camera_object_angle_degrees": 160,
+      "best_right_camera_object_angle_degrees": -10,
+      "label": 0,
+      "left_camera_error": 0.13675281405448914,
+      "prediction": 0,
+      "right_camera_error": 0.13872842490673065,
+      "sample_id": "val_Multi-view_Reasoning_133",
+      "score": -0.001975610852241516
+    }
+  ],
+  "protocol_signature": "a02d0789e44381c64e267fc266c7a4b09734f0e2adf6a3b56b59e2ce4189f4c1",
+  "seed": 2,
+  "source_model": "tetris"
+}

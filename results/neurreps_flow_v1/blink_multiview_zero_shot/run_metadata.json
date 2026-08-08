@@ -1,0 +1,44 @@
+{
+  "command": [
+    "scripts/evaluate_neurreps_flow_blink_multiview.py",
+    "--device",
+    "mps"
+  ],
+  "created_at_utc": "2026-08-08T07:02:29.546999+00:00",
+  "dependencies": {
+    "datasets": "4.8.5",
+    "gymnasium": "1.2.3",
+    "kornia": "0.8.2",
+    "numpy": "2.2.6",
+    "pillow": "12.1.1",
+    "scikit-learn": "1.8.0",
+    "stable-baselines3": "2.7.1",
+    "timm": "1.0.22",
+    "torch": "2.9.1",
+    "torchvision": "0.24.1"
+  },
+  "git": {
+    "branch": "main",
+    "commit": "eb0124163d7104ce4e4938dde451f0ebedf0c995",
+    "dirty": true,
+    "status": [
+      "M .gitignore",
+      " M tests/test_paper_mps_suite.py",
+      "?? docs/external_zero_shot_benchmarks.md",
+      "?? results/neurreps_flow_v1/blink_multiview_zero_shot/",
+      "?? scripts/evaluate_neurreps_flow_blink_multiview.py"
+    ]
+  },
+  "hardware": {
+    "cuda_available": false,
+    "cuda_device": null,
+    "cuda_device_count": 0,
+    "mps_available": true
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": {
+    "executable": "/Users/masha/Documents/visual-reasoning/.venv/bin/python",
+    "implementation": "CPython",
+    "version": "3.12.12"
+  }
+}

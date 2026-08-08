@@ -1,0 +1,85 @@
+{
+  "arguments": {
+    "angle_step": 10,
+    "audit_examples": 6,
+    "cache_dir": null,
+    "dataset_revision": "a3666eb249237ba3d5eca8db21176cc47967e040",
+    "device": "mps",
+    "hypothesis_batch_size": 48,
+    "image_size": 64,
+    "item_batch_size": 4,
+    "max_angle": 170,
+    "max_eval": 0,
+    "output_dir": "/Users/masha/Documents/visual-reasoning/results/neurreps_flow_v1/blink_multiview_zero_shot",
+    "rerun": false,
+    "run_root": "/Users/masha/Documents/visual-reasoning/models/runs/neurreps_flow_v1/overnight",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "skip_exact_control": false,
+    "source_models": [
+      "tetris",
+      "colored"
+    ],
+    "split": "val"
+  },
+  "data": {
+    "evaluation_status": "exploratory public validation; sign convention finalized after a two-item smoke",
+    "label_counts": {
+      "left_A": 59,
+      "right_B": 74
+    },
+    "n_items": 133,
+    "raw_images_redistributed": false
+  },
+  "protocol": {
+    "angles_degrees": [
+      -10,
+      -20,
+      -30,
+      -40,
+      -50,
+      -60,
+      -70,
+      -80,
+      -90,
+      -100,
+      -110,
+      -120,
+      -130,
+      -140,
+      -150,
+      -160,
+      -170,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170
+    ],
+    "dataset_config": "Multi-view_Reasoning",
+    "dataset_fingerprint_sha256": "42c8e62feaf3a404940a393fc796a7550b638b5b20935b1dfd7f126b169c9063",
+    "dataset_id": "BLINK-Benchmark/BLINK",
+    "dataset_revision": "a3666eb249237ba3d5eca8db21176cc47967e040",
+    "decision": "right camera iff min_positive_object_angle_error - min_negative_object_angle_error >= 0",
+    "image_size": 64,
+    "preprocessing": "center_square_crop_antialiased_resize",
+    "split": "val"
+  },
+  "protocol_signature": "a02d0789e44381c64e267fc266c7a4b09734f0e2adf6a3b56b59e2ce4189f4c1",
+  "schema_version": 1
+}

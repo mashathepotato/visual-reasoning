@@ -16,6 +16,10 @@ models/runs/
 models/cache/
 models/archives/
 
+# External benchmark audit grids contain third-party source images. Keep the
+# numerical predictions and reports, but do not redistribute the image pixels.
+results/neurreps_flow_v1/blink_multiview_zero_shot/audits/
+
 data/ganis_kievit_data/.DS_Store
 .DS_Store
 

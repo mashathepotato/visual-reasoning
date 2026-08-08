@@ -17,6 +17,13 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.fot.train_dinov3_pair_baseline import PairHead
 from scripts.evaluate_neurreps_flow_3d_zero_shot import classification_metrics
+from scripts.evaluate_neurreps_flow_blink_multiview import (
+    angle_grid as blink_angle_grid,
+    classification_metrics as blink_classification_metrics,
+    paired_exact_comparison as blink_paired_exact_comparison,
+    parse_label as parse_blink_label,
+    predictions_from_errors as blink_predictions_from_errors,
+)
 from scripts.run_paper_mps_suite import stage_plan
 from utils.fot.external_datasets import SATv2Dataset
 from utils.fot.maze_ops import MazeTraceDataset
@@ -102,6 +109,31 @@ class PaperSuiteTests(unittest.TestCase):
         single_class = classification_metrics([1], [0.2])
         self.assertIsNone(single_class["auc"])
         self.assertIsNone(single_class["balanced_accuracy"])
+
+    def test_blink_protocol_has_fixed_signed_mapping(self) -> None:
+        angles = blink_angle_grid(10, 20)
+        self.assertEqual(angles, [-10, -20, 10, 20])
+        self.assertEqual(parse_blink_label("(A)"), 0)
+        self.assertEqual(parse_blink_label("(B)"), 1)
+        rows = [{"idx": "left", "answer": "(A)"}, {"idx": "right", "answer": "(B)"}]
+        errors = torch.tensor([
+            [0.8, 0.9, 0.1, 0.2],
+            [0.2, 0.1, 0.8, 0.9],
+        ])
+        predictions = blink_predictions_from_errors(rows, errors, angles)
+        self.assertEqual([row["prediction"] for row in predictions], [0, 1])
+        metrics = blink_classification_metrics(
+            [row["label"] for row in predictions], [row["score"] for row in predictions]
+        )
+        self.assertEqual(metrics["accuracy"], 1.0)
+        self.assertEqual(metrics["balanced_accuracy"], 1.0)
+        self.assertEqual(metrics["chance_accuracy_p_value_one_sided_exact_binomial"], 0.25)
+        exact = [dict(row) for row in predictions]
+        exact[0]["prediction"] = 1
+        comparison = blink_paired_exact_comparison(predictions, exact)
+        self.assertEqual(comparison["candidate_correct_exact_wrong"], 1)
+        self.assertEqual(comparison["candidate_wrong_exact_correct"], 0)
+        self.assertEqual(comparison["p_value_two_sided_exact_mcnemar"], 1.0)
 
     def test_aggregator_writes_all_formats(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
